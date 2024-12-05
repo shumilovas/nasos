@@ -215,6 +215,22 @@
 						<Color/>
 					</Properties>
 				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1733395469236</Id>
+					<Name><![CDATA[сальдо]]></Name>
+					<X>530</X><Y>230</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[доходы-расходы]]></InitialValue>
+						<Color/>
+					</Properties>
+				</Variable>
 				<Variable Class="Flow">
 					<Id>1733299138669</Id>
 					<Name><![CDATA[flow]]></Name>
@@ -570,6 +586,36 @@
 					<Id>1733300236242</Id>
 					<Name><![CDATA[<flow7> - продажи]]></Name>
 					<X>310</X><Y>230</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1733299045548" TargetId="1733395469236" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>140</X><Y>120</Y></Direction>
+					<Id>1733395524865</Id>
+					<Name><![CDATA[доходы - сальдо]]></Name>
+					<X>390</X><Y>110</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1733299574592" TargetId="1733395469236" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>130</X><Y>-120</Y></Direction>
+					<Id>1733395538015</Id>
+					<Name><![CDATA[расходы - сальдо]]></Name>
+					<X>400</X><Y>350</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
