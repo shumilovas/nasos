@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 *************************************************
-	         AnyLogic Project File 
-*************************************************	         
+	         AnyLogic Project File
+*************************************************
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.8.5.202310311109" AlpVersion="8.8.2">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.3.202411201858" AlpVersion="8.9.2">
 <Model>
 	<Id>1733206194534</Id>
 	<Name><![CDATA[НАСОСЫ]]></Name>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[насосы]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Day]]></ModelTimeUnit>
+	
+	<Folders>
+		
+	</Folders>
 	<ActiveObjectClasses>
 		<!--   =========   Active Object Class   ========  -->
 		<ActiveObjectClass>
@@ -68,9 +72,7 @@
 					<RowsCountCode><![CDATA[100]]></RowsCountCode>
 					<NeigborhoodType>MOORE</NeigborhoodType>
 					<LayoutType>USER_DEF</LayoutType>
-					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
 					<NetworkType>USER_DEF</NetworkType>
-					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
 					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
 					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
 					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
@@ -142,7 +144,7 @@
 				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1733299103863</Id>
-					<Name><![CDATA[ТоварзятВаренду]]></Name>
+					<Name><![CDATA[ТоварВзятВаренду]]></Name>
 					<X>240</X><Y>70</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -152,7 +154,7 @@
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[0]]></InitialValue>
+						<InitialValue><![CDATA[товар*0.5]]></InitialValue>
 						<Color/>
 					</Properties>
 				</Variable>
@@ -185,6 +187,22 @@
 					<Width>20</Width>
 					<Height>20</Height>
 						<InitialValue><![CDATA[0]]></InitialValue>
+						<Color/>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1733400188182</Id>
+					<Name><![CDATA[товарПродаётся]]></Name>
+					<X>60</X><Y>220</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[0.5*товар]]></InitialValue>
 						<Color/>
 					</Properties>
 				</Variable>
@@ -228,40 +246,21 @@
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
-					<Id>1733299345761</Id>
-					<Name><![CDATA[flow2]]></Name>
-					<X>30</X><Y>130</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1733299328818" TargetId="1733299103863" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[1]]></Formula>
-						<Color/>
-						<ValveIndex>1</ValveIndex>
-						<Points>
-							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>110</X><Y>-30</Y></Point>
-							<Point><X>210</X><Y>-60</Y></Point>
-						</Points>
-					</Properties>
-				</Variable>
-				<Variable Class="Flow">
 					<Id>1733299356180</Id>
 					<Name><![CDATA[flow3]]></Name>
-					<X>30</X><Y>130</Y>
+					<X>60</X><Y>220</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1733299328818" TargetId="1733299074715" External="false" Constant="false" Array="false">
+					<Properties SourceId="1733400188182" TargetId="1733299074715" External="false" Constant="false" Array="false">
 						<Formula><![CDATA[1]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>130</X><Y>20</Y></Point>
-							<Point><X>210</X><Y>30</Y></Point>
+							<Point><X>120</X><Y>-10</Y></Point>
+							<Point><X>180</X><Y>-60</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -285,6 +284,38 @@
 					</Properties>
 				</Variable>
 			</Variables>
+			<Dependences>
+				<Link SourceId="1733299328818" TargetId="1733299103863" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>210</X><Y>-60</Y></Direction>
+					<Id>1733400141013</Id>
+					<Name><![CDATA[товар - ТоварВзятВаренду]]></Name>
+					<X>30</X><Y>130</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1733299328818" TargetId="1733400188182" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>30</X><Y>90</Y></Direction>
+					<Id>1733400194233</Id>
+					<Name><![CDATA[товар - товарПродаётся]]></Name>
+					<X>30</X><Y>130</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+			</Dependences>
 			<AgentLinks>
 				<AgentLink>
 					<Id>1733206194552</Id>
@@ -326,7 +357,7 @@
 			</Presentation>
 
 		</ActiveObjectClass>
-	</ActiveObjectClasses>	
+	</ActiveObjectClasses>
 	<DifferentialEquationsMethod>EULER</DifferentialEquationsMethod>
 	<MixedEquationsMethod>RK45_NEWTON</MixedEquationsMethod>
 	<AlgebraicEquationsMethod>MODIFIED_NEWTON</AlgebraicEquationsMethod>
@@ -347,7 +378,7 @@
 		<ExportSettings>
 		</ExportSettings>
 	</Database>
-	
+
 	<RunConfiguration ActiveObjectClassId="1733206194547">
 		<Id>1733206194597</Id>
 		<Name><![CDATA[RunConfiguration]]></Name>
@@ -372,7 +403,7 @@
 		<Outputs>
 		</Outputs>
 	</RunConfiguration>
-	<Experiments>	
+	<Experiments>
 		<!--   =========   Simulation Experiment   ========  -->
 		<SimulationExperiment ActiveObjectClassId="1733206194547">
 			<Id>1733206194594</Id>
@@ -410,22 +441,22 @@
 				</Text>
 			</Presentation>
 
-			<Parameters>			
-			</Parameters>			
+			<Parameters>
+			</Parameters>
 			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
 				<ExecutionMode><![CDATA[realTimeScaled]]></ExecutionMode>
-				<Title><![CDATA[НАСОСЫ : Simulation]]></Title>	
+				<Title><![CDATA[НАСОСЫ : Simulation]]></Title>
 				<EnableDeveloperPanel>true</EnableDeveloperPanel>
 				<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
 				<RealTimeScale>0.004</RealTimeScale>
 			</PresentationProperties>
 			<ModelTimeProperties>
 				<StopOption><![CDATA[Stop at specified date]]></StopOption>
-				<InitialDate><![CDATA[1733184000000]]></InitialDate>	
-				<InitialTime><![CDATA[0.0]]></InitialTime>	
-				<FinalDate><![CDATA[1735948800000]]></FinalDate>	
-				<FinalTime><![CDATA[32.0]]></FinalTime>	
+				<InitialDate><![CDATA[1733184000000]]></InitialDate>
+				<InitialTime><![CDATA[0.0]]></InitialTime>
+				<FinalDate><![CDATA[1735948800000]]></FinalDate>
+				<FinalTime><![CDATA[32.0]]></FinalTime>
 			</ModelTimeProperties>
 			<BypassInitialScreen>true</BypassInitialScreen>
 		</SimulationExperiment>	
