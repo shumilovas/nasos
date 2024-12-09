@@ -113,7 +113,7 @@
 				<Variable Class="StockVariable">
 					<Id>1733299045548</Id>
 					<Name><![CDATA[доходы]]></Name>
-					<X>340</X><Y>90</Y>
+					<X>810</X><Y>200</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -129,7 +129,7 @@
 				<Variable Class="StockVariable">
 					<Id>1733299074715</Id>
 					<Name><![CDATA[товарПродан]]></Name>
-					<X>240</X><Y>160</Y>
+					<X>700</X><Y>300</Y>
 					<Label><X>15</X><Y>5</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -145,7 +145,7 @@
 				<Variable Class="StockVariable">
 					<Id>1733299103863</Id>
 					<Name><![CDATA[ТоварВзятВаренду]]></Name>
-					<X>240</X><Y>70</Y>
+					<X>660</X><Y>160</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -161,7 +161,7 @@
 				<Variable Class="StockVariable">
 					<Id>1733299328818</Id>
 					<Name><![CDATA[товар]]></Name>
-					<X>30</X><Y>130</Y>
+					<X>450</X><Y>220</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -177,7 +177,7 @@
 				<Variable Class="StockVariable">
 					<Id>1733395930914</Id>
 					<Name><![CDATA[сырьё]]></Name>
-					<X>-140</X><Y>130</Y>
+					<X>280</X><Y>220</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -193,7 +193,7 @@
 				<Variable Class="StockVariable">
 					<Id>1733400188182</Id>
 					<Name><![CDATA[товарПродаётся]]></Name>
-					<X>60</X><Y>220</Y>
+					<X>480</X><Y>310</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -209,7 +209,7 @@
 				<Variable Class="StockVariable">
 					<Id>1733400548792</Id>
 					<Name><![CDATA[аммортизация]]></Name>
-					<X>430</X><Y>30</Y>
+					<X>590</X><Y>40</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -225,7 +225,7 @@
 				<Variable Class="StockVariable">
 					<Id>1733420114973</Id>
 					<Name><![CDATA[земныеНедра]]></Name>
-					<X>-310</X><Y>120</Y>
+					<X>60</X><Y>220</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -241,7 +241,7 @@
 				<Variable Class="Flow">
 					<Id>1733299138669</Id>
 					<Name><![CDATA[flow]]></Name>
-					<X>240</X><Y>70</Y>
+					<X>660</X><Y>160</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -252,15 +252,15 @@
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>75</X><Y>20</Y></Point>
-							<Point><X>190</X><Y>-40</Y></Point>
+							<Point><X>-35</X><Y>-60</Y></Point>
+							<Point><X>-70</X><Y>-120</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1733299267755</Id>
 					<Name><![CDATA[flow1]]></Name>
-					<X>240</X><Y>160</Y>
+					<X>700</X><Y>300</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -271,16 +271,15 @@
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>75</X><Y>-20</Y></Point>
-							<Point><X>130</X><Y>-30</Y></Point>
-							<Point><X>100</X><Y>-70</Y></Point>
+							<Point><X>55</X><Y>-50</Y></Point>
+							<Point><X>110</X><Y>-100</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1733299356180</Id>
 					<Name><![CDATA[flow3]]></Name>
-					<X>60</X><Y>220</Y>
+					<X>480</X><Y>310</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -291,15 +290,15 @@
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>120</X><Y>-10</Y></Point>
-							<Point><X>180</X><Y>-60</Y></Point>
+							<Point><X>110</X><Y>-5</Y></Point>
+							<Point><X>220</X><Y>-10</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1733395945800</Id>
 					<Name><![CDATA[flow4]]></Name>
-					<X>-140</X><Y>130</Y>
+					<X>280</X><Y>220</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -318,7 +317,7 @@
 				<Variable Class="Flow">
 					<Id>1733419905292</Id>
 					<Name><![CDATA[flow2]]></Name>
-					<X>-310</X><Y>120</Y>
+					<X>60</X><Y>220</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -329,16 +328,15 @@
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>65</X><Y>10</Y></Point>
-							<Point><X>130</X><Y>20</Y></Point>
-							<Point><X>170</X><Y>10</Y></Point>
+							<Point><X>110</X><Y>0</Y></Point>
+							<Point><X>220</X><Y>0</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1733420846798</Id>
 					<Name><![CDATA[flow5]]></Name>
-					<X>30</X><Y>130</Y>
+					<X>450</X><Y>220</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -357,7 +355,7 @@
 				<Variable Class="Flow">
 					<Id>1733420908562</Id>
 					<Name><![CDATA[flow6]]></Name>
-					<X>30</X><Y>130</Y>
+					<X>450</X><Y>220</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -376,7 +374,7 @@
 				<Variable Class="Parameter">
 					<Id>1733400731909</Id>
 					<Name><![CDATA[стоимостьАрендыВдень]]></Name>
-					<X>220</X><Y>10</Y>
+					<X>820</X><Y>120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -402,10 +400,10 @@
 				<Link SourceId="1733299103863" TargetId="1733299045548" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>100</X><Y>20</Y></Direction>
+					<Direction><X>150</X><Y>40</Y></Direction>
 					<Id>1733400567875</Id>
 					<Name><![CDATA[ТоварВзятВаренду - доходы]]></Name>
-					<X>240</X><Y>70</Y>
+					<X>660</X><Y>160</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -417,10 +415,10 @@
 				<Link SourceId="1733400731909" TargetId="1733299045548" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>120</X><Y>80</Y></Direction>
+					<Direction><X>-10</X><Y>80</Y></Direction>
 					<Id>1733400755819</Id>
 					<Name><![CDATA[стоимостьАрендыВдень - доходы]]></Name>
-					<X>220</X><Y>10</Y>
+					<X>820</X><Y>120</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
