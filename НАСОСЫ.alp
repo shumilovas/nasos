@@ -113,7 +113,7 @@
 				<Variable Class="StockVariable">
 					<Id>1733299045548</Id>
 					<Name><![CDATA[доходы]]></Name>
-					<X>390</X><Y>110</Y>
+					<X>340</X><Y>90</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -154,7 +154,7 @@
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[товар*0.5]]></InitialValue>
+						<InitialValue><![CDATA[2]]></InitialValue>
 						<Color/>
 					</Properties>
 				</Variable>
@@ -186,7 +186,7 @@
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[0]]></InitialValue>
+						<InitialValue><![CDATA[10]]></InitialValue>
 						<Color/>
 					</Properties>
 				</Variable>
@@ -202,7 +202,7 @@
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[0.5*товар]]></InitialValue>
+						<InitialValue><![CDATA[3]]></InitialValue>
 						<Color/>
 					</Properties>
 				</Variable>
@@ -222,6 +222,22 @@
 						<Color/>
 					</Properties>
 				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1733420114973</Id>
+					<Name><![CDATA[земныеНедра]]></Name>
+					<X>-310</X><Y>120</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[10000]]></InitialValue>
+						<Color/>
+					</Properties>
+				</Variable>
 				<Variable Class="Flow">
 					<Id>1733299138669</Id>
 					<Name><![CDATA[flow]]></Name>
@@ -231,7 +247,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1733299103863" TargetId="1733400548792" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[1]]></Formula>
+						<Formula><![CDATA[0.01]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -250,14 +266,14 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1733299074715" TargetId="1733299045548" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[0]]></Formula>
+						<Formula><![CDATA[0.1]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
 							<Point><X>75</X><Y>-20</Y></Point>
 							<Point><X>130</X><Y>-30</Y></Point>
-							<Point><X>150</X><Y>-50</Y></Point>
+							<Point><X>100</X><Y>-70</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -270,7 +286,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1733400188182" TargetId="1733299074715" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[1]]></Formula>
+						<Formula><![CDATA[0.5]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -289,13 +305,71 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1733395930914" TargetId="1733299328818" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[0]]></Formula>
+						<Formula><![CDATA[1]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
 							<Point><X>85</X><Y>0</Y></Point>
 							<Point><X>170</X><Y>0</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1733419905292</Id>
+					<Name><![CDATA[flow2]]></Name>
+					<X>-310</X><Y>120</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1733420114973" TargetId="1733395930914" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[1]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>65</X><Y>10</Y></Point>
+							<Point><X>130</X><Y>20</Y></Point>
+							<Point><X>170</X><Y>10</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1733420846798</Id>
+					<Name><![CDATA[flow5]]></Name>
+					<X>30</X><Y>130</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1733299328818" TargetId="1733400188182" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[0.6]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>15</X><Y>45</Y></Point>
+							<Point><X>30</X><Y>90</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1733420908562</Id>
+					<Name><![CDATA[flow6]]></Name>
+					<X>30</X><Y>130</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1733299328818" TargetId="1733299103863" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[0.4]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>105</X><Y>-30</Y></Point>
+							<Point><X>210</X><Y>-60</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -312,7 +386,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[1]]></Code>
+							<Code><![CDATA[0.001]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1733400731907</Id>
@@ -325,40 +399,10 @@
 				</Variable>
 			</Variables>
 			<Dependences>
-				<Link SourceId="1733299328818" TargetId="1733299103863" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>210</X><Y>-60</Y></Direction>
-					<Id>1733400141013</Id>
-					<Name><![CDATA[товар - ТоварВзятВаренду]]></Name>
-					<X>30</X><Y>130</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1733299328818" TargetId="1733400188182" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>30</X><Y>90</Y></Direction>
-					<Id>1733400194233</Id>
-					<Name><![CDATA[товар - товарПродаётся]]></Name>
-					<X>30</X><Y>130</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
 				<Link SourceId="1733299103863" TargetId="1733299045548" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>150</X><Y>40</Y></Direction>
+					<Direction><X>100</X><Y>20</Y></Direction>
 					<Id>1733400567875</Id>
 					<Name><![CDATA[ТоварВзятВаренду - доходы]]></Name>
 					<X>240</X><Y>70</Y>
@@ -373,7 +417,7 @@
 				<Link SourceId="1733400731909" TargetId="1733299045548" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>170</X><Y>100</Y></Direction>
+					<Direction><X>120</X><Y>80</Y></Direction>
 					<Id>1733400755819</Id>
 					<Name><![CDATA[стоимостьАрендыВдень - доходы]]></Name>
 					<X>220</X><Y>10</Y>
