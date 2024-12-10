@@ -4,7 +4,7 @@
 	         AnyLogic Project File
 *************************************************
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.3.202411201858" AlpVersion="8.9.2">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.8.5.202310311109" AlpVersion="8.8.2">
 <Model>
 	<Id>1733206194534</Id>
 	<Name><![CDATA[НАСОСЫ]]></Name>
