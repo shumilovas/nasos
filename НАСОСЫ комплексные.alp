@@ -3859,6 +3859,9 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[forceStatisticsCollection]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
@@ -3965,6 +3968,9 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[forceStatisticsCollection]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
@@ -4284,6 +4290,9 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[forceStatisticsCollection]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
