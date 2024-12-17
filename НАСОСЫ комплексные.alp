@@ -132,10 +132,10 @@
 					<X>110</X><Y>-240</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
+					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[100000*ставкаЦентробанка]]></Formula>
+						<Formula><![CDATA[100000*1.2]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color>-256</Color>
 					</Properties>
@@ -19660,6 +19660,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="120" Height="30">
+						<EntryAction><![CDATA[traceln("грузовик поехал во время " + time())]]></EntryAction>
 						<FillColor/>
 					</Properties>
 				</StatechartElement>
@@ -19703,9 +19704,10 @@
 						<Point><X>0</X><Y>50</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1734355473102" Target="1734355473104" Trigger="message">
-						<Action><![CDATA[moveTo(msg.retailer);
-order = msg;]]></Action>
+					<Properties Source="1734355473102" Target="1734355473104" Trigger="rate">
+						<Action><![CDATA[//moveTo(msg.retailer);
+//order = msg;
+moveTo(main.поставки.retailers.random());]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
