@@ -305,7 +305,22 @@
 					<Properties External="false" Constant="false" Array="false">
 						<Formula><![CDATA[30/365]]></Formula>
 						<Value><![CDATA[0]]></Value>
-						<Color>-256</Color>
+						<Color>-16711681</Color>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1734698734940</Id>
+					<Name><![CDATA[Доход]]></Name>
+					<X>-260</X><Y>-280</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[ЗапасыДенег - СобственныеДеньги]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
 					</Properties>
 
 				</Variable>
@@ -622,7 +637,7 @@
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[20000000]]></InitialValue>
+						<InitialValue><![CDATA[ИзначальныйКредит]]></InitialValue>
 						<Color>-16711681</Color>
 					</Properties>
 				</Variable>
@@ -638,7 +653,7 @@
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[10000000]]></InitialValue>
+						<InitialValue><![CDATA[ИзначальныйДенежныйКапиталл]]></InitialValue>
 						<Color>-16711681</Color>
 					</Properties>
 				</Variable>
@@ -1073,19 +1088,19 @@
 				<Variable Class="Flow">
 					<Id>1734697054887</Id>
 					<Name><![CDATA[flow17]]></Name>
-					<X>-130</X><Y>60</Y>
+					<X>60</X><Y>90</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1733940934923" TargetId="1734697029736" External="false" Constant="false" Array="false">
+					<Properties SourceId="1733829760160" TargetId="1734697029736" External="false" Constant="false" Array="false">
 						<Formula><![CDATA[ЗаёмныеДеньги*ставкаЦентробанкаДляЗаёма]]></Formula>
 						<Color>-16711681</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>10</X><Y>-80</Y></Point>
-							<Point><X>20</X><Y>-160</Y></Point>
+							<Point><X>-85</X><Y>-95</Y></Point>
+							<Point><X>-170</X><Y>-190</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -1106,6 +1121,51 @@
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1733400731907</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1734698480094</Id>
+					<Name><![CDATA[ИзначальныйДенежныйКапиталл]]></Name>
+					<X>-180</X><Y>170</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1734698480092</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1734698552529</Id>
+					<Name><![CDATA[ИзначальныйКредит]]></Name>
+					<X>-280</X><Y>40</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[20000000]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1734698552527</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1715,6 +1775,66 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
+				<Link SourceId="1734698480094" TargetId="1733940948982" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>50</X><Y>-50</Y></Direction>
+					<Id>1734698514993</Id>
+					<Name><![CDATA[ИзначальныйДенежныйКапиталл - СобственныеДеньги]]></Name>
+					<X>-180</X><Y>170</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1734698552529" TargetId="1733940934923" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>150</X><Y>20</Y></Direction>
+					<Id>1734698572940</Id>
+					<Name><![CDATA[ИзначальныйКредит - ЗаёмныеДеньги]]></Name>
+					<X>-280</X><Y>40</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1733940948982" TargetId="1734698734940" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-130</X><Y>-400</Y></Direction>
+					<Id>1734698891791</Id>
+					<Name><![CDATA[СобственныеДеньги - Доход]]></Name>
+					<X>-130</X><Y>120</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1733829760160" TargetId="1734698734940" Polarity="null">
+					<Height>-48.479</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-320</X><Y>-370</Y></Direction>
+					<Id>1734698908991</Id>
+					<Name><![CDATA[ЗапасыДенег - Доход]]></Name>
+					<X>60</X><Y>90</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
 			</Dependences>
 			<Events>
 				<Event>
@@ -1853,12 +1973,12 @@ if (a>0.4) {
 					<ShowLabel>true</ShowLabel>
 					<ActiveObjectClass>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Dostavka]]></ClassName>
+						<ClassName><![CDATA[Доставка]]></ClassName>
 					</ActiveObjectClass>
 					<GenericParameterSubstitute>
 						<GenericParameterSubstituteReference>
 							<PackageName><![CDATA[насосы]]></PackageName>
-							<ClassName><![CDATA[Dostavka]]></ClassName>
+							<ClassName><![CDATA[Доставка]]></ClassName>
 							<ItemName><![CDATA[1734607480081]]></ItemName>
 						</GenericParameterSubstituteReference>
 					</GenericParameterSubstitute>
@@ -18344,7 +18464,7 @@ if (a>0.4) {
 		<!--   =========   Active Object Class   ========  -->
 		<ActiveObjectClass>
 			<Id>1734607480075</Id>
-			<Name><![CDATA[Dostavka]]></Name>
+			<Name><![CDATA[Доставка]]></Name>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1734607480081</Id>
@@ -18529,12 +18649,12 @@ if (a>0.4) {
 					<PresentationId>1734608093090</PresentationId>
 					<ActiveObjectClass>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Airport]]></ClassName>
+						<ClassName><![CDATA[КлиентСервисаХочетнасос]]></ClassName>
 					</ActiveObjectClass>
 					<GenericParameterSubstitute>
 						<GenericParameterSubstituteReference>
 							<PackageName><![CDATA[насосы]]></PackageName>
-							<ClassName><![CDATA[Airport]]></ClassName>
+							<ClassName><![CDATA[КлиентСервисаХочетнасос]]></ClassName>
 							<ItemName><![CDATA[1734608093056]]></ItemName>
 						</GenericParameterSubstituteReference>
 					</GenericParameterSubstitute>
@@ -18592,12 +18712,12 @@ if (a>0.4) {
 					<PresentationId>1734608777789</PresentationId>
 					<ActiveObjectClass>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Truck]]></ClassName>
+						<ClassName><![CDATA[ГрузовикЛогистикаМежГород]]></ClassName>
 					</ActiveObjectClass>
 					<GenericParameterSubstitute>
 						<GenericParameterSubstituteReference>
 							<PackageName><![CDATA[насосы]]></PackageName>
-							<ClassName><![CDATA[Truck]]></ClassName>
+							<ClassName><![CDATA[ГрузовикЛогистикаМежГород]]></ClassName>
 							<ItemName><![CDATA[1734608777759]]></ItemName>
 						</GenericParameterSubstituteReference>
 					</GenericParameterSubstitute>
@@ -18658,12 +18778,12 @@ if (a>0.4) {
 					<PresentationId>1734608915976</PresentationId>
 					<ActiveObjectClass>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 					</ActiveObjectClass>
 					<GenericParameterSubstitute>
 						<GenericParameterSubstituteReference>
 							<PackageName><![CDATA[насосы]]></PackageName>
-							<ClassName><![CDATA[Manufacturing]]></ClassName>
+							<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 							<ItemName><![CDATA[1734608915947]]></ItemName>
 						</GenericParameterSubstituteReference>
 					</GenericParameterSubstitute>
@@ -18877,7 +18997,7 @@ if (a>0.4) {
 		<!--   =========   Active Object Class   ========  -->
 		<ActiveObjectClass>
 			<Id>1734608093050</Id>
-			<Name><![CDATA[Airport]]></Name>
+			<Name><![CDATA[КлиентСервисаХочетнасос]]></Name>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1734608093056</Id>
@@ -18972,27 +19092,27 @@ if (a>0.4) {
 			<StatechartElements>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1734615992910</Id>
-					<Name><![CDATA[normalWork]]></Name>
+					<Name><![CDATA[РаботаБезПоломок]]></Name>
 					<X>150</X><Y>50</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="30">
+					<Properties Width="130" Height="30">
 						<FillColor/>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1734616018419</Id>
-					<Name><![CDATA[waitingDetails]]></Name>
+					<Name><![CDATA[ПоломкаЖдутДетали]]></Name>
 					<X>150</X><Y>140</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="30">
-						<EntryAction><![CDATA[Order order = new Order( this );
-send( order, get_Dostavka().manufacturing);
+					<Properties Width="150" Height="30">
+						<EntryAction><![CDATA[ЗаказНаСервис заказНаСервис = new ЗаказНаСервис( this );
+send( заказНаСервис, get_Доставка().manufacturing);
 traceln(getFullName() + " in time " + time());]]></EntryAction>
 						<FillColor/>
 					</Properties>
@@ -19088,7 +19208,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<MessageType><![CDATA[Object]]></MessageType>
 					<StatechartReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Airport]]></ClassName>
+						<ClassName><![CDATA[КлиентСервисаХочетнасос]]></ClassName>
 						<ItemName><![CDATA[statechart]]></ItemName>
 					</StatechartReference>
 					<LineStyle>SOLID</LineStyle>
@@ -19103,7 +19223,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 			<ContainerLinks>
 				<ContainerLink>
 					<Id>1734608093195</Id>
-					<Name><![CDATA[dostavka]]></Name>
+					<Name><![CDATA[доставка]]></Name>
 					<X>50</X><Y>-100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -19111,7 +19231,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<ShowLabel>true</ShowLabel>
 					<ActiveObjectClass>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Dostavka]]></ClassName>
+						<ClassName><![CDATA[Доставка]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
 				<ContainerLink>
@@ -19383,7 +19503,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 		<!--   =========   Active Object Class   ========  -->
 		<ActiveObjectClass>
 			<Id>1734608777753</Id>
-			<Name><![CDATA[Truck]]></Name>
+			<Name><![CDATA[ГрузовикЛогистикаМежГород]]></Name>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1734608777759</Id>
@@ -19485,7 +19605,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[Airport]]></Type>
+						<Type><![CDATA[КлиентСервисаХочетнасос]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<ParameterEditor>
@@ -19523,7 +19643,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 			<ContainerLinks>
 				<ContainerLink>
 					<Id>1734608777902</Id>
-					<Name><![CDATA[dostavka]]></Name>
+					<Name><![CDATA[доставка]]></Name>
 					<X>50</X><Y>-100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -19531,7 +19651,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<ShowLabel>true</ShowLabel>
 					<ActiveObjectClass>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Dostavka]]></ClassName>
+						<ClassName><![CDATA[Доставка]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
 				<ContainerLink>
@@ -19853,7 +19973,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 		<!--   =========   Active Object Class   ========  -->
 		<ActiveObjectClass>
 			<Id>1734608915941</Id>
-			<Name><![CDATA[Manufacturing]]></Name>
+			<Name><![CDATA[СервисЛогистика]]></Name>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1734608915947</Id>
@@ -19956,7 +20076,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 						<ItemName><![CDATA[toAirport]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
@@ -19966,7 +20086,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 						<ItemName><![CDATA[packing]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -19989,7 +20109,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 						<ItemName><![CDATA[toAirport]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
@@ -19999,7 +20119,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 						<ItemName><![CDATA[seize]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -20022,7 +20142,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 						<ItemName><![CDATA[sink]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
@@ -20032,7 +20152,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 						<ItemName><![CDATA[release]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -20055,7 +20175,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 						<ItemName><![CDATA[release]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
@@ -20065,7 +20185,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 						<ItemName><![CDATA[unpacking]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -20088,7 +20208,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 						<ItemName><![CDATA[unpacking]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
@@ -20098,7 +20218,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 						<ItemName><![CDATA[seize]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -20121,7 +20241,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 						<ItemName><![CDATA[moveTo]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
@@ -20131,7 +20251,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 						<ItemName><![CDATA[release]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -20154,7 +20274,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 						<ItemName><![CDATA[resourceTaskEnd]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
@@ -20164,7 +20284,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 						<ItemName><![CDATA[moveTo]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -20187,7 +20307,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 						<ItemName><![CDATA[seize]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
@@ -20197,7 +20317,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 						<ItemName><![CDATA[queue]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -20220,7 +20340,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 						<ItemName><![CDATA[queue]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
@@ -20230,7 +20350,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 						<ItemName><![CDATA[enter]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -20253,7 +20373,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 						<ItemName><![CDATA[packing]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
@@ -20263,7 +20383,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 						<ItemName><![CDATA[queue1]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -20286,7 +20406,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 						<ItemName><![CDATA[queue1]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
@@ -20296,7 +20416,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Manufacturing]]></ClassName>
+						<ClassName><![CDATA[СервисЛогистика]]></ClassName>
 						<ItemName><![CDATA[resourceTaskStart]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -20323,7 +20443,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<HandleReceiveInConnections>false</HandleReceiveInConnections>
 					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
 					<AgentLinkBidirectional>true</AgentLinkBidirectional>
-					<MessageType><![CDATA[Order]]></MessageType>
+					<MessageType><![CDATA[ЗаказНаСервис]]></MessageType>
 					<LineStyle>SOLID</LineStyle>
 					<LineWidth>1</LineWidth>
 					<LineColor>-16777216</LineColor>
@@ -20336,7 +20456,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 			<ContainerLinks>
 				<ContainerLink>
 					<Id>1734608916053</Id>
-					<Name><![CDATA[dostavka]]></Name>
+					<Name><![CDATA[доставка]]></Name>
 					<X>50</X><Y>-100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -20344,7 +20464,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<ShowLabel>true</ShowLabel>
 					<ActiveObjectClass>
 						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Dostavka]]></ClassName>
+						<ClassName><![CDATA[Доставка]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
 				<ContainerLink>
@@ -20391,7 +20511,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 						<Parameter>
 							<Name><![CDATA[capacity]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[get_Dostavka().numberTrucks]]></Code>
+								<Code><![CDATA[get_Доставка().numberTrucks]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -20425,12 +20545,12 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 								<EntityEmbeddedObject>
 									<ActiveObjectClass>
 										<PackageName><![CDATA[насосы]]></PackageName>
-										<ClassName><![CDATA[Truck]]></ClassName>
+										<ClassName><![CDATA[ГрузовикЛогистикаМежГород]]></ClassName>
 									</ActiveObjectClass>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
 											<PackageName><![CDATA[насосы]]></PackageName>
-											<ClassName><![CDATA[Truck]]></ClassName>
+											<ClassName><![CDATA[ГрузовикЛогистикаМежГород]]></ClassName>
 											<ItemName><![CDATA[1734608777759]]></ItemName>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
@@ -20603,7 +20723,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 						<Parameter>
 							<Name><![CDATA[population]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[get_Dostavka().trucks]]></Code>
+								<Code><![CDATA[get_Доставка().trucks]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -20707,7 +20827,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 							<ItemName><![CDATA[1412336242933]]></ItemName>
 						</GenericParameterSubstituteReference>
 						<GenericParameterSubstituteValue Class="CodeValue">
-							<Code><![CDATA[Order]]></Code>
+							<Code><![CDATA[ЗаказНаСервис]]></Code>
 						</GenericParameterSubstituteValue>
 					</GenericParameterSubstitute>
 					<Parameters>
@@ -20972,7 +21092,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 						<Parameter>
 							<Name><![CDATA[onSeizeUnit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[((Truck)unit).client = agent.customer;]]></Code>
+								<Code><![CDATA[((ГрузовикЛогистикаМежГород)unit).client = agent.customer;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -21058,7 +21178,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 							<ItemName><![CDATA[1412336243161]]></ItemName>
 						</GenericParameterSubstituteReference>
 						<GenericParameterSubstituteValue Class="CodeValue">
-							<Code><![CDATA[Truck]]></Code>
+							<Code><![CDATA[ГрузовикЛогистикаМежГород]]></Code>
 						</GenericParameterSubstituteValue>
 					</GenericParameterSubstitute>
 					<Parameters>
@@ -21666,7 +21786,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 							<ItemName><![CDATA[1412336243157]]></ItemName>
 						</GenericParameterSubstituteReference>
 						<GenericParameterSubstituteValue Class="CodeValue">
-							<Code><![CDATA[Truck]]></Code>
+							<Code><![CDATA[ГрузовикЛогистикаМежГород]]></Code>
 						</GenericParameterSubstituteValue>
 					</GenericParameterSubstitute>
 					<Parameters>
@@ -21691,7 +21811,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 						<Parameter>
 							<Name><![CDATA[destinationAgent]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[get_Dostavka().manufacturing]]></Code>
+								<Code><![CDATA[get_Доставка().manufacturing]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -22561,7 +22681,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 		<!--   =========   Active Object Class   ========  -->
 		<ActiveObjectClass>
 			<Id>1734609570150</Id>
-			<Name><![CDATA[Order]]></Name>
+			<Name><![CDATA[ЗаказНаСервис]]></Name>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1734609570156</Id>
@@ -22663,7 +22783,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[Airport]]></Type>
+						<Type><![CDATA[КлиентСервисаХочетнасос]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<ParameterEditor>
@@ -22804,6 +22924,12 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 			<Parameters>			
 				<Parameter>
 					<ParameterName><![CDATA[стоимостьАрендыВдень]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[ИзначальныйДенежныйКапиталл]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[ИзначальныйКредит]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
