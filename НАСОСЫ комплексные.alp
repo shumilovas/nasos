@@ -22834,6 +22834,21 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
+				<Link SourceId="1735055459533" TargetId="1735055459529" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>110</X><Y>-80</Y></Direction>
+					<Id>1735056104290</Id>
+					<Name><![CDATA[ставкаЦентробанкаДляТовара - затратыНаАрендуЕденицыОборудования]]></Name>
+					<X>610</X><Y>-130</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
 			</Dependences>
 			<AgentLinks>
 				<AgentLink>
