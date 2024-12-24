@@ -22910,6 +22910,36 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
+				<Link SourceId="1735054979890" TargetId="1735055545732" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>120</X><Y>90</Y></Direction>
+					<Id>1735056473840</Id>
+					<Name><![CDATA[ТоварВзятВаренду - ВесьТовар]]></Name>
+					<X>600</X><Y>280</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1735054979886" TargetId="1735055459517" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>275</X><Y>-250</Y></Direction>
+					<Id>1735056569313</Id>
+					<Name><![CDATA[flow6 - flow9]]></Name>
+					<X>385</X><Y>280</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
 			</Dependences>
 			<AgentLinks>
 				<AgentLink>
