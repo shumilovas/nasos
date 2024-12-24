@@ -22805,12 +22805,12 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1735055459531" Polarity="null">
+				<Link SourceId="1735055459531" TargetId="1735055612697" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-125</X><Y>60</Y></Direction>
+					<Direction><X>-138</X><Y>62</Y></Direction>
 					<Id>1735055459527</Id>
-					<Name><![CDATA[затратыНаЕденицуСервиса - ]]></Name>
+					<Name><![CDATA[затратыНаЕденицуСервиса - flow18]]></Name>
 					<X>830</X><Y>70</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -22872,6 +22872,36 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<Id>1735056334622</Id>
 					<Name><![CDATA[сервис - flow18]]></Name>
 					<X>820</X><Y>370</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1735054979886" TargetId="1735055803188" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>344</X><Y>231</Y></Direction>
+					<Id>1735056409544</Id>
+					<Name><![CDATA[flow6 - flow14]]></Name>
+					<X>385</X><Y>280</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1735054979874" TargetId="1735055459517" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-55</X><Y>-250</Y></Direction>
+					<Id>1735056451017</Id>
+					<Name><![CDATA[flow - flow9]]></Name>
+					<X>715</X><Y>280</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
