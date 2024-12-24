@@ -22634,7 +22634,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1735056176763</Id>
-					<Name><![CDATA[stock]]></Name>
+					<Name><![CDATA[ЗапасыДенег]]></Name>
 					<X>490</X><Y>80</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -22690,19 +22690,19 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 				<Variable Class="Flow">
 					<Id>1735055459517</Id>
 					<Name><![CDATA[flow9]]></Name>
-					<X>570</X><Y>130</Y>
+					<X>490</X><Y>80</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties TargetId="1735055459535" External="false" Constant="false" Array="false">
+					<Properties SourceId="1735056176763" TargetId="1735055459535" External="false" Constant="false" Array="false">
 						<Formula><![CDATA[flow*затратыНаАрендуЕденицыОборудования]]></Formula>
 						<Color>-65281</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>90</X><Y>-100</Y></Point>
-							<Point><X>270</X><Y>-160</Y></Point>
+							<Point><X>170</X><Y>-50</Y></Point>
+							<Point><X>350</X><Y>-110</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -22857,6 +22857,21 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<Id>1735056104290</Id>
 					<Name><![CDATA[ставкаЦентробанкаДляТовара - затратыНаАрендуЕденицыОборудования]]></Name>
 					<X>610</X><Y>-130</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1735055545725" TargetId="1735055612697" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-128</X><Y>-238</Y></Direction>
+					<Id>1735056334622</Id>
+					<Name><![CDATA[сервис - flow18]]></Name>
+					<X>820</X><Y>370</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
