@@ -1651,6 +1651,12 @@ if (a>0.4) {
 						<Parameter>
 							<Name><![CDATA[стоимостьАрендыВдень]]></Name>
 						</Parameter>
+						<Parameter>
+							<Name><![CDATA[стоимостьАрендыВдень1]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[стоимостьСервисаВдень]]></Name>
+						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
 					<Replication Class="CodeValue">
@@ -22775,6 +22781,15 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<Height>20</Height>
 						<InitialValue><![CDATA[0]]></InitialValue>
 						<Color/>
+						<Shadow>
+							<Id>1735062864264</Id>
+							<Name><![CDATA[<ЗапасыДенег>]]></Name>
+							<X>650</X><Y>580</Y>
+							<Label><X>0</X><Y>-20</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
 					</Properties>
 				</Variable>
 				<Variable Class="StockVariable">
@@ -22876,7 +22891,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1735055545732" TargetId="1735055545735" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[0]]></Formula>
+						<Formula><![CDATA[0.1]]></Formula>
 						<Color>-6632142</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -22914,7 +22929,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
+					<Properties TargetId="1735062864264" External="false" Constant="false" Array="false">
 						<Formula><![CDATA[flow6*стоимостьАрендыВдень]]></Formula>
 						<Color>-65281</Color>
 						<ValveIndex>1</ValveIndex>
@@ -22963,6 +22978,25 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 						</Points>
 					</Properties>
 				</Variable>
+				<Variable Class="Flow">
+					<Id>1735062955206</Id>
+					<Name><![CDATA[ПродажаСервиса]]></Name>
+					<X>900</X><Y>530</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1735062864264" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[сервис*стоимостьСервисаВдень]]></Formula>
+						<Color>-6632142</Color>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>-125</X><Y>25</Y></Point>
+							<Point><X>-250</X><Y>50</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
 				<Variable Class="Parameter">
 					<Id>1735055803199</Id>
 					<Name><![CDATA[стоимостьАрендыВдень]]></Name>
@@ -22980,6 +23014,51 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1735055803197</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1735063014204</Id>
+					<Name><![CDATA[стоимостьАрендыВдень1]]></Name>
+					<X>495</X><Y>85</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[10000]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1735063014202</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1735063022629</Id>
+					<Name><![CDATA[стоимостьСервисаВдень]]></Name>
+					<X>860</X><Y>620</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1735063022627</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -23101,6 +23180,66 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<Id>1735056473840</Id>
 					<Name><![CDATA[ТоварВзятВаренду - ВесьТовар]]></Name>
 					<X>600</X><Y>280</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1735055545725" TargetId="1735062955206" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-45</X><Y>185</Y></Direction>
+					<Id>1735062992144</Id>
+					<Name><![CDATA[сервис - ПродажаСервиса]]></Name>
+					<X>820</X><Y>370</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1735063022629" TargetId="1735062955206" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-85</X><Y>-65</Y></Direction>
+					<Id>1735063039756</Id>
+					<Name><![CDATA[стоимостьСервисаВдень - ПродажаСервиса]]></Name>
+					<X>860</X><Y>620</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1735055803188" TargetId="1735062864264" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-79</X><Y>69</Y></Direction>
+					<Id>1735063139049</Id>
+					<Name><![CDATA[flow14 - <ЗапасыДенег>]]></Name>
+					<X>729</X><Y>511</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1735062955206" TargetId="1735062864264" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-125</X><Y>25</Y></Direction>
+					<Id>1735063175335</Id>
+					<Name><![CDATA[ПродажаСервиса - <ЗапасыДенег>]]></Name>
+					<X>775</X><Y>555</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
