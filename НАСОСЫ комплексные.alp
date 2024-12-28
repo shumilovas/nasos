@@ -11,6 +11,25 @@
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[насосы]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Day]]></ModelTimeUnit>
+	<Dimensions>
+		<!--   =========   Dimension   ========  -->
+		<Dimension>
+			<Id>1735400908827</Id>
+			<Name><![CDATA[Металлургия]]></Name>
+			<Type>enumeration</Type>
+			<Range><![CDATA[]]></Range>
+			<Element>
+				<Id>1735400908828</Id>
+				<Name><![CDATA[порошковая]]></Name>
+				<Value>1</Value>
+			</Element>
+			<Element>
+				<Id>1735400908829</Id>
+				<Name><![CDATA[иная]]></Name>
+				<Value>2</Value>
+			</Element>
+		</Dimension>
+	</Dimensions>
 	<OptionLists>
 		<OptionList>
 			<Id>1733976758569</Id>
@@ -319,7 +338,7 @@
 				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1733395930914</Id>
-					<Name><![CDATA[сырьё]]></Name>
+					<Name><![CDATA[детали]]></Name>
 					<X>280</X><Y>220</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -351,7 +370,7 @@
 				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1733420114973</Id>
-					<Name><![CDATA[СвоиНедра]]></Name>
+					<Name><![CDATA[Лом]]></Name>
 					<X>60</X><Y>220</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
