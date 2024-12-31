@@ -34,6 +34,63 @@
 				<Value>3</Value>
 			</Element>
 		</Dimension>
+		<!--   =========   Dimension   ========  -->
+		<Dimension>
+			<Id>1735665632031</Id>
+			<Name><![CDATA[типыНасосов]]></Name>
+			<Type>enumeration</Type>
+			<Range><![CDATA[]]></Range>
+			<Element>
+				<Id>1735665632032</Id>
+				<Name><![CDATA[двигатель]]></Name>
+				<Value>1</Value>
+			</Element>
+			<Element>
+				<Id>1735665632033</Id>
+				<Name><![CDATA[гидрозащиты]]></Name>
+				<Value>2</Value>
+			</Element>
+			<Element>
+				<Id>1735665908820</Id>
+				<Name><![CDATA[модульСмещения]]></Name>
+				<Value>3</Value>
+			</Element>
+			<Element>
+				<Id>1735666056806</Id>
+				<Name><![CDATA[клапаныОбратные]]></Name>
+				<Value>4</Value>
+			</Element>
+			<Element>
+				<Id>1735666071217</Id>
+				<Name><![CDATA[насосыНефтПласт]]></Name>
+				<Value>5</Value>
+			</Element>
+			<Element>
+				<Id>1735666095699</Id>
+				<Name><![CDATA[модульВхНакид]]></Name>
+				<Value>6</Value>
+			</Element>
+			<Element>
+				<Id>1735666124559</Id>
+				<Name><![CDATA[устНасосПогруж]]></Name>
+				<Value>7</Value>
+			</Element>
+			<Element>
+				<Id>1735666167005</Id>
+				<Name><![CDATA[газосепаратор]]></Name>
+				<Value>8</Value>
+			</Element>
+			<Element>
+				<Id>1735666175342</Id>
+				<Name><![CDATA[диспергатор]]></Name>
+				<Value>9</Value>
+			</Element>
+			<Element>
+				<Id>1735666182604</Id>
+				<Name><![CDATA[телеметрия]]></Name>
+				<Value>10</Value>
+			</Element>
+		</Dimension>
 	</Dimensions>
 	<OptionLists>
 		<OptionList>
@@ -349,12 +406,18 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Array="false">
+					<Properties Array="true">
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
 						<InitialValue><![CDATA[10]]></InitialValue>
 						<Color>-256</Color>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[насосы]]></PackageName>
+								<ClassName><![CDATA[типыНасосов]]></ClassName>
+							</Dimension>
+						</Array>
 					</Properties>
 				</Variable>
 				<Variable Class="StockVariable">
@@ -869,6 +932,7 @@
 				<Variable Class="Flow">
 					<Id>1733940626882</Id>
 					<Name><![CDATA[flow15]]></Name>
+					<Description><![CDATA[тысяча двести тонн и четыреста тон в год производятся на металлургических заводах новомета . здесь всё переводится в час.]]></Description>
 					<X>10</X><Y>160</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -964,9 +1028,11 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties TargetId="1733395930914" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[flow15.sum()+flow2.sum()]]></Formula>
+					<Properties TargetId="1733395930914" External="false" Constant="false" Array="true">
+						<Formula><![CDATA[(flow15.sum()+flow2.sum())/2]]></Formula>
 						<Color/>
+						<Array>
+						</Array>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
