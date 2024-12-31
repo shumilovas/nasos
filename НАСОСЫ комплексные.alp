@@ -37,7 +37,7 @@
 		<!--   =========   Dimension   ========  -->
 		<Dimension>
 			<Id>1735665632031</Id>
-			<Name><![CDATA[типыНасосов]]></Name>
+			<Name><![CDATA[ТипыОборудования]]></Name>
 			<Type>enumeration</Type>
 			<Range><![CDATA[]]></Range>
 			<Element>
@@ -89,6 +89,46 @@
 				<Id>1735666182604</Id>
 				<Name><![CDATA[телеметрия]]></Name>
 				<Value>10</Value>
+			</Element>
+			<Element>
+				<Id>1735673635280</Id>
+				<Name><![CDATA[двигательныеСекции]]></Name>
+				<Value>11</Value>
+			</Element>
+			<Element>
+				<Id>1735673704874</Id>
+				<Name><![CDATA[НасосаныеСекции]]></Name>
+				<Value>12</Value>
+			</Element>
+			<Element>
+				<Id>1735673716066</Id>
+				<Name><![CDATA[НасосыВентиль]]></Name>
+				<Value>13</Value>
+			</Element>
+			<Element>
+				<Id>1735673736699</Id>
+				<Name><![CDATA[насосыАсинхронные]]></Name>
+				<Value>14</Value>
+			</Element>
+			<Element>
+				<Id>1735673742902</Id>
+				<Name><![CDATA[иныеНасосы]]></Name>
+				<Value>15</Value>
+			</Element>
+			<Element>
+				<Id>1735673881428</Id>
+				<Name><![CDATA[фильтры]]></Name>
+				<Value>16</Value>
+			</Element>
+			<Element>
+				<Id>1735673904178</Id>
+				<Name><![CDATA[центраторы]]></Name>
+				<Value>17</Value>
+			</Element>
+			<Element>
+				<Id>1735673907699</Id>
+				<Name><![CDATA[шламоуловители]]></Name>
+				<Value>18</Value>
 			</Element>
 		</Dimension>
 	</Dimensions>
@@ -415,7 +455,7 @@
 						<Array>
 							<Dimension>
 								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[типыНасосов]]></ClassName>
+								<ClassName><![CDATA[ТипыОборудования]]></ClassName>
 							</Dimension>
 						</Array>
 					</Properties>
