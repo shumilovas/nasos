@@ -1248,8 +1248,25 @@
 								<Coordinate>
 									<PackageName><![CDATA[насосы]]></PackageName>
 									<ClassName><![CDATA[Металлургия]]></ClassName>
+									<ItemName><![CDATA[порошковая]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[{1200/(365*24),(400/(365*24)), 0.00000000001};]]></Expression>
+								<Expression><![CDATA[1200/(365*24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[Металлургия]]></ClassName>
+									<ItemName><![CDATA[обычная]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[400/(365*24) ]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[Металлургия]]></ClassName>
+									<ItemName><![CDATA[иная]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[0.00000000001]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
