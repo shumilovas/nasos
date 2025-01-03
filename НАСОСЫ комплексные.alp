@@ -853,8 +853,181 @@
 								<Coordinate>
 									<PackageName><![CDATA[насосы]]></PackageName>
 									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[двигатель]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[{ 90/ (30 * 24), 160/ (30 * 24), 1/ (30 * 24), 160/(30*24), 0, 90/(30*24), 0, 90/ (30 * 24), 0, 140/ (30 * 24), 50/ (30 * 24), 0, 0, 0, 0, 25, 8/ (30 * 24), 50/ (30 * 24), 320/ (30 * 24),130/(30 * 24), 20/(30 * 24), 110/ (30 * 24)}]]></Expression>
+								<Expression><![CDATA[90/(30 * 24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[гидрозащиты]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[160/(30 * 24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[модульСмещения]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[1/(30 * 24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[клапаны]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[ 160/(30*24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[насосыНефтПласт]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[0]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[модульВхНакид]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[ 90/(30*24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[устНасосПогруж]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[0]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[газосепаратор]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[ 90/(30 * 24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[диспергатор]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[ 0]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[телеметрия]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[140/(30 * 24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[двигательныеСекции]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[ 50/(30 * 24)
+ 
+ ]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[НасосаныеСекции]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[0]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[НасосыВентиль]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[0]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[насосыАсинхронные]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[0]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[иныеНасосы]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[0]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[фильтры]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[25 /(30 * 24)
+ ]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[центраторы]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[8/(30 * 24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[шламоуловители]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[50/(30 * 24)
+ ]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[протектолайзеры]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[ 320/(30 * 24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[насосыПорошковые]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[130/(30 * 24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[насосыМультифазные]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[ 20/(30 * 24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[насосыЛитые]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[110/(30 * 24)]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
