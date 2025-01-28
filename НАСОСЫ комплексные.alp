@@ -24039,7 +24039,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 				<Variable Class="AuxVariable">
 					<Id>1737994877636</Id>
 					<Name><![CDATA[затратыПродажиЕденицыОборудования]]></Name>
-					<X>-1790</X><Y>250</Y>
+					<X>-1790</X><Y>350</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24054,7 +24054,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 				<Variable Class="AuxVariable">
 					<Id>1737994877638</Id>
 					<Name><![CDATA[стоимостьЕденицыТовара]]></Name>
-					<X>-1800</X><Y>1090</Y>
+					<X>-1800</X><Y>1030</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24866,10 +24866,10 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 				<Link SourceId="1737994877636" TargetId="1737994877604" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-126</X><Y>261</Y></Direction>
+					<Direction><X>-20</X><Y>170</Y></Direction>
 					<Id>1737994877620</Id>
 					<Name><![CDATA[затратыПродажиЕденицыОборудования - flow8]]></Name>
-					<X>-1790</X><Y>250</Y>
+					<X>-1790</X><Y>350</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24926,10 +24926,10 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 				<Link SourceId="1737994877638" TargetId="1737994877606" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-90</X><Y>-170</Y></Direction>
+					<Direction><X>-90</X><Y>-110</Y></Direction>
 					<Id>1737994877628</Id>
 					<Name><![CDATA[стоимостьЕденицыТовара - flow13]]></Name>
-					<X>-1800</X><Y>1090</Y>
+					<X>-1800</X><Y>1030</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -24985,7 +24985,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 				<Link SourceId="1737995120246" TargetId="1737994877636" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>150</X><Y>-330</Y></Direction>
+					<Direction><X>150</X><Y>-230</Y></Direction>
 					<Id>1737995154094</Id>
 					<Name><![CDATA[ставкаЦентробанкаДляТовара1 - затратыПродажиЕденицыОборудования]]></Name>
 					<X>-1940</X><Y>580</Y>
