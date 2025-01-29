@@ -593,15 +593,6 @@
 						<InitialValue><![CDATA[ЗаёмныеДеньги+СобственныеДеньги]]></InitialValue>
 						<Color>-16711681</Color>
 						<Shadow>
-							<Id>1733842925235</Id>
-							<Name><![CDATA[<ЗапасыДенег>]]></Name>
-							<X>700</X><Y>90</Y>
-							<Label><X>0</X><Y>-20</Y></Label>
-							<PublicFlag>false</PublicFlag>
-							<PresentationFlag>true</PresentationFlag>
-							<ShowLabel>true</ShowLabel>
-						</Shadow>
-						<Shadow>
 							<Id>1733843467972</Id>
 							<Name><![CDATA[<ЗапасыДенег>]]></Name>
 							<X>400</X><Y>80</Y>
@@ -2145,21 +2136,6 @@
 					<Direction><X>140</X><Y>-140</Y></Direction>
 					<Id>1734015968709</Id>
 					<Name><![CDATA[ставкаЦентробанкаДляТовара - ЗатратыНаЕденицуЛома]]></Name>
-					<X>240</X><Y>-160</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1735055696360" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>540</X><Y>-80</Y></Direction>
-					<Id>1734015992568</Id>
-					<Name><![CDATA[ставкаЦентробанкаДляТовара - ]]></Name>
 					<X>240</X><Y>-160</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -24732,6 +24708,9 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 						<Type><![CDATA[double]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[20000000/5]]></Code>
+						</DefaultValue>
 						<ParameterEditor>
 							<Id>1738150666888</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
@@ -24754,7 +24733,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[20000000]]></Code>
+							<Code><![CDATA[20000000/5]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1738150666891</Id>
