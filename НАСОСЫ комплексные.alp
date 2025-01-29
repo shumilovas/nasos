@@ -364,7 +364,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1734697399492</Id>
 					<Name><![CDATA[ставкаЦентробанкаДляЗаёма]]></Name>
-					<X>-100</X><Y>-210</Y>
+					<X>-400</X><Y>-170</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -379,7 +379,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1734698734940</Id>
 					<Name><![CDATA[Доход]]></Name>
-					<X>-260</X><Y>-280</Y>
+					<X>-260</X><Y>-190</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -581,7 +581,7 @@
 				<Variable Class="StockVariable">
 					<Id>1733829760160</Id>
 					<Name><![CDATA[ЗапасыДенег]]></Name>
-					<X>60</X><Y>90</Y>
+					<X>-250</X><Y>90</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -749,7 +749,7 @@
 				<Variable Class="StockVariable">
 					<Id>1733940934923</Id>
 					<Name><![CDATA[ЗаёмныеДеньги]]></Name>
-					<X>-130</X><Y>60</Y>
+					<X>-500</X><Y>60</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -765,7 +765,7 @@
 				<Variable Class="StockVariable">
 					<Id>1733940948982</Id>
 					<Name><![CDATA[СобственныеДеньги]]></Name>
-					<X>-130</X><Y>120</Y>
+					<X>-500</X><Y>120</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -781,7 +781,7 @@
 				<Variable Class="StockVariable">
 					<Id>1734697029736</Id>
 					<Name><![CDATA[ТратыНаПроценты]]></Name>
-					<X>-110</X><Y>-100</Y>
+					<X>-420</X><Y>-100</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1204,7 +1204,7 @@
 				<Variable Class="Flow">
 					<Id>1733829992097</Id>
 					<Name><![CDATA[flow1]]></Name>
-					<X>60</X><Y>90</Y>
+					<X>-250</X><Y>90</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1215,8 +1215,8 @@
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>110</X><Y>-75</Y></Point>
-							<Point><X>220</X><Y>-150</Y></Point>
+							<Point><X>420</X><Y>-75</Y></Point>
+							<Point><X>530</X><Y>-150</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -1368,7 +1368,7 @@
 				<Variable Class="Flow">
 					<Id>1733940676880</Id>
 					<Name><![CDATA[flow16]]></Name>
-					<X>60</X><Y>90</Y>
+					<X>-250</X><Y>90</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1379,16 +1379,16 @@
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>55</X><Y>-90</Y></Point>
-							<Point><X>110</X><Y>-180</Y></Point>
-							<Point><X>120</X><Y>-200</Y></Point>
+							<Point><X>365</X><Y>-90</Y></Point>
+							<Point><X>420</X><Y>-180</Y></Point>
+							<Point><X>430</X><Y>-200</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1734697054887</Id>
 					<Name><![CDATA[flow17]]></Name>
-					<X>60</X><Y>90</Y>
+					<X>-250</X><Y>90</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1686,7 +1686,7 @@
 				<Variable Class="Parameter">
 					<Id>1734698480094</Id>
 					<Name><![CDATA[ИзначальныйДенежныйКапиталл]]></Name>
-					<X>-180</X><Y>170</Y>
+					<X>-550</X><Y>170</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1707,7 +1707,7 @@
 				<Variable Class="Parameter">
 					<Id>1734698552529</Id>
 					<Name><![CDATA[ИзначальныйКредит]]></Name>
-					<X>-280</X><Y>40</Y>
+					<X>-650</X><Y>40</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2082,10 +2082,10 @@
 				<Link SourceId="1733940934923" TargetId="1733829760160" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>190</X><Y>30</Y></Direction>
+					<Direction><X>250</X><Y>30</Y></Direction>
 					<Id>1733940976693</Id>
 					<Name><![CDATA[ЗаёмныеДеньги - ЗапасыДенег]]></Name>
-					<X>-130</X><Y>60</Y>
+					<X>-500</X><Y>60</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2097,10 +2097,10 @@
 				<Link SourceId="1733940948982" TargetId="1733829760160" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>190</X><Y>-30</Y></Direction>
+					<Direction><X>250</X><Y>-30</Y></Direction>
 					<Id>1733940985296</Id>
 					<Name><![CDATA[СобственныеДеньги - ЗапасыДенег]]></Name>
-					<X>-130</X><Y>120</Y>
+					<X>-500</X><Y>120</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2172,10 +2172,10 @@
 				<Link SourceId="1733940934923" TargetId="1734697054887" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>10</X><Y>-80</Y></Direction>
+					<Direction><X>165</X><Y>-65</Y></Direction>
 					<Id>1734697068130</Id>
 					<Name><![CDATA[ЗаёмныеДеньги - flow17]]></Name>
-					<X>-130</X><Y>60</Y>
+					<X>-500</X><Y>60</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2187,10 +2187,10 @@
 				<Link SourceId="1734697399492" TargetId="1734697054887" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-20</X><Y>190</Y></Direction>
+					<Direction><X>65</X><Y>165</Y></Direction>
 					<Id>1734697491597</Id>
 					<Name><![CDATA[ставкаЦентробанкаДляЗаёма - flow17]]></Name>
-					<X>-100</X><Y>-210</Y>
+					<X>-400</X><Y>-170</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2205,7 +2205,7 @@
 					<Direction><X>50</X><Y>-50</Y></Direction>
 					<Id>1734698514993</Id>
 					<Name><![CDATA[ИзначальныйДенежныйКапиталл - СобственныеДеньги]]></Name>
-					<X>-180</X><Y>170</Y>
+					<X>-550</X><Y>170</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2220,7 +2220,7 @@
 					<Direction><X>150</X><Y>20</Y></Direction>
 					<Id>1734698572940</Id>
 					<Name><![CDATA[ИзначальныйКредит - ЗаёмныеДеньги]]></Name>
-					<X>-280</X><Y>40</Y>
+					<X>-650</X><Y>40</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2232,10 +2232,10 @@
 				<Link SourceId="1733940948982" TargetId="1734698734940" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-130</X><Y>-400</Y></Direction>
+					<Direction><X>240</X><Y>-310</Y></Direction>
 					<Id>1734698891791</Id>
 					<Name><![CDATA[СобственныеДеньги - Доход]]></Name>
-					<X>-130</X><Y>120</Y>
+					<X>-500</X><Y>120</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2247,10 +2247,10 @@
 				<Link SourceId="1733829760160" TargetId="1734698734940" Polarity="null">
 					<Height>-48.479</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-320</X><Y>-370</Y></Direction>
+					<Direction><X>-10</X><Y>-280</Y></Direction>
 					<Id>1734698908991</Id>
 					<Name><![CDATA[ЗапасыДенег - Доход]]></Name>
-					<X>60</X><Y>90</Y>
+					<X>-250</X><Y>90</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2959,6 +2959,12 @@ if (a>0.4) {
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[стоимостьСервисаВдень]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[ИзначальныйДенежныйКапиталл]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[ИзначальныйКредит]]></Name>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -24126,6 +24132,36 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					</Properties>
 
 				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1738150666895</Id>
+					<Name><![CDATA[ставкаЦентробанкаДляЗаёма]]></Name>
+					<X>-780</X><Y>120</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[30/365]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color>-16711681</Color>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1738150666897</Id>
+					<Name><![CDATA[Доход]]></Name>
+					<X>-640</X><Y>100</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[ЗапасыДенег - СобственныеДеньги]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1735054979890</Id>
 					<Name><![CDATA[ТоварВзятВаренду]]></Name>
@@ -24363,6 +24399,70 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<Height>20</Height>
 						<InitialValue><![CDATA[get_Main().ЗапасыДенег]]></InitialValue>
 						<Color/>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1738150666900</Id>
+					<Name><![CDATA[ЗапасыДенег1]]></Name>
+					<X>-630</X><Y>380</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[ЗаёмныеДеньги+СобственныеДеньги]]></InitialValue>
+						<Color>-16711681</Color>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1738150666917</Id>
+					<Name><![CDATA[ЗаёмныеДеньги]]></Name>
+					<X>-880</X><Y>350</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[ИзначальныйКредит]]></InitialValue>
+						<Color>-16711681</Color>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1738150666922</Id>
+					<Name><![CDATA[СобственныеДеньги]]></Name>
+					<X>-880</X><Y>410</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[ИзначальныйДенежныйКапиталл]]></InitialValue>
+						<Color>-16711681</Color>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1738150666926</Id>
+					<Name><![CDATA[ТратыНаПроценты]]></Name>
+					<X>-800</X><Y>190</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[0]]></InitialValue>
+						<Color>-16711681</Color>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
@@ -24620,6 +24720,25 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 						</Points>
 					</Properties>
 				</Variable>
+				<Variable Class="Flow">
+					<Id>1738150666858</Id>
+					<Name><![CDATA[flow17]]></Name>
+					<X>-630</X><Y>380</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1738150666900" TargetId="1738150666926" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[ЗаёмныеДеньги*ставкаЦентробанкаДляЗаёма]]></Formula>
+						<Color>-16711681</Color>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>-85</X><Y>-95</Y></Point>
+							<Point><X>-170</X><Y>-190</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
 				<Variable Class="Parameter">
 					<Id>1735055803199</Id>
 					<Name><![CDATA[стоимостьАрендыВдень]]></Name>
@@ -24682,6 +24801,51 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 						<SdArray>false</SdArray>
 						<ParameterEditor>
 							<Id>1735063022627</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1738150666890</Id>
+					<Name><![CDATA[ИзначальныйДенежныйКапиталл]]></Name>
+					<X>-930</X><Y>460</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1738150666888</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1738150666893</Id>
+					<Name><![CDATA[ИзначальныйКредит]]></Name>
+					<X>-1030</X><Y>330</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[20000000]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1738150666891</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -25012,6 +25176,126 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<Id>1737995154094</Id>
 					<Name><![CDATA[ставкаЦентробанкаДляТовара1 - затратыПродажиЕденицыОборудования]]></Name>
 					<X>-1940</X><Y>580</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1738150666917" TargetId="1738150666900" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>250</X><Y>30</Y></Direction>
+					<Id>1738150666872</Id>
+					<Name><![CDATA[ЗаёмныеДеньги - ЗапасыДенег1]]></Name>
+					<X>-880</X><Y>350</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1738150666922" TargetId="1738150666900" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>250</X><Y>-30</Y></Direction>
+					<Id>1738150666875</Id>
+					<Name><![CDATA[СобственныеДеньги - ЗапасыДенег1]]></Name>
+					<X>-880</X><Y>410</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1738150666917" TargetId="1738150666858" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>165</X><Y>-65</Y></Direction>
+					<Id>1738150666877</Id>
+					<Name><![CDATA[ЗаёмныеДеньги - flow17]]></Name>
+					<X>-880</X><Y>350</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1738150666895" TargetId="1738150666858" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>65</X><Y>165</Y></Direction>
+					<Id>1738150666879</Id>
+					<Name><![CDATA[ставкаЦентробанкаДляЗаёма - flow17]]></Name>
+					<X>-780</X><Y>120</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1738150666890" TargetId="1738150666922" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>50</X><Y>-50</Y></Direction>
+					<Id>1738150666881</Id>
+					<Name><![CDATA[ИзначальныйДенежныйКапиталл - СобственныеДеньги]]></Name>
+					<X>-930</X><Y>460</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1738150666893" TargetId="1738150666917" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>150</X><Y>20</Y></Direction>
+					<Id>1738150666883</Id>
+					<Name><![CDATA[ИзначальныйКредит - ЗаёмныеДеньги]]></Name>
+					<X>-1030</X><Y>330</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1738150666922" TargetId="1738150666897" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>240</X><Y>-310</Y></Direction>
+					<Id>1738150666885</Id>
+					<Name><![CDATA[СобственныеДеньги - Доход]]></Name>
+					<X>-880</X><Y>410</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1738150666900" TargetId="1738150666897" Polarity="null">
+					<Height>-48.479</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-10</X><Y>-280</Y></Direction>
+					<Id>1738150666887</Id>
+					<Name><![CDATA[ЗапасыДенег1 - Доход]]></Name>
+					<X>-630</X><Y>380</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
