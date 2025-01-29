@@ -518,6 +518,21 @@
 					</Properties>
 
 				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1738149951738</Id>
+					<Name><![CDATA[стоимостьЕденицыТовара]]></Name>
+					<X>890</X><Y>500</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[10000000]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color>-65536</Color>
+					</Properties>
+
+				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1733395930914</Id>
 					<Name><![CDATA[детали]]></Name>
@@ -1390,25 +1405,6 @@
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
-					<Id>1735930972946</Id>
-					<Name><![CDATA[flow9]]></Name>
-					<X>430</X><Y>440</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[flow5.sum()]]></Formula>
-						<Color/>
-						<ValveIndex>1</ValveIndex>
-						<Points>
-							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>60</X><Y>-35</Y></Point>
-							<Point><X>240</X><Y>-70</Y></Point>
-						</Points>
-					</Properties>
-				</Variable>
-				<Variable Class="Flow">
 					<Id>1736775868390</Id>
 					<Name><![CDATA[flow6]]></Name>
 					<Description><![CDATA[есть в таблице 3.4 в доке ао новомет – пермь]]></Description>
@@ -1663,8 +1659,27 @@
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>140</X><Y>0</Y></Point>
 							<Point><X>290</X><Y>0</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1738149894979</Id>
+					<Name><![CDATA[flow13]]></Name>
+					<X>786</X><Y>361</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1733843823522" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[(товарПродаётсяДочернейФирме.sum())*стоимостьЕденицыТовара]]></Formula>
+						<Color>-65536</Color>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>60</X><Y>70</Y></Point>
+							<Point><X>-156</X><Y>139</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -2274,21 +2289,6 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link TargetId="1735930972946" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-150</X><Y>125</Y></Direction>
-					<Id>1735930981128</Id>
-					<Name><![CDATA[ - flow9]]></Name>
-					<X>640</X><Y>280</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
 				<Link SourceId="1733830256629" TargetId="1737458285223" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
@@ -2691,6 +2691,51 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1738061915074" TargetId="1738061915059" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>140</X><Y>0</Y></Direction>
+					<Id>1738149583862</Id>
+					<Name><![CDATA[товар - товарПродаётсяДочернейФирме]]></Name>
+					<X>640</X><Y>220</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1738149894979" TargetId="1733843823522" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-216</X><Y>69</Y></Direction>
+					<Id>1738149894991</Id>
+					<Name><![CDATA[flow13 - <ЗапасыДенег>]]></Name>
+					<X>846</X><Y>431</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1738149951738" TargetId="1738149894979" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-44</X><Y>-69</Y></Direction>
+					<Id>1738149894993</Id>
+					<Name><![CDATA[стоимостьЕденицыТовара - flow13]]></Name>
+					<X>890</X><Y>500</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color>-65536</Color>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
@@ -24320,28 +24365,6 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 						<Color/>
 					</Properties>
 				</Variable>
-				<Variable Class="StockVariable">
-					<Id>1738061965646</Id>
-					<Name><![CDATA[товарПроданДочернейФирме]]></Name>
-					<X>-2100</X><Y>820</Y>
-					<Label><X>15</X><Y>5</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Array="true">
-					<EquationStyle>classic</EquationStyle>
-					<Width>20</Width>
-					<Height>20</Height>
-						<InitialValue><![CDATA[{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1, 1, 11, 1, 1}]]></InitialValue>
-						<Color>-65536</Color>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-							</Dimension>
-						</Array>
-					</Properties>
-				</Variable>
 				<Variable Class="Flow">
 					<Id>1735054979874</Id>
 					<Name><![CDATA[flow]]></Name>
@@ -24586,7 +24609,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1738061965646" TargetId="1737994956974" External="false" Constant="false" Array="false">
+					<Properties TargetId="1737994956974" External="false" Constant="false" Array="false">
 						<Formula><![CDATA[(flow4+товарПродаётсяДочернейФирме.sum())*стоимостьЕденицыТовара]]></Formula>
 						<Color>-65536</Color>
 						<ValveIndex>1</ValveIndex>
