@@ -5785,6 +5785,9 @@ if (a>0.4) {
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[firstArrivalMode]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[self.AT_START]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[firstArrivalTime]]></Name>
@@ -5819,7 +5822,7 @@ if (a>0.4) {
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[(int)(20*(1-всяСталь)*доляМассыДлинныхСекций/(365*24))]]></Code>
+								<Code><![CDATA[(int)(20*(1-доляМассыДлинныхСекций)*всяСталь/(365*24))]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -5970,6 +5973,9 @@ if (a>0.4) {
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[traceln("выгрузка минорного объема стали")]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onDiscard]]></Name>
@@ -15393,7 +15399,7 @@ if (a>0.4) {
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[2]]></Code>
+								<Code><![CDATA[1]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 							</Value>
 						</Parameter>
