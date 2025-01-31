@@ -5819,7 +5819,7 @@ if (a>0.4) {
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[20*(1-всяСталь)*доляМассыДлинныхСекций/(365*24)]]></Code>
+								<Code><![CDATA[(int)(20*(1-всяСталь)*доляМассыДлинныхСекций/(365*24))]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -15433,7 +15433,7 @@ if (a>0.4) {
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[20*всяСталь*доляМассыДлинныхСекций/(365*24)]]></Code>
+								<Code><![CDATA[(int)(20*всяСталь*доляМассыДлинныхСекций/(365*24))]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
