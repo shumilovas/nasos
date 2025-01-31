@@ -2824,6 +2824,12 @@ if (a>0.4) {
 						<Parameter>
 							<Name><![CDATA[ПорСтаГод]]></Name>
 						</Parameter>
+						<Parameter>
+							<Name><![CDATA[всяСталь]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[доляМассыДлинныхСекций]]></Name>
+						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
 					<Replication Class="CodeValue">
@@ -3290,6 +3296,54 @@ if (a>0.4) {
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1738313508406</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1738323375716</Id>
+					<Name><![CDATA[всяСталь]]></Name>
+					<X>1140</X><Y>430</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[(СтальГод+ПорСтаГод)]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1738323375714</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1738323440027</Id>
+					<Name><![CDATA[доляМассыДлинныхСекций]]></Name>
+					<X>1170</X><Y>540</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.9]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1738323440025</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -3786,7 +3840,7 @@ if (a>0.4) {
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
 						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[разгрузкаЗаготовок]]></ItemName>
+						<ItemName><![CDATA[разгрузкаЗаготовокДляСекций]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
@@ -3795,7 +3849,7 @@ if (a>0.4) {
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-130</X><Y>0</Y></Point>
+						<Point><X>-212</X><Y>8</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -5621,6 +5675,39 @@ if (a>0.4) {
 						<Point><X>30</X><Y>10</Y></Point>
 					</Points>
 				</Connector>
+				<Connector>
+					<Id>1738323873566</Id>
+					<Name><![CDATA[connector70]]></Name>
+					<X>710</X><Y>1150</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[насосы]]></PackageName>
+						<ClassName><![CDATA[Завод]]></ClassName>
+						<ItemName><![CDATA[ПодготовкаГрузовика2]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Source]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[насосы]]></PackageName>
+						<ClassName><![CDATA[Завод]]></ClassName>
+						<ItemName><![CDATA[seize7]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Seize]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>330</X><Y>-10</Y></Point>
+					</Points>
+				</Connector>
 			</Connectors>
 			<AgentLinks>
 				<AgentLink>
@@ -5662,8 +5749,8 @@ if (a>0.4) {
 			<EmbeddedObjects>
 				<EmbeddedObject>
 					<Id>1733910307363</Id>
-					<Name><![CDATA[разгрузкаЗаготовок]]></Name>
-					<X>1232</X><Y>482</Y>
+					<Name><![CDATA[разгрузкаЗаготовокДляСекций]]></Name>
+					<X>1150</X><Y>490</Y>
 					<Label><X>-5</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5692,7 +5779,7 @@ if (a>0.4) {
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[2]]></Code>
+								<Code><![CDATA[1]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -5732,7 +5819,7 @@ if (a>0.4) {
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[50]]></Code>
+								<Code><![CDATA[20*(1-всяСталь)*доляМассыДлинныхСекций/(365*24)]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -11143,6 +11230,7 @@ if (a>0.4) {
 				<EmbeddedObject>
 					<Id>1733910309157</Id>
 					<Name><![CDATA[queue]]></Name>
+					<Description><![CDATA[количество 50 килограммовых заготовок в час]]></Description>
 					<X>1392</X><Y>472</Y>
 					<Label><X>-5</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -15345,7 +15433,7 @@ if (a>0.4) {
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[50]]></Code>
+								<Code><![CDATA[20*всяСталь*доляМассыДлинныхСекций/(365*24)]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
