@@ -3374,7 +3374,7 @@ if (a>0.4) {
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[int]]></Type>        
 						<InitialValue Class="CodeValue">
-							<Code><![CDATA[(int)(20*(1-доляМассыДлинныхСекций) /(365))]]></Code>
+							<Code><![CDATA[(int)(20*всяСталь*(1-доляМассыДлинныхСекций) /(365))]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
