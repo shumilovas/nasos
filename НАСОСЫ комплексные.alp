@@ -249,6 +249,46 @@
 				<Name><![CDATA[ФильтрВыходной]]></Name>
 			</Option>
 		</OptionList>
+		<OptionList>
+			<Id>1738760118475</Id>
+			<Name><![CDATA[BigDetal]]></Name>
+			<Option>
+				<Id>1738760118477</Id>
+				<Name><![CDATA[CompECN]]></Name>
+			</Option>
+			<Option>
+				<Id>1738760118479</Id>
+				<Name><![CDATA[Nazem]]></Name>
+			</Option>
+			<Option>
+				<Id>1738760118481</Id>
+				<Name><![CDATA[Gasosep]]></Name>
+			</Option>
+			<Option>
+				<Id>1738760118483</Id>
+				<Name><![CDATA[FiltrSchel]]></Name>
+			</Option>
+			<Option>
+				<Id>1738760118485</Id>
+				<Name><![CDATA[HydroZach]]></Name>
+			</Option>
+			<Option>
+				<Id>1738760118487</Id>
+				<Name><![CDATA[PogrujElecDvig]]></Name>
+			</Option>
+			<Option>
+				<Id>1738760118489</Id>
+				<Name><![CDATA[Kabel]]></Name>
+			</Option>
+			<Option>
+				<Id>1738760118491</Id>
+				<Name><![CDATA[Telemetr]]></Name>
+			</Option>
+			<Option>
+				<Id>1738760118493</Id>
+				<Name><![CDATA[Slamoul]]></Name>
+			</Option>
+		</OptionList>
 	</OptionLists>
 	<ActiveObjectClasses>
 		<!--   =========   Active Object Class   ========  -->
@@ -7397,13 +7437,13 @@ if (a>0.4) {
 									</GenericParameterSubstitute>
 									<Parameters>
 										<Parameter>
-											<Name><![CDATA[крупноеРазделениеНаДетали]]></Name>
-										</Parameter>
-										<Parameter>
 											<Name><![CDATA[ЭЦН]]></Name>
 										</Parameter>
 										<Parameter>
 											<Name><![CDATA[Наземное]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[крупноеРазделениеНаДетали1]]></Name>
 										</Parameter>
 									</Parameters>
 									<ReplicationFlag>true</ReplicationFlag>
@@ -15859,13 +15899,13 @@ if (a>0.4) {
 									</GenericParameterSubstitute>
 									<Parameters>
 										<Parameter>
-											<Name><![CDATA[крупноеРазделениеНаДетали]]></Name>
-										</Parameter>
-										<Parameter>
 											<Name><![CDATA[ЭЦН]]></Name>
 										</Parameter>
 										<Parameter>
 											<Name><![CDATA[Наземное]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[крупноеРазделениеНаДетали1]]></Name>
 										</Parameter>
 									</Parameters>
 									<ReplicationFlag>true</ReplicationFlag>
@@ -22837,13 +22877,13 @@ if (a>0.4) {
 									</GenericParameterSubstitute>
 									<Parameters>
 										<Parameter>
-											<Name><![CDATA[крупноеРазделениеНаДетали]]></Name>
-										</Parameter>
-										<Parameter>
 											<Name><![CDATA[ЭЦН]]></Name>
 										</Parameter>
 										<Parameter>
 											<Name><![CDATA[Наземное]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[крупноеРазделениеНаДетали1]]></Name>
 										</Parameter>
 									</Parameters>
 									<ReplicationFlag>true</ReplicationFlag>
