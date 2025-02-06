@@ -289,6 +289,26 @@
 				<Name><![CDATA[Slamoul]]></Name>
 			</Option>
 		</OptionList>
+		<OptionList>
+			<Id>1738846958785</Id>
+			<Name><![CDATA[Nazem]]></Name>
+			<Option>
+				<Id>1738846958786</Id>
+				<Name><![CDATA[StancUpravl]]></Name>
+			</Option>
+			<Option>
+				<Id>1738846958787</Id>
+				<Name><![CDATA[Transformator]]></Name>
+			</Option>
+			<Option>
+				<Id>1738846958788</Id>
+				<Name><![CDATA[FiltrVhod]]></Name>
+			</Option>
+			<Option>
+				<Id>1738846958789</Id>
+				<Name><![CDATA[FiltrVihod]]></Name>
+			</Option>
+		</OptionList>
 	</OptionLists>
 	<ActiveObjectClasses>
 		<!--   =========   Active Object Class   ========  -->
