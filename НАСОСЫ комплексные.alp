@@ -122,7 +122,7 @@
 			</Element>
 			<Element>
 				<Id>1735673904178</Id>
-				<Name><![CDATA[центраторы]]></Name>
+				<Name><![CDATA[центратор]]></Name>
 				<Value>17</Value>
 			</Element>
 			<Element>
@@ -182,7 +182,7 @@
 			</Option>
 			<Option>
 				<Id>1738587053403</Id>
-				<Name><![CDATA[Газосепаратора]]></Name>
+				<Name><![CDATA[Газосепаратор]]></Name>
 			</Option>
 			<Option>
 				<Id>1738587073595</Id>
@@ -207,6 +207,26 @@
 			<Option>
 				<Id>1738597041201</Id>
 				<Name><![CDATA[шламоуловитель]]></Name>
+			</Option>
+			<Option>
+				<Id>1739458711791</Id>
+				<Name><![CDATA[газостабилизатор]]></Name>
+			</Option>
+			<Option>
+				<Id>1739459072401</Id>
+				<Name><![CDATA[контейнер]]></Name>
+			</Option>
+			<Option>
+				<Id>1739628645054</Id>
+				<Name><![CDATA[системы_байпасные]]></Name>
+			</Option>
+			<Option>
+				<Id>1739628807531</Id>
+				<Name><![CDATA[центраторы]]></Name>
+			</Option>
+			<Option>
+				<Id>1739629152504</Id>
+				<Name><![CDATA[прочее]]></Name>
 			</Option>
 		</OptionList>
 		<OptionList>
@@ -247,6 +267,10 @@
 			<Option>
 				<Id>1738587449760</Id>
 				<Name><![CDATA[ФильтрВыходной]]></Name>
+			</Option>
+			<Option>
+				<Id>1739629316040</Id>
+				<Name><![CDATA[прочие]]></Name>
 			</Option>
 		</OptionList>
 		<OptionList>
@@ -1253,7 +1277,7 @@
 								<Coordinate>
 									<PackageName><![CDATA[насосы]]></PackageName>
 									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[центраторы]]></ItemName>
+									<ItemName><![CDATA[центратор]]></ItemName>
 								</Coordinate>
 								<Expression><![CDATA[8/(30 * 24)]]></Expression>
 							</CustomExpression>
@@ -3459,6 +3483,18 @@ if (a>0.4) {
 						<InitialValue Class="CodeValue">
 							<Code><![CDATA[(int)(20*всяСталь*(доляМассыДлинныхСекций)/(365*24))]]></Code>
 						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1739460097499</Id>
+					<Name><![CDATA[общаяСтоимость]]></Name>
+					<X>2820</X><Y>400</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
 					</Properties>
 				</Variable>
 				<Variable Class="Parameter">
@@ -6572,7 +6608,7 @@ if (a>0.4) {
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
 						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[газосепИлиНет]]></ItemName>
+						<ItemName><![CDATA[былоИлиНет]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
@@ -7244,15 +7280,36 @@ if (a>0.4) {
 				<Connector>
 					<Id>1739456112042</Id>
 					<Name><![CDATA[connector100]]></Name>
-					<X>1910</X><Y>490</Y>
+					<X>1900</X><Y>450</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[насосы]]></PackageName>
+						<ClassName><![CDATA[Завод]]></ClassName>
+						<ItemName><![CDATA[selectOutput6]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[SelectOutput5]]></ClassName>
+						<ItemName><![CDATA[out1]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[насосы]]></PackageName>
+						<ClassName><![CDATA[Завод]]></ClassName>
+						<ItemName><![CDATA[ОчередьНаОбработку]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Queue]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-10</X><Y>10</Y></Point>
-						<Point><X>60</X><Y>10</Y></Point>
+						<Point><X>20</X><Y>-10</Y></Point>
+						<Point><X>248</X><Y>-138</Y></Point>
+						<Point><X>410</X><Y>-200</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -7266,7 +7323,7 @@ if (a>0.4) {
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
 						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[газосепИлиНет]]></ItemName>
+						<ItemName><![CDATA[былоИлиНет]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
@@ -7309,7 +7366,7 @@ if (a>0.4) {
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
 						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[газосепИлиНет]]></ItemName>
+						<ItemName><![CDATA[былоИлиНет]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
@@ -7610,9 +7667,15 @@ if (a>0.4) {
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[addToCustomPopulation]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[population]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[заготовки]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[pushProtocol]]></Name>
@@ -16072,9 +16135,15 @@ if (a>0.4) {
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[addToCustomPopulation]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[population]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[заготовки]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[pushProtocol]]></Name>
@@ -20560,29 +20629,37 @@ if (a>0.4) {
 						<Parameter>
 							<Name><![CDATA[onExit1]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.Наземное = СТанцияУправления]]></Code>
+								<Code><![CDATA[agent.Наземное = СТанцияУправления;
+agent.стоимость = 1200000   ;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit2]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.Наземное = Трансфортматор]]></Code>
+								<Code><![CDATA[agent.Наземное = Трансфортматор;
+agent.стоимость = 1200000   ;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit3]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.Наземное = ФильтрВходной]]></Code>
+								<Code><![CDATA[agent.Наземное = ФильтрВходной;
+agent.стоимость = 100000   ;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit4]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.Наземное = ФильтрВыходной]]></Code>
+								<Code><![CDATA[agent.Наземное = ФильтрВыходной;
+agent.стоимость = 100000   ;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit5]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[agent.Наземное = прочие;
+agent.стоимость = 1500000   ;]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -20821,31 +20898,36 @@ if (a>0.4) {
 						<Parameter>
 							<Name><![CDATA[onExit1]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.крупноеРазделениеНаДетали1 = шламоуловитель]]></Code>
+								<Code><![CDATA[agent.крупноеРазделениеНаДетали1 = шламоуловитель;
+agent.стоимость = 12000   ;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit2]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.крупноеРазделениеНаДетали1 = ФильтрЩелевой]]></Code>
+								<Code><![CDATA[agent.крупноеРазделениеНаДетали1 = ФильтрЩелевой;
+agent.стоимость = 100000  ;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit3]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.крупноеРазделениеНаДетали1 = Гидрозащита]]></Code>
+								<Code><![CDATA[agent.крупноеРазделениеНаДетали1 = Гидрозащита;
+agent.стоимость = 234530   ;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit4]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.крупноеРазделениеНаДетали1 = ПогружнойЭлектродвигатель]]></Code>
+								<Code><![CDATA[agent.крупноеРазделениеНаДетали1 = ПогружнойЭлектродвигатель;
+agent.стоимость = 800000   ;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit5]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.крупноеРазделениеНаДетали1 = Кабель]]></Code>
+								<Code><![CDATA[agent.крупноеРазделениеНаДетали1 = Кабель;
+agent.стоимость = 10000   ;]]></Code>
 							</Value>
 						</Parameter>
 					</Parameters>
@@ -22396,6 +22478,9 @@ if (a>0.4) {
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[общаяСтоимость = sum(заготовки, p -> p.стоимость);]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRemove]]></Name>
@@ -23050,9 +23135,15 @@ if (a>0.4) {
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[addToCustomPopulation]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[population]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[заготовки]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[pushProtocol]]></Name>
@@ -23117,7 +23208,7 @@ if (a>0.4) {
 				</EmbeddedObject>
 				<EmbeddedObject>
 					<Id>1739456108988</Id>
-					<Name><![CDATA[газосепИлиНет]]></Name>
+					<Name><![CDATA[былоИлиНет]]></Name>
 					<X>1840</X><Y>410</Y>
 					<Label><X>-25</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -23156,8 +23247,8 @@ if (a>0.4) {
 						<Parameter>
 							<Name><![CDATA[onExitFalse]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.крупноеРазделениеНаДетали1=газосепаратор;
-agent.стоимость =   53 650   ; ]]></Code>
+								<Code><![CDATA[agent.крупноеРазделениеНаДетали1 = Газосепаратор;
+agent.стоимость = 53650.0  ; ]]></Code>
 							</Value>
 						</Parameter>
 					</Parameters>
@@ -23237,18 +23328,33 @@ agent.стоимость =   53 650   ; ]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[probability1]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[0.33]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[probability2]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[0.33]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[probability3]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[0.33]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[probability4]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[0.0000000001]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[probability5]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[0.0000000001]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[exitNumber]]></Name>
@@ -23259,20 +23365,37 @@ agent.стоимость =   53 650   ; ]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExit1]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.крупноеРазделениеНаДетали1 = ]]></Code>
+								<Code><![CDATA[agent.крупноеРазделениеНаДетали1 = Газосепаратор ;
+agent.стоимость = 53650.0 ;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit2]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[agent.крупноеРазделениеНаДетали1 = газостабилизатор;
+agent.стоимость = 78129 ;  ]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit3]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[agent.крупноеРазделениеНаДетали1 = контейнер ;
+agent.стоимость = 48158 ;]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit4]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[agent.крупноеРазделениеНаДетали1 = системы_байпасные ;
+agent.стоимость = 48158 ;]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit5]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[agent.крупноеРазделениеНаДетали1 = центраторы ;
+agent.стоимость = 22000;]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -23306,6 +23429,76 @@ agent.стоимость =   53 650   ; ]]></Code>
 						<Code><![CDATA[""]]></Code>
 					</LocationNameCode>
 					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1739459973649</Id>
+					<Name><![CDATA[заготовки]]></Name>
+					<X>1760</X><Y>230</Y>
+					<Label><X>-35</X><Y>-30</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[насосы]]></PackageName>
+						<ClassName><![CDATA[Заготовка]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[насосы]]></PackageName>
+							<ClassName><![CDATA[Заготовка]]></ClassName>
+							<ItemName><![CDATA[1733849507641]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[крупноеРазделениеНаДетали1]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[ЭЦН]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Наземное]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>true</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>	
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>EMPTY</InitializationType>
 					<InitializationDatabaseTableQuery>
 						<TableReference>
 						</TableReference>
@@ -32576,6 +32769,9 @@ agent.стоимость =   53 650   ; ]]></Code>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[100]]></Code>
+						</InitialValue>
 					</Properties>
 				</Variable>
 				<Variable Class="Parameter">
@@ -32664,6 +32860,34 @@ agent.стоимость =   53 650   ; ]]></Code>
 				</AgentLink>
 			</AgentLinks>
 
+			<ContainerLinks>
+				<ContainerLink>
+					<Id>1739459978363</Id>
+					<Name><![CDATA[main]]></Name>
+					<X>50</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[насосы]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+				<ContainerLink>
+					<Id>1739459978370</Id>
+					<Name><![CDATA[завод]]></Name>
+					<X>150</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[насосы]]></PackageName>
+						<ClassName><![CDATA[Завод]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+			</ContainerLinks>
 
 			<Presentation>
 				<Level>
@@ -37912,6 +38136,22 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<Height>20</Height>
 						<InitialValue><![CDATA[0]]></InitialValue>
 						<Color>-65536</Color>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1739464231773</Id>
+					<Name><![CDATA[чужой_насос]]></Name>
+					<X>630</X><Y>410</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[0]]></InitialValue>
+						<Color/>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
