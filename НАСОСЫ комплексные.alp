@@ -3631,7 +3631,7 @@ if (a>0.4) {
 				<Variable Class="PlainVariable">
 					<Id>1739802703004</Id>
 					<Name><![CDATA[суммаПоФильтрамПЭД]]></Name>
-					<X>2810</X><Y>270</Y>
+					<X>2820</X><Y>270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3646,7 +3646,7 @@ if (a>0.4) {
 				<Variable Class="PlainVariable">
 					<Id>1739802740972</Id>
 					<Name><![CDATA[суммаПоФильтрамТелеметрии]]></Name>
-					<X>2800</X><Y>250</Y>
+					<X>2820</X><Y>240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3661,7 +3661,7 @@ if (a>0.4) {
 				<Variable Class="PlainVariable">
 					<Id>1739802958855</Id>
 					<Name><![CDATA[числоСекцийНасосов]]></Name>
-					<X>2820</X><Y>230</Y>
+					<X>2820</X><Y>210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7329,7 +7329,7 @@ if (a>0.4) {
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы]]></PackageName>
 						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[доляМассы12кг]]></ItemName>
+						<ItemName><![CDATA[доляМассы10кг]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
@@ -7985,7 +7985,7 @@ if (a>0.4) {
 						</RecurrenceCode>
 						<Condition><![CDATA[(time()==1)]]></Condition>
 					</Properties>
-					<Action><![CDATA[доляМассы12кг.inject(790);
+					<Action><![CDATA[доляМассы10кг.inject(790);
 разгрузкаЗаготовок25кг1.inject(900);
 разгрузкаЗаготовок10кг1.inject(900);]]></Action>
 				</Event>
@@ -8103,7 +8103,7 @@ if (a>0.4) {
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[ЗаготовокВ_10_ДеньНеПовторящихсяСекций*4]]></Code>
+								<Code><![CDATA[ЗаготовокВ_10_ДеньНеПовторящихсяСекций*6]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -12276,7 +12276,7 @@ if (a>0.4) {
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[300/(4*ЗаготовокВ_10_ДеньНеПовторящихсяСекций)]]></Code>
+								<Code><![CDATA[300/(5*ЗаготовокВ_10_ДеньНеПовторящихсяСекций)]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 							</Value>
 						</Parameter>
@@ -23526,7 +23526,7 @@ agent.стоимость = 10000 ;]]></Code>
 				</EmbeddedObject>
 				<EmbeddedObject>
 					<Id>1738708289554</Id>
-					<Name><![CDATA[доляМассы12кг]]></Name>
+					<Name><![CDATA[доляМассы10кг]]></Name>
 					<X>-170</X><Y>420</Y>
 					<Label><X>-5</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -24569,7 +24569,7 @@ agent.стоимость = 22000;]]></Code>
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[10*ЗаготовокВчасПовторящихсяСекций1ДляДвух]]></Code>
+								<Code><![CDATA[8*ЗаготовокВчасПовторящихсяСекций1ДляДвух]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
