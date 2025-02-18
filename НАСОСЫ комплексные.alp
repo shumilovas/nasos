@@ -658,9 +658,10 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Array="false">
-					<EquationStyle>classic</EquationStyle>
+					<EquationStyle>custom</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
+						<Expression><![CDATA[(flow3/15)-flow4]]></Expression>
 						<InitialValue><![CDATA[((90 +  321+ 90*2+  4*140 + 5* 50)/ (30 * 24)+ (25+ 8+50+320)/ (30 * 24))]]></InitialValue>
 						<Color>-256</Color>
 					</Properties>
@@ -878,18 +879,12 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Array="true">
+					<Properties Array="false">
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,1,1,1}]]></InitialValue>
+						<InitialValue><![CDATA[25]]></InitialValue>
 						<Color>-16711936</Color>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-							</Dimension>
-						</Array>
 					</Properties>
 				</Variable>
 				<Variable Class="StockVariable">
@@ -900,18 +895,12 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Array="true">
+					<Properties Array="false">
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1, 1, 11, 1, 1}]]></InitialValue>
+						<InitialValue><![CDATA[25]]></InitialValue>
 						<Color>-65536</Color>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-							</Dimension>
-						</Array>
 					</Properties>
 				</Variable>
 				<Variable Class="StockVariable">
@@ -939,15 +928,14 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1733395930914" External="false" Constant="false" Array="false">
+					<Properties SourceId="1733395930914" TargetId="1738061915074" External="false" Constant="false" Array="false">
 						<Formula><![CDATA[9*завод.ЗаготовокВчасПовторящихсяСекций1ДляДвух+(завод.ЗаготовокВ_10_ДеньНеПовторящихсяСекций*6)/24]]></Formula>
 						<Color>-16711936</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>85</X><Y>0</Y></Point>
-							<Point><X>186</X><Y>0</Y></Point>
-							<Point><X>380</X><Y>50</Y></Point>
+							<Point><X>180</X><Y>0</Y></Point>
+							<Point><X>360</X><Y>0</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -1154,23 +1142,9 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<Properties SourceId="1738061915074" TargetId="1738061915082" External="false" Constant="false" Array="true">
-						<Formula><![CDATA[0.5]]></Formula>
+					<Properties SourceId="1738061915074" TargetId="1738061915082" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[0.2*товар]]></Formula>
 						<Color>-65536</Color>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-							</Dimension>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[насосыНефтПласт]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[товар.get(5)*0.25]]></Expression>
-							</CustomExpression>
-						</Array>
 						<ValveIndex>2</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
@@ -1189,13 +1163,33 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties TargetId="1733843823522" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[(товарПродаётсяДочернейФирме.sum())*стоимостьЕденицыТовара]]></Formula>
+						<Formula><![CDATA[(товарПродаётсяДочернейФирме)*стоимостьЕденицыТовара]]></Formula>
 						<Color>-65536</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
 							<Point><X>60</X><Y>70</Y></Point>
 							<Point><X>-156</X><Y>139</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1739893362023</Id>
+					<Name><![CDATA[flow3]]></Name>
+					<X>190</X><Y>200</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1735401157040" TargetId="1733395930914" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[flow4*15]]></Formula>
+						<Color/>
+						<ValveIndex>2</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>33</X><Y>7</Y></Point>
+							<Point><X>45</X><Y>10</Y></Point>
+							<Point><X>90</X><Y>20</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -2082,6 +2076,51 @@
 					<Id>1738152194006</Id>
 					<Name><![CDATA[товарПродаётсяДочернейФирме - flow13]]></Name>
 					<X>780</X><Y>220</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1733395945800" TargetId="1739893362023" Polarity="null">
+					<Height>49.983</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-225</X><Y>-10</Y></Direction>
+					<Id>1739893400992</Id>
+					<Name><![CDATA[flow4 - flow3]]></Name>
+					<X>460</X><Y>220</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1733395945800" TargetId="1733395930914" Polarity="null">
+					<Height>49.983</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-180</X><Y>0</Y></Direction>
+					<Id>1739893556310</Id>
+					<Name><![CDATA[flow4 - детали]]></Name>
+					<X>460</X><Y>220</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1739893362023" TargetId="1733395930914" Polarity="null">
+					<Height>49.983</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>45</X><Y>10</Y></Direction>
+					<Id>1739893568537</Id>
+					<Name><![CDATA[flow3 - детали]]></Name>
+					<X>235</X><Y>210</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7217,6 +7256,32 @@ if (a>0.4) {
 						<ClassName><![CDATA[Main]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
+				<ContainerLink>
+					<Id>1739894158318</Id>
+					<Name><![CDATA[доставка]]></Name>
+					<X>150</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[насосы]]></PackageName>
+						<ClassName><![CDATA[Доставка]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+				<ContainerLink>
+					<Id>1739894158336</Id>
+					<Name><![CDATA[клиентСервисаХочетнасос]]></Name>
+					<X>250</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[насосы]]></PackageName>
+						<ClassName><![CDATA[КлиентСервисаХочетнасос]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
 			</ContainerLinks>
 			<EmbeddedObjects>
 				<EmbeddedObject>
@@ -8734,7 +8799,7 @@ if (a>0.4) {
 						<Parameter>
 							<Name><![CDATA[quantity]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[60]]></Code>
+								<Code><![CDATA[20]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -33943,6 +34008,32 @@ agent.стоимость = 100 ;]]></Code>
 						<ClassName><![CDATA[Завод]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
+				<ContainerLink>
+					<Id>1739894158352</Id>
+					<Name><![CDATA[доставка]]></Name>
+					<X>250</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[насосы]]></PackageName>
+						<ClassName><![CDATA[Доставка]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+				<ContainerLink>
+					<Id>1739894158364</Id>
+					<Name><![CDATA[клиентСервисаХочетнасос]]></Name>
+					<X>350</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[насосы]]></PackageName>
+						<ClassName><![CDATA[КлиентСервисаХочетнасос]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
 			</ContainerLinks>
 
 			<Presentation>
@@ -35010,6 +35101,7 @@ agent.стоимость = 100 ;]]></Code>
 					<Properties Width="150" Height="30">
 						<EntryAction><![CDATA[ЗаказНаСервис заказНаСервис = new ЗаказНаСервис( this );
 send( заказНаСервис, get_Доставка().manufacturing);
+завод.ПодготовкаГрузовика.inject(1);
 traceln(getFullName() + " in time " + time());]]></EntryAction>
 						<FillColor/>
 					</Properties>
@@ -35145,6 +35237,112 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					</ActiveObjectClass>
 				</ContainerLink>
 			</ContainerLinks>
+			<EmbeddedObjects>
+				<EmbeddedObject>
+					<Id>1739894154114</Id>
+					<Name><![CDATA[завод]]></Name>
+					<X>150</X><Y>240</Y>
+					<Label><X>-20</X><Y>-30</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1739894158273</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[насосы]]></PackageName>
+						<ClassName><![CDATA[Завод]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[насосы]]></PackageName>
+							<ClassName><![CDATA[Завод]]></ClassName>
+							<ItemName><![CDATA[1733849252019]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[СтальГод]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[ПорСтаГод]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[всяСталь]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[доляМассыДлинныхСекций]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[МассаОбратногоКлапана]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[МассаВходногоМодуля]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[МассаСекцииНасоса]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[МассаСпускногоКлапана]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[МассаТрансформатора]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[МассаСтанцииУправления]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[МассафильтраПомехВходного]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[МассафильтраПомехВыходного]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[КоличествоСекцийНасоса]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[доляНеУкурпнённыхДеталей]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>	
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+			</EmbeddedObjects>
 
 			<Presentation>
 				<Level>
@@ -35391,6 +35589,25 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 			</Presentation>
 
 				</Group>
+				<EmbeddedObjectPresentation>
+					<Id>1739894158273</Id>
+					<Name><![CDATA[завод_presentation]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>0.0</Latitude>
+					<Longitude>0.0</Longitude>
+				</EmbeddedObjectPresentation>
 			</Presentation>
 
 				</Level>
@@ -39354,7 +39571,7 @@ traceln(getFullName() + " in time " + time());]]></EntryAction>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties TargetId="1735057145534" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[get_Main().товарПродаётсяДочернейФирме.sum()]]></Formula>
+						<Formula><![CDATA[get_Main().товарПродаётсяДочернейФирме]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
