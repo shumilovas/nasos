@@ -467,16 +467,10 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="true" Array="true">
+					<Properties External="false" Constant="true" Array="false">
 						<Formula><![CDATA[100000*ставкаЦентробанкаДляТовара]]></Formula>
-						<Value><![CDATA[{ 100000, 319361, 100000, 35000, 1000000, 100000, 1000000, 135597, 100000, 200000, 300000, 700000, 700000, 5000000, 20000, 20000, 12000, 30000, 800000, 110000, 1000000 }]]></Value>
+						<Value><![CDATA[100000]]></Value>
 						<Color>-16711936</Color>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-							</Dimension>
-						</Array>
 					</Properties>
 
 				</Variable>
@@ -580,49 +574,6 @@
 
 				</Variable>
 				<Variable Class="AuxVariable">
-					<Id>1737467896055</Id>
-					<Name><![CDATA[всегоМеталлаПотрачено]]></Name>
-					<X>40</X><Y>430</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[металлаПотрачено.sum()]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1737468805929</Id>
-					<Name><![CDATA[ДоляОтМеталла]]></Name>
-					<X>180</X><Y>540</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="true">
-						<Formula><![CDATA[0]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-							</Dimension>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-								</Coordinate>
-								<Expression><![CDATA[flow4[ТипыОборудования]/flow4.sum()]]></Expression>
-							</CustomExpression>
-						</Array>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
 					<Id>1737980935379</Id>
 					<Name><![CDATA[аммортизацияВЧасНаТонну]]></Name>
 					<X>150</X><Y>-390</Y>
@@ -706,18 +657,12 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Array="true">
+					<Properties Array="false">
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[{90/ (30 * 24), 160/ (30 * 24), 1/ (30 * 24), 160/(30*24), 0, 90/(30*24), 0, 90/ (30 * 24), 0, 140/ (30 * 24), 50/ (30 * 24), 0, 0, 0, 0, 25, 8/ (30 * 24), 50/ (30 * 24), 320/ (30 * 24),1,1,1}]]></InitialValue>
+						<InitialValue><![CDATA[((90 +  321+ 90*2+  4*140 + 5* 50)/ (30 * 24)+ (25+ 8+50+320)/ (30 * 24))]]></InitialValue>
 						<Color>-256</Color>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-							</Dimension>
-						</Array>
 					</Properties>
 				</Variable>
 				<Variable Class="StockVariable">
@@ -728,18 +673,12 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Array="true">
+					<Properties Array="false">
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[{10000,10000,10000}]]></InitialValue>
+						<InitialValue><![CDATA[30000]]></InitialValue>
 						<Color>-256</Color>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[Металлургия]]></ClassName>
-							</Dimension>
-						</Array>
 					</Properties>
 				</Variable>
 				<Variable Class="StockVariable">
@@ -810,18 +749,12 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Array="true">
+					<Properties Array="false">
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}]]></InitialValue>
+						<InitialValue><![CDATA[0]]></InitialValue>
 						<Color>-16711936</Color>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-							</Dimension>
-						</Array>
 					</Properties>
 				</Variable>
 				<Variable Class="StockVariable">
@@ -832,18 +765,12 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Array="true">
+					<Properties Array="false">
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[{0, 0, 0}]]></InitialValue>
+						<InitialValue><![CDATA[1]]></InitialValue>
 						<Color>-16711936</Color>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[Металлургия]]></ClassName>
-							</Dimension>
-						</Array>
 					</Properties>
 				</Variable>
 				<Variable Class="StockVariable">
@@ -860,28 +787,6 @@
 					<Height>20</Height>
 						<InitialValue><![CDATA[0]]></InitialValue>
 						<Color>-16711936</Color>
-					</Properties>
-				</Variable>
-				<Variable Class="StockVariable">
-					<Id>1733940586595</Id>
-					<Name><![CDATA[чужыеНедра]]></Name>
-					<X>10</X><Y>160</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Array="true">
-					<EquationStyle>classic</EquationStyle>
-					<Width>20</Width>
-					<Height>20</Height>
-						<InitialValue><![CDATA[{10000,10000,10000}]]></InitialValue>
-						<Color>-256</Color>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[Металлургия]]></ClassName>
-							</Dimension>
-						</Array>
 					</Properties>
 				</Variable>
 				<Variable Class="StockVariable">
@@ -957,128 +862,12 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Array="true">
+					<Properties Array="false">
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[{10000,10000,10000}]]></InitialValue>
+						<InitialValue><![CDATA[3000]]></InitialValue>
 						<Color/>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[Металлургия]]></ClassName>
-							</Dimension>
-						</Array>
-					</Properties>
-				</Variable>
-				<Variable Class="StockVariable">
-					<Id>1737467701035</Id>
-					<Name><![CDATA[металлаПотрачено]]></Name>
-					<X>190</X><Y>360</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Array="true">
-					<EquationStyle>classic</EquationStyle>
-					<Width>20</Width>
-					<Height>20</Height>
-						<InitialValue><![CDATA[{100000, 100000, 100000}]]></InitialValue>
-						<Color/>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[Металлургия]]></ClassName>
-							</Dimension>
-						</Array>
-					</Properties>
-				</Variable>
-				<Variable Class="StockVariable">
-					<Id>1737991869661</Id>
-					<Name><![CDATA[Лом1]]></Name>
-					<X>-428</X><Y>583</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Array="true">
-					<EquationStyle>classic</EquationStyle>
-					<Width>20</Width>
-					<Height>20</Height>
-						<InitialValue><![CDATA[{10000,10000,10000}]]></InitialValue>
-						<Color>-256</Color>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[Металлургия]]></ClassName>
-							</Dimension>
-						</Array>
-					</Properties>
-				</Variable>
-				<Variable Class="StockVariable">
-					<Id>1737991869677</Id>
-					<Name><![CDATA[чужыеНедра1]]></Name>
-					<X>-428</X><Y>523</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Array="true">
-					<EquationStyle>classic</EquationStyle>
-					<Width>20</Width>
-					<Height>20</Height>
-						<InitialValue><![CDATA[{10000,10000,10000}]]></InitialValue>
-						<Color>-256</Color>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[Металлургия]]></ClassName>
-							</Dimension>
-						</Array>
-					</Properties>
-				</Variable>
-				<Variable Class="StockVariable">
-					<Id>1737991869694</Id>
-					<Name><![CDATA[металлДеталей1]]></Name>
-					<X>-248</X><Y>563</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Array="true">
-					<EquationStyle>classic</EquationStyle>
-					<Width>20</Width>
-					<Height>20</Height>
-						<InitialValue><![CDATA[{10000,10000,10000}]]></InitialValue>
-						<Color/>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[Металлургия]]></ClassName>
-							</Dimension>
-						</Array>
-					</Properties>
-				</Variable>
-				<Variable Class="StockVariable">
-					<Id>1737991869710</Id>
-					<Name><![CDATA[деталейПолучено]]></Name>
-					<X>-248</X><Y>723</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Array="true">
-					<EquationStyle>classic</EquationStyle>
-					<Width>20</Width>
-					<Height>20</Height>
-						<InitialValue><![CDATA[{100000, 100000, 100000}]]></InitialValue>
-						<Color/>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[Металлургия]]></ClassName>
-							</Dimension>
-						</Array>
 					</Properties>
 				</Variable>
 				<Variable Class="StockVariable">
@@ -1125,6 +914,22 @@
 						</Array>
 					</Properties>
 				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1739890088966</Id>
+					<Name><![CDATA[чужыеНедра2]]></Name>
+					<X>-20</X><Y>110</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[30000]]></InitialValue>
+						<Color>-256</Color>
+					</Properties>
+				</Variable>
 				<Variable Class="Flow">
 					<Id>1733395945800</Id>
 					<Name><![CDATA[flow4]]></Name>
@@ -1134,201 +939,15 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1733395930914" TargetId="1738061915074" External="false" Constant="false" Array="true">
-						<Formula><![CDATA[1]]></Formula>
+					<Properties SourceId="1733395930914" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[9*завод.ЗаготовокВчасПовторящихсяСекций1ДляДвух+(завод.ЗаготовокВ_10_ДеньНеПовторящихсяСекций*6)/24]]></Formula>
 						<Color>-16711936</Color>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-							</Dimension>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[двигатель]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[90/(30 * 24)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[гидрозащиты]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[160/(30 * 24)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[модульСмещения]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[1/(30 * 24)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[клапаны]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[160/(30*24)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[насосыНефтПласт]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[0.000000000000000000000001]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[модульВхНакид]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[90/(30*24)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[устНасосПогруж]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[0.000000000000000000000001]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[газосепаратор]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[90/(30 * 24)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[диспергатор]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[0.000000000000000000000001]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[телеметрия]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[140/(30 * 24)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[двигательныеСекции]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[50/(30 * 24)
- 
- ]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[НасосаныеСекции]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[0.000000000000000000000001]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[НасосыВентиль]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[0.000000000000000000000001]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[насосыАсинхронные]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[0.000000000000000000000001]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[иныеНасосы]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[0.000000000000000000000001]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[фильтры]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[25 /(30 * 24)
- ]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[центратор]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[8/(30 * 24)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[шламоуловители]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[50/(30 * 24)
- ]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[протектолайзеры]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[ 320/(30 * 24)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[насосыПорошковые]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[130/(30 * 24)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[насосыМультифазные]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[20/(30 * 24)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-									<ItemName><![CDATA[насосыЛитые]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[110/(30 * 24)]]></Expression>
-							</CustomExpression>
-						</Array>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
 							<Point><X>85</X><Y>0</Y></Point>
 							<Point><X>186</X><Y>0</Y></Point>
-							<Point><X>360</X><Y>0</Y></Point>
+							<Point><X>380</X><Y>50</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -1340,15 +959,9 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1733420114973" TargetId="1735401157040" External="false" Constant="false" Array="true">
-						<Formula><![CDATA[3]]></Formula>
+					<Properties SourceId="1733420114973" TargetId="1735401157040" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[1]]></Formula>
 						<Color>-256</Color>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[Металлургия]]></ClassName>
-							</Dimension>
-						</Array>
 						<ValveIndex>2</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
@@ -1367,7 +980,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1733829760160" TargetId="1733829941885" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[flow2.sum()*СтоимостьОБработкиСвоейЕденицыСырья]]></Formula>
+						<Formula><![CDATA[flow2*СтоимостьОБработкиСвоейЕденицыСырья]]></Formula>
 						<Color>-256</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -1385,22 +998,9 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties TargetId="1733830256640" External="false" Constant="false" Array="true">
-						<Formula><![CDATA[flow4*СтоимостьОБработкиЕденицыОборудования]]></Formula>
+					<Properties TargetId="1733830256640" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[ставкаЦентробанкаДляТовара * flow4*СтоимостьСозданияЕденицыОборудования]]></Formula>
 						<Color>-16711936</Color>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-							</Dimension>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-								</Coordinate>
-								<Expression><![CDATA[ставкаЦентробанкаДляТовара * flow4[ТипыОборудования]*СтоимостьСозданияЕденицыОборудования[ТипыОборудования]]]></Expression>
-							</CustomExpression>
-						</Array>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
@@ -1417,19 +1017,13 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1735401157040" TargetId="1733843529379" External="false" Constant="false" Array="true">
-						<Formula><![CDATA[{1,1,1}]]></Formula>
+					<Properties SourceId="1735401157040" TargetId="1733843529379" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[1]]></Formula>
 						<Color>-16711936</Color>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[Металлургия]]></ClassName>
-							</Dimension>
-						</Array>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>130</X><Y>110</Y></Point>
+							<Point><X>70</X><Y>170</Y></Point>
 							<Point><X>170</X><Y>200</Y></Point>
 						</Points>
 					</Properties>
@@ -1443,7 +1037,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1733843467972" TargetId="1733843639956" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[ЗатратыНаЕденицуЛома*flow10.sum()]]></Formula>
+						<Formula><![CDATA[ЗатратыНаЕденицуЛома*flow10]]></Formula>
 						<Color>-16711936</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -1462,7 +1056,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties TargetId="1733843823522" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[flow10.sum()*СтоимостьЕденицыСырья]]></Formula>
+						<Formula><![CDATA[flow10*СтоимостьЕденицыСырья]]></Formula>
 						<Color>-16711936</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -1476,50 +1070,20 @@
 					<Id>1733940626882</Id>
 					<Name><![CDATA[flow15]]></Name>
 					<Description><![CDATA[тысяча двести тонн и четыреста тон в год производятся на металлургических заводах новомета . здесь всё переводится в час.]]></Description>
-					<X>10</X><Y>160</Y>
+					<X>-20</X><Y>110</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1733940586595" TargetId="1735401157040" External="false" Constant="false" Array="true">
-						<Formula><![CDATA[1]]></Formula>
+					<Properties SourceId="1739890088966" TargetId="1735401157040" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[(ПорошковаяСтальВыплавкаТоннВгод+СтальВыплавкаТоннВгод+ИнаясСтальТОннВГод)/(365*24)]]></Formula>
 						<Color>-256</Color>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[Металлургия]]></ClassName>
-							</Dimension>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[Металлургия]]></ClassName>
-									<ItemName><![CDATA[порошковая]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[ПорошковаяСтальВыплавкаТоннВгод/(365*24)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[Металлургия]]></ClassName>
-									<ItemName><![CDATA[обычная]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[СтальВыплавкаТоннВгод/(365*24) ]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[Металлургия]]></ClassName>
-									<ItemName><![CDATA[иная]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[ИнаясСтальТОннВГод/(365*24) ]]></Expression>
-							</CustomExpression>
-						</Array>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>100</X><Y>20</Y></Point>
-							<Point><X>115</X><Y>23</Y></Point>
-							<Point><X>180</X><Y>40</Y></Point>
+							<Point><X>130</X><Y>60</Y></Point>
+							<Point><X>145</X><Y>63</Y></Point>
+							<Point><X>210</X><Y>90</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -1532,7 +1096,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1733829760160" TargetId="1733940680091" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[СтоимостьПокупкиЧужойЕденицыСырья*flow15.sum()]]></Formula>
+						<Formula><![CDATA[СтоимостьПокупкиЧужойЕденицыСырья*flow15]]></Formula>
 						<Color>-256</Color>
 						<ValveIndex>2</ValveIndex>
 						<Points>
@@ -1564,39 +1128,6 @@
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
-					<Id>1736775868390</Id>
-					<Name><![CDATA[flow6]]></Name>
-					<Description><![CDATA[есть в таблице 3.4 в доке ао новомет – пермь]]></Description>
-					<X>20</X><Y>370</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties TargetId="1733395930914" External="false" Constant="false" Array="true">
-						<Formula><![CDATA[1]]></Formula>
-						<Color>-256</Color>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-							</Dimension>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
-								</Coordinate>
-								<Expression><![CDATA[flow4[ТипыОборудования]*ДоляОтМеталла[ТипыОборудования]]]></Expression>
-							</CustomExpression>
-						</Array>
-						<ValveIndex>1</ValveIndex>
-						<Points>
-							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>60</X><Y>-40</Y></Point>
-							<Point><X>260</X><Y>-150</Y></Point>
-						</Points>
-					</Properties>
-				</Variable>
-				<Variable Class="Flow">
 					<Id>1737458285223</Id>
 					<Name><![CDATA[flow]]></Name>
 					<X>180</X><Y>110</Y>
@@ -1605,188 +1136,13 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1737458232897" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[flow7.sum()]]></Formula>
+						<Formula><![CDATA[flow7]]></Formula>
 						<Color>-16711936</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
 							<Point><X>90</X><Y>-90</Y></Point>
 							<Point><X>140</X><Y>-140</Y></Point>
-						</Points>
-					</Properties>
-				</Variable>
-				<Variable Class="Flow">
-					<Id>1737467567301</Id>
-					<Name><![CDATA[flow14]]></Name>
-					<Description><![CDATA[100 килограмм- масса одной детали]]></Description>
-					<X>190</X><Y>200</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>false</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1735401157040" TargetId="1737467701035" External="false" Constant="false" Array="true">
-						<Color/>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[Металлургия]]></ClassName>
-							</Dimension>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[Металлургия]]></ClassName>
-									<ItemName><![CDATA[порошковая]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[100*flow6.sum()*2/3 ]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[Металлургия]]></ClassName>
-									<ItemName><![CDATA[обычная]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[100*flow6.sum()*1/3]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[Металлургия]]></ClassName>
-									<ItemName><![CDATA[иная]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[100*0]]></Expression>
-							</CustomExpression>
-						</Array>
-						<ValveIndex>1</ValveIndex>
-						<Points>
-							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>0</X><Y>70</Y></Point>
-							<Point><X>0</X><Y>140</Y></Point>
-							<Point><X>0</X><Y>150</Y></Point>
-						</Points>
-					</Properties>
-				</Variable>
-				<Variable Class="Flow">
-					<Id>1737991869592</Id>
-					<Name><![CDATA[flow18]]></Name>
-					<X>-428</X><Y>583</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1737991869661" TargetId="1737991869694" External="false" Constant="false" Array="true">
-						<Formula><![CDATA[3]]></Formula>
-						<Color>-256</Color>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[Металлургия]]></ClassName>
-							</Dimension>
-						</Array>
-						<ValveIndex>1</ValveIndex>
-						<Points>
-							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>80</X><Y>0</Y></Point>
-							<Point><X>180</X><Y>-20</Y></Point>
-						</Points>
-					</Properties>
-				</Variable>
-				<Variable Class="Flow">
-					<Id>1737991869613</Id>
-					<Name><![CDATA[flow19]]></Name>
-					<Description><![CDATA[тысяча двести тонн и четыреста тон в год производятся на металлургических заводах новомета . здесь всё переводится в час.]]></Description>
-					<X>-428</X><Y>523</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1737991869677" TargetId="1737991869694" External="false" Constant="false" Array="true">
-						<Formula><![CDATA[1]]></Formula>
-						<Color>-256</Color>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[Металлургия]]></ClassName>
-							</Dimension>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[Металлургия]]></ClassName>
-									<ItemName><![CDATA[порошковая]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[ПорошковаяСтальВыплавкаТоннВгод/(365*24)]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[Металлургия]]></ClassName>
-									<ItemName><![CDATA[обычная]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[СтальВыплавкаТоннВгод/(365*24) ]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[Металлургия]]></ClassName>
-									<ItemName><![CDATA[иная]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[ИнаясСтальТОннВГод/(365*24) ]]></Expression>
-							</CustomExpression>
-						</Array>
-						<ValveIndex>1</ValveIndex>
-						<Points>
-							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>90</X><Y>20</Y></Point>
-							<Point><X>180</X><Y>40</Y></Point>
-						</Points>
-					</Properties>
-				</Variable>
-				<Variable Class="Flow">
-					<Id>1737991869642</Id>
-					<Name><![CDATA[flow20]]></Name>
-					<Description><![CDATA[100 килограмм- масса одной детали]]></Description>
-					<X>-248</X><Y>563</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>false</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1737991869694" TargetId="1737991869710" External="false" Constant="false" Array="true">
-						<Color/>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[насосы]]></PackageName>
-								<ClassName><![CDATA[Металлургия]]></ClassName>
-							</Dimension>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[Металлургия]]></ClassName>
-									<ItemName><![CDATA[порошковая]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[flow19[порошковая] /80]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[Металлургия]]></ClassName>
-									<ItemName><![CDATA[обычная]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[flow19[обычная]/100]]></Expression>
-							</CustomExpression>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[насосы]]></PackageName>
-									<ClassName><![CDATA[Металлургия]]></ClassName>
-									<ItemName><![CDATA[иная]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[flow19[иная] /20]]></Expression>
-							</CustomExpression>
-						</Array>
-						<ValveIndex>1</ValveIndex>
-						<Points>
-							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>0</X><Y>70</Y></Point>
-							<Point><X>0</X><Y>140</Y></Point>
-							<Point><X>0</X><Y>150</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -2404,36 +1760,6 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1733419905292" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>50</X><Y>60</Y></Direction>
-					<Id>1735419040098</Id>
-					<Name><![CDATA[flow2 - ]]></Name>
-					<X>90</X><Y>220</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1733940626882" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>30</X><Y>100</Y></Direction>
-					<Id>1735419050708</Id>
-					<Name><![CDATA[flow15 - ]]></Name>
-					<X>110</X><Y>180</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
 				<Link SourceId="1733830256629" TargetId="1737458285223" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
@@ -2456,81 +1782,6 @@
 					<Id>1737458421976</Id>
 					<Name><![CDATA[flow - <ЗапасыДенег>]]></Name>
 					<X>270</X><Y>20</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1736775868390" TargetId="1737467567301" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>110</X><Y>-60</Y></Direction>
-					<Id>1737467577746</Id>
-					<Name><![CDATA[flow6 - flow14]]></Name>
-					<X>80</X><Y>330</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1737467701035" TargetId="1737467896055" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-150</X><Y>70</Y></Direction>
-					<Id>1737467920449</Id>
-					<Name><![CDATA[металлаПотрачено - всегоМеталлаПотрачено]]></Name>
-					<X>190</X><Y>360</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1733395945800" TargetId="1737468805929" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-186</X><Y>317</Y></Direction>
-					<Id>1737468801152</Id>
-					<Name><![CDATA[flow4 - ДоляОтМеталла]]></Name>
-					<X>365</X><Y>220</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1737468805929" TargetId="1736775868390" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-100</X><Y>-210</Y></Direction>
-					<Id>1737468998011</Id>
-					<Name><![CDATA[ДоляОтМеталла - flow6]]></Name>
-					<X>180</X><Y>540</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1733395945800" TargetId="1736775868390" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-285</X><Y>110</Y></Direction>
-					<Id>1737469051984</Id>
-					<Name><![CDATA[flow4 - flow6]]></Name>
-					<X>365</X><Y>220</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2771,66 +2022,6 @@
 					<Id>1737989378211</Id>
 					<Name><![CDATA[ДругиеЗатратыМеталлургии - иныеЗатратыМеталлургии]]></Name>
 					<X>380</X><Y>-560</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1737991869613" TargetId="1737991869642" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>90</X><Y>90</Y></Direction>
-					<Id>1737991940721</Id>
-					<Name><![CDATA[flow19 - flow20]]></Name>
-					<X>-338</X><Y>543</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1737981209671" TargetId="1737991869613" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-198</X><Y>903</Y></Direction>
-					<Id>1737992102022</Id>
-					<Name><![CDATA[СтальВыплавкаТоннВгод - flow19]]></Name>
-					<X>-140</X><Y>-360</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1737981242488" TargetId="1737991869613" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-198</X><Y>863</Y></Direction>
-					<Id>1737992106694</Id>
-					<Name><![CDATA[ПорошковаяСтальВыплавкаТоннВгод - flow19]]></Name>
-					<X>-140</X><Y>-320</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1737981260249" TargetId="1737991869613" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-198</X><Y>823</Y></Direction>
-					<Id>1737992110693</Id>
-					<Name><![CDATA[ИнаясСтальТОннВГод - flow19]]></Name>
-					<X>-140</X><Y>-280</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8185,6 +7376,9 @@ if (a>0.4) {
 										</Parameter>
 										<Parameter>
 											<Name><![CDATA[названиеСтрокой]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[масса]]></Name>
 										</Parameter>
 									</Parameters>
 									<ReplicationFlag>true</ReplicationFlag>
@@ -16657,6 +15851,9 @@ if (a>0.4) {
 										<Parameter>
 											<Name><![CDATA[названиеСтрокой]]></Name>
 										</Parameter>
+										<Parameter>
+											<Name><![CDATA[масса]]></Name>
+										</Parameter>
 									</Parameters>
 									<ReplicationFlag>true</ReplicationFlag>
 									<Replication Class="CodeValue">
@@ -23682,6 +22879,9 @@ agent.стоимость = 10000 ;]]></Code>
 										<Parameter>
 											<Name><![CDATA[названиеСтрокой]]></Name>
 										</Parameter>
+										<Parameter>
+											<Name><![CDATA[масса]]></Name>
+										</Parameter>
 									</Parameters>
 									<ReplicationFlag>true</ReplicationFlag>
 									<Replication Class="CodeValue">
@@ -24263,6 +23463,9 @@ agent.стоимость = 22000;]]></Code>
 										<Parameter>
 											<Name><![CDATA[названиеСтрокой]]></Name>
 										</Parameter>
+										<Parameter>
+											<Name><![CDATA[масса]]></Name>
+										</Parameter>
 									</Parameters>
 									<ReplicationFlag>true</ReplicationFlag>
 									<Replication Class="CodeValue">
@@ -24652,6 +23855,9 @@ agent.стоимость = 22000;]]></Code>
 										<Parameter>
 											<Name><![CDATA[названиеСтрокой]]></Name>
 										</Parameter>
+										<Parameter>
+											<Name><![CDATA[масса]]></Name>
+										</Parameter>
 									</Parameters>
 									<ReplicationFlag>true</ReplicationFlag>
 									<Replication Class="CodeValue">
@@ -24940,6 +24146,9 @@ agent.стоимость = 22000;]]></Code>
 										</Parameter>
 										<Parameter>
 											<Name><![CDATA[названиеСтрокой]]></Name>
+										</Parameter>
+										<Parameter>
+											<Name><![CDATA[масса]]></Name>
 										</Parameter>
 									</Parameters>
 									<ReplicationFlag>true</ReplicationFlag>
