@@ -587,6 +587,15 @@
 							<PresentationFlag>true</PresentationFlag>
 							<ShowLabel>true</ShowLabel>
 						</Shadow>
+						<Shadow>
+							<Id>1740590032835</Id>
+							<Name><![CDATA[<ставкаЦентробанкаДляТовара>]]></Name>
+							<X>90</X><Y>880</Y>
+							<Label><X>0</X><Y>-20</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
 					</Properties>
 
 				</Variable>
@@ -678,6 +687,21 @@
 						<Formula><![CDATA[завод.средняяЦенаДетали]]></Formula>
 						<Value><![CDATA[average(завод.заготовки,  p -> p.стоимость)]]></Value>
 						<Color>-16711936</Color>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1740584612873</Id>
+					<Name><![CDATA[ДоляРынкаУЭЦНпроц]]></Name>
+					<X>680</X><Y>700</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[100*(ПотокСтоимостиДеталей+недосдача)/в_уэцн]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
 					</Properties>
 
 				</Variable>
@@ -952,6 +976,54 @@
 						<Color>-256</Color>
 					</Properties>
 				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1740578325773</Id>
+					<Name><![CDATA[ОбшийРынокРоссии]]></Name>
+					<X>360</X><Y>780</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[1000000000]]></InitialValue>
+						<Color/>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1740578372148</Id>
+					<Name><![CDATA[техносервис]]></Name>
+					<X>570</X><Y>800</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[100000000]]></InitialValue>
+						<Color/>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1740578594094</Id>
+					<Name><![CDATA[уэцн]]></Name>
+					<X>360</X><Y>1010</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[10000000]]></InitialValue>
+						<Color/>
+					</Properties>
+				</Variable>
 				<Variable Class="Flow">
 					<Id>1733395945800</Id>
 					<Name><![CDATA[flow4]]></Name>
@@ -1189,7 +1261,7 @@
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1738149894979</Id>
-					<Name><![CDATA[flow13]]></Name>
+					<Name><![CDATA[ПотокСтоимостиДеталей]]></Name>
 					<X>786</X><Y>361</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1224,6 +1296,212 @@
 							<Point><X>33</X><Y>7</Y></Point>
 							<Point><X>45</X><Y>10</Y></Point>
 							<Point><X>90</X><Y>20</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1740477129830</Id>
+					<Name><![CDATA[зарплата_кроме_литейки]]></Name>
+					<X>400</X><Y>80</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1733843467972" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[112289.312/(30*24)]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>-35</X><Y>70</Y></Point>
+							<Point><X>65</X><Y>50</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1740477129841</Id>
+					<Name><![CDATA[электроТранспПроч]]></Name>
+					<Description><![CDATA[C:\работа дмитрий\данные окрон и алмаз\данные Акрон\данные Акрон\FULL archive\PDF_Алмаз\Управленческая отчетность]]></Description>
+					<X>400</X><Y>80</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1733843467972" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[10212289.312/(30*24)]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>11</X><Y>99</Y></Point>
+							<Point><X>146</X><Y>99</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1740477129852</Id>
+					<Name><![CDATA[продажиСервису]]></Name>
+					<Description><![CDATA[C:\работа дмитрий\данные окрон и алмаз\данные Акрон\данные Акрон\FULL archive\PDF_Алмаз\Управленческая отчетность]]></Description>
+					<X>400</X><Y>80</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1733843467972" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[22298980/(30*24)]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>-160</X><Y>100</Y></Point>
+							<Point><X>-132</X><Y>133</Y></Point>
+							<Point><X>-125</X><Y>140</Y></Point>
+							<Point><X>-55</X><Y>140</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1740477129861</Id>
+					<Name><![CDATA[заготовкуПроизводствРеализацию]]></Name>
+					<Description><![CDATA[file:///C:/%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D0%B4%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9/%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5%20%D0%BE%D0%BA%D1%80%D0%BE%D0%BD%20%D0%B8%20%D0%B0%D0%BB%D0%BC%D0%B0%D0%B7/%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5%20%D0%90%D0%BA%D1%80%D0%BE%D0%BD/%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5%20%D0%90%D0%BA%D1%80%D0%BE%D0%BD/FULL%20archive/PDF_%D0%90%D0%BB%D0%BC%D0%B0%D0%B7/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D1%82%D1%87%D0%B5%D1%82%D0%BD%D0%BE%D1%81%D1%82%D1%8C/%D0%9F%D0%BB%D0%B0%D0%BD-%D0%A4%D0%B0%D0%BA%D1%82%20(%D0%94%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D1%8B)%202022-2024.pdf
+
+
+file:///C:/работа%20дмитрий/данные%20окрон%20и%20алмаз/данные%20Акрон
+
+C:\работа дмитрий\данные окрон и алмаз\данные Акрон\данные Акрон\FULL archive\PDF_Алмаз\Управленческая отчетность]]></Description>
+					<X>400</X><Y>80</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1733843467972" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[6001304/(24*30)]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>55</X><Y>-40</Y></Point>
+							<Point><X>145</X><Y>-90</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1740477129873</Id>
+					<Name><![CDATA[общехозРасходы]]></Name>
+					<Description><![CDATA[C:\работа дмитрий\данные окрон и алмаз\данные Акрон\данные Акрон\FULL archive\PDF_Алмаз\Управленческая отчетность]]></Description>
+					<X>400</X><Y>80</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1733843467972" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[33095145/(30*24)]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>80</X><Y>0</Y></Point>
+							<Point><X>165</X><Y>0</Y></Point>
+							<Point><X>185</X><Y>0</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1740477129881</Id>
+					<Name><![CDATA[производствоИпродажаНеТехнологич]]></Name>
+					<Description><![CDATA[C:\работа дмитрий\данные окрон и алмаз\данные Акрон\данные Акрон\FULL archive\PDF_Алмаз\Управленческая отчетность]]></Description>
+					<X>400</X><Y>80</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1733843467972" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[19183878/(24*30)]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>10</X><Y>-90</Y></Point>
+							<Point><X>25</X><Y>-180</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1740477129888</Id>
+					<Name><![CDATA[прочие]]></Name>
+					<X>400</X><Y>80</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1733843467972" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[344361720/(30*24)]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>-45</X><Y>-90</Y></Point>
+							<Point><X>-85</X><Y>-180</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1740578205438</Id>
+					<Name><![CDATA[в_общий_рынок_россии]]></Name>
+					<Description><![CDATA[3000000000000/(24*365)]]></Description>
+					<X>150</X><Y>740</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1740578325773" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[200000753.425]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>105</X><Y>20</Y></Point>
+							<Point><X>210</X><Y>40</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1740578369072</Id>
+					<Name><![CDATA[в_техносервис_росии]]></Name>
+					<X>360</X><Y>780</Y>
+					<Label><X>-20</X><Y>-15</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1740578325773" TargetId="1740578372148" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[в_общий_рынок_россии*0.29/ставкаЦентробанкаДляТовара]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>90</X><Y>50</Y></Point>
+							<Point><X>170</X><Y>20</Y></Point>
+							<Point><X>210</X><Y>20</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1740578590891</Id>
+					<Name><![CDATA[в_уэцн]]></Name>
+					<X>360</X><Y>780</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1740578325773" TargetId="1740578594094" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[в_общий_рынок_россии*0.043/ставкаЦентробанкаДляТовара]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>0</X><Y>105</Y></Point>
+							<Point><X>0</X><Y>210</Y></Point>
+							<Point><X>0</X><Y>230</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -1434,6 +1712,30 @@
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1737989359593</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1740613024114</Id>
+					<Name><![CDATA[недосдача]]></Name>
+					<X>760</X><Y>740</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1740613024110</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -2078,7 +2380,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-216</X><Y>69</Y></Direction>
 					<Id>1738149894991</Id>
-					<Name><![CDATA[flow13 - <ЗапасыДенег>]]></Name>
+					<Name><![CDATA[ПотокСтоимостиДеталей - <ЗапасыДенег>]]></Name>
 					<X>846</X><Y>431</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2093,7 +2395,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-44</X><Y>-69</Y></Direction>
 					<Id>1738149894993</Id>
-					<Name><![CDATA[стоимостьЕденицыТовара - flow13]]></Name>
+					<Name><![CDATA[стоимостьЕденицыТовара - ПотокСтоимостиДеталей]]></Name>
 					<X>890</X><Y>500</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2108,7 +2410,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>66</X><Y>211</Y></Direction>
 					<Id>1738152194006</Id>
-					<Name><![CDATA[товарПродаётсяДочернейФирме - flow13]]></Name>
+					<Name><![CDATA[товарПродаётсяДочернейФирме - ПотокСтоимостиДеталей]]></Name>
 					<X>780</X><Y>220</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2200,6 +2502,216 @@
 					<Id>1739977506288</Id>
 					<Name><![CDATA[СтоимостьЕДобр - СтоимостьСозданияЕденицыОборудования]]></Name>
 					<X>600</X><Y>-310</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1740477129841" TargetId="1733843467972" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-11</X><Y>-99</Y></Direction>
+					<Id>1740477129898</Id>
+					<Name><![CDATA[электроТранспПроч - <ЗапасыДенег>]]></Name>
+					<X>411</X><Y>179</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1740477129873" TargetId="1733843467972" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-80</X><Y>0</Y></Direction>
+					<Id>1740477129902</Id>
+					<Name><![CDATA[общехозРасходы - <ЗапасыДенег>]]></Name>
+					<X>480</X><Y>80</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1740477129861" TargetId="1733843467972" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-55</X><Y>40</Y></Direction>
+					<Id>1740477129904</Id>
+					<Name><![CDATA[заготовкуПроизводствРеализацию - <ЗапасыДенег>]]></Name>
+					<X>455</X><Y>40</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1740477129881" TargetId="1733843467972" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-10</X><Y>90</Y></Direction>
+					<Id>1740477129906</Id>
+					<Name><![CDATA[производствоИпродажаНеТехнологич - <ЗапасыДенег>]]></Name>
+					<X>410</X><Y>-10</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1740477129888" TargetId="1733843467972" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>45</X><Y>90</Y></Direction>
+					<Id>1740477129908</Id>
+					<Name><![CDATA[прочие - <ЗапасыДенег>]]></Name>
+					<X>355</X><Y>-10</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1740477129852" TargetId="1733843467972" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>160</X><Y>-100</Y></Direction>
+					<Id>1740477129910</Id>
+					<Name><![CDATA[продажиСервису - <ЗапасыДенег>]]></Name>
+					<X>240</X><Y>180</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1740477129830" TargetId="1733843467972" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>35</X><Y>-70</Y></Direction>
+					<Id>1740480449011</Id>
+					<Name><![CDATA[зарплата_кроме_литейки - <ЗапасыДенег>]]></Name>
+					<X>365</X><Y>150</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1740578205438" TargetId="1740578369072" Polarity="null">
+					<Height>-36.2</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>195</X><Y>40</Y></Direction>
+					<Id>1740578438474</Id>
+					<Name><![CDATA[в_общий_рынок_россии - в_техносервис_росии]]></Name>
+					<X>255</X><Y>760</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1740578205438" TargetId="1740578590891" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>105</X><Y>125</Y></Direction>
+					<Id>1740578645869</Id>
+					<Name><![CDATA[в_общий_рынок_россии - в_уэцн]]></Name>
+					<X>255</X><Y>760</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1738149894979" TargetId="1740584612873" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-40</X><Y>280</Y></Direction>
+					<Id>1740584621440</Id>
+					<Name><![CDATA[ПотокСтоимостиДеталей - ДоляРынкаУЭЦНпроц]]></Name>
+					<X>720</X><Y>420</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1740578590891" TargetId="1740584612873" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>320</X><Y>-185</Y></Direction>
+					<Id>1740584627534</Id>
+					<Name><![CDATA[в_уэцн - ДоляРынкаУЭЦНпроц]]></Name>
+					<X>360</X><Y>885</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1740590032835" TargetId="1740578590891" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>270</X><Y>5</Y></Direction>
+					<Id>1740590111592</Id>
+					<Name><![CDATA[<ставкаЦентробанкаДляТовара> - в_уэцн]]></Name>
+					<X>90</X><Y>880</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1740590032835" TargetId="1740578369072" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>360</X><Y>-50</Y></Direction>
+					<Id>1740590119297</Id>
+					<Name><![CDATA[<ставкаЦентробанкаДляТовара> - в_техносервис_росии]]></Name>
+					<X>90</X><Y>880</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1740613024114" TargetId="1740584612873" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-80</X><Y>-40</Y></Direction>
+					<Id>1740613015768</Id>
+					<Name><![CDATA[недосдача - ДоляРынкаУЭЦНпроц]]></Name>
+					<X>760</X><Y>740</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9589,7 +10101,8 @@ if (a>0.4) {
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[traceln("сервисЛогистика.source.inject(1); " +time());
-get_Main().выехалГрузовикОтдаватьНаСервис=true;]]></Code>
+get_Main().выехалГрузовикОтдаватьНаСервис=true;
+get_Main().dostavka.manufacturing.source.inject(1);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -14133,9 +14646,6 @@ get_Main().выехалГрузовикОтдаватьНаСервис=true;]]>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[enableFailuresRepairs]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[true]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialTimeToFailure]]></Name>
@@ -38298,6 +38808,9 @@ traceln(getFullName() + " in time " + time());
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[хранитсяНаСкладахСервисаПо10.stopDelayForAll();]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRemove]]></Name>
@@ -39126,7 +39639,8 @@ traceln(getFullName() + " in time " + time());
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[send("Доставлено!", agent.customer);]]></Code>
+								<Code><![CDATA[send("Доставлено!", agent.customer);
+if (хранитсяНаСкладахСервисаПо10.isSuspended()) хранитсяНаСкладахСервисаПо10.resume();]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -41254,15 +41768,15 @@ traceln(getFullName() + " in time " + time());
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[if (хранитсяНаСкладахСервисаПо10.isSuspended()) хранитсяНаСкладахСервисаПо10.resume();]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onAtExit]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[хранитсяНаСкладахСервисаПо10.resume();]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRemove]]></Name>
@@ -44446,6 +44960,9 @@ return result;	]]></Body>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[ДругиеЗатратыМеталлургии]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[недосдача]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
