@@ -693,13 +693,43 @@
 				<Variable Class="AuxVariable">
 					<Id>1740584612873</Id>
 					<Name><![CDATA[ДоляРынкаУЭЦНпроц]]></Name>
-					<X>680</X><Y>700</Y>
+					<X>640</X><Y>710</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
 						<Formula><![CDATA[100*(ПотокСтоимостиДеталей+недосдача)/в_уэцн]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1740661447395</Id>
+					<Name><![CDATA[буферДеталей]]></Name>
+					<X>610</X><Y>900</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[в_уэцн*(ДоляРынкаУЭЦНпроц+недосдача)]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1740661533325</Id>
+					<Name><![CDATA[недосдача]]></Name>
+					<X>760</X><Y>740</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[стартовыйУровень - ДоляРынкаУЭЦНпроц]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -1151,9 +1181,10 @@
 					<Properties TargetId="1733843823522" External="false" Constant="false" Array="false">
 						<Formula><![CDATA[flow10*СтоимостьЕденицыСырья]]></Formula>
 						<Color>-16711936</Color>
-						<ValveIndex>1</ValveIndex>
+						<ValveIndex>2</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>149</X><Y>0</Y></Point>
 							<Point><X>210</X><Y>0</Y></Point>
 							<Point><X>310</X><Y>0</Y></Point>
 						</Points>
@@ -1248,7 +1279,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Properties SourceId="1738061915074" TargetId="1738061915082" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[0.2*товар]]></Formula>
+						<Formula><![CDATA[0.01*товар*flow4]]></Formula>
 						<Color>-65536</Color>
 						<ValveIndex>2</ValveIndex>
 						<Points>
@@ -1720,9 +1751,9 @@ C:\работа дмитрий\данные окрон и алмаз\данны�
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1740613024114</Id>
-					<Name><![CDATA[недосдача]]></Name>
-					<X>760</X><Y>740</Y>
+					<Id>1740661639395</Id>
+					<Name><![CDATA[стартовыйУровень]]></Name>
+					<X>780</X><Y>830</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1731,11 +1762,8 @@ C:\работа дмитрий\данные окрон и алмаз\данны�
 						<Type><![CDATA[double]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</DefaultValue>
 						<ParameterEditor>
-							<Id>1740613024110</Id>
+							<Id>1740661639393</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -2648,7 +2676,7 @@ C:\работа дмитрий\данные окрон и алмаз\данны�
 				<Link SourceId="1738149894979" TargetId="1740584612873" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-40</X><Y>280</Y></Direction>
+					<Direction><X>-80</X><Y>290</Y></Direction>
 					<Id>1740584621440</Id>
 					<Name><![CDATA[ПотокСтоимостиДеталей - ДоляРынкаУЭЦНпроц]]></Name>
 					<X>720</X><Y>420</Y>
@@ -2663,7 +2691,7 @@ C:\работа дмитрий\данные окрон и алмаз\данны�
 				<Link SourceId="1740578590891" TargetId="1740584612873" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>320</X><Y>-185</Y></Direction>
+					<Direction><X>280</X><Y>-175</Y></Direction>
 					<Id>1740584627534</Id>
 					<Name><![CDATA[в_уэцн - ДоляРынкаУЭЦНпроц]]></Name>
 					<X>360</X><Y>885</Y>
@@ -2705,13 +2733,88 @@ C:\работа дмитрий\данные окрон и алмаз\данны�
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1740613024114" TargetId="1740584612873" Polarity="null">
+				<Link SourceId="1733395945800" TargetId="1738061915059" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-80</X><Y>-40</Y></Direction>
-					<Id>1740613015768</Id>
-					<Name><![CDATA[недосдача - ДоляРынкаУЭЦНпроц]]></Name>
+					<Direction><X>320</X><Y>0</Y></Direction>
+					<Id>1740661208555</Id>
+					<Name><![CDATA[flow4 - товарПродаётсяДочернейФирме]]></Name>
+					<X>460</X><Y>220</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1740578590891" TargetId="1740661447395" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>250</X><Y>15</Y></Direction>
+					<Id>1740661473597</Id>
+					<Name><![CDATA[в_уэцн - буферДеталей]]></Name>
+					<X>360</X><Y>885</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1740661533325" TargetId="1740661447395" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-150</X><Y>160</Y></Direction>
+					<Id>1740661503723</Id>
+					<Name><![CDATA[недосдача - буферДеталей]]></Name>
 					<X>760</X><Y>740</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1740661639395" TargetId="1740661533325" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-20</X><Y>-90</Y></Direction>
+					<Id>1740662001388</Id>
+					<Name><![CDATA[стартовыйУровень - недосдача]]></Name>
+					<X>780</X><Y>830</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1740584612873" TargetId="1740661533325" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>120</X><Y>30</Y></Direction>
+					<Id>1740662083482</Id>
+					<Name><![CDATA[ДоляРынкаУЭЦНпроц - недосдача]]></Name>
+					<X>640</X><Y>710</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1740584612873" TargetId="1740661447395" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-30</X><Y>190</Y></Direction>
+					<Id>1740662195637</Id>
+					<Name><![CDATA[ДоляРынкаУЭЦНпроц - буферДеталей]]></Name>
+					<X>640</X><Y>710</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2761,6 +2864,38 @@ if (a>0.4) {
 	traceln("ставка понижена");
 }
 ]]></Action>
+				</Event>
+				<Event>
+					<Id>1740661702171</Id>
+					<Name><![CDATA[закреплениеСтартовогоУровня]]></Name>
+					<X>740</X><Y>880</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1740729600000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[2]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[traceln("закрепление стартового уровня часов" +time()+ "уровень " + ДоляРынкаУЭЦНпроц);
+стартовыйУровень = ДоляРынкаУЭЦНпроц;]]></Action>
 				</Event>
 			</Events>
 			<AgentLinks>
@@ -44962,7 +45097,7 @@ return result;	]]></Body>
 					<ParameterName><![CDATA[ДругиеЗатратыМеталлургии]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[недосдача]]></ParameterName>
+					<ParameterName><![CDATA[стартовыйУровень]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
