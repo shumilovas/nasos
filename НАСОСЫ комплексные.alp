@@ -7664,6 +7664,7 @@ if (a>0.4) {
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>90</X><Y>20</Y></Point>
 						<Point><X>70</X><Y>-120</Y></Point>
 					</Points>
 				</Connector>
@@ -10218,7 +10219,7 @@ if (a>0.4) {
 				<Connector>
 					<Id>1741096343336</Id>
 					<Name><![CDATA[connector151]]></Name>
-					<X>0</X><Y>0</Y>
+					<X>2810</X><Y>610</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10244,11 +10245,11 @@ if (a>0.4) {
 						<ItemName><![CDATA[in]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>2810</X><Y>610</Y></Point>
-						<Point><X>2810</X><Y>530</Y></Point>
-						<Point><X>2792</X><Y>480</Y></Point>
-						<Point><X>2540</X><Y>180</Y></Point>
-						<Point><X>2650</X><Y>180</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-20</X><Y>-80</Y></Point>
+						<Point><X>-18</X><Y>-130</Y></Point>
+						<Point><X>-270</X><Y>-430</Y></Point>
+						<Point><X>-160</X><Y>-430</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -10558,7 +10559,7 @@ if (a>0.4) {
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[1]]></Code>
+								<Code><![CDATA[0.6]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -17143,7 +17144,7 @@ get_Main().сервис.товарПродаётся.set(1,0,0);]]></Code>
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[1]]></Code>
+								<Code><![CDATA[0.5]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -20425,7 +20426,7 @@ agent.стоимость = 10000   ;]]></Code>
 						<Parameter>
 							<Name><![CDATA[probability]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[доляНеУкурпнённыхДеталей/1.5]]></Code>
+								<Code><![CDATA[доляНеУкурпнённыхДеталей*1.2]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -20508,6 +20509,9 @@ agent.стоимость = 10000   ;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[probability]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[0.62]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onAtEnter]]></Name>
@@ -22668,7 +22672,7 @@ agent.стоимость = 10000 ;]]></Code>
 						<Parameter>
 							<Name><![CDATA[probability]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[0.3]]></Code>
+								<Code><![CDATA[0.53]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -23359,7 +23363,7 @@ agent.стоимость = 22000;]]></Code>
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[1]]></Code>
+								<Code><![CDATA[0.5]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -25831,6 +25835,9 @@ agent.стоимость = 100 ;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[probability]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[0.2]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onAtEnter]]></Name>
@@ -25912,6 +25919,9 @@ agent.стоимость = 100 ;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[probability]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[0.2]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onAtEnter]]></Name>
@@ -25993,6 +26003,9 @@ agent.стоимость = 100 ;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[probability]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[0.2]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onAtEnter]]></Name>
@@ -26074,6 +26087,9 @@ agent.стоимость = 100 ;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[probability]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[0.2]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onAtEnter]]></Name>
@@ -26155,6 +26171,9 @@ agent.стоимость = 100 ;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[probability]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[0.2]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onAtEnter]]></Name>
@@ -26520,6 +26539,9 @@ agent.стоимость = 100 ;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[probability]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[0.3]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onAtEnter]]></Name>
@@ -27388,7 +27410,7 @@ agent.стоимость = 100 ;]]></Code>
 						<Parameter>
 							<Name><![CDATA[probability]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[0.7]]></Code>
+								<Code><![CDATA[0.9]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -34324,7 +34346,7 @@ get_Main().выехалГрузовикОтдаватьНаСервис=true;
 						<Parameter>
 							<Name><![CDATA[probability]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[0.25]]></Code>
+								<Code><![CDATA[0.51]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -43753,7 +43775,7 @@ get_Main().выехалГрузовикОтдаватьНаСервис=true;
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[double]]></Type>        
 						<InitialValue Class="CodeValue">
-							<Code><![CDATA[100]]></Code>
+							<Code><![CDATA[50.0]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
