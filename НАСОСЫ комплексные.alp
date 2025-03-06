@@ -460,6 +460,21 @@
 						</InitialValue>
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1741263845932</Id>
+					<Name><![CDATA[поправка]]></Name>
+					<X>640</X><Y>310</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[2]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
 				<Variable Class="AuxVariable">
 					<Id>1733830012322</Id>
 					<Name><![CDATA[СтоимостьОБработкиСвоейЕденицыСырья]]></Name>
@@ -699,7 +714,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[100*(ПотокСтоимостиДеталей+недосдача)/в_уэцн]]></Formula>
+						<Formula><![CDATA[100*(ПотокСтоимостиДеталей+недосдача+dynamicVariable)/в_уэцн]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -729,7 +744,22 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[стартовыйУровень - ДоляРынкаУЭЦНпроц]]></Formula>
+						<Formula><![CDATA[стартовыйУровень - ДоляРынкаУЭЦНпроц +0.11]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1741265692915</Id>
+					<Name><![CDATA[dynamicVariable]]></Name>
+					<X>540</X><Y>630</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[0.01]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
 					</Properties>
@@ -1064,7 +1094,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1733395930914" TargetId="1738061915074" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[9*завод.ЗаготовокВчасПовторящихсяСекций1ДляДвух+(завод.ЗаготовокВ_10_ДеньНеПовторящихсяСекций*6)/24]]></Formula>
+						<Formula><![CDATA[2*завод.ЗаготовокВчасПовторящихсяСекций1ДляДвух+(завод.ЗаготовокВ_10_ДеньНеПовторящихсяСекций*6)/24]]></Formula>
 						<Color>-16711936</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -1141,7 +1171,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1735401157040" TargetId="1733843529379" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[1]]></Formula>
+						<Formula><![CDATA[0.6]]></Formula>
 						<Color>-16711936</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -1279,7 +1309,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Properties SourceId="1738061915074" TargetId="1738061915082" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[ДоляРынкаУЭЦНпроц*flow4*flow4/(доляРынкаУЭЦНстатич+flow4)]]></Formula>
+						<Formula><![CDATA[поправка + (ДоляРынкаУЭЦНпроц*flow4*flow4/(доляРынкаУЭЦНстатич+flow4))]]></Formula>
 						<Color>-65536</Color>
 						<ValveIndex>2</ValveIndex>
 						<Points>
@@ -1385,9 +1415,9 @@
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
 							<Point><X>-160</X><Y>100</Y></Point>
-							<Point><X>-132</X><Y>133</Y></Point>
-							<Point><X>-125</X><Y>140</Y></Point>
-							<Point><X>-55</X><Y>140</Y></Point>
+							<Point><X>-140</X><Y>150</Y></Point>
+							<Point><X>-140</X><Y>170</Y></Point>
+							<Point><X>-60</X><Y>240</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -1762,6 +1792,9 @@ C:\работа дмитрий\данные окрон и алмаз\данны�
 						<Type><![CDATA[double]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.05]]></Code>
+						</DefaultValue>
 						<ParameterEditor>
 							<Id>1740661639393</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
@@ -2877,6 +2910,36 @@ C:\работа дмитрий\данные окрон и алмаз\данны�
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
+				<Link SourceId="1741263845932" TargetId="1738061915059" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>140</X><Y>-90</Y></Direction>
+					<Id>1741264019530</Id>
+					<Name><![CDATA[поправка - товарПродаётсяДочернейФирме]]></Name>
+					<X>640</X><Y>310</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1741265692915" TargetId="1740584612873" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>100</X><Y>80</Y></Direction>
+					<Id>1741265700603</Id>
+					<Name><![CDATA[dynamicVariable - ДоляРынкаУЭЦНпроц]]></Name>
+					<X>540</X><Y>630</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
 			</Dependences>
 			<Events>
 				<Event>
@@ -2949,7 +3012,9 @@ if (a>0.4) {
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
 					<Action><![CDATA[traceln("закрепление стартового уровня часов" +time()+ "уровень " + ДоляРынкаУЭЦНпроц);
-стартовыйУровень = ДоляРынкаУЭЦНпроц;]]></Action>
+if (ДоляРынкаУЭЦНпроц>0) стартовыйУровень = ДоляРынкаУЭЦНпроц;
+else стартовыйУровень = 0.001;
+]]></Action>
 				</Event>
 				<Event>
 					<Id>1740939652056</Id>
@@ -2980,6 +3045,108 @@ if (a>0.4) {
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
+				</Event>
+				<Event>
+					<Id>1741259532375</Id>
+					<Name><![CDATA[следимЗауровнемЦенИдолейРынка]]></Name>
+					<X>770</X><Y>570</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1741334400000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0.1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[10]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[(ДоляРынкаУЭЦНпроц<=0)]]></Condition>
+					</Properties>
+					<Action><![CDATA[{
+ ДоляРынкаУЭЦНпроц=0.01;
+ недосдача = 10;
+ traceln("коррекция доли рынка");
+}
+if (стоимостьЕденицыТовара <10.0) {
+ стоимостьЕденицыТовара=100.0;
+ traceln("коррекция цены");
+ }
+]]></Action>
+				</Event>
+				<Event>
+					<Id>1741263871449</Id>
+					<Name><![CDATA[event1]]></Name>
+					<X>560</X><Y>280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1741334400000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[(ДоляРынкаУЭЦНпроц*flow4*flow4/(доляРынкаУЭЦНстатич+flow4)<0)]]></Condition>
+					</Properties>
+					<Action><![CDATA[поправка =1.6 - (ДоляРынкаУЭЦНпроц*flow4*flow4/(доляРынкаУЭЦНстатич+flow4)) ;]]></Action>
+				</Event>
+				<Event>
+					<Id>1741265727968</Id>
+					<Name><![CDATA[event2]]></Name>
+					<X>550</X><Y>670</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1741334400000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[((ПотокСтоимостиДеталей+недосдача)<0)]]></Condition>
+					</Properties>
+					<Action><![CDATA[dynamicVariable  = 0.41 -(ПотокСтоимостиДеталей+недосдача)]]></Action>
 				</Event>
 			</Events>
 			<AgentLinks>
@@ -3805,7 +3972,7 @@ if (a>0.4) {
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[double]]></Type>        
 						<InitialValue Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
+							<Code><![CDATA[50000]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
@@ -10559,7 +10726,7 @@ if (a>0.4) {
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[0.6]]></Code>
+								<Code><![CDATA[1]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -10602,7 +10769,7 @@ if (a>0.4) {
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[2*ЗаготовокВ_10_ДеньНеПовторящихсяСекций]]></Code>
+								<Code><![CDATA[ЗаготовокВ_10_ДеньНеПовторящихсяСекций]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -17144,7 +17311,7 @@ get_Main().сервис.товарПродаётся.set(1,0,0);]]></Code>
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[0.5]]></Code>
+								<Code><![CDATA[1]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -23363,7 +23530,7 @@ agent.стоимость = 22000;]]></Code>
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[0.5]]></Code>
+								<Code><![CDATA[1]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 							</Value>
 						</Parameter>
