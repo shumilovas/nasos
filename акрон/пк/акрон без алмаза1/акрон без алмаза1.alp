@@ -729,6 +729,51 @@
 					</Properties>
 
 				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1741608354776</Id>
+					<Name><![CDATA[числоНАсосовСЗавода]]></Name>
+					<X>470</X><Y>420</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1741609502511</Id>
+					<Name><![CDATA[числоНасосов]]></Name>
+					<X>410</X><Y>340</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[1]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1741610167236</Id>
+					<Name><![CDATA[числоИныхДеталейСЗавода]]></Name>
+					<X>500</X><Y>560</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[10]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1733395930914</Id>
 					<Name><![CDATA[детали]]></Name>
@@ -1258,6 +1303,7 @@
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
 							<Point><X>14</X><Y>69</Y></Point>
+							<Point><X>-33</X><Y>130</Y></Point>
 							<Point><X>-86</X><Y>199</Y></Point>
 						</Points>
 					</Properties>
@@ -1518,13 +1564,33 @@ C:\работа дмитрий\данные окрон и алмаз\данны�
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties TargetId="1733843823522" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[(товарПроданДочернейФирме)*стоимостьЕденицыТовара]]></Formula>
+						<Formula><![CDATA[(товарПроданДочернейФирме)*стоимостьЕденицыТовара/3]]></Formula>
 						<Color>-65536</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
 							<Point><X>-100</X><Y>30</Y></Point>
 							<Point><X>-110</X><Y>150</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1741608322353</Id>
+					<Name><![CDATA[потокСтоимостиЭЦНсЗавода]]></Name>
+					<X>500</X><Y>280</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1733843823522" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[2*(стоимостьЕденицыТовара/1.6)*числоИныхДеталейСЗавода + стоимостьУцн*(числоНАсосовСЗавода + числоНасосов)/3]]></Formula>
+						<Color>-65536</Color>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>30</X><Y>80</Y></Point>
+							<Point><X>60</X><Y>160</Y></Point>
+							<Point><X>130</X><Y>220</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -1686,6 +1752,30 @@ C:\работа дмитрий\данные окрон и алмаз\данны�
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1740666073367</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1741608622434</Id>
+					<Name><![CDATA[стоимостьУцн]]></Name>
+					<X>490</X><Y>450</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[4500000]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1741608622432</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -2745,6 +2835,96 @@ C:\работа дмитрий\данные окрон и алмаз\данны�
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
+				<Link SourceId="1741608354776" TargetId="1741608322353" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>60</X><Y>-60</Y></Direction>
+					<Id>1741608444056</Id>
+					<Name><![CDATA[числоНАсосовСЗавода - потокСтоимостиЭЦНсЗавода]]></Name>
+					<X>470</X><Y>420</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1741608622434" TargetId="1741608322353" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>40</X><Y>-90</Y></Direction>
+					<Id>1741608654724</Id>
+					<Name><![CDATA[стоимостьУцн - потокСтоимостиЭЦНсЗавода]]></Name>
+					<X>490</X><Y>450</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1741609502511" TargetId="1741608322353" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>120</X><Y>20</Y></Direction>
+					<Id>1741609522613</Id>
+					<Name><![CDATA[числоНасосов - потокСтоимостиЭЦНсЗавода]]></Name>
+					<X>410</X><Y>340</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1741610167236" TargetId="1741608322353" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>30</X><Y>-200</Y></Direction>
+					<Id>1741611137404</Id>
+					<Name><![CDATA[числоИныхДеталейСЗавода - потокСтоимостиЭЦНсЗавода]]></Name>
+					<X>500</X><Y>560</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1738149951738" TargetId="1741608322353" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-360</X><Y>-140</Y></Direction>
+					<Id>1741611171369</Id>
+					<Name><![CDATA[стоимостьЕденицыТовара - потокСтоимостиЭЦНсЗавода]]></Name>
+					<X>890</X><Y>500</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1741608322353" TargetId="1733843823522" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>100</X><Y>140</Y></Direction>
+					<Id>1741628069885</Id>
+					<Name><![CDATA[потокСтоимостиЭЦНсЗавода - <ЗапасыДенег>]]></Name>
+					<X>530</X><Y>360</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
 			</Dependences>
 			<Events>
 				<Event>
@@ -2924,7 +3104,7 @@ if (стоимостьЕденицыТовара <10.0) {
 				</Event>
 				<Event>
 					<Id>1741265727968</Id>
-					<Name><![CDATA[event2]]></Name>
+					<Name><![CDATA[РегуляцияРынком]]></Name>
 					<X>550</X><Y>670</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2983,6 +3163,103 @@ if (стоимостьЕденицыТовара <10.0) {
 						<Condition><![CDATA[((СтоимостьСозданияЕденицыОборудования <= 0) && (time()>3))]]></Condition>
 					</Properties>
 					<Action><![CDATA[доб = -(0-СтоимостьСозданияЕденицыОборудования)+5000]]></Action>
+				</Event>
+				<Event>
+					<Id>1741608695096</Id>
+					<Name><![CDATA[рассчётРазницыНасосов]]></Name>
+					<X>860</X><Y>640</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1741680000000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[10]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[10]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[traceln("разница " + (потокСтоимостиЭЦНсЗавода - ПотокСтоимостиДеталей) + "при потоке " + ПотокСтоимостиДеталей)]]></Action>
+				</Event>
+				<Event>
+					<Id>1741609324178</Id>
+					<Name><![CDATA[потомСтоимостиЭЦНСОбытие]]></Name>
+					<X>380</X><Y>460</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1741680000000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[10]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[if ( time()<40 && числоНАсосовСЗавода<1 )
+числоНасосов=50;
+if ( time()<40 && числоИныхДеталейСЗавода<1 )
+числоИныхДеталейСЗавода=2000;
+else числоИныхДеталейСЗавода=завод.moveTo6.in.count()/time();]]></Action>
+				</Event>
+				<Event>
+					<Id>1741611651913</Id>
+					<Name><![CDATA[event4]]></Name>
+					<X>280</X><Y>550</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1741680000000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[2]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[10]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[числоИныхДеталейСЗавода = завод.moveTo6.in.count()/time()]]></Action>
 				</Event>
 			</Events>
 			<AgentLinks>
@@ -46301,6 +46578,9 @@ return result;	]]></Body>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[доляРынкаУЭЦНстатич]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[стоимостьУцн]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
