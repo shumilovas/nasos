@@ -485,7 +485,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[(СтоимостьЕДобр-доб)*ставкаЦентробанкаДляТовара+доб]]></Formula>
+						<Formula><![CDATA[добВремяДоход*(СтоимостьЕДобр-доб)*ставкаЦентробанкаДляТовара+доб]]></Formula>
 						<Value><![CDATA[average(завод.заготовки,  p -> p.стоимость)]]></Value>
 						<Color>-16711936</Color>
 					</Properties>
@@ -515,7 +515,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[1000000]]></Formula>
+						<Formula><![CDATA[1000000*добВремяРасход]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color>-16711936</Color>
 					</Properties>
@@ -530,7 +530,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[450000*ставкаЦентробанкаДляТовара]]></Formula>
+						<Formula><![CDATA[450000*ставкаЦентробанкаДляТовара*добВремяДоход]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color>-256</Color>
 					</Properties>
@@ -771,6 +771,45 @@
 						<Formula><![CDATA[10]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1741866664099</Id>
+					<Name><![CDATA[добВремяДоход]]></Name>
+					<X>510</X><Y>-110</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[0.85]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1741867168644</Id>
+					<Name><![CDATA[добВремяРасход]]></Name>
+					<X>620</X><Y>-110</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[добВремяДоход+0.1]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+						<Shadow>
+							<Id>1741867259889</Id>
+							<Name><![CDATA[<добВремяРасход>]]></Name>
+							<X>380</X><Y>310</Y>
+							<Label><X>0</X><Y>-20</Y></Label>
+							<PublicFlag>false</PublicFlag>
+							<PresentationFlag>true</PresentationFlag>
+							<ShowLabel>true</ShowLabel>
+						</Shadow>
 					</Properties>
 
 				</Variable>
@@ -1297,7 +1336,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties TargetId="1741266852632" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[(товарПродаётсяДочернейФирме)*стоимостьЕденицыТовара]]></Formula>
+						<Formula><![CDATA[добВремяРасход*(товарПродаётсяДочернейФирме)*стоимостьЕденицыТовара]]></Formula>
 						<Color>-65536</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -1564,7 +1603,7 @@ C:\работа дмитрий\данные окрон и алмаз\данны�
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties TargetId="1733843823522" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[(товарПроданДочернейФирме)*стоимостьЕденицыТовара/3]]></Formula>
+						<Formula><![CDATA[добВремяРасход*(товарПроданДочернейФирме)*стоимостьЕденицыТовара/3]]></Formula>
 						<Color>-65536</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -1583,7 +1622,7 @@ C:\работа дмитрий\данные окрон и алмаз\данны�
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties TargetId="1733843823522" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[2*(стоимостьЕденицыТовара/1.6)*числоИныхДеталейСЗавода + стоимостьУцн*(числоНАсосовСЗавода + числоНасосов)/3]]></Formula>
+						<Formula><![CDATA[добВремяРасход*2*(стоимостьЕденицыТовара/1.6)*числоИныхДеталейСЗавода + стоимостьУцн*(числоНАсосовСЗавода + числоНасосов)/3]]></Formula>
 						<Color>-65536</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -1972,21 +2011,6 @@ C:\работа дмитрий\данные окрон и алмаз\данны�
 					<Id>1733940985296</Id>
 					<Name><![CDATA[СобственныеДеньги - ЗапасыДенег]]></Name>
 					<X>-500</X><Y>120</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1735055696360" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-130</X><Y>-80</Y></Direction>
-					<Id>1734015856581</Id>
-					<Name><![CDATA[ставкаЦентробанкаДляТовара - ]]></Name>
-					<X>240</X><Y>-160</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2925,6 +2949,111 @@ C:\работа дмитрий\данные окрон и алмаз\данны�
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
+				<Link SourceId="1741866664099" TargetId="1741867168644" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>110</X><Y>0</Y></Direction>
+					<Id>1741867198759</Id>
+					<Name><![CDATA[добВремяДоход - добВремяРасход]]></Name>
+					<X>510</X><Y>-110</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1741866664099" TargetId="1733830256638" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-130</X><Y>-130</Y></Direction>
+					<Id>1741868327692</Id>
+					<Name><![CDATA[добВремяДоход - СтоимостьСозданияЕденицыОборудования]]></Name>
+					<X>510</X><Y>-110</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1741866664099" TargetId="1733940775047" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-450</X><Y>-150</Y></Direction>
+					<Id>1741868414001</Id>
+					<Name><![CDATA[добВремяДоход - СтоимостьПокупкиЧужойЕденицыСырья]]></Name>
+					<X>510</X><Y>-110</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1741867259889" TargetId="1733844034368" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-60</X><Y>290</Y></Direction>
+					<Id>1741868469067</Id>
+					<Name><![CDATA[<добВремяРасход> - СтоимостьЕденицыСырья]]></Name>
+					<X>380</X><Y>310</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1741867259889" TargetId="1741608322353" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>150</X><Y>50</Y></Direction>
+					<Id>1741868498794</Id>
+					<Name><![CDATA[<добВремяРасход> - потокСтоимостиЭЦНсЗавода]]></Name>
+					<X>380</X><Y>310</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1741867259889" TargetId="1741267646841" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>260</X><Y>70</Y></Direction>
+					<Id>1741868504539</Id>
+					<Name><![CDATA[<добВремяРасход> - ПотокСтоимостиДеталей]]></Name>
+					<X>380</X><Y>310</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1741867259889" TargetId="1738149894979" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>420</X><Y>120</Y></Direction>
+					<Id>1741868511327</Id>
+					<Name><![CDATA[<добВремяРасход> - ПотокСтоимостиДеталейРынок]]></Name>
+					<X>380</X><Y>310</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
 			</Dependences>
 			<Events>
 				<Event>
@@ -3260,6 +3389,37 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
 					<Action><![CDATA[числоИныхДеталейСЗавода = завод.moveTo6.in.count()/time()]]></Action>
+				</Event>
+				<Event>
+					<Id>1741866664097</Id>
+					<Name><![CDATA[event5]]></Name>
+					<X>610</X><Y>-170</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1741593600000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[6]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[((СтоимостьСозданияЕденицыОборудования <= 0) && (time()>3))]]></Condition>
+					</Properties>
+					<Action><![CDATA[добВремяДоход += 0.05]]></Action>
 				</Event>
 			</Events>
 			<AgentLinks>
@@ -46450,6 +46610,37 @@ traceln(getFullName() + " in time " + time());
 	} 
 self.resume();]]></Action>
 				</Event>
+				<Event>
+					<Id>1741873794498</Id>
+					<Name><![CDATA[ЧтобVLбольшеНуля]]></Name>
+					<X>480</X><Y>180</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1741939200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[(vl<=0 && time()>1900)]]></Condition>
+					</Properties>
+					<Action><![CDATA[vl=1;]]></Action>
+				</Event>
 			</Events>
 			<Functions>
 				<Function AccessType="default" StaticFunction="false">
@@ -49515,7 +49706,7 @@ T agent - the agent.
 			<Id>1733206194594</Id>
 			<Name><![CDATA[Simulation]]></Name>
 			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
-			<MaximumMemory>512</MaximumMemory>
+			<MaximumMemory>1024</MaximumMemory>
 			<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
 			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
 			<SeedValue>1</SeedValue>
@@ -49579,14 +49770,14 @@ T agent - the agent.
 				<Title><![CDATA[НАСОСЫ : Simulation]]></Title>	
 				<EnableDeveloperPanel>true</EnableDeveloperPanel>
 				<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
-				<RealTimeScale>0.02</RealTimeScale>
+				<RealTimeScale>0.5</RealTimeScale>
 			</PresentationProperties>
 			<ModelTimeProperties>
 				<StopOption><![CDATA[Stop at specified time]]></StopOption>
-				<InitialDate><![CDATA[1733184000000]]></InitialDate>	
+				<InitialDate><![CDATA[1606953600000]]></InitialDate>	
 				<InitialTime><![CDATA[0.0]]></InitialTime>	
-				<FinalDate><![CDATA[1735776000000]]></FinalDate>	
-				<FinalTime><![CDATA[720.0]]></FinalTime>	
+				<FinalDate><![CDATA[1762473600000]]></FinalDate>	
+				<FinalTime><![CDATA[43200.0]]></FinalTime>	
 			</ModelTimeProperties>
 			<BypassInitialScreen>true</BypassInitialScreen>
 		</SimulationExperiment>	
