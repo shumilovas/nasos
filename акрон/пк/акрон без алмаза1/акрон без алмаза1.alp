@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 *************************************************
-	         AnyLogic Project File
-*************************************************
+	         AnyLogic Project File 
+*************************************************	         
 -->
 <AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.8.5.202310311109" AlpVersion="8.8.2">
 <Model>
@@ -334,10 +334,6 @@
 			</Option>
 		</OptionList>
 	</OptionLists>
-	
-	<Folders>
-		
-	</Folders>
 	<ActiveObjectClasses>
 		<!--   =========   Active Object Class   ========  -->
 		<ActiveObjectClass>
@@ -3523,70 +3519,6 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
 					<InEnvironment>true</InEnvironment>	
 					<InitialLocationType>XYZ</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1734607493564</Id>
-					<Name><![CDATA[dostavka]]></Name>
-					<X>140</X><Y>360</Y>
-					<Label><X>-30</X><Y>-30</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Доставка]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[насосы]]></PackageName>
-							<ClassName><![CDATA[Доставка]]></ClassName>
-							<ItemName><![CDATA[1734607480081]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[numberTrucks]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InEnvironment>true</InEnvironment>	
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
 					<XCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</XCode>
@@ -13261,9 +13193,6 @@ get_Main().сервис.товарПродаётся.set(1,0,0);]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExitNode]]></Name>
 						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onDestinationReached]]></Name>
-						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
 					<Replication Class="CodeValue">
@@ -13496,9 +13425,6 @@ get_Main().сервис.товарПродаётся.set(1,0,0);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExitNode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onDestinationReached]]></Name>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -14456,9 +14382,6 @@ get_Main().сервис.товарПродаётся.set(1,0,0);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExitNode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onDestinationReached]]></Name>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -20926,9 +20849,6 @@ agent.стоимость = 10000   ;]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExitNode]]></Name>
 						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onDestinationReached]]></Name>
-						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
 					<Replication Class="CodeValue">
@@ -21161,9 +21081,6 @@ agent.стоимость = 10000   ;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExitNode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onDestinationReached]]></Name>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -52853,7 +52770,7 @@ T agent - the agent.
 			</Presentation>
 
 		</ActiveObjectClass>
-	</ActiveObjectClasses>
+	</ActiveObjectClasses>	
 	<DifferentialEquationsMethod>EULER</DifferentialEquationsMethod>
 	<MixedEquationsMethod>RK45_NEWTON</MixedEquationsMethod>
 	<AlgebraicEquationsMethod>MODIFIED_NEWTON</AlgebraicEquationsMethod>
@@ -52874,7 +52791,7 @@ T agent - the agent.
 		<ExportSettings>
 		</ExportSettings>
 	</Database>
-
+	
 	<RunConfiguration ActiveObjectClassId="1733206194547">
 		<Id>1733206194597</Id>
 		<Name><![CDATA[RunConfiguration]]></Name>
