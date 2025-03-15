@@ -47102,7 +47102,8 @@ traceln(getFullName() + " in time " + time());
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[int n=1;
+					<Action><![CDATA[// snep
+int n=1;
 String  s = "F " + n;
 getExperimentHost().saveSnapshot(
   s + ".als",
