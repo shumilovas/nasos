@@ -3131,36 +3131,6 @@ else стартовыйУровень = 0.001;
 ]]></Action>
 				</Event>
 				<Event>
-					<Id>1740939652056</Id>
-					<Name><![CDATA[event]]></Name>
-					<X>60</X><Y>280</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="timeout" Mode="occuresOnce">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</Timeout>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
-						</Rate>
-						<OccurrenceAtTime>true</OccurrenceAtTime>
-						<OccurrenceDate>1740988800000</OccurrenceDate>
-						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[0]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</OccurrenceTime>
-						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</RecurrenceCode>
-						<Condition><![CDATA[false]]></Condition>
-					</Properties>
-				</Event>
-				<Event>
 					<Id>1741259532375</Id>
 					<Name><![CDATA[следимЗауровнемЦенИдолейРынка]]></Name>
 					<X>770</X><Y>570</Y>
@@ -3202,7 +3172,7 @@ if (стоимостьЕденицыТовара <10.0) {
 				</Event>
 				<Event>
 					<Id>1741263871449</Id>
-					<Name><![CDATA[event1]]></Name>
+					<Name><![CDATA[поправкаДолиРынка]]></Name>
 					<X>560</X><Y>280</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -3264,7 +3234,7 @@ if (стоимостьЕденицыТовара <10.0) {
 				</Event>
 				<Event>
 					<Id>1741519368940</Id>
-					<Name><![CDATA[event3]]></Name>
+					<Name><![CDATA[поправкаСтоимостиТовара]]></Name>
 					<X>600</X><Y>-210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -3361,7 +3331,7 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 				</Event>
 				<Event>
 					<Id>1741611651913</Id>
-					<Name><![CDATA[event4]]></Name>
+					<Name><![CDATA[сколькоДеталейСзавода]]></Name>
 					<X>280</X><Y>550</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -3392,7 +3362,7 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 				</Event>
 				<Event>
 					<Id>1741866664097</Id>
-					<Name><![CDATA[event5]]></Name>
+					<Name><![CDATA[изменениеЦены]]></Name>
 					<X>610</X><Y>-170</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
