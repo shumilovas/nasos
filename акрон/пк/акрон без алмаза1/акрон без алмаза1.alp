@@ -45118,7 +45118,7 @@ get_Main().выехалГрузовикОтдаватьНаСервис=true;
 					<Properties Width="150" Height="30">
 						<EntryAction><![CDATA[ЗаказНаСервис заказНаСервис = new ЗаказНаСервис( this );
 get_Main().завод.ПодготовкаГрузовика.inject(1);
-traceln(getFullName() + " in time " + time());
+traceln(getFullName() + "грузовик деталей in time " + time());
 началоСостояния1=time(MONTH);]]></EntryAction>
 						<FillColor/>
 					</Properties>
@@ -45141,7 +45141,7 @@ traceln(getFullName() + " in time " + time());
 							<Code><![CDATA[2]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[WEEK]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[(time(MONTH)- началоСостояния1)>0.1]]></Condition>
+						<Condition><![CDATA[(time(MONTH)- началоСостояния1)>triangular(10*24, 36*24, 15*24)]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[2]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_WEEK]]></Unit>
@@ -46205,12 +46205,12 @@ traceln(getFullName() + " in time " + time());
 				<Variable Class="Flow">
 					<Id>1735054979886</Id>
 					<Name><![CDATA[flow6]]></Name>
-					<X>90</X><Y>280</Y>
+					<X>-90</X><Y>280</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1735057145532" TargetId="1735054979890" External="false" Constant="false" Array="true">
+					<Properties SourceId="1735057145534" TargetId="1735054979890" External="false" Constant="false" Array="true">
 						<Formula><![CDATA[0.4]]></Formula>
 						<Color>-65281</Color>
 						<Array>
@@ -46243,12 +46243,14 @@ traceln(getFullName() + " in time " + time());
 								<Expression><![CDATA[0]]></Expression>
 							</CustomExpression>
 						</Array>
-						<ValveIndex>1</ValveIndex>
+						<ValveIndex>3</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>295</X><Y>0</Y></Point>
-							<Point><X>429</X><Y>0</Y></Point>
-							<Point><X>510</X><Y>0</Y></Point>
+							<Point><X>69</X><Y>78</Y></Point>
+							<Point><X>252</X><Y>68</Y></Point>
+							<Point><X>475</X><Y>0</Y></Point>
+							<Point><X>609</X><Y>0</Y></Point>
+							<Point><X>690</X><Y>0</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
