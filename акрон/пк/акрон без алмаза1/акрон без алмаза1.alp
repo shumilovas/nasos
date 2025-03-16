@@ -51305,8 +51305,9 @@ T agent - the agent.
 		<SimulationExperiment ActiveObjectClassId="1733206194547">
 			<Id>1733206194594</Id>
 			<Name><![CDATA[Simulation]]></Name>
+			<Description><![CDATA[длинный оч]]></Description>
 			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
-			<MaximumMemory>1024</MaximumMemory>
+			<MaximumMemory>2048</MaximumMemory>
 			<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
 			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
 			<SeedValue>1</SeedValue>
