@@ -12292,16 +12292,9 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[double a= get_Main().сервис.ТоварВзятВаренду.get(1);
-double b= get_Main().сервис.товарПродаётся.get(1);
-traceln("сервисЛогистика.source.inject(1); " +time() + " потоки до, с главного на 0.4 = " + 0.4*a +   "потоки до, аренда = "  +b );
+								<Code><![CDATA[traceln("сервисЛогистика.source.inject(1); " +time());
 get_Main().выехалГрузовикОтдаватьНаСервис=true;
-get_Main().сервис.ТоварВзятВаренду.set(a+1.0,1);
-get_Main().сервис.товарПродаётся.set(b-1.0,1);
-a= get_Main().сервис.ТоварВзятВаренду.get(1);
-b= get_Main().сервис.товарПродаётся.get(1);
-traceln("сервисЛогистика.source.inject(1); " +time() + " потоки после, с главного на 0.4 = " + 0.4*a +   "потоки после , аренда = "  +b );
-]]></Code>
+//get_Main().dostavka.manufacturing.source.inject(1);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -28489,9 +28482,16 @@ agent.стоимость = 100 ;]]></Code>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[traceln("сервисЛогистика.source.inject(1); " +time());
+								<Code><![CDATA[double a= get_Main().сервис.ТоварВзятВаренду.get(1);
+double b= get_Main().сервис.товарПродаётся.get(1);
+traceln("сервисЛогистика.source.inject(1); " +time() + " потоки до, с главного на 0.4 = " + 0.4*a +   "потоки до, аренда = "  +b );
 get_Main().выехалГрузовикОтдаватьНаСервис=true;
-//get_Main().dostavka.manufacturing.source.inject(1);]]></Code>
+get_Main().сервис.ТоварВзятВаренду.set(a+1.0,1);
+get_Main().сервис.товарПродаётся.set(b-1.0,1);
+a= get_Main().сервис.ТоварВзятВаренду.get(1);
+b= get_Main().сервис.товарПродаётся.get(1);
+traceln("сервисЛогистика.source.inject(1); " +time() + " потоки после, с главного на 0.4 = " + 0.4*a +   "потоки после , аренда = "  +b );
+]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
