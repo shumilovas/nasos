@@ -4,7 +4,7 @@
 	         AnyLogic Project File
 *************************************************
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.8.5.202310311109" AlpVersion="8.8.2">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.1.202408021040" AlpVersion="8.9.1">
 <Model>
 	<Id>1733206194534</Id>
 	<Name><![CDATA[акрон без алмаза1]]></Name>
@@ -1626,7 +1626,7 @@ C:\работа дмитрий\данные окрон и алмаз\данны�
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties TargetId="1733843823522" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[добВремяРасход*2*(стоимостьЕденицыТовара/1.6)*числоИныхДеталейСЗавода + стоимостьУцн*(числоНАсосовСЗавода + числоНасосов)/3]]></Formula>
+						<Formula><![CDATA[добВремяРасход*2*(стоимостьЕденицыТовара/1.65)*числоИныхДеталейСЗавода + стоимостьУцн*(числоНАсосовСЗавода + числоНасосов)/3]]></Formula>
 						<Color>-65536</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -3135,36 +3135,6 @@ else стартовыйУровень = 0.001;
 ]]></Action>
 				</Event>
 				<Event>
-					<Id>1740939652056</Id>
-					<Name><![CDATA[event]]></Name>
-					<X>60</X><Y>280</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="timeout" Mode="occuresOnce">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</Timeout>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
-						</Rate>
-						<OccurrenceAtTime>true</OccurrenceAtTime>
-						<OccurrenceDate>1740988800000</OccurrenceDate>
-						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[0]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</OccurrenceTime>
-						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</RecurrenceCode>
-						<Condition><![CDATA[false]]></Condition>
-					</Properties>
-				</Event>
-				<Event>
 					<Id>1741259532375</Id>
 					<Name><![CDATA[следимЗауровнемЦенИдолейРынка]]></Name>
 					<X>770</X><Y>570</Y>
@@ -3206,7 +3176,7 @@ if (стоимостьЕденицыТовара <10.0) {
 				</Event>
 				<Event>
 					<Id>1741263871449</Id>
-					<Name><![CDATA[event1]]></Name>
+					<Name><![CDATA[поправкаДолиРынка]]></Name>
 					<X>560</X><Y>280</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -3268,7 +3238,7 @@ if (стоимостьЕденицыТовара <10.0) {
 				</Event>
 				<Event>
 					<Id>1741519368940</Id>
-					<Name><![CDATA[event3]]></Name>
+					<Name><![CDATA[поправкаСтоимостиТовара]]></Name>
 					<X>600</X><Y>-210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -3365,7 +3335,7 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 				</Event>
 				<Event>
 					<Id>1741611651913</Id>
-					<Name><![CDATA[event4]]></Name>
+					<Name><![CDATA[сколькоДеталейСзавода]]></Name>
 					<X>280</X><Y>550</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -3396,7 +3366,7 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 				</Event>
 				<Event>
 					<Id>1741866664097</Id>
-					<Name><![CDATA[event5]]></Name>
+					<Name><![CDATA[изменениеЦены]]></Name>
 					<X>610</X><Y>-170</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -3523,70 +3493,6 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
 					<InEnvironment>true</InEnvironment>	
 					<InitialLocationType>XYZ</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1734607493564</Id>
-					<Name><![CDATA[dostavka]]></Name>
-					<X>140</X><Y>360</Y>
-					<Label><X>-30</X><Y>-30</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[насосы]]></PackageName>
-						<ClassName><![CDATA[Доставка]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[насосы]]></PackageName>
-							<ClassName><![CDATA[Доставка]]></ClassName>
-							<ItemName><![CDATA[1734607480081]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[numberTrucks]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InEnvironment>true</InEnvironment>	
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
 					<XCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</XCode>
@@ -4725,42 +4631,9 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 					</Points>
 				</Connector>
 				<Connector>
-					<Id>1733910309648</Id>
-					<Name><![CDATA[connector17]]></Name>
-					<X>3172</X><Y>392</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[насосы10]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[ЕдетОтгружать]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-						<ClassName><![CDATA[MoveByTransporter]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[насосы10]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[ЗагрузкаЯщиковВгрузовик]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Pickup]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>1750</X><Y>50</Y></Point>
-						<Point><X>1790</X><Y>50</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1733910309651</Id>
-					<Name><![CDATA[connector10]]></Name>
-					<X>3172</X><Y>392</Y>
+					<Id>1733910309655</Id>
+					<Name><![CDATA[connector18]]></Name>
+					<X>5282</X><Y>442</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4778,39 +4651,6 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы10]]></PackageName>
 						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[ЕдетВоВнешнийМир]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-						<ClassName><![CDATA[MoveByTransporter]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>2110</X><Y>50</Y></Point>
-						<Point><X>2030</X><Y>50</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1733910309655</Id>
-					<Name><![CDATA[connector18]]></Name>
-					<X>3172</X><Y>392</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[насосы10]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[ЕдетВоВнешнийМир]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-						<ClassName><![CDATA[MoveByTransporter]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[насосы10]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
 						<ItemName><![CDATA[ЗагрузкаЯщиковВгрузовик]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -4819,8 +4659,8 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 						<ItemName><![CDATA[out]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>1990</X><Y>50</Y></Point>
-						<Point><X>1830</X><Y>50</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-280</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -5288,11 +5128,11 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы10]]></PackageName>
 						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[ЕдетОтгружать]]></ItemName>
+						<ItemName><![CDATA[ЗагрузкаЯщиковВгрузовик]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-						<ClassName><![CDATA[MoveByTransporter]]></ClassName>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Pickup]]></ClassName>
 						<ItemName><![CDATA[in]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
@@ -5300,6 +5140,8 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 						<Point><X>140</X><Y>0</Y></Point>
 						<Point><X>180</X><Y>0</Y></Point>
 						<Point><X>222</X><Y>2</Y></Point>
+						<Point><X>262</X><Y>2</Y></Point>
+						<Point><X>302</X><Y>2</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -8201,41 +8043,6 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы10]]></PackageName>
 						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[ЕдетОтгружать7]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-						<ClassName><![CDATA[MoveByTransporter]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>140</X><Y>0</Y></Point>
-						<Point><X>180</X><Y>0</Y></Point>
-						<Point><X>320</X><Y>-10</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1740918009827</Id>
-					<Name><![CDATA[connector198]]></Name>
-					<X>5040</X><Y>-270</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[насосы10]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[ЕдетОтгружать7]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-						<ClassName><![CDATA[MoveByTransporter]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[насосы10]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
 						<ItemName><![CDATA[ЗагрузкаЯщиковВгрузовик5]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -8245,7 +8052,11 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>160</X><Y>-30</Y></Point>
+						<Point><X>140</X><Y>0</Y></Point>
+						<Point><X>180</X><Y>0</Y></Point>
+						<Point><X>320</X><Y>-10</Y></Point>
+						<Point><X>360</X><Y>-10</Y></Point>
+						<Point><X>520</X><Y>-40</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -8269,39 +8080,6 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[насосы10]]></PackageName>
 						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[ЕдетВоВнешнийМир3]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-						<ClassName><![CDATA[MoveByTransporter]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>160</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1740918022665</Id>
-					<Name><![CDATA[connector200]]></Name>
-					<X>5440</X><Y>-300</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[насосы10]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[ЕдетВоВнешнийМир3]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-						<ClassName><![CDATA[MoveByTransporter]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[насосы10]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
 						<ItemName><![CDATA[delay10]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -8311,7 +8089,9 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>160</X><Y>-40</Y></Point>
+						<Point><X>160</X><Y>0</Y></Point>
+						<Point><X>200</X><Y>0</Y></Point>
+						<Point><X>360</X><Y>-40</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -13541,733 +13321,6 @@ get_Main().сервис.товарПродаётся.set(1,0,0);]]></Code>
 					</QuantityColumn>
 				</EmbeddedObject>
 				<EmbeddedObject>
-					<Id>1733910308268</Id>
-					<Name><![CDATA[ЕдетОтгружать]]></Name>
-					<X>4882</X><Y>432</Y>
-					<Label><X>-45</X><Y>-25</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-						<ClassName><![CDATA[MoveByTransporter]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-							<ClassName><![CDATA[MoveByTransporter]]></ClassName>
-							<ItemName><![CDATA[1521106872908]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[destinationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationPath]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationPathOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationPathOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationAttractor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationNode]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[отгрузка]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationConveyorOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationConveyorOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationPositionOnConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationConveyorStation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[changeOrientation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[orientation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationX]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationZ]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationInNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationLevel]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeTransporter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[fleet]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[ГрузовикиОтвозят]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[loadingTime]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationPath]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationPathOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationPathOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationAttractor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationNode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationConveyorOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationConveyorOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationPositionOnConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationConveyorStation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationX]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationZ]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationInNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationLevel]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[priority]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskMayPreemptOtherTasks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskPreemptionPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[customizeTransporterChoice]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[transporterChoiceCondition]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[dispatchingPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[transporterComparison]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[transporterRating]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledMovingPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationPath]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationPathOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationPathOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationAttractor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationNode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationConveyorOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationConveyorOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationPositionOnConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationConveyorStation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationX]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationZ]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationInNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationLevel]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledReturnPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseTransporter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[unloadingTime]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseMovingPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationPath]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationPathOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationPathOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationAttractor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationNode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationConveyorOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationConveyorOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationPositionOnConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationConveyorStation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationX]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationZ]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationInNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationLevel]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseReturnPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onAtExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onRemove]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onSeizeTransporter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onLoadingStarted]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onLoadingFinished]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onTaskSuspended]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onTaskResumed]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onReleaseTransporter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onUnloadingStarted]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onUnloadingFinished]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>XYZ</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1733910308443</Id>
-					<Name><![CDATA[ЕдетВоВнешнийМир]]></Name>
-					<Description><![CDATA[столько тритдацитонных грузовиков уходит отсюда]]></Description>
-					<X>5162</X><Y>432</Y>
-					<Label><X>-45</X><Y>-25</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-						<ClassName><![CDATA[MoveByTransporter]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-							<ClassName><![CDATA[MoveByTransporter]]></ClassName>
-							<ItemName><![CDATA[1521106872908]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[destinationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationPath]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationPathOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationPathOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationAttractor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationNode]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[ТоварУвезён]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationConveyorOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationConveyorOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationPositionOnConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationConveyorStation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[changeOrientation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[orientation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationX]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationZ]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationInNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationLevel]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeTransporter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[fleet]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[ГрузовикиОтвозят]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[loadingTime]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationPath]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationPathOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationPathOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationAttractor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationNode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationConveyorOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationConveyorOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationPositionOnConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationConveyorStation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationX]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationZ]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationInNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationLevel]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[priority]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskMayPreemptOtherTasks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskPreemptionPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[customizeTransporterChoice]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[transporterChoiceCondition]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[dispatchingPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[transporterComparison]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[transporterRating]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledMovingPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationPath]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationPathOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationPathOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationAttractor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationNode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationConveyorOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationConveyorOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationPositionOnConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationConveyorStation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationX]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationZ]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationInNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationLevel]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledReturnPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseTransporter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[unloadingTime]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseMovingPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationPath]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationPathOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationPathOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationAttractor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationNode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationConveyorOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationConveyorOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationPositionOnConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationConveyorStation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationX]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationZ]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationInNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationLevel]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseReturnPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onAtExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onRemove]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onSeizeTransporter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onLoadingStarted]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onLoadingFinished]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onTaskSuspended]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onTaskResumed]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onReleaseTransporter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onUnloadingStarted]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onUnloadingFinished]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>XYZ</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
 					<Id>1733910308601</Id>
 					<Name><![CDATA[ГрузовикиОтвозят]]></Name>
 					<X>4240</X><Y>660</Y>
@@ -14748,7 +13801,7 @@ get_Main().сервис.товарПродаётся.set(1,0,0);]]></Code>
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[6]]></Code>
+								<Code><![CDATA[0.6]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 							</Value>
 						</Parameter>
@@ -29123,369 +28176,6 @@ agent.стоимость = 100 ;]]></Code>
 					</QuantityColumn>
 				</EmbeddedObject>
 				<EmbeddedObject>
-					<Id>1740917645788</Id>
-					<Name><![CDATA[ЕдетОтгружать7]]></Name>
-					<X>5000</X><Y>-280</Y>
-					<Label><X>-45</X><Y>-25</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-						<ClassName><![CDATA[MoveByTransporter]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-							<ClassName><![CDATA[MoveByTransporter]]></ClassName>
-							<ItemName><![CDATA[1521106872908]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[destinationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationPath]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationPathOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationPathOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationAttractor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationNode]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[отгрузка]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationConveyorOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationConveyorOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationPositionOnConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationConveyorStation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[changeOrientation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[orientation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationX]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationZ]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationInNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationLevel]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeTransporter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[fleet]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[ГрузовикиОтвозят]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[loadingTime]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationPath]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationPathOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationPathOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationAttractor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationNode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationConveyorOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationConveyorOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationPositionOnConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationConveyorStation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationX]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationZ]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationInNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationLevel]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[priority]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskMayPreemptOtherTasks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskPreemptionPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[customizeTransporterChoice]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[transporterChoiceCondition]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[dispatchingPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[transporterComparison]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[transporterRating]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledMovingPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationPath]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationPathOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationPathOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationAttractor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationNode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationConveyorOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationConveyorOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationPositionOnConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationConveyorStation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationX]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationZ]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationInNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationLevel]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledReturnPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseTransporter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[unloadingTime]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseMovingPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationPath]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationPathOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationPathOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationAttractor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationNode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationConveyorOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationConveyorOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationPositionOnConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationConveyorStation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationX]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationZ]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationInNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationLevel]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseReturnPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onAtExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onRemove]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onSeizeTransporter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onLoadingStarted]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onLoadingFinished]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onTaskSuspended]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onTaskResumed]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onReleaseTransporter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onUnloadingStarted]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onUnloadingFinished]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>XYZ</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
 					<Id>1740917840823</Id>
 					<Name><![CDATA[ЗагрузкаЯщиковВгрузовик5]]></Name>
 					<X>5200</X><Y>-320</Y>
@@ -29544,370 +28234,6 @@ agent.стоимость = 100 ;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>XYZ</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1740917841087</Id>
-					<Name><![CDATA[ЕдетВоВнешнийМир3]]></Name>
-					<Description><![CDATA[столько тритдацитонных грузовиков уходит отсюда]]></Description>
-					<X>5400</X><Y>-310</Y>
-					<Label><X>-45</X><Y>-25</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-						<ClassName><![CDATA[MoveByTransporter]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.material_handling]]></PackageName>
-							<ClassName><![CDATA[MoveByTransporter]]></ClassName>
-							<ItemName><![CDATA[1521106872908]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[destinationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationPath]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationPathOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationPathOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationAttractor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationNode]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[ТоварУвезён]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationConveyorOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationConveyorOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationPositionOnConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationConveyorStation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[changeOrientation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[orientation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationX]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationZ]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationInNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationLevel]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeTransporter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[fleet]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[ГрузовикиОтвозят]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[loadingTime]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationPath]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationPathOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationPathOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationAttractor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationNode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationConveyorOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationConveyorOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationPositionOnConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationConveyorStation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationX]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationZ]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationInNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeDestinationLevel]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[priority]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskMayPreemptOtherTasks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskPreemptionPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[customizeTransporterChoice]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[transporterChoiceCondition]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[dispatchingPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[transporterComparison]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[transporterRating]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledMovingPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationPath]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationPathOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationPathOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationAttractor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationNode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationConveyorOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationConveyorOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationPositionOnConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationConveyorStation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationX]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationZ]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationInNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledDestinationLevel]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledReturnPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseTransporter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[unloadingTime]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseMovingPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationPath]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationPathOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationPathOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationAttractor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationNode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationConveyorOffsetFromBeginning]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationConveyorOffset]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationPositionOnConveyor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationConveyorStation]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationX]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationZ]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationInNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationNetwork]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseDestinationLevel]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[releaseReturnPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onAtExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onRemove]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onSeizeTransporter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onLoadingStarted]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onLoadingFinished]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onTaskSuspended]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onTaskResumed]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onReleaseTransporter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onUnloadingStarted]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onUnloadingFinished]]></Name>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -46318,12 +44644,12 @@ traceln(getFullName() + " in time " + time());
 				<Variable Class="Flow">
 					<Id>1735054979886</Id>
 					<Name><![CDATA[flow6]]></Name>
-					<X>90</X><Y>280</Y>
+					<X>-90</X><Y>280</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1735057145532" TargetId="1735054979890" External="false" Constant="false" Array="true">
+					<Properties SourceId="1735057145534" TargetId="1735054979890" External="false" Constant="false" Array="true">
 						<Formula><![CDATA[0.4]]></Formula>
 						<Color>-65281</Color>
 						<Array>
@@ -46337,7 +44663,7 @@ traceln(getFullName() + " in time " + time());
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 									<ItemName><![CDATA[порошковая]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[0.4]]></Expression>
+								<Expression><![CDATA[0.4*товарПродаётся.get(1)]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -46356,12 +44682,13 @@ traceln(getFullName() + " in time " + time());
 								<Expression><![CDATA[0]]></Expression>
 							</CustomExpression>
 						</Array>
-						<ValveIndex>1</ValveIndex>
+						<ValveIndex>2</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>295</X><Y>0</Y></Point>
-							<Point><X>429</X><Y>0</Y></Point>
-							<Point><X>510</X><Y>0</Y></Point>
+							<Point><X>170</X><Y>140</Y></Point>
+							<Point><X>180</X><Y>100</Y></Point>
+							<Point><X>609</X><Y>0</Y></Point>
+							<Point><X>690</X><Y>0</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -46464,7 +44791,7 @@ traceln(getFullName() + " in time " + time());
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 									<ItemName><![CDATA[порошковая]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[1]]></Expression>
+								<Expression><![CDATA[0.6*товарПродаётся.get(1)]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -47153,7 +45480,81 @@ traceln(getFullName() + " in time " + time());
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
+				<Link SourceId="1735057145534" TargetId="1735057145525" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>70</X><Y>0</Y></Direction>
+					<Id>1742069046106</Id>
+					<Name><![CDATA[товарПродаётся - flow3]]></Name>
+					<X>-90</X><Y>280</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1735057145534" TargetId="1735054979886" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>180</X><Y>100</Y></Direction>
+					<Id>1742069064394</Id>
+					<Name><![CDATA[товарПродаётся - flow6]]></Name>
+					<X>-90</X><Y>280</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
 			</Dependences>
+			<Events>
+				<Event>
+					<Id>1742079112030</Id>
+					<Name><![CDATA[снепшоты]]></Name>
+					<X>150</X><Y>80</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1742112000000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[1000]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[2000]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[// snep
+int n=1;
+String  s = "F " + n;
+getExperimentHost().saveSnapshot(
+  s + ".als",
+  () -> traceln("Saved! " + s),
+  e -> {
+    traceln("Error!");
+    e.printStackTrace();
+  }
+);
+++n;]]></Action>
+				</Event>
+			</Events>
 			<AgentLinks>
 				<AgentLink>
 					<Id>1735054662346</Id>

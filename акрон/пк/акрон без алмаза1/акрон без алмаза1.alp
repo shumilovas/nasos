@@ -12213,7 +12213,7 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 							<Value Class="CodeValue">
 								<Code><![CDATA[traceln("сервисЛогистика.source.inject(1); " +time());
 get_Main().выехалГрузовикОтдаватьНаСервис=true;
-get_Main().сервис.товарПродаётся.set(1,0,0);]]></Code>
+get_Main().сервис.товарПродаётся.set(1.0,1);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
