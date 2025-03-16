@@ -3166,11 +3166,11 @@ else стартовыйУровень = 0.001;
 					<Action><![CDATA[{
  ДоляРынкаУЭЦНпроц=0.01;
  недосдача = 10;
- traceln("коррекция доли рынка");
+ //traceln("коррекция доли рынка");
 }
 if (стоимостьЕденицыТовара <10.0) {
  стоимостьЕденицыТовара=100.0;
- traceln("коррекция цены");
+ //traceln("коррекция цены");
  }
 ]]></Action>
 				</Event>
@@ -3287,11 +3287,11 @@ if (стоимостьЕденицыТовара <10.0) {
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1741680000000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[10]]></Code>
+							<Code><![CDATA[100]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[10]]></Code>
+							<Code><![CDATA[100]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
