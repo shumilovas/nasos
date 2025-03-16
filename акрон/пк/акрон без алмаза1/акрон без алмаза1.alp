@@ -43669,7 +43669,7 @@ traceln(getFullName() + " in time " + time());
 							<Code><![CDATA[2]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[WEEK]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[(time(HOUR)- началоСостояния1)>0.1*poisson(350, 600, 370, 0, 1)]]></Condition>
+						<Condition><![CDATA[(time(HOUR)- началоСостояния1)>24*poisson(350, 600, 370, 0, 1)]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[2]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_WEEK]]></Unit>
