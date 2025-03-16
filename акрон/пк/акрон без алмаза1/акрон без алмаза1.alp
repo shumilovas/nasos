@@ -3749,6 +3749,68 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 					<QuantityColumn>
 					</QuantityColumn>
 				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1742159961850</Id>
+					<Name><![CDATA[клиентСервисаХочетнасос1]]></Name>
+					<X>-840</X><Y>110</Y>
+					<Label><X>-90</X><Y>-30</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1742159965032</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[насосы10]]></PackageName>
+						<ClassName><![CDATA[КлиентСервисаХочетнасос]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[насосы10]]></PackageName>
+							<ClassName><![CDATA[КлиентСервисаХочетнасос]]></ClassName>
+							<ItemName><![CDATA[1734608093056]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+					</Parameters>
+					<ReplicationFlag>true</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[10]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>	
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
 			</EmbeddedObjects>
 
 			<Presentation>
@@ -3892,6 +3954,25 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 					<FillAreaUnderLine>false</FillAreaUnderLine>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
     			</TimePlot>
+				<EmbeddedObjectPresentation>
+					<Id>1742159965032</Id>
+					<Name><![CDATA[клиентСервисаХочетнасос1_presentation]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>0.0</Latitude>
+					<Longitude>0.0</Longitude>
+				</EmbeddedObjectPresentation>
 			</Presentation>
 
 				</Level>
@@ -12211,9 +12292,16 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[traceln("сервисЛогистика.source.inject(1); " +time());
+								<Code><![CDATA[double a= get_Main().сервис.ТоварВзятВаренду.get(1);
+double b= get_Main().сервис.товарПродаётся.get(1);
+traceln("сервисЛогистика.source.inject(1); " +time() + " потоки до, с главного на 0.4 = " + 0.4*a +   "потоки до, аренда = "  +b );
 get_Main().выехалГрузовикОтдаватьНаСервис=true;
-get_Main().сервис.товарПродаётся.set(1.0,1);]]></Code>
+get_Main().сервис.ТоварВзятВаренду.set(a+1.0,1);
+get_Main().сервис.товарПродаётся.set(b-1.0,1);
+a= get_Main().сервис.ТоварВзятВаренду.get(1);
+b= get_Main().сервис.товарПродаётся.get(1);
+traceln("сервисЛогистика.source.inject(1); " +time() + " потоки после, с главного на 0.4 = " + 0.4*a +   "потоки после , аренда = "  +b );
+]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -43557,6 +43645,7 @@ get_Main().выехалГрузовикОтдаватьНаСервис=true;
 					<Properties Width="150" Height="30">
 						<EntryAction><![CDATA[ЗаказНаСервис заказНаСервис = new ЗаказНаСервис( this );
 get_Main().завод.ПодготовкаГрузовика.inject(1);
+get_Main().завод.ПодготовкаГрузовика5.inject(1);
 traceln(getFullName() + " in time " + time());
 началоСостояния1=time(MONTH);]]></EntryAction>
 						<FillColor/>
@@ -43580,7 +43669,7 @@ traceln(getFullName() + " in time " + time());
 							<Code><![CDATA[2]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[WEEK]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[(time(MONTH)- началоСостояния1)>0.1]]></Condition>
+						<Condition><![CDATA[(time(HOUR)- началоСостояния1)>0.1*poisson(350, 600, 370, 0, 1)]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[2]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_WEEK]]></Unit>
@@ -44663,7 +44752,7 @@ traceln(getFullName() + " in time " + time());
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 									<ItemName><![CDATA[порошковая]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[0.4*товарПродаётся.get(1)]]></Expression>
+								<Expression><![CDATA[0.4*товарПродаётся.get(1)*СГлавногоАгентаПотокПродаж.get(1)]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -44791,7 +44880,7 @@ traceln(getFullName() + " in time " + time());
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 									<ItemName><![CDATA[порошковая]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[0.6*товарПродаётся.get(1)]]></Expression>
+								<Expression><![CDATA[0.6*товарПродаётся.get(1)*СГлавногоАгентаПотокПродаж.get(1)]]></Expression>
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
@@ -45502,6 +45591,36 @@ traceln(getFullName() + " in time " + time());
 					<Id>1742069064394</Id>
 					<Name><![CDATA[товарПродаётся - flow6]]></Name>
 					<X>-90</X><Y>280</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1735062378032" TargetId="1735057145525" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>145</X><Y>-45</Y></Direction>
+					<Id>1742158218533</Id>
+					<Name><![CDATA[СГлавногоАгентаПотокПродаж - flow3]]></Name>
+					<X>-165</X><Y>325</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1735062378032" TargetId="1735054979886" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>255</X><Y>55</Y></Direction>
+					<Id>1742158226427</Id>
+					<Name><![CDATA[СГлавногоАгентаПотокПродаж - flow6]]></Name>
+					<X>-165</X><Y>325</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
