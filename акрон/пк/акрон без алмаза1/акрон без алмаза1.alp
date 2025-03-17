@@ -48884,6 +48884,39 @@ T agent - the agent.
 						<Point><X>440</X><Y>220</Y></Point>
 					</Points>
 				</Connector>
+				<Connector>
+					<Id>1742206345297</Id>
+					<Name><![CDATA[connector2]]></Name>
+					<X>710</X><Y>450</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[насосы10]]></PackageName>
+						<ClassName><![CDATA[ПодготовкаКобработке]]></ClassName>
+						<ItemName><![CDATA[moveTo2]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[MoveTo]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[насосы10]]></PackageName>
+						<ClassName><![CDATA[ПодготовкаКобработке]]></ClassName>
+						<ItemName><![CDATA[СколькоХранятьсяЗаготовки]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>242</X><Y>-128</Y></Point>
+					</Points>
+				</Connector>
 			</Connectors>
 			<AgentLinks>
 				<AgentLink>
