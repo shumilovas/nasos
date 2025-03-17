@@ -43645,6 +43645,8 @@ traceln("сервисЛогистика.source.inject(1); " +time() + " пото
 					<Properties Width="150" Height="30">
 						<EntryAction><![CDATA[ЗаказНаСервис заказНаСервис = new ЗаказНаСервис( this );
 get_Main().завод.ПодготовкаГрузовика.inject(1);
+if get_Main().завод.ПгрузовикОжидаетЗагрузки1
+traceln("насос уэцн на заводе для клиента есть,  время " + time())
 get_Main().завод.ПодготовкаГрузовика5.inject(1);
 traceln(getFullName() + " in time " + time());
 началоСостояния1=time(MONTH);]]></EntryAction>
@@ -44681,6 +44683,28 @@ traceln(getFullName() + " in time " + time());
 						<Color/>
 					</Properties>
 				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1742211977574</Id>
+					<Name><![CDATA[аммортизация1]]></Name>
+					<X>220</X><Y>295</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="true">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[{0.0,0.0,0.0}]]></InitialValue>
+						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[насосы10]]></PackageName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
+							</Dimension>
+						</Array>
+					</Properties>
+				</Variable>
 				<Variable Class="Flow">
 					<Id>1735054979874</Id>
 					<Name><![CDATA[flow]]></Name>
@@ -45012,6 +45036,55 @@ traceln(getFullName() + " in time " + time());
 							<Point><X>0</X><Y>0</Y></Point>
 							<Point><X>60</X><Y>-60</Y></Point>
 							<Point><X>60</X><Y>-150</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1742211991703</Id>
+					<Name><![CDATA[flow1]]></Name>
+					<X>90</X><Y>280</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1735057145532" TargetId="1742211977574" External="false" Constant="false" Array="true">
+						<Formula><![CDATA[0.01]]></Formula>
+						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[насосы10]]></PackageName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы10]]></PackageName>
+									<ClassName><![CDATA[Металлургия]]></ClassName>
+									<ItemName><![CDATA[порошковая]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[0.4]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы10]]></PackageName>
+									<ClassName><![CDATA[Металлургия]]></ClassName>
+									<ItemName><![CDATA[обычная]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[0]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[насосы10]]></PackageName>
+									<ClassName><![CDATA[Металлургия]]></ClassName>
+									<ItemName><![CDATA[иная]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[0]]></Expression>
+							</CustomExpression>
+						</Array>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>60</X><Y>0</Y></Point>
+							<Point><X>130</X><Y>15</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -45621,6 +45694,20 @@ traceln(getFullName() + " in time " + time());
 					<Id>1742158226427</Id>
 					<Name><![CDATA[СГлавногоАгентаПотокПродаж - flow6]]></Name>
 					<X>-165</X><Y>325</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-128</X><Y>-238</Y></Direction>
+					<Id>1742211977572</Id>
+					<X>210</X><Y>385</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
