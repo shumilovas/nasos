@@ -33671,7 +33671,7 @@ get_Main().выехалГрузовикОтдаватьНаСервис=true;
 						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
 					</SlotDepth>
 					<CellWidth Class="UnitValue">
-						<Value Class="Double">0.08333333333333334</Value>
+						<Value Class="Double">0.05000000000000001</Value>
 						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
 					</CellWidth>
 					<SingleUnitFirst>true</SingleUnitFirst>
@@ -33684,7 +33684,7 @@ get_Main().выехалГрузовикОтдаватьНаСервис=true;
 					<UnitsDefinition>NUMBER_OF_UNITS</UnitsDefinition>
 					<NumberOfUnits>8</NumberOfUnits>
 					<BaysDefinition>NUMBER_OF_BAYS</BaysDefinition>
-					<NumberOfBays>60</NumberOfBays>
+					<NumberOfBays>100</NumberOfBays>
 					<NumberOfCells>1</NumberOfCells>
 					<RackType>SELECTIVE</RackType>
 					<SkuFlow>LIFO</SkuFlow>
