@@ -141,6 +141,21 @@
 					</Properties>
 
 				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1742389480770</Id>
+					<Name><![CDATA[dynamicVariable]]></Name>
+					<X>360</X><Y>20</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[пульсирующийПотокНасосов.get(1)]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1742212639855</Id>
 					<Name><![CDATA[товарПродан]]></Name>
@@ -389,7 +404,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.002]]></Code>
+							<Code><![CDATA[2]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1742227435268</Id>
@@ -454,6 +469,21 @@
 					<Id>1742227464429</Id>
 					<Name><![CDATA[поправка - пульсирующийПотокНасосов]]></Name>
 					<X>920</X><Y>240</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1742212682314" TargetId="1742389480770" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-480</X><Y>-330</Y></Direction>
+					<Id>1742389505562</Id>
+					<Name><![CDATA[пульсирующийПотокНасосов - dynamicVariable]]></Name>
+					<X>840</X><Y>350</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -623,6 +653,7 @@
 				<EmbeddedObject>
 					<Id>1742224244412</Id>
 					<Name><![CDATA[новыеНасосы]]></Name>
+					<Description><![CDATA[uniform_discr(2*ПрибавкаНасосовВМнсяц-2, 2*ПрибавкаНасосовВМнсяц+2)]]></Description>
 					<X>660</X><Y>80</Y>
 					<Label><X>-5</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -696,7 +727,7 @@
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[uniform_discr(2*ПрибавкаНасосовВМнсяц-2, 2*ПрибавкаНасосовВМнсяц+2)]]></Code>
+								<Code><![CDATA[1]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -1235,8 +1266,7 @@
 						<Parameter>
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[triangular( 0.5, 1.5, 2.5 )
-]]></Code>
+								<Code><![CDATA[2]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
 							</Value>
 						</Parameter>
@@ -1245,9 +1275,6 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maximumCapacity]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[true]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[entityLocation]]></Name>
@@ -1267,6 +1294,7 @@
 								<Code><![CDATA[traceln("do увеличения потока " +пульсирующийПотокНасосов.get(1));
 увеличениеПослеСобытия = увеличениеПослеСобытия + 10*увеличениеНасосовВАренде;
 traceln("время увеличения потока " +time());
+пульсирующийПотокНасосов.set(пульсирующийПотокНасосов.get(1)*10,1);
 traceln("posle увеличения потока " +пульсирующийПотокНасосов.get(1));
 ]]></Code>
 							</Value>
@@ -1278,7 +1306,9 @@ traceln("posle увеличения потока " +пульсирующийПо
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[увеличениеПослеСобытия =увеличениеПослеСобытия - 10*увеличениеПослеСобытия;
+пульсирующийПотокНасосов.set(пульсирующийПотокНасосов.get(1)/10,1);
 traceln("время увеличения потока " +time());
+
 ]]></Code>
 							</Value>
 						</Parameter>
@@ -1388,8 +1418,8 @@ traceln("время увеличения потока " +time());
 					<ShowLegend>true</ShowLegend>
 					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
 					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
-					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
-					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleFromExpression><![CDATA[0.6]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[5]]></VerScaleToExpression>
 					<VerScaleType>AUTO</VerScaleType>
 					<DrawLine>true</DrawLine>
 					<Interpolation>LINEAR</Interpolation>
@@ -1403,8 +1433,8 @@ traceln("время увеличения потока " +time());
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>1.0</LineWidth>
 					</DatasetExpression>
-					<SamplesToKeep>10000</SamplesToKeep>
-					<TimeWindowExpression><![CDATA[10000]]></TimeWindowExpression>
+					<SamplesToKeep>2000</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[2000]]></TimeWindowExpression>
 					<FillAreaUnderLine>false</FillAreaUnderLine>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
     			</TimePlot>
