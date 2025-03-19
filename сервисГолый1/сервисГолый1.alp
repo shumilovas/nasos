@@ -175,7 +175,7 @@
 					<Width>20</Width>
 					<Height>20</Height>
 						<Expression><![CDATA[flow3]]></Expression>
-						<InitialValue><![CDATA[3]]></InitialValue>
+						<InitialValue><![CDATA[{3.0}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
@@ -197,7 +197,7 @@
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[3]]></InitialValue>
+						<InitialValue><![CDATA[{3}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
@@ -223,6 +223,13 @@
 								<PackageName><![CDATA[сервисголый]]></PackageName>
 								<ClassName><![CDATA[MyDimension]]></ClassName>
 							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[сервисголый]]></PackageName>
+									<ClassName><![CDATA[MyDimension]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[0.5*СГлавногоАгентаПотокПродаж.get(1)]]></Expression>
+							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -281,6 +288,13 @@
 								<PackageName><![CDATA[сервисголый]]></PackageName>
 								<ClassName><![CDATA[MyDimension]]></ClassName>
 							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[сервисголый]]></PackageName>
+									<ClassName><![CDATA[MyDimension]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[0.35*СГлавногоАгентаПотокПродаж.get(1)*(1+увеличениеПослеСобытия)*поправка]]></Expression>
+							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -628,6 +642,9 @@
 					<Parameters>
 						<Parameter>
 							<Name><![CDATA[arrivalType]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[self.INTERARRIVAL_TIME]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
@@ -638,6 +655,10 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[2]]></Code>
+								<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[firstArrivalMode]]></Name>
@@ -675,7 +696,7 @@
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[uniform_discr(ПрибавкаНасосовВМнсяц-2, ПрибавкаНасосовВМнсяц+2)]]></Code>
+								<Code><![CDATA[uniform_discr(2*ПрибавкаНасосовВМнсяц-2, 2*ПрибавкаНасосовВМнсяц+2)]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -1243,10 +1264,10 @@
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[traceln("do увеличения потока " +пульсирующийПотокНасосов);
-увеличениеПослеСобытия = увеличениеПослеСобытия + увеличениеНасосовВАренде;
+								<Code><![CDATA[traceln("do увеличения потока " +пульсирующийПотокНасосов.get(1));
+увеличениеПослеСобытия = увеличениеПослеСобытия + 10*увеличениеНасосовВАренде;
 traceln("время увеличения потока " +time());
-traceln("posle увеличения потока " +пульсирующийПотокНасосов);
+traceln("posle увеличения потока " +пульсирующийПотокНасосов.get(1));
 ]]></Code>
 							</Value>
 						</Parameter>
@@ -1256,7 +1277,7 @@ traceln("posle увеличения потока " +пульсирующийПо
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[увеличениеПослеСобытия =увеличениеПослеСобытия - увеличениеПослеСобытия;
+								<Code><![CDATA[увеличениеПослеСобытия =увеличениеПослеСобытия - 10*увеличениеПослеСобытия;
 traceln("время увеличения потока " +time());
 ]]></Code>
 							</Value>
