@@ -589,7 +589,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[11/24]]></Code>
+							<Code><![CDATA[13/24]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1742485775366</Id>
@@ -3477,7 +3477,7 @@ if (bestInfeasibleObjective != Double.POSITIVE_INFINITY) {
 			<Id>1742481781382</Id>
 			<Name><![CDATA[Calibration1]]></Name>
 			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
-			<MaximumMemory>256</MaximumMemory>
+			<MaximumMemory>128</MaximumMemory>
 			<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
 			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
 			<BeforeEachExperimentRunCode><![CDATA[datasetCurrentObjective.reset();
@@ -4827,13 +4827,16 @@ copyToClipboard( s );]]></ActionCode>
 			</Parameter>
 			<Parameter>	
 				<Id>1742227435270</Id>
-				<Type>CONTINUOUS</Type>
+				<Type>DISCRETE</Type>
 				<Min Class="CodeValue">
-					<Code><![CDATA[0.00001]]></Code>
+					<Code><![CDATA[0.001]]></Code>
 				</Min>
 				<Max Class="CodeValue">
 					<Code><![CDATA[10]]></Code>
 				</Max>
+				<Step Class="CodeValue">
+					<Code><![CDATA[0.01]]></Code>
+				</Step>
 			</Parameter>
 			<Parameter>	
 				<Id>1742481221816</Id>
@@ -4852,13 +4855,13 @@ copyToClipboard( s );]]></ActionCode>
 				<Id>1742485775368</Id>
 				<Type>DISCRETE</Type>
 				<Min Class="CodeValue">
-					<Code><![CDATA[0.25]]></Code>
+					<Code><![CDATA[0.3]]></Code>
 				</Min>
 				<Max Class="CodeValue">
 					<Code><![CDATA[5]]></Code>
 				</Max>
 				<Step Class="CodeValue">
-					<Code><![CDATA[0.2]]></Code>
+					<Code><![CDATA[0.25]]></Code>
 				</Step>
 			</Parameter>
 			<ObjectiveFunctionCode><![CDATA[abs( (root.новыеНасосы.out.count()+root.изначальныеНасосы.out.count()) - (9000)+ 1.15 * abs( (root.насосыВАренде.get(1)) - (root.насосЧинят.size())) ) -  root.товарПродаётся.get(1)]]></ObjectiveFunctionCode>
@@ -4900,7 +4903,7 @@ if( isBestSolutionFeasible() && isCurrentSolutionBest() ) {
 				<FinalDate><![CDATA[2057702400000]]></FinalDate>	
 				<FinalTime><![CDATA[87648.0]]></FinalTime>	
 				<StopAfterIterationCount>true</StopAfterIterationCount>
-				<IterationCount>50000</IterationCount>
+				<IterationCount>500</IterationCount>
 				<AutomaticStop>false</AutomaticStop>
 			</ModelTimeProperties>
 		</OptimizationExperiment>

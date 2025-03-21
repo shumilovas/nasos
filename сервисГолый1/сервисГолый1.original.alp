@@ -317,7 +317,7 @@
 									<PackageName><![CDATA[сервисголый]]></PackageName>
 									<ClassName><![CDATA[MyDimension]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[11/24]]></Expression>
+								<Expression><![CDATA[количествоНасосовПроизводиться]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>2</ValveIndex>
@@ -469,7 +469,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[50]]></Code>
+							<Code><![CDATA[140]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1742224314134</Id>
@@ -493,7 +493,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[8]]></Code>
+							<Code><![CDATA[290]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1742224343584</Id>
@@ -517,7 +517,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[3.119	]]></Code>
+							<Code><![CDATA[2.22]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1742224823145</Id>
@@ -541,7 +541,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.001]]></Code>
+							<Code><![CDATA[9.475]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1742227435268</Id>
@@ -565,10 +565,34 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[300]]></Code>
+							<Code><![CDATA[62.681]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1742481221814</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1742485775368</Id>
+					<Name><![CDATA[количествоНасосовПроизводиться]]></Name>
+					<X>430</X><Y>260</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[11/24]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1742485775366</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -705,6 +729,21 @@
 					<Id>1742467575619</Id>
 					<Name><![CDATA[СГлавногоАгентаПотокПродаж - аммортизация1]]></Name>
 					<X>597</X><Y>316</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1742485775368" TargetId="1742212639791" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>167</X><Y>56</Y></Direction>
+					<Id>1742485813120</Id>
+					<Name><![CDATA[количествоНасосовПроизводиться - СГлавногоАгентаПотокПродаж]]></Name>
+					<X>430</X><Y>260</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1780,6 +1819,9 @@ traceln("время увеличения потока " +time());
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maximumCapacity]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[entityLocation]]></Name>
@@ -2366,6 +2408,9 @@ traceln("posle увеличения потока " +пульсирующийПо
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[НовНасДискр]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[количествоНасосовПроизводиться]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
@@ -3383,6 +3428,10 @@ copyToClipboard( s );]]></ActionCode>
 				<Id>1742481221816</Id>
 				<Type>FIXED</Type>
 			</Parameter>
+			<Parameter>	
+				<Id>1742485775368</Id>
+				<Type>FIXED</Type>
+			</Parameter>
 			<ObjectiveFunctionCode><![CDATA[1.15 * abs( (root.насосыВАренде.get(1)) - (root.насосЧинят.size()))]]></ObjectiveFunctionCode>
 			<Objective>MINIMIZE</Objective>  
 			<OptimizationEngine>NATIVE</OptimizationEngine>
@@ -3428,7 +3477,7 @@ if (bestInfeasibleObjective != Double.POSITIVE_INFINITY) {
 			<Id>1742481781382</Id>
 			<Name><![CDATA[Calibration1]]></Name>
 			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
-			<MaximumMemory>512</MaximumMemory>
+			<MaximumMemory>256</MaximumMemory>
 			<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
 			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
 			<BeforeEachExperimentRunCode><![CDATA[datasetCurrentObjective.reset();
@@ -4739,25 +4788,80 @@ copyToClipboard( s );]]></ActionCode>
 
 			<Parameter>	
 				<Id>1742224314136</Id>
-				<Type>FIXED</Type>
+				<Type>DISCRETE</Type>
+				<Min Class="CodeValue">
+					<Code><![CDATA[10]]></Code>
+				</Min>
+				<Max Class="CodeValue">
+					<Code><![CDATA[300]]></Code>
+				</Max>
+				<Step Class="CodeValue">
+					<Code><![CDATA[10]]></Code>
+				</Step>
 			</Parameter>
 			<Parameter>	
 				<Id>1742224343586</Id>
-				<Type>FIXED</Type>
+				<Type>DISCRETE</Type>
+				<Min Class="CodeValue">
+					<Code><![CDATA[5]]></Code>
+				</Min>
+				<Max Class="CodeValue">
+					<Code><![CDATA[300]]></Code>
+				</Max>
+				<Step Class="CodeValue">
+					<Code><![CDATA[5]]></Code>
+				</Step>
 			</Parameter>
 			<Parameter>	
 				<Id>1742224823147</Id>
-				<Type>FIXED</Type>
+				<Type>DISCRETE</Type>
+				<Min Class="CodeValue">
+					<Code><![CDATA[1]]></Code>
+				</Min>
+				<Max Class="CodeValue">
+					<Code><![CDATA[10]]></Code>
+				</Max>
+				<Step Class="CodeValue">
+					<Code><![CDATA[0.01]]></Code>
+				</Step>
 			</Parameter>
 			<Parameter>	
 				<Id>1742227435270</Id>
-				<Type>FIXED</Type>
+				<Type>CONTINUOUS</Type>
+				<Min Class="CodeValue">
+					<Code><![CDATA[0.00001]]></Code>
+				</Min>
+				<Max Class="CodeValue">
+					<Code><![CDATA[10]]></Code>
+				</Max>
 			</Parameter>
 			<Parameter>	
 				<Id>1742481221816</Id>
-				<Type>FIXED</Type>
+				<Type>DISCRETE</Type>
+				<Min Class="CodeValue">
+					<Code><![CDATA[200]]></Code>
+				</Min>
+				<Max Class="CodeValue">
+					<Code><![CDATA[500]]></Code>
+				</Max>
+				<Step Class="CodeValue">
+					<Code><![CDATA[50]]></Code>
+				</Step>
 			</Parameter>
-			<ObjectiveFunctionCode><![CDATA[abs( (root.новыеНасосы.out.count()+root.изначальныеНасосы.out.count()) - (9000)+ 1.15 * abs( (root.насосыВАренде.get(1)) - (root.насосЧинят.size())) )]]></ObjectiveFunctionCode>
+			<Parameter>	
+				<Id>1742485775368</Id>
+				<Type>DISCRETE</Type>
+				<Min Class="CodeValue">
+					<Code><![CDATA[0.25]]></Code>
+				</Min>
+				<Max Class="CodeValue">
+					<Code><![CDATA[5]]></Code>
+				</Max>
+				<Step Class="CodeValue">
+					<Code><![CDATA[0.2]]></Code>
+				</Step>
+			</Parameter>
+			<ObjectiveFunctionCode><![CDATA[abs( (root.новыеНасосы.out.count()+root.изначальныеНасосы.out.count()) - (9000)+ 1.15 * abs( (root.насосыВАренде.get(1)) - (root.насосЧинят.size())) ) -  root.товарПродаётся.get(1)]]></ObjectiveFunctionCode>
 			<Objective>MINIMIZE</Objective>  
 			<OptimizationEngine>NATIVE</OptimizationEngine>
 			<AfterIterationCode><![CDATA[if (isBestSolutionFeasible()) {
@@ -4832,6 +4936,9 @@ if( isBestSolutionFeasible() && isCurrentSolutionBest() ) {
 			<FreeformParamValue>	
 				<Id>1742481221816</Id>
 			</FreeformParamValue>
+			<FreeformParamValue>	
+				<Id>1742485775368</Id>
+			</FreeformParamValue>
 			<RangeVariationParamValue>	
 				<Id>1742224314136</Id>
 				<Type>FIXED</Type>
@@ -4850,6 +4957,10 @@ if( isBestSolutionFeasible() && isCurrentSolutionBest() ) {
 			</RangeVariationParamValue>
 			<RangeVariationParamValue>	
 				<Id>1742481221816</Id>
+				<Type>FIXED</Type>
+			</RangeVariationParamValue>
+			<RangeVariationParamValue>	
+				<Id>1742485775368</Id>
 				<Type>FIXED</Type>
 			</RangeVariationParamValue>
 			<ModelTimeProperties>
