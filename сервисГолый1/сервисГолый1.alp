@@ -1194,6 +1194,7 @@ self.restart();
 				<Event>
 					<Id>1742650611445</Id>
 					<Name><![CDATA[слежкаЗаПеременными1]]></Name>
+					<Description><![CDATA[хоп]]></Description>
 					<X>700</X><Y>200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
