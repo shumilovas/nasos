@@ -8,6 +8,7 @@
 <Model>
 	<Id>1742212621685</Id>
 	<Name><![CDATA[сервисГолый1]]></Name>
+	<Description><![CDATA[модель]]></Description>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[сервисголый]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Hour]]></ModelTimeUnit>
