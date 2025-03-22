@@ -600,6 +600,129 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+<<<<<<< HEAD
+=======
+				<Variable Class="Parameter">
+					<Id>1742643215814</Id>
+					<Name><![CDATA[поправка2]]></Name>
+					<X>710</X><Y>420</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[900]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1742643215812</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1742643682506</Id>
+					<Name><![CDATA[поправка4]]></Name>
+					<X>860</X><Y>440</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[1.3]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1742643682504</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1742650478851</Id>
+					<Name><![CDATA[ПоправкаДляСобытия1]]></Name>
+					<X>830</X><Y>130</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.01]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1742650478849</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1742650516631</Id>
+					<Name><![CDATA[ПоправкаДляСобытия2]]></Name>
+					<X>800</X><Y>150</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.1]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1742650516629</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1742650729761</Id>
+					<Name><![CDATA[УвеличениеПараметров]]></Name>
+					<X>1040</X><Y>170</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[3]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1742650729759</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+>>>>>>> fb6a9a3512da2ef5c49854fd2b2d69fd557dba11
 			</Variables>
 			<Dependences>
 				<Link SourceId="1742212639791" TargetId="1742212639729" Polarity="null">
@@ -1019,6 +1142,82 @@
 					</Points>
 				</Connector>
 			</Connectors>
+<<<<<<< HEAD
+=======
+			<Events>
+				<Event>
+					<Id>1742646551873</Id>
+					<Name><![CDATA[слежкаЗаПеременными]]></Name>
+					<X>750</X><Y>170</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1742716800000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[(увеличениеПаркаНасосов<0)]]></Condition>
+					</Properties>
+					<Action><![CDATA[увеличениеПаркаНасосов=ПоправкаДляСобытия1;
+if (увеличениеПослеСобытия>5) увеличениеПослеСобытия=ПоправкаДляСобытия2;
+if (увеличениеПослеСобытия<0) увеличениеПослеСобытия=ПоправкаДляСобытия2;
+self.restart();
+
+]]></Action>
+				</Event>
+				<Event>
+					<Id>1742650611445</Id>
+					<Name><![CDATA[слежкаЗаПеременными1]]></Name>
+					<X>700</X><Y>200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1742716800000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[(насосыВАренде.get(1)<0)]]></Condition>
+					</Properties>
+					<Action><![CDATA[увеличениеПаркаНасосов=ПоправкаДляСобытия1;
+if (увеличениеПослеСобытия<ПоправкаДляСобытия2*5) увеличениеПослеСобытия=УвеличениеПараметров*ПоправкаДляСобытия2;
+self.restart();
+
+]]></Action>
+				</Event>
+			</Events>
+>>>>>>> fb6a9a3512da2ef5c49854fd2b2d69fd557dba11
 			<AnalysisData>
     			<DataSet>
 					<Id>1742390052403</Id>
@@ -2412,6 +2611,24 @@ traceln("posle увеличения потока " +пульсирующийПо
 				<Parameter>
 					<ParameterName><![CDATA[количествоНасосовПроизводиться]]></ParameterName>
 				</Parameter>
+<<<<<<< HEAD
+=======
+				<Parameter>
+					<ParameterName><![CDATA[поправка2]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[поправка4]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[ПоправкаДляСобытия1]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[ПоправкаДляСобытия2]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[УвеличениеПараметров]]></ParameterName>
+				</Parameter>
+>>>>>>> fb6a9a3512da2ef5c49854fd2b2d69fd557dba11
 			</Parameters>			
 			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
@@ -3432,6 +3649,29 @@ copyToClipboard( s );]]></ActionCode>
 				<Id>1742485775368</Id>
 				<Type>FIXED</Type>
 			</Parameter>
+<<<<<<< HEAD
+=======
+			<Parameter>	
+				<Id>1742643215814</Id>
+				<Type>FIXED</Type>
+			</Parameter>
+			<Parameter>	
+				<Id>1742643682506</Id>
+				<Type>FIXED</Type>
+			</Parameter>
+			<Parameter>	
+				<Id>1742650478851</Id>
+				<Type>FIXED</Type>
+			</Parameter>
+			<Parameter>	
+				<Id>1742650516631</Id>
+				<Type>FIXED</Type>
+			</Parameter>
+			<Parameter>	
+				<Id>1742650729761</Id>
+				<Type>FIXED</Type>
+			</Parameter>
+>>>>>>> fb6a9a3512da2ef5c49854fd2b2d69fd557dba11
 			<ObjectiveFunctionCode><![CDATA[1.15 * abs( (root.насосыВАренде.get(1)) - (root.насосЧинят.size()))]]></ObjectiveFunctionCode>
 			<Objective>MINIMIZE</Objective>  
 			<OptimizationEngine>NATIVE</OptimizationEngine>
@@ -4864,6 +5104,29 @@ copyToClipboard( s );]]></ActionCode>
 					<Code><![CDATA[0.25]]></Code>
 				</Step>
 			</Parameter>
+<<<<<<< HEAD
+=======
+			<Parameter>	
+				<Id>1742643215814</Id>
+				<Type>FIXED</Type>
+			</Parameter>
+			<Parameter>	
+				<Id>1742643682506</Id>
+				<Type>FIXED</Type>
+			</Parameter>
+			<Parameter>	
+				<Id>1742650478851</Id>
+				<Type>FIXED</Type>
+			</Parameter>
+			<Parameter>	
+				<Id>1742650516631</Id>
+				<Type>FIXED</Type>
+			</Parameter>
+			<Parameter>	
+				<Id>1742650729761</Id>
+				<Type>FIXED</Type>
+			</Parameter>
+>>>>>>> fb6a9a3512da2ef5c49854fd2b2d69fd557dba11
 			<ObjectiveFunctionCode><![CDATA[abs( (root.новыеНасосы.out.count()+root.изначальныеНасосы.out.count()) - (9000)+ 1.15 * abs( (root.насосыВАренде.get(1)) - (root.насосЧинят.size())) ) -  root.товарПродаётся.get(1)]]></ObjectiveFunctionCode>
 			<Objective>MINIMIZE</Objective>  
 			<OptimizationEngine>NATIVE</OptimizationEngine>
@@ -4942,6 +5205,24 @@ if( isBestSolutionFeasible() && isCurrentSolutionBest() ) {
 			<FreeformParamValue>	
 				<Id>1742485775368</Id>
 			</FreeformParamValue>
+<<<<<<< HEAD
+=======
+			<FreeformParamValue>	
+				<Id>1742643215814</Id>
+			</FreeformParamValue>
+			<FreeformParamValue>	
+				<Id>1742643682506</Id>
+			</FreeformParamValue>
+			<FreeformParamValue>	
+				<Id>1742650478851</Id>
+			</FreeformParamValue>
+			<FreeformParamValue>	
+				<Id>1742650516631</Id>
+			</FreeformParamValue>
+			<FreeformParamValue>	
+				<Id>1742650729761</Id>
+			</FreeformParamValue>
+>>>>>>> fb6a9a3512da2ef5c49854fd2b2d69fd557dba11
 			<RangeVariationParamValue>	
 				<Id>1742224314136</Id>
 				<Type>FIXED</Type>
@@ -4966,6 +5247,29 @@ if( isBestSolutionFeasible() && isCurrentSolutionBest() ) {
 				<Id>1742485775368</Id>
 				<Type>FIXED</Type>
 			</RangeVariationParamValue>
+<<<<<<< HEAD
+=======
+			<RangeVariationParamValue>	
+				<Id>1742643215814</Id>
+				<Type>FIXED</Type>
+			</RangeVariationParamValue>
+			<RangeVariationParamValue>	
+				<Id>1742643682506</Id>
+				<Type>FIXED</Type>
+			</RangeVariationParamValue>
+			<RangeVariationParamValue>	
+				<Id>1742650478851</Id>
+				<Type>FIXED</Type>
+			</RangeVariationParamValue>
+			<RangeVariationParamValue>	
+				<Id>1742650516631</Id>
+				<Type>FIXED</Type>
+			</RangeVariationParamValue>
+			<RangeVariationParamValue>	
+				<Id>1742650729761</Id>
+				<Type>FIXED</Type>
+			</RangeVariationParamValue>
+>>>>>>> fb6a9a3512da2ef5c49854fd2b2d69fd557dba11
 			<ModelTimeProperties>
 				<StopOption><![CDATA[Stop at specified time]]></StopOption>
 				<InitialDate><![CDATA[1742169600000]]></InitialDate>	
