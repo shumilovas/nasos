@@ -35,6 +35,7 @@
 		<ActiveObjectClass>
 			<Id>1742212621688</Id>
 			<Name><![CDATA[Main]]></Name>
+			<Description><![CDATA[v]]></Description>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1742212621694</Id>
@@ -3694,31 +3695,94 @@ copyToClipboard( s );]]></ActionCode>
 			</Parameter>
 			<Parameter>	
 				<Id>1742481221816</Id>
-				<Type>FIXED</Type>
+				<Type>DISCRETE</Type>
+				<Min Class="CodeValue">
+					<Code><![CDATA[50]]></Code>
+				</Min>
+				<Max Class="CodeValue">
+					<Code><![CDATA[80]]></Code>
+				</Max>
+				<Step Class="CodeValue">
+					<Code><![CDATA[3]]></Code>
+				</Step>
 			</Parameter>
 			<Parameter>	
 				<Id>1742485775368</Id>
-				<Type>FIXED</Type>
+				<Type>DISCRETE</Type>
+				<Min Class="CodeValue">
+					<Code><![CDATA[0.2]]></Code>
+				</Min>
+				<Max Class="CodeValue">
+					<Code><![CDATA[2]]></Code>
+				</Max>
+				<Step Class="CodeValue">
+					<Code><![CDATA[0.05]]></Code>
+				</Step>
 			</Parameter>
 			<Parameter>	
 				<Id>1742643215814</Id>
-				<Type>FIXED</Type>
+				<Type>DISCRETE</Type>
+				<Min Class="CodeValue">
+					<Code><![CDATA[250]]></Code>
+				</Min>
+				<Max Class="CodeValue">
+					<Code><![CDATA[1500]]></Code>
+				</Max>
+				<Step Class="CodeValue">
+					<Code><![CDATA[50]]></Code>
+				</Step>
 			</Parameter>
 			<Parameter>	
 				<Id>1742643682506</Id>
-				<Type>FIXED</Type>
+				<Type>DISCRETE</Type>
+				<Min Class="CodeValue">
+					<Code><![CDATA[0.2]]></Code>
+				</Min>
+				<Max Class="CodeValue">
+					<Code><![CDATA[3]]></Code>
+				</Max>
+				<Step Class="CodeValue">
+					<Code><![CDATA[0.1]]></Code>
+				</Step>
 			</Parameter>
 			<Parameter>	
 				<Id>1742650478851</Id>
-				<Type>FIXED</Type>
+				<Type>DISCRETE</Type>
+				<Min Class="CodeValue">
+					<Code><![CDATA[0.001]]></Code>
+				</Min>
+				<Max Class="CodeValue">
+					<Code><![CDATA[2]]></Code>
+				</Max>
+				<Step Class="CodeValue">
+					<Code><![CDATA[0.01]]></Code>
+				</Step>
 			</Parameter>
 			<Parameter>	
 				<Id>1742650516631</Id>
-				<Type>FIXED</Type>
+				<Type>DISCRETE</Type>
+				<Min Class="CodeValue">
+					<Code><![CDATA[0.01]]></Code>
+				</Min>
+				<Max Class="CodeValue">
+					<Code><![CDATA[2]]></Code>
+				</Max>
+				<Step Class="CodeValue">
+					<Code><![CDATA[0.1]]></Code>
+				</Step>
 			</Parameter>
 			<Parameter>	
 				<Id>1742650729761</Id>
-				<Type>FIXED</Type>
+				<Type>DISCRETE</Type>
+				<Min Class="CodeValue">
+					<Code><![CDATA[1]]></Code>
+				</Min>
+				<Max Class="CodeValue">
+					<Code><![CDATA[10]]></Code>
+				</Max>
+				<Step Class="CodeValue">
+					<Code><![CDATA[1]]></Code>
+				</Step>
 			</Parameter>
 			<ObjectiveFunctionCode><![CDATA[1.15 * abs( (root.насосыВАренде.get(1)) - (root.насосЧинят.size()))]]></ObjectiveFunctionCode>
 			<Objective>MINIMIZE</Objective>  
