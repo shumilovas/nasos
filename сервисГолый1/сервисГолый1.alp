@@ -3717,7 +3717,11 @@ if (bestInfeasibleObjective != Double.POSITIVE_INFINITY) {
 			<Id>1742481781382</Id>
 			<Name><![CDATA[Calibration1]]></Name>
 			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
+<<<<<<< Updated upstream
 			<MaximumMemory>128</MaximumMemory>
+=======
+			<MaximumMemory>512</MaximumMemory>
+>>>>>>> Stashed changes
 			<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
 			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
 			<BeforeEachExperimentRunCode><![CDATA[datasetCurrentObjective.reset();
