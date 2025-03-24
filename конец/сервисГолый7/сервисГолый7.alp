@@ -2338,7 +2338,7 @@ dynamicVariable = dynamicVariable/8;
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[увеличениеПослеСобытия = увеличениеПослеСобытия - увеличениеНасосовВАренде;
-traceln("время УМЕНЬШЕНИЯ потока " +time());
+//traceln("время УМЕНЬШЕНИЯ потока " +time());
 увеличениеПаркаНасосов = увеличениеПаркаНасосов+0.001;]]></Code>
 							</Value>
 						</Parameter>
@@ -2549,10 +2549,10 @@ traceln("время УМЕНЬШЕНИЯ потока " +time());
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[traceln("do увеличения потока " +пульсирующийПотокНасосов.get(1));
+								<Code><![CDATA[//traceln("do увеличения потока " +пульсирующийПотокНасосов.get(1));
 увеличениеПослеСобытия = увеличениеПослеСобытия + увеличениеНасосовВАренде;
 traceln("время увеличения потока " +time());
-traceln("posle увеличения потока " +пульсирующийПотокНасосов.get(1));
+//traceln("posle увеличения потока " +пульсирующийПотокНасосов.get(1));
 ]]></Code>
 							</Value>
 						</Parameter>
@@ -6042,14 +6042,41 @@ copyToClipboard( s );]]></ActionCode>
 			<Parameter>	
 				<Id>1742650478851</Id>
 				<Type>FIXED</Type>
+				<Min Class="CodeValue">
+					<Code><![CDATA[0.01]]></Code>
+				</Min>
+				<Max Class="CodeValue">
+					<Code><![CDATA[2]]></Code>
+				</Max>
+				<Step Class="CodeValue">
+					<Code><![CDATA[0.1]]></Code>
+				</Step>
 			</Parameter>
 			<Parameter>	
 				<Id>1742650516631</Id>
-				<Type>FIXED</Type>
+				<Type>DISCRETE</Type>
+				<Min Class="CodeValue">
+					<Code><![CDATA[0.01]]></Code>
+				</Min>
+				<Max Class="CodeValue">
+					<Code><![CDATA[2]]></Code>
+				</Max>
+				<Step Class="CodeValue">
+					<Code><![CDATA[0.09]]></Code>
+				</Step>
 			</Parameter>
 			<Parameter>	
 				<Id>1742650729761</Id>
-				<Type>FIXED</Type>
+				<Type>DISCRETE</Type>
+				<Min Class="CodeValue">
+					<Code><![CDATA[1]]></Code>
+				</Min>
+				<Max Class="CodeValue">
+					<Code><![CDATA[10]]></Code>
+				</Max>
+				<Step Class="CodeValue">
+					<Code><![CDATA[1]]></Code>
+				</Step>
 			</Parameter>
 			<Parameter>	
 				<Id>1742743435599</Id>
