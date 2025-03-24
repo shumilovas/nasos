@@ -1598,7 +1598,7 @@ self.restart();
 						</RecurrenceCode>
 						<Condition><![CDATA[(товарПродан.get(1) + насосыВАренде.get(1) > МаксимальноеКоличествоСкважинРоссии/2) || (насосЧинят.size()>МаксимальноеКоличествоСкважинРоссии/3)]]></Condition>
 					</Properties>
-					<Action><![CDATA[traceln("уменьшение рынка " +time(), red);
+					<Action><![CDATA[//traceln("уменьшение рынка " +time(), red);
 ПрибавкаНасосовВМнсяц=(int)(ПрибавкаНасосовВМнсяц*0.8);
 увеличениеПаркаНасосов=увеличениеПаркаНасосов*0.8;
 поправка2=поправка2*1.5;
@@ -2338,7 +2338,7 @@ dynamicVariable = dynamicVariable/8;
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[увеличениеПослеСобытия = увеличениеПослеСобытия - увеличениеНасосовВАренде;
-traceln("время УМЕНЬШЕНИЯ потока " +time());
+//traceln("время УМЕНЬШЕНИЯ потока " +time());
 увеличениеПаркаНасосов = увеличениеПаркаНасосов+0.001;]]></Code>
 							</Value>
 						</Parameter>
@@ -2549,10 +2549,10 @@ traceln("время УМЕНЬШЕНИЯ потока " +time());
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[traceln("do увеличения потока " +пульсирующийПотокНасосов.get(1));
+								<Code><![CDATA[//traceln("do увеличения потока " +пульсирующийПотокНасосов.get(1));
 увеличениеПослеСобытия = увеличениеПослеСобытия + увеличениеНасосовВАренде;
 traceln("время увеличения потока " +time());
-traceln("posle увеличения потока " +пульсирующийПотокНасосов.get(1));
+//traceln("posle увеличения потока " +пульсирующийПотокНасосов.get(1));
 ]]></Code>
 							</Value>
 						</Parameter>
@@ -2764,10 +2764,10 @@ traceln("posle увеличения потока " +пульсирующийПо
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[traceln("do увеличения потока " +пульсирующийПотокНасосов.get(1));
+								<Code><![CDATA[//traceln("do увеличения потока " +пульсирующийПотокНасосов.get(1));
 увеличениеПослеСобытия = увеличениеПослеСобытия + увеличениеНасосовВАренде;
-traceln("время увеличения потока " +time());
-traceln("posle увеличения потока " +пульсирующийПотокНасосов.get(1));
+//traceln("время увеличения потока " +time());
+//traceln("posle увеличения потока " +пульсирующийПотокНасосов.get(1));
 ]]></Code>
 							</Value>
 						</Parameter>
@@ -6015,7 +6015,7 @@ copyToClipboard( s );]]></ActionCode>
 			</Parameter>
 			<Parameter>	
 				<Id>1742643215814</Id>
-				<Type>FIXED</Type>
+				<Type>DISCRETE</Type>
 			</Parameter>
 			<Parameter>	
 				<Id>1742643682506</Id>
@@ -6037,7 +6037,7 @@ copyToClipboard( s );]]></ActionCode>
 				<Id>1742743435599</Id>
 				<Type>FIXED</Type>
 			</Parameter>
-			<ObjectiveFunctionCode><![CDATA[abs( (root.новыеНасосы.out.count()+root.изначальныеНасосы.out.count()) - (9000)+ 1.15 * abs( (root.насосыВАренде.get(1)) - (root.насосЧинят.size())) ) -  root.товарПродаётся.get(1)]]></ObjectiveFunctionCode>
+			<ObjectiveFunctionCode><![CDATA[abs( (root.новыеНасосы.out.count()+root.изначальныеНасосы.out.count()) - (9000)+ 1.15 * abs( (root.насосыВАренде.get(1)) - (root.насосЧинят.size())) ) ]]></ObjectiveFunctionCode>
 			<Objective>MINIMIZE</Objective>  
 			<OptimizationEngine>NATIVE</OptimizationEngine>
 			<AfterIterationCode><![CDATA[if (isBestSolutionFeasible()) {
