@@ -2277,6 +2277,7 @@ dynamicVariable = dynamicVariable/8;
 				<EmbeddedObject>
 					<Id>1742224872935</Id>
 					<Name><![CDATA[насосЧинят]]></Name>
+					<Description><![CDATA[емя увеличения потока 168.0]]></Description>
 					<X>980</X><Y>80</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2333,6 +2334,9 @@ dynamicVariable = dynamicVariable/8;
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onAtExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[вычввв]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
@@ -4629,7 +4633,7 @@ if (bestInfeasibleObjective != Double.POSITIVE_INFINITY) {
 			<Id>1742481781382</Id>
 			<Name><![CDATA[Calibration1]]></Name>
 			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
-			<MaximumMemory>256</MaximumMemory>
+			<MaximumMemory>512</MaximumMemory>
 			<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
 			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
 			<BeforeEachExperimentRunCode><![CDATA[datasetCurrentObjective.reset();
