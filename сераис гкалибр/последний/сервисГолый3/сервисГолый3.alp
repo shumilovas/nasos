@@ -188,6 +188,21 @@
 						</InitialValue>
 					</Properties>
 				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1742809095835</Id>
+					<Name><![CDATA[dynamicVariable]]></Name>
+					<X>480</X><Y>310</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[количествоНасосовПроизводиться]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1742212639855</Id>
 					<Name><![CDATA[товарПродан]]></Name>
@@ -349,7 +364,7 @@
 									<PackageName><![CDATA[сервисголый]]></PackageName>
 									<ClassName><![CDATA[MyDimension]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[количествоНасосовПроизводиться]]></Expression>
+								<Expression><![CDATA[dynamicVariable]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>2</ValveIndex>
@@ -898,12 +913,12 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1742485775368" TargetId="1742212639791" Polarity="null">
+				<Link SourceId="1742485775368" TargetId="1742809095835" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>167</X><Y>56</Y></Direction>
+					<Direction><X>50</X><Y>50</Y></Direction>
 					<Id>1742485813120</Id>
-					<Name><![CDATA[количествоНасосовПроизводиться - СГлавногоАгентаПотокПродаж]]></Name>
+					<Name><![CDATA[количествоНасосовПроизводиться - dynamicVariable]]></Name>
 					<X>430</X><Y>260</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -965,6 +980,21 @@
 					<Id>1742742671137</Id>
 					<Name><![CDATA[p4 - flow]]></Name>
 					<X>1080</X><Y>190</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1742809095835" TargetId="1742212639791" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>117</X><Y>6</Y></Direction>
+					<Id>1742809120655</Id>
+					<Name><![CDATA[dynamicVariable - СГлавногоАгентаПотокПродаж]]></Name>
+					<X>480</X><Y>310</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1505,7 +1535,8 @@ self.restart();
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[СГлавногоАгентаПотокПродаж.set(СГлавногоАгентаПотокПродаж.get(1)*1.05,1)]]></Action>
+					<Action><![CDATA[if ((товарПродан.get(1) + насосыВАренде.get(1) < МаксимальноеКоличествоСкважинРоссии/2) || (насосЧинят.size() < МаксимальноеКоличествоСкважинРоссии/3) )
+СГлавногоАгентаПотокПродаж.set(СГлавногоАгентаПотокПродаж.get(1)*1.05,1);]]></Action>
 				</Event>
 				<Event>
 					<Id>1742742549995</Id>
@@ -1571,7 +1602,9 @@ self.restart();
 ПрибавкаНасосовВМнсяц=(int)(ПрибавкаНасосовВМнсяц*0.8);
 увеличениеПаркаНасосов=увеличениеПаркаНасосов*0.8;
 поправка2=поправка2*1.5;
-НовНасДискр = (int)(НовНасДискр*0.8);]]></Action>
+НовНасДискр = (int)(НовНасДискр*0.8);
+dynamicVariable = dynamicVariable/8;
+]]></Action>
 				</Event>
 			</Events>
 			<AnalysisData>
@@ -6021,6 +6054,18 @@ if( isBestSolutionFeasible() && isCurrentSolutionBest() ) {
 }
 ]]></AfterIterationCode>
 			<AllowParallelEvaluations>true</AllowParallelEvaluations>
+			<Requirement>
+				<Enabled>true</Enabled>
+				<Expression><![CDATA[root.товарПродаётся.get(1)]]></Expression>
+				<Type>MORE_OR_EQUAL</Type>
+				<Bound>0.1</Bound>
+			</Requirement>
+			<Requirement>
+				<Enabled>true</Enabled>
+				<Expression><![CDATA[root.насосыВАренде.get(1)]]></Expression>
+				<Type>MORE_OR_EQUAL</Type>
+				<Bound>0.1</Bound>
+			</Requirement>
 			<ReplicationsProperties>
 				<UseReplication>false</UseReplication>
 				<FixedReplicationsNumber>true</FixedReplicationsNumber>
