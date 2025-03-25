@@ -1459,7 +1459,7 @@
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="condition" Mode="occuresOnce">
+					<Properties TriggerType="timeout" Mode="cyclic">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -1471,20 +1471,19 @@
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1742716800000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[0]]></Code>
+							<Code><![CDATA[370]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 						</RecurrenceCode>
-						<Condition><![CDATA[(увеличениеПаркаНасосов<0)]]></Condition>
+						<Condition><![CDATA[((увеличениеПаркаНасосов<1) &&( time()>100))]]></Condition>
 					</Properties>
-					<Action><![CDATA[увеличениеПаркаНасосов=ПоправкаДляСобытия1;
-if (увеличениеПослеСобытия>5) увеличениеПослеСобытия=ПоправкаДляСобытия2;
-if (увеличениеПослеСобытия<0.2) увеличениеПослеСобытия=ПоправкаДляСобытия2;
-self.restart();
-
+					<Action><![CDATA[if ((увеличениеПаркаНасосов<2) &&( time()>100))увеличениеПаркаНасосов=ПоправкаДляСобытия1;
+{if (увеличениеПослеСобытия>3) увеличениеПослеСобытия=ПоправкаДляСобытия2;
+if (увеличениеПослеСобытия<0.7) увеличениеПослеСобытия=ПоправкаДляСобытия2;
+self.restart();}
 ]]></Action>
 				</Event>
 				<Event>
@@ -1496,7 +1495,7 @@ self.restart();
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="condition" Mode="occuresOnce">
+					<Properties TriggerType="timeout" Mode="cyclic">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -1508,18 +1507,19 @@ self.restart();
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1742716800000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[0]]></Code>
+							<Code><![CDATA[380]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 						</RecurrenceCode>
-						<Condition><![CDATA[(насосыВАренде.get(1)<0)]]></Condition>
+						<Condition><![CDATA[((насосыВАренде.get(1)<1) && (time()>100))]]></Condition>
 					</Properties>
-					<Action><![CDATA[увеличениеПаркаНасосов=ПоправкаДляСобытия1;
-if (увеличениеПослеСобытия<ПоправкаДляСобытия2*5) увеличениеПослеСобытия=УвеличениеПараметров*ПоправкаДляСобытия2;
-self.restart();
+					<Action><![CDATA[if (((насосыВАренде.get(1)<5) && (time()>100)))
+{увеличениеПаркаНасосов=ПоправкаДляСобытия1;
+if (увеличениеПослеСобытия<ПоправкаДляСобытия2*3) увеличениеПослеСобытия=УвеличениеПараметров*ПоправкаДляСобытия2;
+self.restart();}
 
 ]]></Action>
 				</Event>
@@ -6540,13 +6540,13 @@ if (bestInfeasibleObjective != Double.POSITIVE_INFINITY) {
 				<Enabled>true</Enabled>
 				<Expression><![CDATA[root.товарПродаётся.get(1)]]></Expression>
 				<Type>MORE_OR_EQUAL</Type>
-				<Bound>0.1</Bound>
+				<Bound>0.5</Bound>
 			</Requirement>
 			<Requirement>
 				<Enabled>true</Enabled>
 				<Expression><![CDATA[root.насосыВАренде.get(1)]]></Expression>
 				<Type>MORE_OR_EQUAL</Type>
-				<Bound>0.1</Bound>
+				<Bound>0.5</Bound>
 			</Requirement>
 			<ReplicationsProperties>
 				<UseReplication>false</UseReplication>
