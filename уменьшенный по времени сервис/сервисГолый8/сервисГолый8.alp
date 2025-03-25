@@ -139,7 +139,7 @@
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[double]]></Type>        
 						<InitialValue Class="CodeValue">
-							<Code><![CDATA[0.1]]></Code>
+							<Code><![CDATA[0.2]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
@@ -154,7 +154,7 @@
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[double]]></Type>        
 						<InitialValue Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
+							<Code><![CDATA[1]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
@@ -564,7 +564,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[95]]></Code>
+							<Code><![CDATA[250]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1742224314134</Id>
@@ -756,7 +756,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.01]]></Code>
+							<Code><![CDATA[0.08]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1742650478849</Id>
@@ -780,7 +780,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.1]]></Code>
+							<Code><![CDATA[0.7]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1742650516629</Id>
@@ -1476,7 +1476,7 @@
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</RecurrenceCode>
 						<Condition><![CDATA[((увеличениеПаркаНасосов<1) &&( time()>100))]]></Condition>
 					</Properties>
@@ -1512,7 +1512,7 @@ self.restart();}
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</RecurrenceCode>
 						<Condition><![CDATA[((насосыВАренде.get(1)<1) && (time()>100))]]></Condition>
 					</Properties>
@@ -1584,7 +1584,7 @@ self.restart();}
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
 					<Action><![CDATA[if ((товарПродан.get(1) + насосыВАренде.get(1) < МаксимальноеКоличествоСкважинРоссии/2) || (насосЧинят.size() < МаксимальноеКоличествоСкважинРоссии/3) )
-СГлавногоАгентаПотокПродаж.set(СГлавногоАгентаПотокПродаж.get(1)*1.05,1);]]></Action>
+СГлавногоАгентаПотокПродаж.set(СГлавногоАгентаПотокПродаж.get(1)*1.15,1);]]></Action>
 				</Event>
 				<Event>
 					<Id>1742742549995</Id>
@@ -1780,7 +1780,7 @@ if (времяОтрицательных1_1 - времяОтрицательны
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</RecurrenceCode>
-						<Condition><![CDATA[насосыВАренде.get(1)<0;]]></Condition>
+						<Condition><![CDATA[насосыВАренде.get(1)<1;]]></Condition>
 					</Properties>
 					<Action><![CDATA[времяОтрицательных2_1=time();
 if  (времяОтрицательных2_1 - времяОтрицательных2 >100) stopSimulation();
@@ -2095,7 +2095,7 @@ if  (времяОтрицательных2_1 - времяОтрицательн�
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[triangular( 2.5, 3, 3.5 )]]></Code>
-								<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
+								<Unit Class="TimeUnits"><![CDATA[YEAR]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -2481,7 +2481,7 @@ if  (времяОтрицательных2_1 - времяОтрицательн�
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[triangular(1, 3, 2)]]></Code>
-								<Unit Class="TimeUnits"><![CDATA[WEEK]]></Unit>
+								<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -2508,7 +2508,7 @@ if  (времяОтрицательных2_1 - времяОтрицательн�
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[увеличениеПаркаНасосов = увеличениеПаркаНасосов-0.001;]]></Code>
+								<Code><![CDATA[увеличениеПаркаНасосов = увеличениеПаркаНасосов-0.1;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -3481,7 +3481,7 @@ traceln("posle увеличения потока " +пульсирующийПо
 					</OccurrenceTime>
 					<RecurrenceCode Class="CodeUnitValue">
 						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						<Unit Class="TimeUnits"><![CDATA[WEEK]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Width>260</Width>
@@ -3510,9 +3510,9 @@ traceln("posle увеличения потока " +пульсирующийПо
 					<ShowLegend>true</ShowLegend>
 					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
 					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
-					<VerScaleFromExpression><![CDATA[0.6]]></VerScaleFromExpression>
-					<VerScaleToExpression><![CDATA[5]]></VerScaleToExpression>
-					<VerScaleType>AUTO</VerScaleType>
+					<VerScaleFromExpression><![CDATA[0.01]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1.2]]></VerScaleToExpression>
+					<VerScaleType>FIXED</VerScaleType>
 					<DrawLine>true</DrawLine>
 					<Interpolation>LINEAR</Interpolation>
 					<DatasetExpression>  
@@ -3525,8 +3525,8 @@ traceln("posle увеличения потока " +пульсирующийПо
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>1.0</LineWidth>
 					</DatasetExpression>
-					<SamplesToKeep>100000</SamplesToKeep>
-					<TimeWindowExpression><![CDATA[100000]]></TimeWindowExpression>
+					<SamplesToKeep>10000</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[5000]]></TimeWindowExpression>
 					<FillAreaUnderLine>false</FillAreaUnderLine>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
     			</TimePlot>
