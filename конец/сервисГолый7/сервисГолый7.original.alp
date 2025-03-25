@@ -6390,7 +6390,7 @@ if (bestInfeasibleObjective != Double.POSITIVE_INFINITY) {
 				<FinalDate><![CDATA[1836864000000]]></FinalDate>	
 				<FinalTime><![CDATA[26304.0]]></FinalTime>	
 				<StopAfterIterationCount>true</StopAfterIterationCount>
-				<IterationCount>35</IterationCount>
+				<IterationCount>500</IterationCount>
 				<AutomaticStop>false</AutomaticStop>
 			</ModelTimeProperties>
 		</OptimizationExperiment>
