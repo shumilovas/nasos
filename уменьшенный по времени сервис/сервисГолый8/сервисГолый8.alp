@@ -7,10 +7,10 @@
 <AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.1.202408021040" AlpVersion="8.9.1">
 <Model>
 	<Id>1742212621685</Id>
-	<Name><![CDATA[сервисГолый3]]></Name>
+	<Name><![CDATA[сервисГолый8]]></Name>
 	<Description><![CDATA[модель]]></Description>
 	<EngineVersion>6</EngineVersion>
-	<JavaPackageName><![CDATA[сервисголый]]></JavaPackageName>
+	<JavaPackageName><![CDATA[сервисголый7]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Hour]]></ModelTimeUnit>
 	<Dimensions>
 		<!--   =========   Dimension   ========  -->
@@ -188,6 +188,54 @@
 						</InitialValue>
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1742912999839</Id>
+					<Name><![CDATA[времяОтрицательных1]]></Name>
+					<X>970</X><Y>-370</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1742913123735</Id>
+					<Name><![CDATA[времяОтрицательных2]]></Name>
+					<X>989</X><Y>-289</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1742913584477</Id>
+					<Name><![CDATA[времяОтрицательных1_1]]></Name>
+					<X>966</X><Y>-199</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1742913584481</Id>
+					<Name><![CDATA[времяОтрицательных2_1]]></Name>
+					<X>985</X><Y>-118</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
 				<Variable Class="AuxVariable">
 					<Id>1742809095835</Id>
 					<Name><![CDATA[dynamicVariable]]></Name>
@@ -218,7 +266,7 @@
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[сервисголый]]></PackageName>
+								<PackageName><![CDATA[сервисголый7]]></PackageName>
 								<ClassName><![CDATA[MyDimension]]></ClassName>
 							</Dimension>
 						</Array>
@@ -241,7 +289,7 @@
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[сервисголый]]></PackageName>
+								<PackageName><![CDATA[сервисголый7]]></PackageName>
 								<ClassName><![CDATA[MyDimension]]></ClassName>
 							</Dimension>
 						</Array>
@@ -263,7 +311,7 @@
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[сервисголый]]></PackageName>
+								<PackageName><![CDATA[сервисголый7]]></PackageName>
 								<ClassName><![CDATA[MyDimension]]></ClassName>
 							</Dimension>
 						</Array>
@@ -284,7 +332,7 @@
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[сервисголый]]></PackageName>
+								<PackageName><![CDATA[сервисголый7]]></PackageName>
 								<ClassName><![CDATA[MyDimension]]></ClassName>
 							</Dimension>
 						</Array>
@@ -305,7 +353,7 @@
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[сервисголый]]></PackageName>
+								<PackageName><![CDATA[сервисголый7]]></PackageName>
 								<ClassName><![CDATA[MyDimension]]></ClassName>
 							</Dimension>
 						</Array>
@@ -324,12 +372,12 @@
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[сервисголый]]></PackageName>
+								<PackageName><![CDATA[сервисголый7]]></PackageName>
 								<ClassName><![CDATA[MyDimension]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[сервисголый]]></PackageName>
+									<PackageName><![CDATA[сервисголый7]]></PackageName>
 									<ClassName><![CDATA[MyDimension]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[0.5*СГлавногоАгентаПотокПродаж.get(1)]]></Expression>
@@ -356,12 +404,12 @@
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[сервисголый]]></PackageName>
+								<PackageName><![CDATA[сервисголый7]]></PackageName>
 								<ClassName><![CDATA[MyDimension]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[сервисголый]]></PackageName>
+									<PackageName><![CDATA[сервисголый7]]></PackageName>
 									<ClassName><![CDATA[MyDimension]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[dynamicVariable]]></Expression>
@@ -389,12 +437,12 @@
 						<Color>-65281</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[сервисголый]]></PackageName>
+								<PackageName><![CDATA[сервисголый7]]></PackageName>
 								<ClassName><![CDATA[MyDimension]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[сервисголый]]></PackageName>
+									<PackageName><![CDATA[сервисголый7]]></PackageName>
 									<ClassName><![CDATA[MyDimension]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[(СГлавногоАгентаПотокПродаж.get(1)*(1+увеличениеПослеСобытия)*поправка+увеличениеПаркаНасосов)/поправка2]]></Expression>
@@ -420,12 +468,12 @@
 						<Color>-4565549</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[сервисголый]]></PackageName>
+								<PackageName><![CDATA[сервисголый7]]></PackageName>
 								<ClassName><![CDATA[MyDimension]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[сервисголый]]></PackageName>
+									<PackageName><![CDATA[сервисголый7]]></PackageName>
 									<ClassName><![CDATA[MyDimension]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[flow3.get(1)*(1+увеличениеПослеСобытия)/(поправка4*p4)]]></Expression>
@@ -453,12 +501,12 @@
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[сервисголый]]></PackageName>
+								<PackageName><![CDATA[сервисголый7]]></PackageName>
 								<ClassName><![CDATA[MyDimension]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[сервисголый]]></PackageName>
+									<PackageName><![CDATA[сервисголый7]]></PackageName>
 									<ClassName><![CDATA[MyDimension]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[СГлавногоАгентаПотокПродаж.get(1)*0.33*0.4/(24*365)]]></Expression>
@@ -484,12 +532,12 @@
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[сервисголый]]></PackageName>
+								<PackageName><![CDATA[сервисголый7]]></PackageName>
 								<ClassName><![CDATA[MyDimension]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[сервисголый]]></PackageName>
+									<PackageName><![CDATA[сервисголый7]]></PackageName>
 									<ClassName><![CDATA[MyDimension]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[СГлавногоАгентаПотокПродаж.get(1)*0.33*0.6/(24*365)]]></Expression>
@@ -1014,7 +1062,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[насосСтариться]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -1024,7 +1072,7 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[новыеНасосы]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -1047,7 +1095,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[изначальныеНасосы]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -1057,7 +1105,7 @@
 						<ItemName><![CDATA[out]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[ож]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -1080,7 +1128,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[ож]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -1090,7 +1138,7 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[насосСтариться]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -1113,7 +1161,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[delay]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -1123,7 +1171,7 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[ож]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -1146,7 +1194,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[насосЧинят]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -1156,7 +1204,7 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[queue]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -1179,7 +1227,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[queue]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -1189,7 +1237,7 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[delay]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -1212,7 +1260,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[delay1]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -1222,7 +1270,7 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[queue1]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -1245,7 +1293,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[queue1]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -1255,7 +1303,7 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[насосЧинят]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -1278,7 +1326,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[delay2]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -1288,7 +1336,7 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[queue2]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -1311,7 +1359,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[queue2]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -1321,7 +1369,7 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[delay1]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -1344,7 +1392,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[насосСломан]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -1354,7 +1402,7 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[queue3]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -1377,7 +1425,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[queue3]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -1387,7 +1435,7 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[сервисголый]]></PackageName>
+						<PackageName><![CDATA[сервисголый7]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[delay2]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -1604,6 +1652,138 @@ self.restart();
 поправка2=поправка2*1.5;
 НовНасДискр = (int)(НовНасДискр*0.8);
 dynamicVariable = dynamicVariable/8;
+]]></Action>
+				</Event>
+				<Event>
+					<Id>1742912979292</Id>
+					<Name><![CDATA[отслеживаниеОтрицательных]]></Name>
+					<X>950</X><Y>-410</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1742976000000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[(товарПродаётся.get(1)<0)
+]]></Condition>
+					</Properties>
+					<Action><![CDATA[времяОтрицательных1=time();
+self.reset();]]></Action>
+				</Event>
+				<Event>
+					<Id>1742913123746</Id>
+					<Name><![CDATA[отслеживаниеОтрицательных1]]></Name>
+					<X>969</X><Y>-329</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1742976000000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[насосыВАренде.get(1)<0;]]></Condition>
+					</Properties>
+					<Action><![CDATA[времяОтрицательных2=time();
+self.reset();]]></Action>
+				</Event>
+				<Event>
+					<Id>1742913584484</Id>
+					<Name><![CDATA[отслеживаниеОтрицательных1_1]]></Name>
+					<X>946</X><Y>-239</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1742976000000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[(товарПродаётся.get(1)<0)
+]]></Condition>
+					</Properties>
+					<Action><![CDATA[времяОтрицательных1_1=time();
+if (времяОтрицательных1_1 - времяОтрицательных1 >100) stopSimulation();
+]]></Action>
+				</Event>
+				<Event>
+					<Id>1742913584499</Id>
+					<Name><![CDATA[отслеживаниеОтрицательных2_1]]></Name>
+					<X>965</X><Y>-158</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1742976000000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[насосыВАренде.get(1)<0;]]></Condition>
+					</Properties>
+					<Action><![CDATA[времяОтрицательных2_1=time();
+if  (времяОтрицательных2_1 - времяОтрицательных2 >100) stopSimulation();
 ]]></Action>
 				</Event>
 			</Events>
@@ -1915,7 +2095,7 @@ dynamicVariable = dynamicVariable/8;
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[triangular( 2.5, 3, 3.5 )]]></Code>
-								<Unit Class="TimeUnits"><![CDATA[YEAR]]></Unit>
+								<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -2301,7 +2481,7 @@ dynamicVariable = dynamicVariable/8;
 							<Name><![CDATA[delayTime]]></Name>
 							<Value Class="CodeUnitValue">
 								<Code><![CDATA[triangular(1, 3, 2)]]></Code>
-								<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
+								<Unit Class="TimeUnits"><![CDATA[WEEK]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -2338,7 +2518,7 @@ dynamicVariable = dynamicVariable/8;
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[увеличениеПослеСобытия = увеличениеПослеСобытия - увеличениеНасосовВАренде;
-traceln("время УМЕНЬШЕНИЯ потока " +time());
+//traceln("время УМЕНЬШЕНИЯ потока " +time());
 увеличениеПаркаНасосов = увеличениеПаркаНасосов+0.001;]]></Code>
 							</Value>
 						</Parameter>
@@ -2549,10 +2729,10 @@ traceln("время УМЕНЬШЕНИЯ потока " +time());
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[traceln("do увеличения потока " +пульсирующийПотокНасосов.get(1));
+								<Code><![CDATA[//traceln("do увеличения потока " +пульсирующийПотокНасосов.get(1));
 увеличениеПослеСобытия = увеличениеПослеСобытия + увеличениеНасосовВАренде;
 traceln("время увеличения потока " +time());
-traceln("posle увеличения потока " +пульсирующийПотокНасосов.get(1));
+//traceln("posle увеличения потока " +пульсирующийПотокНасосов.get(1));
 ]]></Code>
 							</Value>
 						</Parameter>
@@ -3483,7 +3663,7 @@ traceln("posle увеличения потока " +пульсирующийПо
 				<ExecutionMode><![CDATA[realTimeScaled]]></ExecutionMode>
 				<Title><![CDATA[сервисГолый : Simulation]]></Title>	
 				<EnableDeveloperPanel>true</EnableDeveloperPanel>
-				<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
+				<ShowDeveloperPanelOnStart>true</ShowDeveloperPanelOnStart>
 				<RealTimeScale>250.0</RealTimeScale>
 			</PresentationProperties>
 			<ModelTimeProperties>
@@ -4642,7 +4822,7 @@ datasetBestFeasibleObjective.reset();
 			<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
 			<Variables>
 				<Variable Class="PlainVariable">
-					<Id>1742899069574</Id>
+					<Id>1742911881027</Id>
 					<Name><![CDATA[bestInfeasibleObjective]]></Name>
 					<X>-350</X><Y>120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -4659,7 +4839,7 @@ datasetBestFeasibleObjective.reset();
 			</Variables>
 			<AnalysisData>
     			<DataSet>
-					<Id>1742899069572</Id>
+					<Id>1742911881025</Id>
 					<Name><![CDATA[datasetCurrentObjective]]></Name>
 					<X>-350</X><Y>50</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -4682,7 +4862,7 @@ datasetBestFeasibleObjective.reset();
 					<SamplesToKeep>50000</SamplesToKeep>
 				</DataSet>
     			<DataSet>
-					<Id>1742899069573</Id>
+					<Id>1742911881026</Id>
 					<Name><![CDATA[datasetBestInfeasibleObjective]]></Name>
 					<X>-350</X><Y>100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -4705,7 +4885,7 @@ datasetBestFeasibleObjective.reset();
 					<SamplesToKeep>50000</SamplesToKeep>
 				</DataSet>
     			<DataSet>
-					<Id>1742899069576</Id>
+					<Id>1742911881029</Id>
 					<Name><![CDATA[datasetBestFeasibleObjective]]></Name>
 					<X>-350</X><Y>150</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -4731,7 +4911,7 @@ datasetBestFeasibleObjective.reset();
 
 			<Presentation>
 				<Text>
-					<Id>1742899069510</Id>
+					<Id>1742911880964</Id>
 					<Name><![CDATA[text]]></Name>
 					<X>40</X><Y>30</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -4752,7 +4932,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069512</Id>
+					<Id>1742911880965</Id>
 					<Name><![CDATA[text1]]></Name>
 					<X>240</X><Y>80</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -4773,7 +4953,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069513</Id>
+					<Id>1742911880966</Id>
 					<Name><![CDATA[text2]]></Name>
 					<X>330</X><Y>80</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -4794,7 +4974,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Line>
-					<Id>1742899069514</Id>
+					<Id>1742911880967</Id>
 					<Name><![CDATA[line]]></Name>
 					<X>40</X><Y>100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -4818,7 +4998,7 @@ datasetBestFeasibleObjective.reset();
 					<Dz>0</Dz>
 				</Line>
 				<Text>
-					<Id>1742899069515</Id>
+					<Id>1742911880968</Id>
 					<Name><![CDATA[text3]]></Name>
 					<X>50</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -4839,7 +5019,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069516</Id>
+					<Id>1742911880969</Id>
 					<Name><![CDATA[text4]]></Name>
 					<X>240</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -4862,7 +5042,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069517</Id>
+					<Id>1742911880970</Id>
 					<Name><![CDATA[text5]]></Name>
 					<X>240</X><Y>119</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -4884,7 +5064,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069518</Id>
+					<Id>1742911880971</Id>
 					<Name><![CDATA[text6]]></Name>
 					<X>330</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -4907,7 +5087,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069519</Id>
+					<Id>1742911880972</Id>
 					<Name><![CDATA[text7]]></Name>
 					<X>330</X><Y>119</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -4929,7 +5109,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Rectangle>
-					<Id>1742899069520</Id>
+					<Id>1742911880973</Id>
 					<Name><![CDATA[rectangle]]></Name>
 					<X>40</X><Y>130</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -4951,7 +5131,7 @@ datasetBestFeasibleObjective.reset();
 					<FillMaterial>null</FillMaterial>
 				</Rectangle>
 				<Text>
-					<Id>1742899069521</Id>
+					<Id>1742911880974</Id>
 					<Name><![CDATA[text8]]></Name>
 					<X>50</X><Y>140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -4972,7 +5152,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069522</Id>
+					<Id>1742911880975</Id>
 					<Name><![CDATA[text9]]></Name>
 					<X>240</X><Y>140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -4995,7 +5175,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069523</Id>
+					<Id>1742911880976</Id>
 					<Name><![CDATA[text10]]></Name>
 					<X>330</X><Y>140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5018,7 +5198,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Line>
-					<Id>1742899069524</Id>
+					<Id>1742911880977</Id>
 					<Name><![CDATA[line1]]></Name>
 					<X>115</X><Y>140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5042,7 +5222,7 @@ datasetBestFeasibleObjective.reset();
 					<Dz>0</Dz>
 				</Line>
 				<Polyline>
-					<Id>1742899069525</Id>
+					<Id>1742911880978</Id>
 					<Name><![CDATA[polyline]]></Name>
 					<X>110</X><Y>150</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5071,7 +5251,7 @@ datasetBestFeasibleObjective.reset();
 					<Closed>false</Closed>
 				</Polyline>
 				<Text>
-					<Id>1742899069526</Id>
+					<Id>1742911880979</Id>
 					<Name><![CDATA[text11]]></Name>
 					<X>50</X><Y>180</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5092,7 +5272,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Line>
-					<Id>1742899069528</Id>
+					<Id>1742911880981</Id>
 					<Name><![CDATA[line2]]></Name>
 					<X>40</X><Y>200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5116,7 +5296,7 @@ datasetBestFeasibleObjective.reset();
 					<Dz>0</Dz>
 				</Line>
 				<Text>
-					<Id>1742899069529</Id>
+					<Id>1742911880982</Id>
 					<Name><![CDATA[text12]]></Name>
 					<X>50</X><Y>210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5137,7 +5317,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069530</Id>
+					<Id>1742911880983</Id>
 					<Name><![CDATA[text13]]></Name>
 					<X>240</X><Y>210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5160,7 +5340,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069531</Id>
+					<Id>1742911880984</Id>
 					<Name><![CDATA[text14]]></Name>
 					<X>330</X><Y>210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5183,7 +5363,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Rectangle>
-					<Id>1742899069532</Id>
+					<Id>1742911880985</Id>
 					<Name><![CDATA[rectangle1]]></Name>
 					<X>40</X><Y>230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5205,7 +5385,7 @@ datasetBestFeasibleObjective.reset();
 					<FillMaterial>null</FillMaterial>
 				</Rectangle>
 				<Text>
-					<Id>1742899069533</Id>
+					<Id>1742911880986</Id>
 					<Name><![CDATA[text15]]></Name>
 					<X>50</X><Y>240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5226,7 +5406,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069534</Id>
+					<Id>1742911880987</Id>
 					<Name><![CDATA[text16]]></Name>
 					<X>240</X><Y>240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5249,7 +5429,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069535</Id>
+					<Id>1742911880988</Id>
 					<Name><![CDATA[text17]]></Name>
 					<X>330</X><Y>240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5272,7 +5452,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069536</Id>
+					<Id>1742911880989</Id>
 					<Name><![CDATA[text18]]></Name>
 					<X>50</X><Y>270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5293,7 +5473,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069537</Id>
+					<Id>1742911880990</Id>
 					<Name><![CDATA[text19]]></Name>
 					<X>240</X><Y>270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5316,7 +5496,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069538</Id>
+					<Id>1742911880991</Id>
 					<Name><![CDATA[text20]]></Name>
 					<X>330</X><Y>270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5339,7 +5519,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Rectangle>
-					<Id>1742899069539</Id>
+					<Id>1742911880992</Id>
 					<Name><![CDATA[rectangle2]]></Name>
 					<X>40</X><Y>290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5361,7 +5541,7 @@ datasetBestFeasibleObjective.reset();
 					<FillMaterial>null</FillMaterial>
 				</Rectangle>
 				<Text>
-					<Id>1742899069540</Id>
+					<Id>1742911880993</Id>
 					<Name><![CDATA[text21]]></Name>
 					<X>50</X><Y>300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5382,7 +5562,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069541</Id>
+					<Id>1742911880994</Id>
 					<Name><![CDATA[text22]]></Name>
 					<X>240</X><Y>300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5405,7 +5585,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069542</Id>
+					<Id>1742911880995</Id>
 					<Name><![CDATA[text23]]></Name>
 					<X>330</X><Y>300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5428,7 +5608,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069543</Id>
+					<Id>1742911880996</Id>
 					<Name><![CDATA[text24]]></Name>
 					<X>50</X><Y>330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5449,7 +5629,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069544</Id>
+					<Id>1742911880997</Id>
 					<Name><![CDATA[text25]]></Name>
 					<X>240</X><Y>330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5472,7 +5652,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069545</Id>
+					<Id>1742911880998</Id>
 					<Name><![CDATA[text26]]></Name>
 					<X>330</X><Y>330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5495,7 +5675,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Rectangle>
-					<Id>1742899069546</Id>
+					<Id>1742911880999</Id>
 					<Name><![CDATA[rectangle3]]></Name>
 					<X>40</X><Y>350</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5517,7 +5697,7 @@ datasetBestFeasibleObjective.reset();
 					<FillMaterial>null</FillMaterial>
 				</Rectangle>
 				<Text>
-					<Id>1742899069547</Id>
+					<Id>1742911881000</Id>
 					<Name><![CDATA[text27]]></Name>
 					<X>50</X><Y>360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5538,7 +5718,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069548</Id>
+					<Id>1742911881001</Id>
 					<Name><![CDATA[text28]]></Name>
 					<X>240</X><Y>360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5561,7 +5741,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069549</Id>
+					<Id>1742911881002</Id>
 					<Name><![CDATA[text29]]></Name>
 					<X>330</X><Y>360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5584,7 +5764,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069550</Id>
+					<Id>1742911881003</Id>
 					<Name><![CDATA[text30]]></Name>
 					<X>50</X><Y>390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5595,17 +5775,17 @@ datasetBestFeasibleObjective.reset();
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
-					<Color>-12171190</Color>
+					<Color>-12490271</Color>
 					<Text><![CDATA[поправка2]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>12</Size>
-						<Style>0</Style>
+						<Style>1</Style>
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069551</Id>
+					<Id>1742911881004</Id>
 					<Name><![CDATA[text31]]></Name>
 					<X>240</X><Y>390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5619,16 +5799,16 @@ datasetBestFeasibleObjective.reset();
 					<Rotation>0.0</Rotation>
 					<Color>-12042869</Color>
 					<Text><![CDATA[?]]></Text>
-					<TextCode><![CDATA[format( поправка2 )]]></TextCode>
+					<TextCode><![CDATA[format( getCurrentParamValue( _oqvar_поправка2 ) )]]></TextCode>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>12</Size>
-						<Style>0</Style>
+						<Style>1</Style>
 					</Font>
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069552</Id>
+					<Id>1742911881005</Id>
 					<Name><![CDATA[text32]]></Name>
 					<X>330</X><Y>390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5640,18 +5820,18 @@ datasetBestFeasibleObjective.reset();
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
-					<Color>-12042869</Color>
+					<Color>-12490271</Color>
 					<Text><![CDATA[?]]></Text>
-					<TextCode><![CDATA[format( поправка2 )]]></TextCode>
+					<TextCode><![CDATA[format( getBestParamValue( _oqvar_поправка2 ) )]]></TextCode>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>12</Size>
-						<Style>0</Style>
+						<Style>1</Style>
 					</Font>
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Rectangle>
-					<Id>1742899069553</Id>
+					<Id>1742911881006</Id>
 					<Name><![CDATA[rectangle4]]></Name>
 					<X>40</X><Y>410</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5673,7 +5853,7 @@ datasetBestFeasibleObjective.reset();
 					<FillMaterial>null</FillMaterial>
 				</Rectangle>
 				<Text>
-					<Id>1742899069554</Id>
+					<Id>1742911881007</Id>
 					<Name><![CDATA[text33]]></Name>
 					<X>50</X><Y>420</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5684,17 +5864,17 @@ datasetBestFeasibleObjective.reset();
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
-					<Color>-12171190</Color>
+					<Color>-12490271</Color>
 					<Text><![CDATA[поправка4]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>12</Size>
-						<Style>0</Style>
+						<Style>1</Style>
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069555</Id>
+					<Id>1742911881008</Id>
 					<Name><![CDATA[text34]]></Name>
 					<X>240</X><Y>420</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5708,16 +5888,16 @@ datasetBestFeasibleObjective.reset();
 					<Rotation>0.0</Rotation>
 					<Color>-12042869</Color>
 					<Text><![CDATA[?]]></Text>
-					<TextCode><![CDATA[format( поправка4 )]]></TextCode>
+					<TextCode><![CDATA[format( getCurrentParamValue( _oqvar_поправка4 ) )]]></TextCode>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>12</Size>
-						<Style>0</Style>
+						<Style>1</Style>
 					</Font>
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069556</Id>
+					<Id>1742911881009</Id>
 					<Name><![CDATA[text35]]></Name>
 					<X>330</X><Y>420</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5729,18 +5909,18 @@ datasetBestFeasibleObjective.reset();
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
-					<Color>-12042869</Color>
+					<Color>-12490271</Color>
 					<Text><![CDATA[?]]></Text>
-					<TextCode><![CDATA[format( поправка4 )]]></TextCode>
+					<TextCode><![CDATA[format( getBestParamValue( _oqvar_поправка4 ) )]]></TextCode>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>12</Size>
-						<Style>0</Style>
+						<Style>1</Style>
 					</Font>
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069557</Id>
+					<Id>1742911881010</Id>
 					<Name><![CDATA[text36]]></Name>
 					<X>50</X><Y>450</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5761,7 +5941,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069558</Id>
+					<Id>1742911881011</Id>
 					<Name><![CDATA[text37]]></Name>
 					<X>240</X><Y>450</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5784,7 +5964,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069559</Id>
+					<Id>1742911881012</Id>
 					<Name><![CDATA[text38]]></Name>
 					<X>330</X><Y>450</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5807,7 +5987,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Rectangle>
-					<Id>1742899069560</Id>
+					<Id>1742911881013</Id>
 					<Name><![CDATA[rectangle5]]></Name>
 					<X>40</X><Y>470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5829,7 +6009,7 @@ datasetBestFeasibleObjective.reset();
 					<FillMaterial>null</FillMaterial>
 				</Rectangle>
 				<Text>
-					<Id>1742899069561</Id>
+					<Id>1742911881014</Id>
 					<Name><![CDATA[text39]]></Name>
 					<X>50</X><Y>480</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5840,17 +6020,17 @@ datasetBestFeasibleObjective.reset();
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
-					<Color>-12171190</Color>
+					<Color>-12490271</Color>
 					<Text><![CDATA[ПоправкаДляСобытия2]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>12</Size>
-						<Style>0</Style>
+						<Style>1</Style>
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069562</Id>
+					<Id>1742911881015</Id>
 					<Name><![CDATA[text40]]></Name>
 					<X>240</X><Y>480</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5864,16 +6044,16 @@ datasetBestFeasibleObjective.reset();
 					<Rotation>0.0</Rotation>
 					<Color>-12042869</Color>
 					<Text><![CDATA[?]]></Text>
-					<TextCode><![CDATA[format( ПоправкаДляСобытия2 )]]></TextCode>
+					<TextCode><![CDATA[format( getCurrentParamValue( _oqvar_ПоправкаДляСобытия2 ) )]]></TextCode>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>12</Size>
-						<Style>0</Style>
+						<Style>1</Style>
 					</Font>
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069563</Id>
+					<Id>1742911881016</Id>
 					<Name><![CDATA[text41]]></Name>
 					<X>330</X><Y>480</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5885,18 +6065,18 @@ datasetBestFeasibleObjective.reset();
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
-					<Color>-12042869</Color>
+					<Color>-12490271</Color>
 					<Text><![CDATA[?]]></Text>
-					<TextCode><![CDATA[format( ПоправкаДляСобытия2 )]]></TextCode>
+					<TextCode><![CDATA[format( getBestParamValue( _oqvar_ПоправкаДляСобытия2 ) )]]></TextCode>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>12</Size>
-						<Style>0</Style>
+						<Style>1</Style>
 					</Font>
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069564</Id>
+					<Id>1742911881017</Id>
 					<Name><![CDATA[text42]]></Name>
 					<X>50</X><Y>510</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5907,17 +6087,17 @@ datasetBestFeasibleObjective.reset();
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
-					<Color>-12171190</Color>
+					<Color>-12490271</Color>
 					<Text><![CDATA[УвеличениеПараметров]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>12</Size>
-						<Style>0</Style>
+						<Style>1</Style>
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069565</Id>
+					<Id>1742911881018</Id>
 					<Name><![CDATA[text43]]></Name>
 					<X>240</X><Y>510</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5931,16 +6111,16 @@ datasetBestFeasibleObjective.reset();
 					<Rotation>0.0</Rotation>
 					<Color>-12042869</Color>
 					<Text><![CDATA[?]]></Text>
-					<TextCode><![CDATA[format( УвеличениеПараметров )]]></TextCode>
+					<TextCode><![CDATA[format( getCurrentParamValue( _oqvar_УвеличениеПараметров ) )]]></TextCode>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>12</Size>
-						<Style>0</Style>
+						<Style>1</Style>
 					</Font>
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069566</Id>
+					<Id>1742911881019</Id>
 					<Name><![CDATA[text44]]></Name>
 					<X>330</X><Y>510</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5952,18 +6132,18 @@ datasetBestFeasibleObjective.reset();
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
-					<Color>-12042869</Color>
+					<Color>-12490271</Color>
 					<Text><![CDATA[?]]></Text>
-					<TextCode><![CDATA[format( УвеличениеПараметров )]]></TextCode>
+					<TextCode><![CDATA[format( getBestParamValue( _oqvar_УвеличениеПараметров ) )]]></TextCode>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>12</Size>
-						<Style>0</Style>
+						<Style>1</Style>
 					</Font>
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Rectangle>
-					<Id>1742899069567</Id>
+					<Id>1742911881020</Id>
 					<Name><![CDATA[rectangle6]]></Name>
 					<X>40</X><Y>530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -5985,7 +6165,7 @@ datasetBestFeasibleObjective.reset();
 					<FillMaterial>null</FillMaterial>
 				</Rectangle>
 				<Text>
-					<Id>1742899069568</Id>
+					<Id>1742911881021</Id>
 					<Name><![CDATA[text45]]></Name>
 					<X>50</X><Y>540</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -6006,7 +6186,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069569</Id>
+					<Id>1742911881022</Id>
 					<Name><![CDATA[text46]]></Name>
 					<X>240</X><Y>540</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -6029,7 +6209,7 @@ datasetBestFeasibleObjective.reset();
 					<Alignment>RIGHT</Alignment>
 				</Text>
 				<Text>
-					<Id>1742899069570</Id>
+					<Id>1742911881023</Id>
 					<Name><![CDATA[text47]]></Name>
 					<X>330</X><Y>540</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -6053,7 +6233,7 @@ datasetBestFeasibleObjective.reset();
 				</Text>
 				<Control Type="Button">
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
-					<Id>1742899069527</Id>
+					<Id>1742911880980</Id>
 					<Name><![CDATA[button]]></Name>
 					<X>255</X><Y>175</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -6073,11 +6253,11 @@ s += "увеличениеНасосовВАренде\t" + format( getBestParam
 s += "поправка\t" + format( getBestParamValue( _oqvar_поправка ) ) + "\n";
 s += "НовНасДискр\t" + format( getBestParamValue( _oqvar_НовНасДискр ) ) + "\n";
 s += "количествоНасосовПроизводиться\t" + format( getBestParamValue( _oqvar_количествоНасосовПроизводиться ) ) + "\n";
-s += "поправка2\t" + format( поправка2 ) + "\n";
-s += "поправка4\t" + format( поправка4 ) + "\n";
+s += "поправка2\t" + format( getBestParamValue( _oqvar_поправка2 ) ) + "\n";
+s += "поправка4\t" + format( getBestParamValue( _oqvar_поправка4 ) ) + "\n";
 s += "ПоправкаДляСобытия1\t" + format( ПоправкаДляСобытия1 ) + "\n";
-s += "ПоправкаДляСобытия2\t" + format( ПоправкаДляСобытия2 ) + "\n";
-s += "УвеличениеПараметров\t" + format( УвеличениеПараметров ) + "\n";
+s += "ПоправкаДляСобытия2\t" + format( getBestParamValue( _oqvar_ПоправкаДляСобытия2 ) ) + "\n";
+s += "УвеличениеПараметров\t" + format( getBestParamValue( _oqvar_УвеличениеПараметров ) ) + "\n";
 s += "МаксимальноеКоличествоСкважинРоссии\t" + format( МаксимальноеКоличествоСкважинРоссии ) + "\n";
 
 copyToClipboard( s );]]></ActionCode>
@@ -6088,7 +6268,7 @@ copyToClipboard( s );]]></ActionCode>
 					</ExtendedProperties>
 				</Control>
 				<Line>
-					<Id>1742899069571</Id>
+					<Id>1742911881024</Id>
 					<Name><![CDATA[line3]]></Name>
 					<X>250</X><Y>70</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -6112,7 +6292,7 @@ copyToClipboard( s );]]></ActionCode>
 					<Dz>0</Dz>
 				</Line>
     			<Plot>
-					<Id>1742899069577</Id>
+					<Id>1742911881030</Id>
 					<Name><![CDATA[plot1]]></Name>
 					<X>370</X><Y>80</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -6163,7 +6343,7 @@ copyToClipboard( s );]]></ActionCode>
 					<Interpolation>LINEAR</Interpolation>
 					<DatasetExpression>  
 						<Title><![CDATA[Текущее]]></Title>
-					<Id>1742899069579</Id>
+					<Id>1742911881032</Id>
 					<Expression><![CDATA[datasetCurrentObjective]]></Expression>
 					<Color>-4144960</Color>
 					<Expression2Flag>false</Expression2Flag>
@@ -6173,7 +6353,7 @@ copyToClipboard( s );]]></ActionCode>
 					</DatasetExpression>
 					<DatasetExpression>  
 						<Title><![CDATA[Лучшее недопустимое]]></Title>
-					<Id>1742899069580</Id>
+					<Id>1742911881033</Id>
 					<Expression><![CDATA[datasetBestInfeasibleObjective]]></Expression>
 					<Color>-4194304</Color>
 					<Expression2Flag>false</Expression2Flag>
@@ -6183,7 +6363,7 @@ copyToClipboard( s );]]></ActionCode>
 					</DatasetExpression>
 					<DatasetExpression>  
 						<Title><![CDATA[Лучшее допустимое]]></Title>
-					<Id>1742899069581</Id>
+					<Id>1742911881034</Id>
 					<Expression><![CDATA[datasetBestFeasibleObjective]]></Expression>
 					<Color>-16777088</Color>
 					<Expression2Flag>false</Expression2Flag>
@@ -6275,23 +6455,68 @@ copyToClipboard( s );]]></ActionCode>
 			</Parameter>
 			<Parameter>	
 				<Id>1742643215814</Id>
-				<Type>FIXED</Type>
+				<Type>DISCRETE</Type>
+				<Min Class="CodeValue">
+					<Code><![CDATA[100]]></Code>
+				</Min>
+				<Max Class="CodeValue">
+					<Code><![CDATA[400]]></Code>
+				</Max>
+				<Step Class="CodeValue">
+					<Code><![CDATA[20]]></Code>
+				</Step>
 			</Parameter>
 			<Parameter>	
 				<Id>1742643682506</Id>
-				<Type>FIXED</Type>
+				<Type>DISCRETE</Type>
+				<Min Class="CodeValue">
+					<Code><![CDATA[1]]></Code>
+				</Min>
+				<Max Class="CodeValue">
+					<Code><![CDATA[2]]></Code>
+				</Max>
+				<Step Class="CodeValue">
+					<Code><![CDATA[0.1]]></Code>
+				</Step>
 			</Parameter>
 			<Parameter>	
 				<Id>1742650478851</Id>
 				<Type>FIXED</Type>
+				<Min Class="CodeValue">
+					<Code><![CDATA[0.01]]></Code>
+				</Min>
+				<Max Class="CodeValue">
+					<Code><![CDATA[2]]></Code>
+				</Max>
+				<Step Class="CodeValue">
+					<Code><![CDATA[0.1]]></Code>
+				</Step>
 			</Parameter>
 			<Parameter>	
 				<Id>1742650516631</Id>
-				<Type>FIXED</Type>
+				<Type>DISCRETE</Type>
+				<Min Class="CodeValue">
+					<Code><![CDATA[0.1]]></Code>
+				</Min>
+				<Max Class="CodeValue">
+					<Code><![CDATA[2]]></Code>
+				</Max>
+				<Step Class="CodeValue">
+					<Code><![CDATA[0.1]]></Code>
+				</Step>
 			</Parameter>
 			<Parameter>	
 				<Id>1742650729761</Id>
-				<Type>FIXED</Type>
+				<Type>DISCRETE</Type>
+				<Min Class="CodeValue">
+					<Code><![CDATA[1]]></Code>
+				</Min>
+				<Max Class="CodeValue">
+					<Code><![CDATA[10]]></Code>
+				</Max>
+				<Step Class="CodeValue">
+					<Code><![CDATA[1]]></Code>
+				</Step>
 			</Parameter>
 			<Parameter>	
 				<Id>1742743435599</Id>
@@ -6342,10 +6567,10 @@ if (bestInfeasibleObjective != Double.POSITIVE_INFINITY) {
 				<StopOption><![CDATA[Stop at specified date]]></StopOption>
 				<InitialDate><![CDATA[1742169600000]]></InitialDate>	
 				<InitialTime><![CDATA[0.0]]></InitialTime>	
-				<FinalDate><![CDATA[2057702400000]]></FinalDate>	
-				<FinalTime><![CDATA[87648.0]]></FinalTime>	
+				<FinalDate><![CDATA[1773705600000]]></FinalDate>	
+				<FinalTime><![CDATA[8760.0]]></FinalTime>	
 				<StopAfterIterationCount>true</StopAfterIterationCount>
-				<IterationCount>50000</IterationCount>
+				<IterationCount>500</IterationCount>
 				<AutomaticStop>false</AutomaticStop>
 			</ModelTimeProperties>
 		</OptimizationExperiment>
