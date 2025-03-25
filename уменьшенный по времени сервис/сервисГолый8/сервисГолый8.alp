@@ -236,20 +236,20 @@
 						<Type><![CDATA[double]]></Type>        
 					</Properties>
 				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1742809095835</Id>
+				<Variable Class="PlainVariable">
+					<Id>1742938907021</Id>
 					<Name><![CDATA[dynamicVariable]]></Name>
-					<X>480</X><Y>310</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
+					<X>430</X><Y>350</Y>
+					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[количествоНасосовПроизводиться]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[количествоНасосовПроизводиться]]></Code>
+						</InitialValue>
 					</Properties>
-
 				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1742212639855</Id>
@@ -961,21 +961,6 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1742485775368" TargetId="1742809095835" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>50</X><Y>50</Y></Direction>
-					<Id>1742485813120</Id>
-					<Name><![CDATA[количествоНасосовПроизводиться - dynamicVariable]]></Name>
-					<X>430</X><Y>260</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
 				<Link SourceId="1742643215814" TargetId="1742212682314" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
@@ -1036,13 +1021,13 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1742809095835" TargetId="1742212639791" Polarity="null">
+				<Link SourceId="1742938907021" TargetId="1742212639791" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>117</X><Y>6</Y></Direction>
+					<Direction><X>167</X><Y>-34</Y></Direction>
 					<Id>1742809120655</Id>
 					<Name><![CDATA[dynamicVariable - СГлавногоАгентаПотокПродаж]]></Name>
-					<X>480</X><Y>310</Y>
+					<X>430</X><Y>350</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1480,9 +1465,9 @@
 						</RecurrenceCode>
 						<Condition><![CDATA[((увеличениеПаркаНасосов<1) &&( time()>100))]]></Condition>
 					</Properties>
-					<Action><![CDATA[if ((увеличениеПаркаНасосов<2) &&( time()>100))увеличениеПаркаНасосов=ПоправкаДляСобытия1;
-{if (увеличениеПослеСобытия>3) увеличениеПослеСобытия=ПоправкаДляСобытия2;
-if (увеличениеПослеСобытия<0.7) увеличениеПослеСобытия=ПоправкаДляСобытия2;
+					<Action><![CDATA[if (увеличениеПаркаНасосов<0.1)увеличениеПаркаНасосов=ПоправкаДляСобытия1;
+{if (увеличениеПослеСобытия>12) увеличениеПослеСобытия=ПоправкаДляСобытия2;
+if (увеличениеПослеСобытия<0.05) увеличениеПослеСобытия=ПоправкаДляСобытия2;
 self.restart();}
 ]]></Action>
 				</Event>
@@ -1516,9 +1501,9 @@ self.restart();}
 						</RecurrenceCode>
 						<Condition><![CDATA[((насосыВАренде.get(1)<1) && (time()>100))]]></Condition>
 					</Properties>
-					<Action><![CDATA[if (((насосыВАренде.get(1)<5) && (time()>100)))
+					<Action><![CDATA[if (насосыВАренде.get(1)<8) 
 {увеличениеПаркаНасосов=ПоправкаДляСобытия1;
-if (увеличениеПослеСобытия<ПоправкаДляСобытия2*3) увеличениеПослеСобытия=УвеличениеПараметров*ПоправкаДляСобытия2;
+if (увеличениеПослеСобытия<ПоправкаДляСобытия2*2) увеличениеПослеСобытия=УвеличениеПараметров*ПоправкаДляСобытия2;
 self.restart();}
 
 ]]></Action>
@@ -1574,17 +1559,18 @@ self.restart();}
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1742803200000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[4]]></Code>
+							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+							<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
 					<Action><![CDATA[if ((товарПродан.get(1) + насосыВАренде.get(1) < МаксимальноеКоличествоСкважинРоссии/2) || (насосЧинят.size() < МаксимальноеКоличествоСкважинРоссии/3) )
-СГлавногоАгентаПотокПродаж.set(СГлавногоАгентаПотокПродаж.get(1)*1.25,1);]]></Action>
+{dynamicVariable =2*dynamicVariable;
+traceln("произовдство увеличилось");}]]></Action>
 				</Event>
 				<Event>
 					<Id>1742742549995</Id>
@@ -3549,9 +3535,9 @@ if  (времяОтрицательных2_1 - времяОтрицательн�
 		<Height>600</Height>
 	</Frame>
 	<Database>
-		<Logging>false</Logging>
+		<Logging>true</Logging>
 		<AutoExport>false</AutoExport>
-		<ShutdownCompact>false</ShutdownCompact>
+		<ShutdownCompact>true</ShutdownCompact>
 		<ImportSettings>
 		</ImportSettings>
 		<ExportSettings>
