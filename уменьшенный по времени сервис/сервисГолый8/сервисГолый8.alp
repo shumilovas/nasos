@@ -828,7 +828,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[8000]]></Code>
+							<Code><![CDATA[20000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1742743435597</Id>
@@ -1584,7 +1584,7 @@ self.restart();}
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
 					<Action><![CDATA[if ((товарПродан.get(1) + насосыВАренде.get(1) < МаксимальноеКоличествоСкважинРоссии/2) || (насосЧинят.size() < МаксимальноеКоличествоСкважинРоссии/3) )
-СГлавногоАгентаПотокПродаж.set(СГлавногоАгентаПотокПродаж.get(1)*1.15,1);]]></Action>
+СГлавногоАгентаПотокПродаж.set(СГлавногоАгентаПотокПродаж.get(1)*1.25,1);]]></Action>
 				</Event>
 				<Event>
 					<Id>1742742549995</Id>
@@ -2731,7 +2731,7 @@ if  (времяОтрицательных2_1 - времяОтрицательн�
 							<Value Class="CodeValue">
 								<Code><![CDATA[//traceln("do увеличения потока " +пульсирующийПотокНасосов.get(1));
 увеличениеПослеСобытия = увеличениеПослеСобытия + увеличениеНасосовВАренде;
-traceln("время увеличения потока " +time());
+//traceln("время увеличения потока " +time());
 //traceln("posle увеличения потока " +пульсирующийПотокНасосов.get(1));
 ]]></Code>
 							</Value>
@@ -2944,10 +2944,10 @@ traceln("время увеличения потока " +time());
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[traceln("do увеличения потока " +пульсирующийПотокНасосов.get(1));
+								<Code><![CDATA[//traceln("do увеличения потока " +пульсирующийПотокНасосов.get(1));
 увеличениеПослеСобытия = увеличениеПослеСобытия + увеличениеНасосовВАренде;
-traceln("время увеличения потока " +time());
-traceln("posle увеличения потока " +пульсирующийПотокНасосов.get(1));
+//traceln("время увеличения потока " +time());
+//traceln("posle увеличения потока " +пульсирующийПотокНасосов.get(1));
 ]]></Code>
 							</Value>
 						</Parameter>
@@ -3466,7 +3466,7 @@ traceln("posle увеличения потока " +пульсирующийПо
     			<TimePlot>
 					<Id>1742301347984</Id>
 					<Name><![CDATA[plot]]></Name>
-					<X>270</X><Y>50</Y>
+					<X>0</X><Y>50</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3484,14 +3484,14 @@ traceln("posle увеличения потока " +пульсирующийПо
 						<Unit Class="TimeUnits"><![CDATA[WEEK]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>260</Width>
+					<Width>530</Width>
 					<Height>210</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>50</XOffset>
 						<YOffset>30</YOffset>
-						<Width>180</Width>
+						<Width>450</Width>
 						<Height>120</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
@@ -3510,8 +3510,8 @@ traceln("posle увеличения потока " +пульсирующийПо
 					<ShowLegend>true</ShowLegend>
 					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
 					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
-					<VerScaleFromExpression><![CDATA[0.01]]></VerScaleFromExpression>
-					<VerScaleToExpression><![CDATA[1.2]]></VerScaleToExpression>
+					<VerScaleFromExpression><![CDATA[0.015]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[3]]></VerScaleToExpression>
 					<VerScaleType>FIXED</VerScaleType>
 					<DrawLine>true</DrawLine>
 					<Interpolation>LINEAR</Interpolation>
@@ -3525,8 +3525,8 @@ traceln("posle увеличения потока " +пульсирующийПо
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>1.0</LineWidth>
 					</DatasetExpression>
-					<SamplesToKeep>10000</SamplesToKeep>
-					<TimeWindowExpression><![CDATA[5000]]></TimeWindowExpression>
+					<SamplesToKeep>25000</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[25000]]></TimeWindowExpression>
 					<FillAreaUnderLine>false</FillAreaUnderLine>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
     			</TimePlot>
