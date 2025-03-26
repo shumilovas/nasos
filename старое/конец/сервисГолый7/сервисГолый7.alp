@@ -516,7 +516,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[95]]></Code>
+							<Code><![CDATA[10]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1742224314134</Id>
@@ -540,7 +540,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[10]]></Code>
+							<Code><![CDATA[25]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1742224343584</Id>
@@ -564,7 +564,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.22]]></Code>
+							<Code><![CDATA[8.82]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1742224823145</Id>
@@ -588,7 +588,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[10.72]]></Code>
+							<Code><![CDATA[9.221]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1742227435268</Id>
@@ -612,7 +612,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[63]]></Code>
+							<Code><![CDATA[500]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1742481221814</Id>
@@ -636,7 +636,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.5]]></Code>
+							<Code><![CDATA[1.05]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1742485775366</Id>
@@ -660,7 +660,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[150]]></Code>
+							<Code><![CDATA[240]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1742643215812</Id>
@@ -684,7 +684,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[1.4]]></Code>
+							<Code><![CDATA[1.8]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1742643682504</Id>
@@ -732,7 +732,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.1]]></Code>
+							<Code><![CDATA[1]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1742650516629</Id>
@@ -756,7 +756,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[3]]></Code>
+							<Code><![CDATA[8]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1742650729759</Id>
@@ -6390,7 +6390,7 @@ if (bestInfeasibleObjective != Double.POSITIVE_INFINITY) {
 				<FinalDate><![CDATA[1836864000000]]></FinalDate>	
 				<FinalTime><![CDATA[26304.0]]></FinalTime>	
 				<StopAfterIterationCount>true</StopAfterIterationCount>
-				<IterationCount>500</IterationCount>
+				<IterationCount>35</IterationCount>
 				<AutomaticStop>false</AutomaticStop>
 			</ModelTimeProperties>
 		</OptimizationExperiment>
