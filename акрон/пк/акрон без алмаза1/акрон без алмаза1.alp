@@ -44326,7 +44326,7 @@ traceln(getFullName() + " in time " + time());
 				<Variable Class="AuxVariable">
 					<Id>1737994877638</Id>
 					<Name><![CDATA[стоимостьЕденицыТовара]]></Name>
-					<X>-110</X><Y>590</Y>
+					<X>-10</X><Y>590</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -44985,19 +44985,19 @@ traceln(getFullName() + " in time " + time());
 				<Variable Class="Flow">
 					<Id>1737994877606</Id>
 					<Name><![CDATA[flow13]]></Name>
-					<X>60</X><Y>480</Y>
+					<X>100</X><Y>680</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1738152040079" External="false" Constant="false" Array="false">
+					<Properties TargetId="1738152040079" External="false" Constant="false" Array="false">
 						<Formula><![CDATA[(СГлавногоАгентаПотокПродаж.get(1))*стоимостьЕденицыТовара]]></Formula>
 						<Color>-65536</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>60</X><Y>110</Y></Point>
-							<Point><X>170</X><Y>150</Y></Point>
+							<Point><X>20</X><Y>-90</Y></Point>
+							<Point><X>-40</X><Y>-200</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -45405,10 +45405,10 @@ traceln(getFullName() + " in time " + time());
 				<Link SourceId="1737994877638" TargetId="1737994877606" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-90</X><Y>-110</Y></Direction>
+					<Direction><X>130</X><Y>0</Y></Direction>
 					<Id>1737994877628</Id>
 					<Name><![CDATA[стоимостьЕденицыТовара - flow13]]></Name>
-					<X>-110</X><Y>590</Y>
+					<X>-10</X><Y>590</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
