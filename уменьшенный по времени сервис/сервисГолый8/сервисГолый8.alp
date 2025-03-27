@@ -15,14 +15,24 @@
 	<Dimensions>
 		<!--   =========   Dimension   ========  -->
 		<Dimension>
-			<Id>1742302351699</Id>
-			<Name><![CDATA[MyDimension]]></Name>
+			<Id>1743073565037</Id>
+			<Name><![CDATA[Металлургия]]></Name>
 			<Type>enumeration</Type>
 			<Range><![CDATA[]]></Range>
 			<Element>
-				<Id>1742302351700</Id>
-				<Name><![CDATA[a]]></Name>
+				<Id>1743073565032</Id>
+				<Name><![CDATA[порошковая]]></Name>
 				<Value>1</Value>
+			</Element>
+			<Element>
+				<Id>1743073565034</Id>
+				<Name><![CDATA[обычная]]></Name>
+				<Value>2</Value>
+			</Element>
+			<Element>
+				<Id>1743073565036</Id>
+				<Name><![CDATA[иная]]></Name>
+				<Value>3</Value>
 			</Element>
 		</Dimension>
 	</Dimensions>
@@ -387,7 +397,7 @@
 						<Array>
 							<Dimension>
 								<PackageName><![CDATA[сервисголый7]]></PackageName>
-								<ClassName><![CDATA[MyDimension]]></ClassName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 						</Array>
 					</Properties>
@@ -410,7 +420,7 @@
 						<Array>
 							<Dimension>
 								<PackageName><![CDATA[сервисголый7]]></PackageName>
-								<ClassName><![CDATA[MyDimension]]></ClassName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 						</Array>
 					</Properties>
@@ -432,7 +442,7 @@
 						<Array>
 							<Dimension>
 								<PackageName><![CDATA[сервисголый7]]></PackageName>
-								<ClassName><![CDATA[MyDimension]]></ClassName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 						</Array>
 					</Properties>
@@ -453,7 +463,7 @@
 						<Array>
 							<Dimension>
 								<PackageName><![CDATA[сервисголый7]]></PackageName>
-								<ClassName><![CDATA[MyDimension]]></ClassName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 						</Array>
 					</Properties>
@@ -474,7 +484,7 @@
 						<Array>
 							<Dimension>
 								<PackageName><![CDATA[сервисголый7]]></PackageName>
-								<ClassName><![CDATA[MyDimension]]></ClassName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 						</Array>
 					</Properties>
@@ -673,12 +683,12 @@
 						<Array>
 							<Dimension>
 								<PackageName><![CDATA[сервисголый7]]></PackageName>
-								<ClassName><![CDATA[MyDimension]]></ClassName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
 									<PackageName><![CDATA[сервисголый7]]></PackageName>
-									<ClassName><![CDATA[MyDimension]]></ClassName>
+									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[0.5*СГлавногоАгентаПотокПродаж.get(1)]]></Expression>
 							</CustomExpression>
@@ -705,12 +715,12 @@
 						<Array>
 							<Dimension>
 								<PackageName><![CDATA[сервисголый7]]></PackageName>
-								<ClassName><![CDATA[MyDimension]]></ClassName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
 									<PackageName><![CDATA[сервисголый7]]></PackageName>
-									<ClassName><![CDATA[MyDimension]]></ClassName>
+									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[dynamicVariable]]></Expression>
 							</CustomExpression>
@@ -737,12 +747,12 @@
 						<Array>
 							<Dimension>
 								<PackageName><![CDATA[сервисголый7]]></PackageName>
-								<ClassName><![CDATA[MyDimension]]></ClassName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
 									<PackageName><![CDATA[сервисголый7]]></PackageName>
-									<ClassName><![CDATA[MyDimension]]></ClassName>
+									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[(СГлавногоАгентаПотокПродаж.get(1)*(1+увеличениеПослеСобытия)*поправка+увеличениеПаркаНасосов)/поправка2]]></Expression>
 							</CustomExpression>
@@ -768,12 +778,12 @@
 						<Array>
 							<Dimension>
 								<PackageName><![CDATA[сервисголый7]]></PackageName>
-								<ClassName><![CDATA[MyDimension]]></ClassName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
 									<PackageName><![CDATA[сервисголый7]]></PackageName>
-									<ClassName><![CDATA[MyDimension]]></ClassName>
+									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[flow3.get(1)*(1+увеличениеПослеСобытия)/(поправка4*p4)]]></Expression>
 							</CustomExpression>
@@ -801,12 +811,12 @@
 						<Array>
 							<Dimension>
 								<PackageName><![CDATA[сервисголый7]]></PackageName>
-								<ClassName><![CDATA[MyDimension]]></ClassName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
 									<PackageName><![CDATA[сервисголый7]]></PackageName>
-									<ClassName><![CDATA[MyDimension]]></ClassName>
+									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[СГлавногоАгентаПотокПродаж.get(1)*0.33*0.4/(24*365)]]></Expression>
 							</CustomExpression>
@@ -832,12 +842,12 @@
 						<Array>
 							<Dimension>
 								<PackageName><![CDATA[сервисголый7]]></PackageName>
-								<ClassName><![CDATA[MyDimension]]></ClassName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
 									<PackageName><![CDATA[сервисголый7]]></PackageName>
-									<ClassName><![CDATA[MyDimension]]></ClassName>
+									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[СГлавногоАгентаПотокПродаж.get(1)*0.33*0.6/(24*365)]]></Expression>
 							</CustomExpression>
