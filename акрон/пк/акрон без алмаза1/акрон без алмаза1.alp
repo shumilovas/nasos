@@ -3941,6 +3941,8 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 		<ActiveObjectClass>
 			<Id>1733849252013</Id>
 			<Name><![CDATA[Завод]]></Name>
+			<StartupCode><![CDATA[if (ЗаготовокВ_10_ДеньНеПовторящихсяСекций<1)
+ЗаготовокВ_10_ДеньНеПовторящихсяСекций=1;]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1733849252019</Id>
@@ -10979,6 +10981,37 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 					<Action><![CDATA[доляМассы10кг.inject(790);
 разгрузкаЗаготовок25кг1.inject(900);
 разгрузкаЗаготовок10кг1.inject(900);]]></Action>
+				</Event>
+				<Event>
+					<Id>1743252950330</Id>
+					<Name><![CDATA[event1ЗаготовокВ_10_ДеньНеПовторящихсяСекций]]></Name>
+					<X>50</X><Y>380</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1743321600000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[ЗаготовокВ_10_ДеньНеПовторящихсяСекций<1]]></Condition>
+					</Properties>
+					<Action><![CDATA[ЗаготовокВ_10_ДеньНеПовторящихсяСекций=1]]></Action>
 				</Event>
 			</Events>
 			<Schedules>
