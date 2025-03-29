@@ -1145,7 +1145,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1733395930914" TargetId="1738061915074" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[завод.ЗаготовокВчасПовторящихсяСекций1ДляДвух+(завод.ЗаготовокВ_10_ДеньНеПовторящихсяСекций*8)/24]]></Formula>
+						<Formula><![CDATA[завод.изменениеЗагрузкиСдругихАгентов*(завод.ЗаготовокВчасПовторящихсяСекций1ДляДвух+(завод.ЗаготовокВ_10_ДеньНеПовторящихсяСекций*8)/24)]]></Formula>
 						<Color>-16711936</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -1164,7 +1164,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1733420114973" TargetId="1735401157040" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[0.7*(ПорошковаяСтальВыплавкаТоннВгод+СтальВыплавкаТоннВгод+ИнаясСтальТОннВГод)/(365*24)]]></Formula>
+						<Formula><![CDATA[0.7*завод.изменениеЗагрузкиСдругихАгентов*(ПорошковаяСтальВыплавкаТоннВгод+СтальВыплавкаТоннВгод+ИнаясСтальТОннВГод)/(365*24)]]></Formula>
 						<Color>-256</Color>
 						<ValveIndex>2</ValveIndex>
 						<Points>
@@ -3941,8 +3941,6 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 		<ActiveObjectClass>
 			<Id>1733849252013</Id>
 			<Name><![CDATA[Завод]]></Name>
-			<StartupCode><![CDATA[if (ЗаготовокВ_10_ДеньНеПовторящихсяСекций<1)
-ЗаготовокВ_10_ДеньНеПовторящихсяСекций=1;]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1733849252019</Id>
@@ -4047,7 +4045,7 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[int]]></Type>        
 						<InitialValue Class="CodeValue">
-							<Code><![CDATA[(int)(изменениеЗагрузкиСдругихАгентов*25*всяСталь*(1-доляМассыДлинныхСекций) /(365))]]></Code>
+							<Code><![CDATA[(int)(25*всяСталь*(1-доляМассыДлинныхСекций) /(365))]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
@@ -10982,37 +10980,6 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 разгрузкаЗаготовок25кг1.inject(900);
 разгрузкаЗаготовок10кг1.inject(900);]]></Action>
 				</Event>
-				<Event>
-					<Id>1743252950330</Id>
-					<Name><![CDATA[event1ЗаготовокВ_10_ДеньНеПовторящихсяСекций]]></Name>
-					<X>50</X><Y>380</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="condition" Mode="occuresOnce">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</Timeout>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
-						</Rate>
-						<OccurrenceAtTime>true</OccurrenceAtTime>
-						<OccurrenceDate>1743321600000</OccurrenceDate>
-						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[0]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</OccurrenceTime>
-						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</RecurrenceCode>
-						<Condition><![CDATA[ЗаготовокВ_10_ДеньНеПовторящихсяСекций<1]]></Condition>
-					</Properties>
-					<Action><![CDATA[ЗаготовокВ_10_ДеньНеПовторящихсяСекций=1]]></Action>
-				</Event>
 			</Events>
 			<Schedules>
 				<Schedule>
@@ -11148,7 +11115,7 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[2]]></Code>
+								<Code><![CDATA[2	]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -11191,7 +11158,7 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[ЗаготовокВ_10_ДеньНеПовторящихсяСекций]]></Code>
+								<Code><![CDATA[(int)(ЗаготовокВ_10_ДеньНеПовторящихсяСекций*изменениеЗагрузкиСдругихАгентов)]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -13928,7 +13895,7 @@ get_Main().выехалГрузовикОтдаватьНаСервис=true;
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[частотаПРиходаГрузовика1]]></Code>
+								<Code><![CDATA[(int)частотаПРиходаГрузовика1*изменениеЗагрузкиСдругихАгентов]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 							</Value>
 						</Parameter>
@@ -16040,7 +16007,7 @@ get_Main().выехалГрузовикОтдаватьНаСервис=true;
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[ЗаготовокВчасПовторящихсяСекций1ДляДвух]]></Code>
+								<Code><![CDATA[(int)изменениеЗагрузкиСдругихАгентов*ЗаготовокВчасПовторящихсяСекций1ДляДвух]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -16506,7 +16473,7 @@ get_Main().выехалГрузовикОтдаватьНаСервис=true;
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[(int)300/(2*ЗаготовокВчасПовторящихсяСекций1ДляДвух)]]></Code>
+								<Code><![CDATA[(int)изменениеЗагрузкиСдругихАгентов*300/(2*ЗаготовокВчасПовторящихсяСекций1ДляДвух)]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -22106,7 +22073,7 @@ agent.стоимость = 22000;]]></Code>
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[6*ЗаготовокВчасПовторящихсяСекций1ДляДвух]]></Code>
+								<Code><![CDATA[(int)изменениеЗагрузкиСдругихАгентов*6*ЗаготовокВчасПовторящихсяСекций1ДляДвух]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -46129,9 +46096,7 @@ self.restart();}
 					</Properties>
 					<Action><![CDATA[if ((товарПродан.get(1) + ТоварВзятВаренду.get(1) < МаксимальноеКоличествоСкважинРоссии/2) || (насосЧинят.size() < МаксимальноеКоличествоСкважинРоссии/3) )
 {dynamicVariable =1.05*dynamicVariable;
-traceln("произовдство увеличилось");
-get_Main().завод.изменениеЗагрузкиСдругихАгентов *=1.1;
-}]]></Action>
+traceln("произовдство увеличилось");}]]></Action>
 				</Event>
 				<Event>
 					<Id>1743073914247</Id>
@@ -46194,8 +46159,8 @@ get_Main().завод.изменениеЗагрузкиСдругихАгент
 						<Condition><![CDATA[(товарПродан.get(1) + ТоварВзятВаренду.get(1) > МаксимальноеКоличествоСкважинРоссии/2) || (насосЧинят.size()>МаксимальноеКоличествоСкважинРоссии/3)]]></Condition>
 					</Properties>
 					<Action><![CDATA[traceln("уменьшение рынка " +time(), red);
-ПрибавкаНасосовВМнсяц=(int)(ПрибавкаНасосовВМнсяц*0.8);
-увеличениеПаркаНасосов=увеличениеПаркаНасосов*0.8;
+ПрибавкаНасосовВМнсяц=(int)(ПрибавкаНасосовВМнсяц*0.2);
+увеличениеПаркаНасосов=увеличениеПаркаНасосов*0.2;
 поправка2=поправка2*1.5;
 НовНасДискр = (int)(НовНасДискр*0.8);
 dynamicVariable = dynamicVariable/8;
