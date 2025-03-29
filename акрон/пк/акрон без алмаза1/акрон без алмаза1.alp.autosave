@@ -4295,7 +4295,7 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[double]]></Type>        
 						<InitialValue Class="CodeValue">
-							<Code><![CDATA[1]]></Code>
+							<Code><![CDATA[1.0]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
