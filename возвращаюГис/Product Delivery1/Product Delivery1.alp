@@ -21,7 +21,7 @@ This model is essentially multi-method. Distributors, trucks and manufacturing f
 		<!--   =========   Active Object Class   ========  -->
 		<ActiveObjectClass>
 			<Id>1406111021224</Id>
-			<Name><![CDATA[MaiGis]]></Name>
+			<Name><![CDATA[MainGis]]></Name>
 			<Import><![CDATA[import java.text.SimpleDateFormat;]]></Import>
 			<StartupCode><![CDATA[setCenters();]]></StartupCode>
 			<Generic>false</Generic>
@@ -1509,7 +1509,7 @@ else
 			<ContainerLinks>
 				<ContainerLink>
 					<Id>1406112943278</Id>
-					<Name><![CDATA[maiGis]]></Name>
+					<Name><![CDATA[mainGis]]></Name>
 					<X>50</X><Y>-100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1517,7 +1517,7 @@ else
 					<ShowLabel>true</ShowLabel>
 					<ActiveObjectClass>
 						<PackageName><![CDATA[product_delivery]]></PackageName>
-						<ClassName><![CDATA[MaiGis]]></ClassName>
+						<ClassName><![CDATA[MainGis]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
 			</ContainerLinks>
@@ -2553,7 +2553,7 @@ unit.setLocation(this);]]></Code>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[products -= agent.amount;
-maiGis.waitingForProduct.add( time() - agent.startWaitingForProduct );]]></Code>
+mainGis.waitingForProduct.add( time() - agent.startWaitingForProduct );]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -3384,7 +3384,7 @@ send( order, center );]]></Action>
 			<ContainerLinks>
 				<ContainerLink>
 					<Id>1406123810540</Id>
-					<Name><![CDATA[maiGis]]></Name>
+					<Name><![CDATA[mainGis]]></Name>
 					<X>50</X><Y>-100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -3392,7 +3392,7 @@ send( order, center );]]></Action>
 					<ShowLabel>true</ShowLabel>
 					<ActiveObjectClass>
 						<PackageName><![CDATA[product_delivery]]></PackageName>
-						<ClassName><![CDATA[MaiGis]]></ClassName>
+						<ClassName><![CDATA[MainGis]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
 			</ContainerLinks>
@@ -4428,7 +4428,7 @@ dest.setText( order.distributor.name );]]></Action>
 				<Name><![CDATA[Waiting Time for Product, hours]]></Name>
 				<OutputReference>
 					<PackageName><![CDATA[product_delivery]]></PackageName>
-					<ClassName><![CDATA[MaiGis]]></ClassName>
+					<ClassName><![CDATA[MainGis]]></ClassName>
 					<ItemName><![CDATA[chartWaitingTime]]></ItemName>
 				</OutputReference>
     		</RunConfigurationOutput>
@@ -4437,7 +4437,7 @@ dest.setText( order.distributor.name );]]></Action>
 				<Name><![CDATA[Products at Manufacturing Centers]]></Name>
 				<OutputReference>
 					<PackageName><![CDATA[product_delivery]]></PackageName>
-					<ClassName><![CDATA[MaiGis]]></ClassName>
+					<ClassName><![CDATA[MainGis]]></ClassName>
 					<ItemName><![CDATA[chartNumberOfProducts]]></ItemName>
 				</OutputReference>
     		</RunConfigurationOutput>
@@ -4446,7 +4446,7 @@ dest.setText( order.distributor.name );]]></Action>
 				<Name><![CDATA[Manufacturing Center Fleet Utilization, %]]></Name>
 				<OutputReference>
 					<PackageName><![CDATA[product_delivery]]></PackageName>
-					<ClassName><![CDATA[MaiGis]]></ClassName>
+					<ClassName><![CDATA[MainGis]]></ClassName>
 					<ItemName><![CDATA[chartFleetUtilization]]></ItemName>
 				</OutputReference>
     		</RunConfigurationOutput>
