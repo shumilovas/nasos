@@ -13,6 +13,329 @@ This model is essentially multi-method. Distributors, trucks and manufacturing f
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[product_delivery]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Hour]]></ModelTimeUnit>
+	<Dimensions>
+		<!--   =========   Dimension   ========  -->
+		<Dimension>
+			<Id>1743684513557</Id>
+			<Name><![CDATA[Металлургия]]></Name>
+			<Type>enumeration</Type>
+			<Range><![CDATA[]]></Range>
+			<Element>
+				<Id>1743684513552</Id>
+				<Name><![CDATA[порошковая]]></Name>
+				<Value>1</Value>
+			</Element>
+			<Element>
+				<Id>1743684513554</Id>
+				<Name><![CDATA[обычная]]></Name>
+				<Value>2</Value>
+			</Element>
+			<Element>
+				<Id>1743684513556</Id>
+				<Name><![CDATA[иная]]></Name>
+				<Value>3</Value>
+			</Element>
+		</Dimension>
+		<!--   =========   Dimension   ========  -->
+		<Dimension>
+			<Id>1743684513649</Id>
+			<Name><![CDATA[ТипыОборудования]]></Name>
+			<Type>enumeration</Type>
+			<Range><![CDATA[]]></Range>
+			<Element>
+				<Id>1743684513606</Id>
+				<Name><![CDATA[двигатель]]></Name>
+				<Value>1</Value>
+			</Element>
+			<Element>
+				<Id>1743684513608</Id>
+				<Name><![CDATA[гидрозащиты]]></Name>
+				<Value>2</Value>
+			</Element>
+			<Element>
+				<Id>1743684513610</Id>
+				<Name><![CDATA[модульСмещения]]></Name>
+				<Value>3</Value>
+			</Element>
+			<Element>
+				<Id>1743684513612</Id>
+				<Name><![CDATA[клапаны]]></Name>
+				<Value>4</Value>
+			</Element>
+			<Element>
+				<Id>1743684513614</Id>
+				<Name><![CDATA[насосыНефтПласт]]></Name>
+				<Value>5</Value>
+			</Element>
+			<Element>
+				<Id>1743684513616</Id>
+				<Name><![CDATA[модульВхНакид]]></Name>
+				<Value>6</Value>
+			</Element>
+			<Element>
+				<Id>1743684513618</Id>
+				<Name><![CDATA[устНасосПогруж]]></Name>
+				<Value>7</Value>
+			</Element>
+			<Element>
+				<Id>1743684513620</Id>
+				<Name><![CDATA[газосепаратор]]></Name>
+				<Value>8</Value>
+			</Element>
+			<Element>
+				<Id>1743684513622</Id>
+				<Name><![CDATA[диспергатор]]></Name>
+				<Value>9</Value>
+			</Element>
+			<Element>
+				<Id>1743684513624</Id>
+				<Name><![CDATA[телеметрия]]></Name>
+				<Value>10</Value>
+			</Element>
+			<Element>
+				<Id>1743684513626</Id>
+				<Name><![CDATA[двигательныеСекции]]></Name>
+				<Value>11</Value>
+			</Element>
+			<Element>
+				<Id>1743684513628</Id>
+				<Name><![CDATA[НасосаныеСекции]]></Name>
+				<Value>12</Value>
+			</Element>
+			<Element>
+				<Id>1743684513630</Id>
+				<Name><![CDATA[НасосыВентиль]]></Name>
+				<Value>13</Value>
+			</Element>
+			<Element>
+				<Id>1743684513632</Id>
+				<Name><![CDATA[насосыАсинхронные]]></Name>
+				<Value>14</Value>
+			</Element>
+			<Element>
+				<Id>1743684513634</Id>
+				<Name><![CDATA[иныеНасосы]]></Name>
+				<Value>15</Value>
+			</Element>
+			<Element>
+				<Id>1743684513636</Id>
+				<Name><![CDATA[фильтры]]></Name>
+				<Value>16</Value>
+			</Element>
+			<Element>
+				<Id>1743684513638</Id>
+				<Name><![CDATA[центратор]]></Name>
+				<Value>17</Value>
+			</Element>
+			<Element>
+				<Id>1743684513640</Id>
+				<Name><![CDATA[шламоуловители]]></Name>
+				<Value>18</Value>
+			</Element>
+			<Element>
+				<Id>1743684513642</Id>
+				<Name><![CDATA[протектолайзеры]]></Name>
+				<Value>19</Value>
+			</Element>
+			<Element>
+				<Id>1743684513644</Id>
+				<Name><![CDATA[насосыПорошковые]]></Name>
+				<Value>20</Value>
+			</Element>
+			<Element>
+				<Id>1743684513646</Id>
+				<Name><![CDATA[насосыМультифазные]]></Name>
+				<Value>21</Value>
+			</Element>
+			<Element>
+				<Id>1743684513648</Id>
+				<Name><![CDATA[насосыЛитые]]></Name>
+				<Value>22</Value>
+			</Element>
+		</Dimension>
+	</Dimensions>
+	<OptionLists>
+		<OptionList>
+			<Id>1743684523732</Id>
+			<Name><![CDATA[BigDetal]]></Name>
+			<Option>
+				<Id>1743684523734</Id>
+				<Name><![CDATA[CompECN]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523736</Id>
+				<Name><![CDATA[Nazem]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523738</Id>
+				<Name><![CDATA[Gasosep]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523740</Id>
+				<Name><![CDATA[FiltrSchel]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523742</Id>
+				<Name><![CDATA[HydroZach]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523744</Id>
+				<Name><![CDATA[PogrujElecDvig]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523746</Id>
+				<Name><![CDATA[Kabel]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523748</Id>
+				<Name><![CDATA[Telemetr]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523750</Id>
+				<Name><![CDATA[Slamoul]]></Name>
+			</Option>
+		</OptionList>
+		<OptionList>
+			<Id>1743684523753</Id>
+			<Name><![CDATA[Nazem]]></Name>
+			<Option>
+				<Id>1743684523755</Id>
+				<Name><![CDATA[StancUpravl]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523757</Id>
+				<Name><![CDATA[Transformator]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523759</Id>
+				<Name><![CDATA[FiltrVhod]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523761</Id>
+				<Name><![CDATA[FiltrVihod]]></Name>
+			</Option>
+		</OptionList>
+		<OptionList>
+			<Id>1743684523769</Id>
+			<Name><![CDATA[Должность]]></Name>
+			<Option>
+				<Id>1743684523771</Id>
+				<Name><![CDATA[Разнорабочий]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523773</Id>
+				<Name><![CDATA[Специалист]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523775</Id>
+				<Name><![CDATA[Эксперт]]></Name>
+			</Option>
+		</OptionList>
+		<OptionList>
+			<Id>1743684523788</Id>
+			<Name><![CDATA[КрупноеРазделениеНаДетали]]></Name>
+			<Option>
+				<Id>1743684523790</Id>
+				<Name><![CDATA[КомпонентыЭЦН]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523792</Id>
+				<Name><![CDATA[НаземнаяЧасть]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523794</Id>
+				<Name><![CDATA[Газосепаратор]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523796</Id>
+				<Name><![CDATA[ФильтрЩелевой]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523798</Id>
+				<Name><![CDATA[Гидрозащита]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523800</Id>
+				<Name><![CDATA[ПогружнойЭлектродвигатель]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523802</Id>
+				<Name><![CDATA[Кабель]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523804</Id>
+				<Name><![CDATA[Телеметрия]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523806</Id>
+				<Name><![CDATA[шламоуловитель]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523808</Id>
+				<Name><![CDATA[газостабилизатор]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523810</Id>
+				<Name><![CDATA[контейнер]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523812</Id>
+				<Name><![CDATA[системы_байпасные]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523814</Id>
+				<Name><![CDATA[центраторы]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523816</Id>
+				<Name><![CDATA[прочее]]></Name>
+			</Option>
+		</OptionList>
+		<OptionList>
+			<Id>1743684523817</Id>
+			<Name><![CDATA[НАземноеОборудование]]></Name>
+			<Option>
+				<Id>1743684523819</Id>
+				<Name><![CDATA[СТанцияУправления]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523821</Id>
+				<Name><![CDATA[Трансфортматор]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523823</Id>
+				<Name><![CDATA[ФильтрВходной]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523825</Id>
+				<Name><![CDATA[ФильтрВыходной]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523827</Id>
+				<Name><![CDATA[прочие]]></Name>
+			</Option>
+		</OptionList>
+		<OptionList>
+			<Id>1743684523838</Id>
+			<Name><![CDATA[ЭЦН]]></Name>
+			<Option>
+				<Id>1743684523840</Id>
+				<Name><![CDATA[ОбратныйКлапан]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523842</Id>
+				<Name><![CDATA[СпускнойКлапан]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523844</Id>
+				<Name><![CDATA[СекцийНасоса]]></Name>
+			</Option>
+			<Option>
+				<Id>1743684523846</Id>
+				<Name><![CDATA[ВходнойМодуль]]></Name>
+			</Option>
+		</OptionList>
+	</OptionLists>
 	
 	<Folders>
 		
@@ -4373,6 +4696,406 @@ dest.setText( order.distributor.name );]]></Action>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<Z>0</Z>
 					<LevelVisibility>ALWAYS_SHOW</LevelVisibility>
+
+
+				</Level>
+			</Presentation>
+
+		</ActiveObjectClass>
+		<!--   =========   Active Object Class   ========  -->
+		<ActiveObjectClass>
+			<Id>1743684418097</Id>
+			<Name><![CDATA[Коробка]]></Name>
+			<Generic>false</Generic>
+			<GenericParameter>
+				<Id>1743684418092</Id>
+				<Name><![CDATA[1743684418092]]></Name>
+				<GenericParameterValue Class="CodeValue">
+					<Code><![CDATA[T extends Agent]]></Code>
+				</GenericParameterValue>
+				<GenericParameterLabel><![CDATA[Параметр настройки:]]></GenericParameterLabel>
+			</GenericParameter>
+			<FlowChartsUsage>ENTITY</FlowChartsUsage>
+			<SamplesToKeep>100</SamplesToKeep>
+			<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
+			<ElementsLimitValue>100</ElementsLimitValue>
+			<MakeDefaultViewArea>true</MakeDefaultViewArea>
+			<SceneGridColor/>
+			<SceneBackgroundColor/>
+			<SceneSkybox>null</SceneSkybox>
+			<AgentProperties>
+				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
+				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
+				<RotateAnimationVertically>false</RotateAnimationVertically>
+				<VelocityCode Class="CodeUnitValue">
+					<Code><![CDATA[10]]></Code>
+					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
+			</AgentProperties>
+			<EnvironmentProperties>
+					<EnableSteps>false</EnableSteps>
+					<StepDurationCode Class="CodeUnitValue">
+						<Code><![CDATA[1.0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</StepDurationCode>
+					<SpaceType>CONTINUOUS</SpaceType>
+					<WidthCode><![CDATA[500]]></WidthCode>
+					<HeightCode><![CDATA[500]]></HeightCode>
+					<ZHeightCode><![CDATA[0]]></ZHeightCode>
+					<ColumnsCountCode><![CDATA[100]]></ColumnsCountCode>
+					<RowsCountCode><![CDATA[100]]></RowsCountCode>
+					<NeigborhoodType>MOORE</NeigborhoodType>
+					<LayoutType>USER_DEF</LayoutType>
+					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
+					<NetworkType>USER_DEF</NetworkType>
+					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
+					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
+					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
+					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
+					<MCode><![CDATA[10]]></MCode>
+			</EnvironmentProperties>
+			<DatasetsCreationProperties>
+				<AutoCreate>true</AutoCreate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1733904000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</RecurrenceCode>
+			</DatasetsCreationProperties>
+			<ScaleRuler>
+				<Id>1743684418093</Id>
+				<Name><![CDATA[scale]]></Name>
+				<X>0</X><Y>-150</Y>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>false</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<Length>100</Length>
+				<Rotation>0</Rotation>
+				<ScaleType>BASED_ON_LENGTH</ScaleType>
+				<ModelLength>10</ModelLength>
+				<LengthUnits>METER</LengthUnits>
+				<Scale>10</Scale>
+				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
+			</ScaleRuler>
+			<CurrentLevel>1743684418099</CurrentLevel>
+			<ConnectionsId>1743684418101</ConnectionsId>
+			<AgentLinks>
+				<AgentLink>
+					<Id>1743684418101</Id>
+					<Name><![CDATA[connections]]></Name>
+					<X>50</X><Y>-50</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<HandleReceiveInConnections>false</HandleReceiveInConnections>
+					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+					<AgentLinkBidirectional>true</AgentLinkBidirectional>
+					<MessageType><![CDATA[Object]]></MessageType>
+					<LineStyle>SOLID</LineStyle>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineZOrder>UNDER_AGENTS</LineZOrder>
+					<LineArrow>NONE</LineArrow>
+					<LineArrowPosition>END</LineArrowPosition>
+				</AgentLink>
+			</AgentLinks>
+
+
+			<Presentation>
+				<Level>
+					<Id>1743684418099</Id>
+					<Name><![CDATA[level]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
+
+
+				</Level>
+			</Presentation>
+
+		</ActiveObjectClass>
+		<!--   =========   Active Object Class   ========  -->
+		<ActiveObjectClass>
+			<Id>1743684474926</Id>
+			<Name><![CDATA[Заготовка]]></Name>
+			<Generic>false</Generic>
+			<GenericParameter>
+				<Id>1743684474921</Id>
+				<Name><![CDATA[1743684474921]]></Name>
+				<GenericParameterValue Class="CodeValue">
+					<Code><![CDATA[T extends Agent]]></Code>
+				</GenericParameterValue>
+				<GenericParameterLabel><![CDATA[Параметр настройки:]]></GenericParameterLabel>
+			</GenericParameter>
+			<FlowChartsUsage>ENTITY</FlowChartsUsage>
+			<SamplesToKeep>100</SamplesToKeep>
+			<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
+			<ElementsLimitValue>100</ElementsLimitValue>
+			<MakeDefaultViewArea>true</MakeDefaultViewArea>
+			<SceneGridColor/>
+			<SceneBackgroundColor/>
+			<SceneSkybox>null</SceneSkybox>
+			<AgentProperties>
+				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
+				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
+				<RotateAnimationVertically>false</RotateAnimationVertically>
+				<VelocityCode Class="CodeUnitValue">
+					<Code><![CDATA[10]]></Code>
+					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
+			</AgentProperties>
+			<EnvironmentProperties>
+					<EnableSteps>false</EnableSteps>
+					<StepDurationCode Class="CodeUnitValue">
+						<Code><![CDATA[1.0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</StepDurationCode>
+					<SpaceType>CONTINUOUS</SpaceType>
+					<WidthCode><![CDATA[500]]></WidthCode>
+					<HeightCode><![CDATA[500]]></HeightCode>
+					<ZHeightCode><![CDATA[0]]></ZHeightCode>
+					<ColumnsCountCode><![CDATA[100]]></ColumnsCountCode>
+					<RowsCountCode><![CDATA[100]]></RowsCountCode>
+					<NeigborhoodType>MOORE</NeigborhoodType>
+					<LayoutType>USER_DEF</LayoutType>
+					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
+					<NetworkType>USER_DEF</NetworkType>
+					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
+					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
+					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
+					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
+					<MCode><![CDATA[10]]></MCode>
+			</EnvironmentProperties>
+			<DatasetsCreationProperties>
+				<AutoCreate>true</AutoCreate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1733904000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</RecurrenceCode>
+			</DatasetsCreationProperties>
+			<ScaleRuler>
+				<Id>1743684474922</Id>
+				<Name><![CDATA[scale]]></Name>
+				<X>0</X><Y>-150</Y>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>false</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<Length>100</Length>
+				<Rotation>0</Rotation>
+				<ScaleType>BASED_ON_LENGTH</ScaleType>
+				<ModelLength>10</ModelLength>
+				<LengthUnits>METER</LengthUnits>
+				<Scale>10</Scale>
+				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
+			</ScaleRuler>
+			<CurrentLevel>1743684474930</CurrentLevel>
+			<ConnectionsId>1743684474947</ConnectionsId>
+			<Variables>
+				<Variable Class="PlainVariable">
+					<Id>1743684474928</Id>
+					<Name><![CDATA[стоимость]]></Name>
+					<X>70</X><Y>230</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[50.0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1743684474933</Id>
+					<Name><![CDATA[крупноеРазделениеНаДетали1]]></Name>
+					<X>70</X><Y>120</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[КрупноеРазделениеНаДетали]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1743684474931</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1743684474936</Id>
+					<Name><![CDATA[ЭЦН]]></Name>
+					<X>70</X><Y>160</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[ЭЦН]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1743684474934</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1743684474939</Id>
+					<Name><![CDATA[Наземное]]></Name>
+					<X>70</X><Y>190</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[НАземноеОборудование]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1743684474937</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1743684474942</Id>
+					<Name><![CDATA[названиеСтрокой]]></Name>
+					<X>70</X><Y>280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[String]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA["Гидрозащита"]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1743684474940</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1743684474945</Id>
+					<Name><![CDATA[масса]]></Name>
+					<X>70</X><Y>330</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[25]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1743684474943</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+			</Variables>
+			<AgentLinks>
+				<AgentLink>
+					<Id>1743684474947</Id>
+					<Name><![CDATA[connections]]></Name>
+					<X>50</X><Y>-50</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<HandleReceiveInConnections>false</HandleReceiveInConnections>
+					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+					<AgentLinkBidirectional>true</AgentLinkBidirectional>
+					<MessageType><![CDATA[Object]]></MessageType>
+					<LineStyle>SOLID</LineStyle>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineZOrder>UNDER_AGENTS</LineZOrder>
+					<LineArrow>NONE</LineArrow>
+					<LineArrowPosition>END</LineArrowPosition>
+				</AgentLink>
+			</AgentLinks>
+
+
+			<Presentation>
+				<Level>
+					<Id>1743684474930</Id>
+					<Name><![CDATA[level]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
 
 
 				</Level>
