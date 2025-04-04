@@ -8638,6 +8638,21 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 				</AgentLink>
 			</AgentLinks>
 
+			<ContainerLinks>
+				<ContainerLink>
+					<Id>1743796133606</Id>
+					<Name><![CDATA[завод]]></Name>
+					<X>50</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[product_delivery]]></PackageName>
+						<ClassName><![CDATA[Завод]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+			</ContainerLinks>
 
 			<Presentation>
 				<Level>
@@ -9527,6 +9542,7 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 		<ActiveObjectClass>
 			<Id>1743794494314</Id>
 			<Name><![CDATA[Завод]]></Name>
+			<ExcludeFromBuild>true</ExcludeFromBuild>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1743794494309</Id>
@@ -16774,14 +16790,14 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
 									<ActiveObjectClass>
-										<PackageName><![CDATA[насосы10]]></PackageName>
+										<PackageName><![CDATA[product_delivery]]></PackageName>
 										<ClassName><![CDATA[Заготовка]]></ClassName>
 									</ActiveObjectClass>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[насосы10]]></PackageName>
+											<PackageName><![CDATA[product_delivery]]></PackageName>
 											<ClassName><![CDATA[Заготовка]]></ClassName>
-											<ItemName><![CDATA[1733849507641]]></ItemName>
+											<ItemName><![CDATA[1743794088999]]></ItemName>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
@@ -17087,14 +17103,14 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
 									<ActiveObjectClass>
-										<PackageName><![CDATA[насосы10]]></PackageName>
+										<PackageName><![CDATA[product_delivery]]></PackageName>
 										<ClassName><![CDATA[Коробка]]></ClassName>
 									</ActiveObjectClass>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[насосы10]]></PackageName>
+											<PackageName><![CDATA[product_delivery]]></PackageName>
 											<ClassName><![CDATA[Коробка]]></ClassName>
-											<ItemName><![CDATA[1733909867345]]></ItemName>
+											<ItemName><![CDATA[1743794089061]]></ItemName>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
@@ -17600,14 +17616,14 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
 									<ActiveObjectClass>
-										<PackageName><![CDATA[насосы10]]></PackageName>
+										<PackageName><![CDATA[product_delivery]]></PackageName>
 										<ClassName><![CDATA[ГрузовикПривозящий]]></ClassName>
 									</ActiveObjectClass>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[насосы10]]></PackageName>
+											<PackageName><![CDATA[product_delivery]]></PackageName>
 											<ClassName><![CDATA[ГрузовикПривозящий]]></ClassName>
-											<ItemName><![CDATA[1733849336243]]></ItemName>
+											<ItemName><![CDATA[1743794494296]]></ItemName>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
@@ -17862,7 +17878,7 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[traceln("сервисЛогистика.source.inject(1); " +time());
-get_MainПОдГис().выехалГрузовикОтдаватьНаСервис=true;
+mainПОдГис.выехалГрузовикОтдаватьНаСервис=true;
 //get_Main().dostavka.manufacturing.source.inject(1);]]></Code>
 							</Value>
 						</Parameter>
@@ -18560,14 +18576,14 @@ get_MainПОдГис().выехалГрузовикОтдаватьНаСерв�
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
 									<ActiveObjectClass>
-										<PackageName><![CDATA[насосы10]]></PackageName>
+										<PackageName><![CDATA[product_delivery]]></PackageName>
 										<ClassName><![CDATA[ГрузовикПривозящий]]></ClassName>
 									</ActiveObjectClass>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[насосы10]]></PackageName>
+											<PackageName><![CDATA[product_delivery]]></PackageName>
 											<ClassName><![CDATA[ГрузовикПривозящий]]></ClassName>
-											<ItemName><![CDATA[1733849336243]]></ItemName>
+											<ItemName><![CDATA[1743794494296]]></ItemName>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
@@ -18796,14 +18812,14 @@ get_MainПОдГис().выехалГрузовикОтдаватьНаСерв�
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
 									<ActiveObjectClass>
-										<PackageName><![CDATA[насосы10]]></PackageName>
+										<PackageName><![CDATA[product_delivery]]></PackageName>
 										<ClassName><![CDATA[Transporter]]></ClassName>
 									</ActiveObjectClass>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[насосы10]]></PackageName>
+											<PackageName><![CDATA[product_delivery]]></PackageName>
 											<ClassName><![CDATA[Transporter]]></ClassName>
-											<ItemName><![CDATA[1733849336157]]></ItemName>
+											<ItemName><![CDATA[1743794277797]]></ItemName>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
@@ -19029,14 +19045,14 @@ get_MainПОдГис().выехалГрузовикОтдаватьНаСерв�
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
 									<ActiveObjectClass>
-										<PackageName><![CDATA[насосы10]]></PackageName>
+										<PackageName><![CDATA[product_delivery]]></PackageName>
 										<ClassName><![CDATA[ГрузовикПривозящий]]></ClassName>
 									</ActiveObjectClass>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[насосы10]]></PackageName>
+											<PackageName><![CDATA[product_delivery]]></PackageName>
 											<ClassName><![CDATA[ГрузовикПривозящий]]></ClassName>
-											<ItemName><![CDATA[1733849336243]]></ItemName>
+											<ItemName><![CDATA[1743794494296]]></ItemName>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
@@ -21623,14 +21639,14 @@ get_MainПОдГис().выехалГрузовикОтдаватьНаСерв�
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
 									<ActiveObjectClass>
-										<PackageName><![CDATA[насосы10]]></PackageName>
+										<PackageName><![CDATA[product_delivery]]></PackageName>
 										<ClassName><![CDATA[Заготовка]]></ClassName>
 									</ActiveObjectClass>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[насосы10]]></PackageName>
+											<PackageName><![CDATA[product_delivery]]></PackageName>
 											<ClassName><![CDATA[Заготовка]]></ClassName>
-											<ItemName><![CDATA[1733849507641]]></ItemName>
+											<ItemName><![CDATA[1743794088999]]></ItemName>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
@@ -25498,14 +25514,14 @@ agent.стоимость = 10000   ;]]></Code>
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
 									<ActiveObjectClass>
-										<PackageName><![CDATA[насосы10]]></PackageName>
+										<PackageName><![CDATA[product_delivery]]></PackageName>
 										<ClassName><![CDATA[Transporter]]></ClassName>
 									</ActiveObjectClass>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[насосы10]]></PackageName>
+											<PackageName><![CDATA[product_delivery]]></PackageName>
 											<ClassName><![CDATA[Transporter]]></ClassName>
-											<ItemName><![CDATA[1733849336157]]></ItemName>
+											<ItemName><![CDATA[1743794277797]]></ItemName>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
@@ -25734,14 +25750,14 @@ agent.стоимость = 10000   ;]]></Code>
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
 									<ActiveObjectClass>
-										<PackageName><![CDATA[насосы10]]></PackageName>
+										<PackageName><![CDATA[product_delivery]]></PackageName>
 										<ClassName><![CDATA[Transporter]]></ClassName>
 									</ActiveObjectClass>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[насосы10]]></PackageName>
+											<PackageName><![CDATA[product_delivery]]></PackageName>
 											<ClassName><![CDATA[Transporter]]></ClassName>
-											<ItemName><![CDATA[1733849336157]]></ItemName>
+											<ItemName><![CDATA[1743794277797]]></ItemName>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
@@ -26593,6 +26609,9 @@ agent.стоимость = 10000 ;]]></Code>
 							<ClassName><![CDATA[Source]]></ClassName>
 							<ItemName><![CDATA[1412336242928]]></ItemName>
 						</GenericParameterSubstituteReference>
+						<GenericParameterSubstituteValue Class="CodeValue">
+							<Code><![CDATA[Заготовка]]></Code>
+						</GenericParameterSubstituteValue>
 					</GenericParameterSubstitute>
 					<Parameters>
 						<Parameter>
@@ -26710,14 +26729,14 @@ agent.стоимость = 10000 ;]]></Code>
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
 									<ActiveObjectClass>
-										<PackageName><![CDATA[насосы10]]></PackageName>
+										<PackageName><![CDATA[product_delivery]]></PackageName>
 										<ClassName><![CDATA[Заготовка]]></ClassName>
 									</ActiveObjectClass>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[насосы10]]></PackageName>
+											<PackageName><![CDATA[product_delivery]]></PackageName>
 											<ClassName><![CDATA[Заготовка]]></ClassName>
-											<ItemName><![CDATA[1733849507641]]></ItemName>
+											<ItemName><![CDATA[1743794088999]]></ItemName>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
@@ -27096,15 +27115,16 @@ agent.стоимость = 22000;]]></Code>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
+					<PresentationId>1743796204726</PresentationId>
 					<ActiveObjectClass>
-						<PackageName><![CDATA[насосы10]]></PackageName>
+						<PackageName><![CDATA[product_delivery]]></PackageName>
 						<ClassName><![CDATA[Заготовка]]></ClassName>
 					</ActiveObjectClass>
 					<GenericParameterSubstitute>
 						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[насосы10]]></PackageName>
+							<PackageName><![CDATA[product_delivery]]></PackageName>
 							<ClassName><![CDATA[Заготовка]]></ClassName>
-							<ItemName><![CDATA[1733849507641]]></ItemName>
+							<ItemName><![CDATA[1743794088999]]></ItemName>
 						</GenericParameterSubstituteReference>
 					</GenericParameterSubstitute>
 					<Parameters>
@@ -27297,14 +27317,14 @@ agent.стоимость = 22000;]]></Code>
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
 									<ActiveObjectClass>
-										<PackageName><![CDATA[насосы10]]></PackageName>
+										<PackageName><![CDATA[product_delivery]]></PackageName>
 										<ClassName><![CDATA[Заготовка]]></ClassName>
 									</ActiveObjectClass>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[насосы10]]></PackageName>
+											<PackageName><![CDATA[product_delivery]]></PackageName>
 											<ClassName><![CDATA[Заготовка]]></ClassName>
-											<ItemName><![CDATA[1733849507641]]></ItemName>
+											<ItemName><![CDATA[1743794088999]]></ItemName>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
@@ -27689,14 +27709,14 @@ agent.стоимость = 22000;]]></Code>
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
 									<ActiveObjectClass>
-										<PackageName><![CDATA[насосы10]]></PackageName>
+										<PackageName><![CDATA[product_delivery]]></PackageName>
 										<ClassName><![CDATA[Заготовка]]></ClassName>
 									</ActiveObjectClass>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[насосы10]]></PackageName>
+											<PackageName><![CDATA[product_delivery]]></PackageName>
 											<ClassName><![CDATA[Заготовка]]></ClassName>
-											<ItemName><![CDATA[1733849507641]]></ItemName>
+											<ItemName><![CDATA[1743794088999]]></ItemName>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
@@ -27981,14 +28001,14 @@ agent.стоимость = 22000;]]></Code>
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
 									<ActiveObjectClass>
-										<PackageName><![CDATA[насосы10]]></PackageName>
+										<PackageName><![CDATA[product_delivery]]></PackageName>
 										<ClassName><![CDATA[Заготовка]]></ClassName>
 									</ActiveObjectClass>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[насосы10]]></PackageName>
+											<PackageName><![CDATA[product_delivery]]></PackageName>
 											<ClassName><![CDATA[Заготовка]]></ClassName>
-											<ItemName><![CDATA[1733849507641]]></ItemName>
+											<ItemName><![CDATA[1743794088999]]></ItemName>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
@@ -28075,9 +28095,6 @@ agent.стоимость = 22000;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[population]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[заготовки]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[pushProtocol]]></Name>
@@ -31352,14 +31369,14 @@ agent.стоимость = 100 ;]]></Code>
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
 									<ActiveObjectClass>
-										<PackageName><![CDATA[насосы10]]></PackageName>
+										<PackageName><![CDATA[product_delivery]]></PackageName>
 										<ClassName><![CDATA[Уэцн]]></ClassName>
 									</ActiveObjectClass>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[насосы10]]></PackageName>
+											<PackageName><![CDATA[product_delivery]]></PackageName>
 											<ClassName><![CDATA[Уэцн]]></ClassName>
-											<ItemName><![CDATA[1740916490986]]></ItemName>
+											<ItemName><![CDATA[1743794089173]]></ItemName>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
@@ -33576,14 +33593,14 @@ agent.стоимость = 100 ;]]></Code>
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
 									<ActiveObjectClass>
-										<PackageName><![CDATA[насосы10]]></PackageName>
+										<PackageName><![CDATA[product_delivery]]></PackageName>
 										<ClassName><![CDATA[ГрузовикПривозящий]]></ClassName>
 									</ActiveObjectClass>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[насосы10]]></PackageName>
+											<PackageName><![CDATA[product_delivery]]></PackageName>
 											<ClassName><![CDATA[ГрузовикПривозящий]]></ClassName>
-											<ItemName><![CDATA[1733849336243]]></ItemName>
+											<ItemName><![CDATA[1743794494296]]></ItemName>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
@@ -34051,14 +34068,14 @@ agent.стоимость = 100 ;]]></Code>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[double a= get_MainПОдГис().сервис.ТоварВзятВаренду.get(1);
-double b= get_MainПОдГис().сервис.товарПродаётся.get(1);
+								<Code><![CDATA[double a= getRootAgent().get_MainПОдГис().сервис.ТоварВзятВаренду.get(1);
+double b= getRootAgent().get_MainПОдГис().сервис.товарПродаётся.get(1);
 traceln("сервисЛогистика.source.inject(1); " +time() + " потоки до, с главного на 0.4 = " + 0.4*a +   "потоки до, аренда = "  +b );
-get_MainПОдГис().выехалГрузовикОтдаватьНаСервис=true;
-get_MainПОдГис().сервис.ТоварВзятВаренду.set(a+1.0,1);
+getRootAgent().get_MainПОдГис().выехалГрузовикОтдаватьНаСервис=true;
+getRootAgent().get_MainПОдГис().сервис.ТоварВзятВаренду.set(a+1.0,1);
 get_MainПОдГис().сервис.товарПродаётся.set(b-1.0,1);
-a= get_MainПОдГис().сервис.ТоварВзятВаренду.get(1);
-b= get_MainПОдГис().сервис.товарПродаётся.get(1);
+a= getRootAgent().get_MainПОдГис().сервис.ТоварВзятВаренду.get(1);
+b= getRootAgent().get_MainПОдГис().сервис.товарПродаётся.get(1);
 traceln("сервисЛогистика.source.inject(1); " +time() + " потоки после, с главного на 0.4 = " + 0.4*a +   "потоки после , аренда = "  +b );
 ]]></Code>
 							</Value>
@@ -37305,14 +37322,14 @@ traceln("сервисЛогистика.source.inject(1); " +time() + " пото
 								<IsAgentEntity>true</IsAgentEntity>
 								<EntityEmbeddedObject>
 									<ActiveObjectClass>
-										<PackageName><![CDATA[насосы10]]></PackageName>
+										<PackageName><![CDATA[product_delivery]]></PackageName>
 										<ClassName><![CDATA[Работник]]></ClassName>
 									</ActiveObjectClass>
 									<GenericParameterSubstitute>
 										<GenericParameterSubstituteReference>
-											<PackageName><![CDATA[насосы10]]></PackageName>
+											<PackageName><![CDATA[product_delivery]]></PackageName>
 											<ClassName><![CDATA[Работник]]></ClassName>
-											<ItemName><![CDATA[1733976758562]]></ItemName>
+											<ItemName><![CDATA[1743794500792]]></ItemName>
 										</GenericParameterSubstituteReference>
 									</GenericParameterSubstitute>
 									<Parameters>
@@ -39147,6 +39164,82 @@ traceln("сервисЛогистика.source.inject(1); " +time() + " пото
 							<Value Class="CodeValue">
 								<Code><![CDATA[storage]]></Code>
 							</Value>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>	
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1743796131262</Id>
+					<Name><![CDATA[заготовка]]></Name>
+					<X>-80</X><Y>1390</Y>
+					<Label><X>-35</X><Y>-30</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[product_delivery]]></PackageName>
+						<ClassName><![CDATA[Заготовка]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[product_delivery]]></PackageName>
+							<ClassName><![CDATA[Заготовка]]></ClassName>
+							<ItemName><![CDATA[1743794088999]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[крупноеРазделениеНаДетали1]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[ЭЦН]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Наземное]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[названиеСтрокой]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[масса]]></Name>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -47983,6 +48076,25 @@ traceln("сервисЛогистика.source.inject(1); " +time() + " пото
 					<FillAreaUnderLine>false</FillAreaUnderLine>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
     			</TimePlot>
+				<EmbeddedObjectPresentation>
+					<Id>1743796204726</Id>
+					<Name><![CDATA[заготовки_presentation]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>0.0</Latitude>
+					<Longitude>0.0</Longitude>
+				</EmbeddedObjectPresentation>
 			</Presentation>
 
 				</Level>
@@ -58384,15 +58496,15 @@ on real roads, and routes are created when vehicles start moving to destinations
 		<VersionBuild>0</VersionBuild>
     </RequiredLibraryReference>
     <RequiredLibraryReference>
-		<LibraryName><![CDATA[насосы10]]></LibraryName>
-		<VersionMajor>0</VersionMajor>
-		<VersionMinor>0</VersionMinor>
-		<VersionBuild>0</VersionBuild>
-    </RequiredLibraryReference>
-    <RequiredLibraryReference>
 		<LibraryName><![CDATA[com.anylogic.libraries.material_handling]]></LibraryName>
 		<VersionMajor>8</VersionMajor>
 		<VersionMinor>3</VersionMinor>
+		<VersionBuild>0</VersionBuild>
+    </RequiredLibraryReference>
+    <RequiredLibraryReference>
+		<LibraryName><![CDATA[насосы10]]></LibraryName>
+		<VersionMajor>0</VersionMajor>
+		<VersionMinor>0</VersionMinor>
 		<VersionBuild>0</VersionBuild>
     </RequiredLibraryReference>
 	<CloudModelUuid><![CDATA[40299513-8f20-4e86-817f-3a6358b9eaf6]]></CloudModelUuid>
