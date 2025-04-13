@@ -545,100 +545,6 @@ groupMainMenu.setPos( viewArea.getX(), viewArea.getY() );]]></Body>
 
 			<EmbeddedObjects>
 				<EmbeddedObject>
-					<Id>1406112940801</Id>
-					<Name><![CDATA[manufacturingCenters]]></Name>
-					<X>-200</X><Y>50</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<PresentationId>1406112943275</PresentationId>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[product_delivery]]></PackageName>
-						<ClassName><![CDATA[ManufacturingCenter]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[product_delivery]]></PackageName>
-							<ClassName><![CDATA[ManufacturingCenter]]></ClassName>
-							<ItemName><![CDATA[1412681287472]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[nVehicles]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[uniform_discr( 1, 3 )]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[capacity]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[uniform_discr( 50, 80 )]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[productsInStorage]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[uniform( 1000, 2000 )]]></Code>
-							</Value>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>true</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InEnvironment>true</InEnvironment>	
-					<InitialLocationType>NODE</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>LOAD_FROM_DATABASE</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-							<PackageName><![CDATA[product_delivery]]></PackageName>
-							<ClassName><![CDATA[manufacturing_centers]]></ClassName>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-					<ParameterToDatabaseColumnMapping>
-						<Item>
-							<Key>
-								FAKE_PARAMETER_GIS_LOCATION_NAME_xjal
-							</Key>
-							<Value>
-								<PackageName><![CDATA[product_delivery]]></PackageName>
-								<ClassName><![CDATA[manufacturing_centers]]></ClassName>
-								<ItemName><![CDATA[city]]></ItemName>
-							</Value>
-						</Item>	
-					</ParameterToDatabaseColumnMapping>
-				</EmbeddedObject>
-				<EmbeddedObject>
 					<Id>1406123809004</Id>
 					<Name><![CDATA[distributors]]></Name>
 					<X>-200</X><Y>75</Y>
@@ -1075,25 +981,6 @@ groupMainMenu.setPos( viewArea.getX(), viewArea.getY() );]]></Body>
 
 
 				</GISMap>
-				<EmbeddedObjectPresentation>
-					<Id>1406112943275</Id>
-					<Name><![CDATA[manufacturingCenters_presentation]]></Name>
-					<X>-90</X><Y>120</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
-					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
-					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
-					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
-					<Latitude>0.0</Latitude>
-					<Longitude>0.0</Longitude>
-				</EmbeddedObjectPresentation>
 				<EmbeddedObjectPresentation>
 					<Id>1406123810536</Id>
 					<Name><![CDATA[distributors_presentation]]></Name>
@@ -1916,7 +1803,7 @@ else
 
 			<ContainerLinks>
 				<ContainerLink>
-					<Id>1406112943278</Id>
+					<Id>1744575100238</Id>
 					<Name><![CDATA[main]]></Name>
 					<X>50</X><Y>-100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -1926,6 +1813,19 @@ else
 					<ActiveObjectClass>
 						<PackageName><![CDATA[product_delivery]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+				<ContainerLink>
+					<Id>1744575100250</Id>
+					<Name><![CDATA[mainПОдГис]]></Name>
+					<X>150</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[product_delivery]]></PackageName>
+						<ClassName><![CDATA[MainПОдГис]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
 			</ContainerLinks>
@@ -5225,7 +5125,7 @@ dest.setText( order.distributor.name );]]></Action>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[завод.средняяЦенаДетали]]></Formula>
+						<Formula><![CDATA[get_Main().man]]></Formula>
 						<Value><![CDATA[average(завод.заготовки,  p -> p.стоимость)]]></Value>
 						<Color>-16711936</Color>
 					</Properties>
@@ -5479,7 +5379,7 @@ dest.setText( order.distributor.name );]]></Action>
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[average(завод.заготовки, p -> p.стоимость);]]></InitialValue>
+						<InitialValue><![CDATA[average(get_Main().man заготовки, p -> p.стоимость);]]></InitialValue>
 						<Color>-16711936</Color>
 					</Properties>
 				</Variable>
@@ -7875,7 +7775,7 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[числоИныхДеталейСЗавода = завод.moveTo6.in.count()/time()]]></Action>
+					<Action><![CDATA[числоИныхДеталейСЗавода = get_Main(). moveTo6.in.count()/time()]]></Action>
 				</Event>
 				<Event>
 					<Id>1743794837453</Id>
@@ -7947,116 +7847,6 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 				</ContainerLink>
 			</ContainerLinks>
 			<EmbeddedObjects>
-				<EmbeddedObject>
-					<Id>1743794838003</Id>
-					<Name><![CDATA[завод]]></Name>
-					<X>720</X><Y>550</Y>
-					<Label><X>-20</X><Y>-30</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<PresentationId>1743797141985</PresentationId>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[product_delivery]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[product_delivery]]></PackageName>
-							<ClassName><![CDATA[Завод]]></ClassName>
-							<ItemName><![CDATA[1743794494309]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[СтальГод]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[ПорСтаГод]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[всяСталь]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[доляМассыДлинныхСекций]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[МассаОбратногоКлапана]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[МассаВходногоМодуля]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[МассаСекцииНасоса]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[МассаСпускногоКлапана]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[МассаТрансформатора]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[МассаСтанцииУправления]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[МассафильтраПомехВходного]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[МассафильтраПомехВыходного]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[КоличествоСекцийНасоса]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[доляНеУкурпнённыхДеталей]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[ПерваяПоловинаОбработки]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[вместимостьГрузовика1]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InEnvironment>true</InEnvironment>	
-					<InitialLocationType>XYZ</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
 				<EmbeddedObject>
 					<Id>1743794838033</Id>
 					<Name><![CDATA[сервис]]></Name>
@@ -8317,6 +8107,79 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 					<QuantityColumn>
 					</QuantityColumn>
 				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1744575098116</Id>
+					<Name><![CDATA[manufacturingCenters]]></Name>
+					<X>1160</X><Y>-150</Y>
+					<Label><X>-70</X><Y>-30</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1744575100195</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[product_delivery]]></PackageName>
+						<ClassName><![CDATA[ManufacturingCenter]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[product_delivery]]></PackageName>
+							<ClassName><![CDATA[ManufacturingCenter]]></ClassName>
+							<ItemName><![CDATA[1412681287472]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[nVehicles]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[capacity]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[productsInStorage]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>true</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>	
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>LOAD_FROM_DATABASE</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+							<PackageName><![CDATA[product_delivery]]></PackageName>
+							<ClassName><![CDATA[manufacturing_centers]]></ClassName>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
 			</EmbeddedObjects>
 
 			<Presentation>
@@ -8423,25 +8286,6 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
     			</TimePlot>
 				<EmbeddedObjectPresentation>
-					<Id>1743797141985</Id>
-					<Name><![CDATA[завод_presentation]]></Name>
-					<X>-390</X><Y>-730</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
-					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
-					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
-					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
-					<Latitude>0.0</Latitude>
-					<Longitude>0.0</Longitude>
-				</EmbeddedObjectPresentation>
-				<EmbeddedObjectPresentation>
 					<Id>1743797158742</Id>
 					<Name><![CDATA[нИОКР_presentation]]></Name>
 					<X>-390</X><Y>-730</Y>
@@ -8464,6 +8308,25 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 					<Id>1743797165258</Id>
 					<Name><![CDATA[сервис_presentation]]></Name>
 					<X>-390</X><Y>-730</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>0.0</Latitude>
+					<Longitude>0.0</Longitude>
+				</EmbeddedObjectPresentation>
+				<EmbeddedObjectPresentation>
+					<Id>1744575100195</Id>
+					<Name><![CDATA[manufacturingCenters_presentation]]></Name>
+					<X>0</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8745,32 +8608,6 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 					</ActiveObjectClass>
 				</ContainerLink>
 				<ContainerLink>
-					<Id>1743797625070</Id>
-					<Name><![CDATA[main]]></Name>
-					<X>150</X><Y>-100</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[product_delivery]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-					</ActiveObjectClass>
-				</ContainerLink>
-				<ContainerLink>
-					<Id>1743797625075</Id>
-					<Name><![CDATA[mainПОдГис]]></Name>
-					<X>250</X><Y>-100</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[product_delivery]]></PackageName>
-						<ClassName><![CDATA[MainПОдГис]]></ClassName>
-					</ActiveObjectClass>
-				</ContainerLink>
-				<ContainerLink>
 					<Id>1744559305257</Id>
 					<Name><![CDATA[manufacturingCenter]]></Name>
 					<X>350</X><Y>-100</Y>
@@ -8781,6 +8618,32 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 					<ActiveObjectClass>
 						<PackageName><![CDATA[product_delivery]]></PackageName>
 						<ClassName><![CDATA[ManufacturingCenter]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+				<ContainerLink>
+					<Id>1744575100286</Id>
+					<Name><![CDATA[main]]></Name>
+					<X>450</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[product_delivery]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+				<ContainerLink>
+					<Id>1744575100295</Id>
+					<Name><![CDATA[mainПОдГис]]></Name>
+					<X>550</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[product_delivery]]></PackageName>
+						<ClassName><![CDATA[MainПОдГис]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
 			</ContainerLinks>
@@ -16786,32 +16649,6 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 
 			<ContainerLinks>
 				<ContainerLink>
-					<Id>1743797625081</Id>
-					<Name><![CDATA[main]]></Name>
-					<X>50</X><Y>-100</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[product_delivery]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-					</ActiveObjectClass>
-				</ContainerLink>
-				<ContainerLink>
-					<Id>1743797625087</Id>
-					<Name><![CDATA[mainПОдГис]]></Name>
-					<X>150</X><Y>-100</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[product_delivery]]></PackageName>
-						<ClassName><![CDATA[MainПОдГис]]></ClassName>
-					</ActiveObjectClass>
-				</ContainerLink>
-				<ContainerLink>
 					<Id>1744559305248</Id>
 					<Name><![CDATA[manufacturingCenter]]></Name>
 					<X>250</X><Y>-100</Y>
@@ -16822,6 +16659,32 @@ else числоИныхДеталейСЗавода=завод.moveTo6.in.count(
 					<ActiveObjectClass>
 						<PackageName><![CDATA[product_delivery]]></PackageName>
 						<ClassName><![CDATA[ManufacturingCenter]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+				<ContainerLink>
+					<Id>1744575100260</Id>
+					<Name><![CDATA[main]]></Name>
+					<X>350</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[product_delivery]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+				<ContainerLink>
+					<Id>1744575100274</Id>
+					<Name><![CDATA[mainПОдГис]]></Name>
+					<X>450</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[product_delivery]]></PackageName>
+						<ClassName><![CDATA[MainПОдГис]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
 			</ContainerLinks>
@@ -50364,32 +50227,6 @@ T agent - the agent.
 
 			<ContainerLinks>
 				<ContainerLink>
-					<Id>1743797625103</Id>
-					<Name><![CDATA[main]]></Name>
-					<X>50</X><Y>-100</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[product_delivery]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-					</ActiveObjectClass>
-				</ContainerLink>
-				<ContainerLink>
-					<Id>1743797625109</Id>
-					<Name><![CDATA[mainПОдГис]]></Name>
-					<X>150</X><Y>-100</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[product_delivery]]></PackageName>
-						<ClassName><![CDATA[MainПОдГис]]></ClassName>
-					</ActiveObjectClass>
-				</ContainerLink>
-				<ContainerLink>
 					<Id>1743797625115</Id>
 					<Name><![CDATA[завод]]></Name>
 					<X>250</X><Y>-100</Y>
@@ -50413,6 +50250,32 @@ T agent - the agent.
 					<ActiveObjectClass>
 						<PackageName><![CDATA[product_delivery]]></PackageName>
 						<ClassName><![CDATA[ManufacturingCenter]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+				<ContainerLink>
+					<Id>1744575100307</Id>
+					<Name><![CDATA[main]]></Name>
+					<X>450</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[product_delivery]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+				<ContainerLink>
+					<Id>1744575100319</Id>
+					<Name><![CDATA[mainПОдГис]]></Name>
+					<X>550</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[product_delivery]]></PackageName>
+						<ClassName><![CDATA[MainПОдГис]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
 			</ContainerLinks>
@@ -53196,32 +53059,6 @@ Actual only when this block is configured to seize using (alternative) resource 
 
 			<ContainerLinks>
 				<ContainerLink>
-					<Id>1743797625121</Id>
-					<Name><![CDATA[main]]></Name>
-					<X>50</X><Y>-100</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[product_delivery]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-					</ActiveObjectClass>
-				</ContainerLink>
-				<ContainerLink>
-					<Id>1743797625125</Id>
-					<Name><![CDATA[mainПОдГис]]></Name>
-					<X>150</X><Y>-100</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[product_delivery]]></PackageName>
-						<ClassName><![CDATA[MainПОдГис]]></ClassName>
-					</ActiveObjectClass>
-				</ContainerLink>
-				<ContainerLink>
 					<Id>1743797625129</Id>
 					<Name><![CDATA[завод]]></Name>
 					<X>250</X><Y>-100</Y>
@@ -53245,6 +53082,32 @@ Actual only when this block is configured to seize using (alternative) resource 
 					<ActiveObjectClass>
 						<PackageName><![CDATA[product_delivery]]></PackageName>
 						<ClassName><![CDATA[ManufacturingCenter]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+				<ContainerLink>
+					<Id>1744575100335</Id>
+					<Name><![CDATA[main]]></Name>
+					<X>450</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[product_delivery]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+				<ContainerLink>
+					<Id>1744575100345</Id>
+					<Name><![CDATA[mainПОдГис]]></Name>
+					<X>550</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[product_delivery]]></PackageName>
+						<ClassName><![CDATA[MainПОдГис]]></ClassName>
 					</ActiveObjectClass>
 				</ContainerLink>
 			</ContainerLinks>
