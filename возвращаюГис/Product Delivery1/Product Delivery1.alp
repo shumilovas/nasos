@@ -5292,7 +5292,7 @@ dest.setText( order.distributor.name );]]></Action>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[get_Main().man]]></Formula>
+						<Formula><![CDATA[average(get_Main().manufacturingCenters,p->p.завод.средняяЦенаДетали)]]></Formula>
 						<Value><![CDATA[average(завод.заготовки,  p -> p.стоимость)]]></Value>
 						<Color>-16711936</Color>
 					</Properties>
