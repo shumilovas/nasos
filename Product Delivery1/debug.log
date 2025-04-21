@@ -1,0 +1,10 @@
+[0421/162911.781:ERROR:gl_display.cc(504)] EGL Driver message (Error) eglCreateContext: Requested GLES version (3.0) is greater than max supported (2, 0).
+[0421/162911.782:ERROR:gl_context_egl.cc(372)] eglCreateContext failed with error EGL_SUCCESS
+[0421/162911.794:ERROR:gl_display.cc(504)] EGL Driver message (Error) eglCreateContext: Requested GLES version (3.0) is greater than max supported (2, 0).
+[0421/162911.795:ERROR:gl_context_egl.cc(372)] eglCreateContext failed with error EGL_SUCCESS
+[0421/162911.795:ERROR:gpu_channel_manager.cc(883)] Failed to create GLES3 context, fallback to GLES2.
+[0421/162916.645:INFO:CONSOLE(21172)] "THREE.WebGLRenderer 92", source: file:///C:/Program%20Files/AnyLogic%208.9%20Professional/plugins/com.anylogic.graphics3d_8.9.1.202408021040/static/build/three.js (21172)
+[0421/162916.987:INFO:CONSOLE(3660)] "THREE.ColladaLoader: File version 1.4.0", source: file:///C:/Program%20Files/AnyLogic%208.9%20Professional/plugins/com.anylogic.graphics3d_8.9.1.202408021040/static/libs/ColladaLoader.js (3660)
+[0421/162917.021:INFO:CONSOLE(255)] "Loaded: file:C:/Users/1/Documents/nasos2/nasos/Product Delivery1/3d/lorry.dae", source: file:///C:/Program%20Files/AnyLogic%208.9%20Professional/plugins/com.anylogic.graphics3d_8.9.1.202408021040/static/init.js (255)
+[0421/162917.023:INFO:CONSOLE(271)] "load end: file:C:/Users/1/Documents/nasos2/nasos/Product Delivery1/3d/lorry.dae", source: file:///C:/Program%20Files/AnyLogic%208.9%20Professional/plugins/com.anylogic.graphics3d_8.9.1.202408021040/static/init.js (271)
+[0421/163111.657:ERROR:gpu_init.cc(523)] Passthrough is not supported, GL is disabled, ANGLE is 
