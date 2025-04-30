@@ -1,0 +1,1628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+*************************************************
+	         AnyLogic Project File 
+*************************************************	         
+-->
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.8.5.202310311109" AlpVersion="8.8.2">
+<Model>
+	<Id>1738240257737</Id>
+	<Name><![CDATA[Model17]]></Name>
+	<EngineVersion>6</EngineVersion>
+	<JavaPackageName><![CDATA[model17]]></JavaPackageName>
+	<ModelTimeUnit><![CDATA[Hour]]></ModelTimeUnit>
+	<Dimensions>
+		<!--   =========   Dimension   ========  -->
+		<Dimension>
+			<Id>1738240395700</Id>
+			<Name><![CDATA[Металлургия]]></Name>
+			<Type>enumeration</Type>
+			<Range><![CDATA[]]></Range>
+			<Element>
+				<Id>1738240395695</Id>
+				<Name><![CDATA[порошковая]]></Name>
+				<Value>1</Value>
+			</Element>
+			<Element>
+				<Id>1738240395697</Id>
+				<Name><![CDATA[обычная]]></Name>
+				<Value>2</Value>
+			</Element>
+			<Element>
+				<Id>1738240395699</Id>
+				<Name><![CDATA[иная]]></Name>
+				<Value>3</Value>
+			</Element>
+		</Dimension>
+		<!--   =========   Dimension   ========  -->
+		<Dimension>
+			<Id>1738241348591</Id>
+			<Name><![CDATA[УЭЦН]]></Name>
+			<Type>enumeration</Type>
+			<Range><![CDATA[]]></Range>
+			<Element>
+				<Id>1738241348592</Id>
+				<Name><![CDATA[ЭЦН]]></Name>
+				<Value>1</Value>
+			</Element>
+			<Element>
+				<Id>1738241348593</Id>
+				<Name><![CDATA[шламоуловитель]]></Name>
+				<Value>2</Value>
+			</Element>
+			<Element>
+				<Id>1738241348858</Id>
+				<Name><![CDATA[газосепаратор]]></Name>
+				<Value>3</Value>
+			</Element>
+			<Element>
+				<Id>1738241368783</Id>
+				<Name><![CDATA[фильтр_щелевой]]></Name>
+				<Value>4</Value>
+			</Element>
+			<Element>
+				<Id>1738241399367</Id>
+				<Name><![CDATA[гидрозащита]]></Name>
+				<Value>5</Value>
+			</Element>
+			<Element>
+				<Id>1738241413176</Id>
+				<Name><![CDATA[погружной_электродвигатель]]></Name>
+				<Value>6</Value>
+			</Element>
+			<Element>
+				<Id>1738241429308</Id>
+				<Name><![CDATA[кабельная_линия]]></Name>
+				<Value>7</Value>
+			</Element>
+			<Element>
+				<Id>1738241452410</Id>
+				<Name><![CDATA[наземное_электрооборудование]]></Name>
+				<Value>8</Value>
+			</Element>
+			<Element>
+				<Id>1738241475767</Id>
+				<Name><![CDATA[телеметрия]]></Name>
+				<Value>9</Value>
+			</Element>
+		</Dimension>
+		<!--   =========   Dimension   ========  -->
+		<Dimension>
+			<Id>1738241717362</Id>
+			<Name><![CDATA[Обратный_клапан]]></Name>
+			<Type>enumeration</Type>
+			<Range><![CDATA[]]></Range>
+			<SuperDimension>
+				<PackageName><![CDATA[model17]]></PackageName>
+				<ClassName><![CDATA[УЭЦН]]></ClassName>
+			</SuperDimension>
+			<Element>
+				<PackageName><![CDATA[model17]]></PackageName>
+				<ClassName><![CDATA[УЭЦН]]></ClassName>
+				<ItemName><![CDATA[ЭЦН]]></ItemName>
+			</Element>
+		</Dimension>
+		<!--   =========   Dimension   ========  -->
+		<Dimension>
+			<Id>1738241819322</Id>
+			<Name><![CDATA[Спускной_клапан]]></Name>
+			<Type>enumeration</Type>
+			<Range><![CDATA[]]></Range>
+			<SuperDimension>
+				<PackageName><![CDATA[model17]]></PackageName>
+				<ClassName><![CDATA[УЭЦН]]></ClassName>
+			</SuperDimension>
+			<Element>
+				<PackageName><![CDATA[model17]]></PackageName>
+				<ClassName><![CDATA[УЭЦН]]></ClassName>
+				<ItemName><![CDATA[ЭЦН]]></ItemName>
+			</Element>
+		</Dimension>
+		<!--   =========   Dimension   ========  -->
+		<Dimension>
+			<Id>1738241885469</Id>
+			<Name><![CDATA[Секции_насоса]]></Name>
+			<Type>enumeration</Type>
+			<Range><![CDATA[]]></Range>
+			<SuperDimension>
+				<PackageName><![CDATA[model17]]></PackageName>
+				<ClassName><![CDATA[УЭЦН]]></ClassName>
+			</SuperDimension>
+			<Element>
+				<PackageName><![CDATA[model17]]></PackageName>
+				<ClassName><![CDATA[УЭЦН]]></ClassName>
+				<ItemName><![CDATA[ЭЦН]]></ItemName>
+			</Element>
+		</Dimension>
+		<!--   =========   Dimension   ========  -->
+		<Dimension>
+			<Id>1738241927195</Id>
+			<Name><![CDATA[Входной_модуль]]></Name>
+			<Type>enumeration</Type>
+			<Range><![CDATA[]]></Range>
+			<SuperDimension>
+				<PackageName><![CDATA[model17]]></PackageName>
+				<ClassName><![CDATA[УЭЦН]]></ClassName>
+			</SuperDimension>
+			<Element>
+				<PackageName><![CDATA[model17]]></PackageName>
+				<ClassName><![CDATA[УЭЦН]]></ClassName>
+				<ItemName><![CDATA[ЭЦН]]></ItemName>
+			</Element>
+		</Dimension>
+		<!--   =========   Dimension   ========  -->
+		<Dimension>
+			<Id>1738240386522</Id>
+			<Name><![CDATA[ТипыОборудования]]></Name>
+			<Type>enumeration</Type>
+			<Range><![CDATA[]]></Range>
+			<Element>
+				<Id>1738240386479</Id>
+				<Name><![CDATA[двигатель]]></Name>
+				<Value>1</Value>
+			</Element>
+			<Element>
+				<Id>1738240386481</Id>
+				<Name><![CDATA[гидрозащиты]]></Name>
+				<Value>2</Value>
+			</Element>
+			<Element>
+				<Id>1738240386483</Id>
+				<Name><![CDATA[модульСмещения]]></Name>
+				<Value>3</Value>
+			</Element>
+			<Element>
+				<Id>1738240386485</Id>
+				<Name><![CDATA[клапаны]]></Name>
+				<Value>4</Value>
+			</Element>
+			<Element>
+				<Id>1738240386487</Id>
+				<Name><![CDATA[насосыНефтПласт]]></Name>
+				<Value>5</Value>
+			</Element>
+			<Element>
+				<Id>1738240386489</Id>
+				<Name><![CDATA[модульВхНакид]]></Name>
+				<Value>6</Value>
+			</Element>
+			<Element>
+				<Id>1738240386491</Id>
+				<Name><![CDATA[устНасосПогруж]]></Name>
+				<Value>7</Value>
+			</Element>
+			<Element>
+				<Id>1738240386493</Id>
+				<Name><![CDATA[газосепаратор1]]></Name>
+				<Value>8</Value>
+			</Element>
+			<Element>
+				<Id>1738240386495</Id>
+				<Name><![CDATA[диспергатор]]></Name>
+				<Value>9</Value>
+			</Element>
+			<Element>
+				<Id>1738240386497</Id>
+				<Name><![CDATA[телеметрия1]]></Name>
+				<Value>10</Value>
+			</Element>
+			<Element>
+				<Id>1738240386499</Id>
+				<Name><![CDATA[двигательныеСекции]]></Name>
+				<Value>11</Value>
+			</Element>
+			<Element>
+				<Id>1738240386501</Id>
+				<Name><![CDATA[НасосаныеСекции]]></Name>
+				<Value>12</Value>
+			</Element>
+			<Element>
+				<Id>1738240386503</Id>
+				<Name><![CDATA[НасосыВентиль]]></Name>
+				<Value>13</Value>
+			</Element>
+			<Element>
+				<Id>1738240386505</Id>
+				<Name><![CDATA[насосыАсинхронные]]></Name>
+				<Value>14</Value>
+			</Element>
+			<Element>
+				<Id>1738240386507</Id>
+				<Name><![CDATA[иныеНасосы]]></Name>
+				<Value>15</Value>
+			</Element>
+			<Element>
+				<Id>1738240386509</Id>
+				<Name><![CDATA[фильтры]]></Name>
+				<Value>16</Value>
+			</Element>
+			<Element>
+				<Id>1738240386511</Id>
+				<Name><![CDATA[центраторы]]></Name>
+				<Value>17</Value>
+			</Element>
+			<Element>
+				<Id>1738240386513</Id>
+				<Name><![CDATA[шламоуловители]]></Name>
+				<Value>18</Value>
+			</Element>
+			<Element>
+				<Id>1738240386515</Id>
+				<Name><![CDATA[протектолайзеры]]></Name>
+				<Value>19</Value>
+			</Element>
+			<Element>
+				<Id>1738240386517</Id>
+				<Name><![CDATA[насосыПорошковые]]></Name>
+				<Value>20</Value>
+			</Element>
+			<Element>
+				<Id>1738240386519</Id>
+				<Name><![CDATA[насосыМультифазные]]></Name>
+				<Value>21</Value>
+			</Element>
+			<Element>
+				<Id>1738240386521</Id>
+				<Name><![CDATA[насосыЛитые]]></Name>
+				<Value>22</Value>
+			</Element>
+		</Dimension>
+	</Dimensions>
+	<ActiveObjectClasses>
+		<!--   =========   Active Object Class   ========  -->
+		<ActiveObjectClass>
+			<Id>1738240257740</Id>
+			<Name><![CDATA[Main]]></Name>
+			<Generic>false</Generic>
+			<GenericParameter>
+				<Id>1738240257746</Id>
+				<Name><![CDATA[1738240257746]]></Name>
+				<GenericParameterValue Class="CodeValue">
+					<Code><![CDATA[T extends Agent]]></Code>
+				</GenericParameterValue>
+				<GenericParameterLabel><![CDATA[Параметр настройки:]]></GenericParameterLabel>
+			</GenericParameter>
+			<FlowChartsUsage>ENTITY</FlowChartsUsage>
+			<SamplesToKeep>100</SamplesToKeep>
+			<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
+			<ElementsLimitValue>100</ElementsLimitValue>
+			<MakeDefaultViewArea>true</MakeDefaultViewArea>
+			<SceneGridColor/>
+			<SceneBackgroundColor/>
+			<SceneSkybox>null</SceneSkybox>
+			<AgentProperties>
+				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
+				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
+				<RotateAnimationVertically>false</RotateAnimationVertically>
+				<VelocityCode Class="CodeUnitValue">
+					<Code><![CDATA[10]]></Code>
+					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
+			</AgentProperties>
+			<EnvironmentProperties>
+					<EnableSteps>false</EnableSteps>
+					<StepDurationCode Class="CodeUnitValue">
+						<Code><![CDATA[1.0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</StepDurationCode>
+					<SpaceType>CONTINUOUS</SpaceType>
+					<WidthCode><![CDATA[500]]></WidthCode>
+					<HeightCode><![CDATA[500]]></HeightCode>
+					<ZHeightCode><![CDATA[0]]></ZHeightCode>
+					<ColumnsCountCode><![CDATA[100]]></ColumnsCountCode>
+					<RowsCountCode><![CDATA[100]]></RowsCountCode>
+					<NeigborhoodType>MOORE</NeigborhoodType>
+					<LayoutType>USER_DEF</LayoutType>
+					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
+					<NetworkType>USER_DEF</NetworkType>
+					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
+					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
+					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
+					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
+					<MCode><![CDATA[10]]></MCode>
+			</EnvironmentProperties>
+			<DatasetsCreationProperties>
+				<AutoCreate>true</AutoCreate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1738310400000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</RecurrenceCode>
+			</DatasetsCreationProperties>
+			<ScaleRuler>
+				<Id>1738240257743</Id>
+				<Name><![CDATA[scale]]></Name>
+				<X>0</X><Y>-150</Y>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>false</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<Length>100</Length>
+				<Rotation>0</Rotation>
+				<ScaleType>BASED_ON_LENGTH</ScaleType>
+				<ModelLength>10</ModelLength>
+				<LengthUnits>METER</LengthUnits>
+				<Scale>10</Scale>
+				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
+			</ScaleRuler>
+			<CurrentLevel>1738240257747</CurrentLevel>
+			<ConnectionsId>1738240257741</ConnectionsId>
+			<Variables>
+				<Variable Class="AuxVariable">
+					<Id>1738240444869</Id>
+					<Name><![CDATA[ДоляОтМеталла]]></Name>
+					<X>440</X><Y>520</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="true">
+						<Formula><![CDATA[0]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[model17]]></PackageName>
+								<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[flow4[ТипыОборудования]/flow4.sum()]]></Expression>
+							</CustomExpression>
+						</Array>
+					</Properties>
+
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1738240444878</Id>
+					<Name><![CDATA[детали]]></Name>
+					<Description><![CDATA[есть в таблице 3.4 в доке ао новомет – пермь]]></Description>
+					<X>540</X><Y>200</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="true">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[{90 / (30 * 24), 160 / (30 * 24), 1 / (30 * 24), 160 / (30 * 24), .00000000000001, 90 / (30 * 24), .00000000000001, 90 / (30 * 24), .00000000000001, 140 / (30 * 24), 50 / (30 * 24), .00000000000001, .00000000000001, .00000000000001, .00000000000001, 25, 8 / (30 * 24), 50 / (30 * 24), 320 / (30 * 24), 1, 1, 1}]]></InitialValue>
+						<Color>-256</Color>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[model17]]></PackageName>
+								<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+							</Dimension>
+						</Array>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1738240444900</Id>
+					<Name><![CDATA[Лом]]></Name>
+					<X>270</X><Y>200</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="true">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[{10000,10000,10000}]]></InitialValue>
+						<Color>-256</Color>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[model17]]></PackageName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
+							</Dimension>
+						</Array>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1738240444911</Id>
+					<Name><![CDATA[ПроданноеСыръёИЛом]]></Name>
+					<X>620</X><Y>380</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="true">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[{0, 0, 0}]]></InitialValue>
+						<Color>-16711936</Color>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[model17]]></PackageName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
+							</Dimension>
+						</Array>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1738240444921</Id>
+					<Name><![CDATA[чужыеНедра]]></Name>
+					<X>270</X><Y>140</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="true">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[{10000,10000,10000}]]></InitialValue>
+						<Color>-256</Color>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[model17]]></PackageName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
+							</Dimension>
+						</Array>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1738240444932</Id>
+					<Name><![CDATA[металлДеталей]]></Name>
+					<X>450</X><Y>180</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="true">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[{10000, 10000, 10000}]]></InitialValue>
+						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[model17]]></PackageName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
+							</Dimension>
+						</Array>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1738240444941</Id>
+					<Name><![CDATA[металлаПотрачено]]></Name>
+					<X>450</X><Y>340</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="true">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[{100000, 100000, 100000}]]></InitialValue>
+						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[model17]]></PackageName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
+							</Dimension>
+						</Array>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1738240444951</Id>
+					<Name><![CDATA[товар]]></Name>
+					<X>900</X><Y>200</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="true">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,1,1,1}]]></InitialValue>
+						<Color>-16711936</Color>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[model17]]></PackageName>
+								<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+							</Dimension>
+						</Array>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1738241952208</Id>
+					<Name><![CDATA[stock]]></Name>
+					<X>340</X><Y>-130</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="true">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[{1, 1, 1, 1, 1, 1, 1, 1, 1}]]></InitialValue>
+						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[model17]]></PackageName>
+								<ClassName><![CDATA[УЭЦН]]></ClassName>
+							</Dimension>
+						</Array>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1738241968288</Id>
+					<Name><![CDATA[stock1]]></Name>
+					<X>570</X><Y>-130</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="true">
+					<EquationStyle>classic</EquationStyle>
+					<Width>20</Width>
+					<Height>20</Height>
+						<InitialValue><![CDATA[{0, 0, 0, 0, 0, 0, 0, 0, 0}]]></InitialValue>
+						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[model17]]></PackageName>
+								<ClassName><![CDATA[УЭЦН]]></ClassName>
+							</Dimension>
+						</Array>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1738240444571</Id>
+					<Name><![CDATA[flow4]]></Name>
+					<Description><![CDATA[есть в таблице 3.4 в доке ао новомет – пермь]]></Description>
+					<X>540</X><Y>200</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1738240444878" TargetId="1738240444951" External="false" Constant="false" Array="true">
+						<Formula><![CDATA[1]]></Formula>
+						<Color>-16711936</Color>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[model17]]></PackageName>
+								<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[двигатель]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[90/(30 * 24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[гидрозащиты]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[160/(30 * 24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[модульСмещения]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[1/(30 * 24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[клапаны]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[ 160/(30*24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[насосыНефтПласт]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[0.00000000000001]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[модульВхНакид]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[ 90/(30*24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[устНасосПогруж]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[0.00000000000001]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[газосепаратор1]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[ 90/(30 * 24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[диспергатор]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[0.00000000000001]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[телеметрия1]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[140/(30 * 24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[двигательныеСекции]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[ 50/(30 * 24)
+ 
+ ]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[НасосаныеСекции]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[0.00000000000001]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[НасосыВентиль]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[0.00000000000001]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[насосыАсинхронные]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[0.00000000000001]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[иныеНасосы]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[0.00000000000001]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[фильтры]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[25 /(30 * 24)
+ ]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[центраторы]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[8/(30 * 24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[шламоуловители]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[50/(30 * 24)
+ ]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[протектолайзеры]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[ 320/(30 * 24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[насосыПорошковые]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[130/(30 * 24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[насосыМультифазные]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[ 20/(30 * 24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+									<ItemName><![CDATA[насосыЛитые]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[110/(30 * 24)]]></Expression>
+							</CustomExpression>
+						</Array>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>85</X><Y>0</Y></Point>
+							<Point><X>360</X><Y>0</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1738240444648</Id>
+					<Name><![CDATA[flow2]]></Name>
+					<X>270</X><Y>200</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1738240444900" TargetId="1738240444932" External="false" Constant="false" Array="true">
+						<Formula><![CDATA[3]]></Formula>
+						<Color>-256</Color>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[model17]]></PackageName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
+							</Dimension>
+						</Array>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>80</X><Y>0</Y></Point>
+							<Point><X>180</X><Y>-20</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1738240444659</Id>
+					<Name><![CDATA[flow10]]></Name>
+					<X>450</X><Y>180</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1738240444932" TargetId="1738240444911" External="false" Constant="false" Array="true">
+						<Formula><![CDATA[{1,1,1}]]></Formula>
+						<Color>-16711936</Color>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[model17]]></PackageName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
+							</Dimension>
+						</Array>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>130</X><Y>110</Y></Point>
+							<Point><X>170</X><Y>200</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1738240444668</Id>
+					<Name><![CDATA[flow15]]></Name>
+					<Description><![CDATA[тысяча двести тонн и четыреста тон в год производятся на металлургических заводах новомета . здесь всё переводится в час.]]></Description>
+					<X>270</X><Y>140</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1738240444921" TargetId="1738240444932" External="false" Constant="false" Array="true">
+						<Formula><![CDATA[1]]></Formula>
+						<Color>-256</Color>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[model17]]></PackageName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[Металлургия]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[ПорошковаяСтальВыплавкаТоннВгод/(365*24)]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[Металлургия]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[СтальВыплавкаТоннВгод/(365*24) ]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[Металлургия]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[ИнаясСтальТОннВГод/(365*24) ]]></Expression>
+							</CustomExpression>
+						</Array>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>100</X><Y>20</Y></Point>
+							<Point><X>180</X><Y>40</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1738240444765</Id>
+					<Name><![CDATA[flow6]]></Name>
+					<Description><![CDATA[есть в таблице 3.4 в доке ао новомет – пермь]]></Description>
+					<X>280</X><Y>350</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1738240444878" External="false" Constant="false" Array="true">
+						<Formula><![CDATA[1]]></Formula>
+						<Color>-256</Color>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[model17]]></PackageName>
+								<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[ТипыОборудования]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[flow4[ТипыОборудования]*ДоляОтМеталла[ТипыОборудования]]]></Expression>
+							</CustomExpression>
+						</Array>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>60</X><Y>-40</Y></Point>
+							<Point><X>260</X><Y>-150</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1738240444774</Id>
+					<Name><![CDATA[flow14]]></Name>
+					<Description><![CDATA[100 килограмм- масса одной детали]]></Description>
+					<X>450</X><Y>180</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>false</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1738240444932" TargetId="1738240444941" External="false" Constant="false" Array="true">
+						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[model17]]></PackageName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[Металлургия]]></ClassName>
+									<ItemName><![CDATA[порошковая]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[100*flow6.sum()*2/3 ]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[Металлургия]]></ClassName>
+									<ItemName><![CDATA[обычная]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[100*flow6.sum()*1/3]]></Expression>
+							</CustomExpression>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[Металлургия]]></ClassName>
+									<ItemName><![CDATA[иная]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[100*0]]></Expression>
+							</CustomExpression>
+						</Array>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>0</X><Y>70</Y></Point>
+							<Point><X>0</X><Y>140</Y></Point>
+							<Point><X>0</X><Y>150</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1738241965755</Id>
+					<Name><![CDATA[flow]]></Name>
+					<X>340</X><Y>-130</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1738241952208" TargetId="1738241968288" External="false" Constant="false" Array="true">
+						<Formula><![CDATA[0]]></Formula>
+						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[model17]]></PackageName>
+								<ClassName><![CDATA[УЭЦН]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[model17]]></PackageName>
+									<ClassName><![CDATA[УЭЦН]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[0.1]]></Expression>
+							</CustomExpression>
+						</Array>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>90</X><Y>0</Y></Point>
+							<Point><X>180</X><Y>0</Y></Point>
+							<Point><X>200</X><Y>0</Y></Point>
+							<Point><X>230</X><Y>0</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1738242493210</Id>
+					<Name><![CDATA[СтальВыплавкаТоннВгод]]></Name>
+					<X>270</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[1200]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1738242493208</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1738242493223</Id>
+					<Name><![CDATA[ПорошковаяСтальВыплавкаТоннВгод]]></Name>
+					<X>270</X><Y>40</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[400]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1738242493221</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1738242493238</Id>
+					<Name><![CDATA[ИнаясСтальТОннВГод]]></Name>
+					<X>270</X><Y>80</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1738242493236</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+			</Variables>
+			<Dependences>
+				<Link SourceId="1738240444648" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>50</X><Y>60</Y></Direction>
+					<Id>1738240444860</Id>
+					<Name><![CDATA[flow2 - ]]></Name>
+					<X>350</X><Y>200</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1738240444668" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>30</X><Y>100</Y></Direction>
+					<Id>1738240444862</Id>
+					<Name><![CDATA[flow15 - ]]></Name>
+					<X>370</X><Y>160</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1738240444765" TargetId="1738240444774" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>110</X><Y>-60</Y></Direction>
+					<Id>1738240444864</Id>
+					<Name><![CDATA[flow6 - flow14]]></Name>
+					<X>340</X><Y>310</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1738240444571" TargetId="1738240444765" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-285</X><Y>110</Y></Direction>
+					<Id>1738240444866</Id>
+					<Name><![CDATA[flow4 - flow6]]></Name>
+					<X>625</X><Y>200</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1738240444869" TargetId="1738240444765" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-100</X><Y>-210</Y></Direction>
+					<Id>1738240554750</Id>
+					<Name><![CDATA[ДоляОтМеталла - flow6]]></Name>
+					<X>440</X><Y>520</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1738240444571" TargetId="1738240444869" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-185</X><Y>320</Y></Direction>
+					<Id>1738240958992</Id>
+					<Name><![CDATA[flow4 - ДоляОтМеталла]]></Name>
+					<X>625</X><Y>200</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1738242493210" TargetId="1738240444668" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>100</X><Y>160</Y></Direction>
+					<Id>1738242505331</Id>
+					<Name><![CDATA[СтальВыплавкаТоннВгод - flow15]]></Name>
+					<X>270</X><Y>0</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1738242493223" TargetId="1738240444668" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>100</X><Y>120</Y></Direction>
+					<Id>1738242509641</Id>
+					<Name><![CDATA[ПорошковаяСтальВыплавкаТоннВгод - flow15]]></Name>
+					<X>270</X><Y>40</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1738242493238" TargetId="1738240444668" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>100</X><Y>80</Y></Direction>
+					<Id>1738242514579</Id>
+					<Name><![CDATA[ИнаясСтальТОннВГод - flow15]]></Name>
+					<X>270</X><Y>80</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+			</Dependences>
+			<AgentLinks>
+				<AgentLink>
+					<Id>1738240257741</Id>
+					<Name><![CDATA[connections]]></Name>
+					<X>50</X><Y>-50</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<HandleReceiveInConnections>false</HandleReceiveInConnections>
+					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+					<AgentLinkBidirectional>true</AgentLinkBidirectional>
+					<MessageType><![CDATA[Object]]></MessageType>
+					<LineStyle>SOLID</LineStyle>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineZOrder>UNDER_AGENTS</LineZOrder>
+					<LineArrow>NONE</LineArrow>
+					<LineArrowPosition>END</LineArrowPosition>
+				</AgentLink>
+			</AgentLinks>
+
+			<EmbeddedObjects>
+				<EmbeddedObject>
+					<Id>1738240444962</Id>
+					<Name><![CDATA[завод]]></Name>
+					<X>550</X><Y>140</Y>
+					<Label><X>-20</X><Y>-30</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[насосы]]></PackageName>
+						<ClassName><![CDATA[Завод]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[насосы]]></PackageName>
+							<ClassName><![CDATA[Завод]]></ClassName>
+							<ItemName><![CDATA[1733849252019]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[СтальГод]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[ПорСтаГод]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[всяСталь]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[доляМассыДлинныхСекций]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[МассаОбратногоКлапана]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[МассаВходногоМодуля]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[МассаСекцииНасоса]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[МассаСпускногоКлапана]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[МассаТрансформатора]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[МассаСтанцииУправления]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[МассафильтраПомехВходного]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[МассафильтраПомехВыходного]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[КоличествоСекцийНасоса]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>	
+					<InitialLocationType>XYZ</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1738240444995</Id>
+					<Name><![CDATA[dostavka]]></Name>
+					<X>400</X><Y>340</Y>
+					<Label><X>-30</X><Y>-30</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[насосы]]></PackageName>
+						<ClassName><![CDATA[Доставка]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[насосы]]></PackageName>
+							<ClassName><![CDATA[Доставка]]></ClassName>
+							<ItemName><![CDATA[1734607480081]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[numberTrucks]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>	
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1738240445025</Id>
+					<Name><![CDATA[сервис]]></Name>
+					<X>480</X><Y>390</Y>
+					<Label><X>-25</X><Y>-30</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[насосы]]></PackageName>
+						<ClassName><![CDATA[Сервис]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[насосы]]></PackageName>
+							<ClassName><![CDATA[Сервис]]></ClassName>
+							<ItemName><![CDATA[1735054662351]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[стоимостьАрендыВдень]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[стоимостьАрендыВдень1]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[стоимостьСервисаВдень]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[ИзначальныйДенежныйКапиталл]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[ИзначальныйКредит]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>	
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+			</EmbeddedObjects>
+
+			<Presentation>
+				<Level>
+					<Id>1738240257747</Id>
+					<Name><![CDATA[level]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
+
+
+				</Level>
+			</Presentation>
+
+		</ActiveObjectClass>
+	</ActiveObjectClasses>	
+	<DifferentialEquationsMethod>EULER</DifferentialEquationsMethod>
+	<MixedEquationsMethod>RK45_NEWTON</MixedEquationsMethod>
+	<AlgebraicEquationsMethod>MODIFIED_NEWTON</AlgebraicEquationsMethod>
+	<AbsoluteAccuracy>1.0E-5</AbsoluteAccuracy>
+	<FixedTimeStep>0.001</FixedTimeStep>
+	<RelativeAccuracy>1.0E-5</RelativeAccuracy>
+	<TimeAccuracy>1.0E-5</TimeAccuracy>
+	<Frame>
+		<Width>1000</Width>
+		<Height>600</Height>
+	</Frame>
+	<Database>
+		<Logging>false</Logging>
+		<AutoExport>false</AutoExport>
+		<ShutdownCompact>false</ShutdownCompact>
+		<ImportSettings>
+		</ImportSettings>
+		<ExportSettings>
+		</ExportSettings>
+	</Database>
+	
+	<RunConfiguration ActiveObjectClassId="1738240257740">
+		<Id>1738240257752</Id>
+		<Name><![CDATA[RunConfiguration]]></Name>
+		<MaximumMemory>512</MaximumMemory>
+		<ModelTimeProperties>
+			<StopOption><![CDATA[Stop at specified time]]></StopOption>
+			<InitialDate><![CDATA[1738195200000]]></InitialDate>	
+			<InitialTime><![CDATA[0.0]]></InitialTime>	
+			<FinalDate><![CDATA[1740700800000]]></FinalDate>	
+			<FinalTime><![CDATA[100.0]]></FinalTime>	
+		</ModelTimeProperties>
+		<AnimationProperties>
+			<StopNever>true</StopNever>
+			<ExecutionMode>realTimeScaled</ExecutionMode>
+			<RealTimeScale>1.0</RealTimeScale>
+			<EnableZoomAndPanning>true</EnableZoomAndPanning>
+			<EnableDeveloperPanel>false</EnableDeveloperPanel>
+			<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
+		</AnimationProperties>
+		<Inputs>		
+		</Inputs>
+		<Outputs>
+		</Outputs>
+	</RunConfiguration>
+	<Experiments>	
+		<!--   =========   Simulation Experiment   ========  -->
+		<SimulationExperiment ActiveObjectClassId="1738240257740">
+			<Id>1738240257749</Id>
+			<Name><![CDATA[Simulation]]></Name>
+			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
+			<MaximumMemory>512</MaximumMemory>
+			<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
+			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
+			<SeedValue>1</SeedValue>
+			<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
+			<VmArgs><![CDATA[]]></VmArgs>
+			<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
+
+			<Presentation>
+				<Text>
+					<Id>1738240257751</Id>
+					<Name><![CDATA[text]]></Name>
+					<X>50</X><Y>30</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-12490271</Color>
+					<Text><![CDATA[Model17]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>24</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+			</Presentation>
+
+			<Parameters>			
+				<Parameter>
+					<ParameterName><![CDATA[СтальВыплавкаТоннВгод]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[ПорошковаяСтальВыплавкаТоннВгод]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[ИнаясСтальТОннВГод]]></ParameterName>
+				</Parameter>
+			</Parameters>			
+			<PresentationProperties>
+				<EnableZoomAndPanning>true</EnableZoomAndPanning>
+				<ExecutionMode><![CDATA[realTimeScaled]]></ExecutionMode>
+				<Title><![CDATA[Model17 : Simulation]]></Title>	
+				<EnableDeveloperPanel>true</EnableDeveloperPanel>
+				<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
+				<RealTimeScale>1.0</RealTimeScale>
+			</PresentationProperties>
+			<ModelTimeProperties>
+				<StopOption><![CDATA[Never]]></StopOption>
+				<InitialDate><![CDATA[1738195200000]]></InitialDate>	
+				<InitialTime><![CDATA[0.0]]></InitialTime>	
+				<FinalDate><![CDATA[1740700800000]]></FinalDate>	
+				<FinalTime><![CDATA[100.0]]></FinalTime>	
+			</ModelTimeProperties>
+			<BypassInitialScreen>true</BypassInitialScreen>
+		</SimulationExperiment>	
+	</Experiments>
+    <RequiredLibraryReference>
+		<LibraryName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></LibraryName>
+		<VersionMajor>1</VersionMajor>
+		<VersionMinor>0</VersionMinor>
+		<VersionBuild>0</VersionBuild>
+    </RequiredLibraryReference>
+</Model>
+</AnyLogicWorkspace>
