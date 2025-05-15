@@ -55214,7 +55214,7 @@ Actual only when this block is configured to seize using (alternative) resource 
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1743794501393" TargetId="1743794501395" External="false" Constant="false" Array="true">
 						<Formula><![CDATA[0.35*СГлавногоАгентаПотокПродаж.get(1)*(1+увеличениеПослеСобытия)*поправка]]></Formula>
-						<Color>-65536</Color>
+						<Color>-65281</Color>
 						<Array>
 							<Dimension>
 								<PackageName><![CDATA[product_delivery3]]></PackageName>
@@ -55424,7 +55424,7 @@ Actual only when this block is configured to seize using (alternative) resource 
 									<ClassName><![CDATA[Деньги]]></ClassName>
 									<ItemName><![CDATA[свои]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[(пульсирующийПотокНасосов.get(1)+старыеНасосыСноваПродаются.get(1))*затратыНаАрендуЕденицыОборудования]]></Expression>
+								<Expression><![CDATA[пульсирующийПотокНасосов.get(1)*затратыНаАрендуЕденицыОборудования]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -55556,7 +55556,7 @@ Actual only when this block is configured to seize using (alternative) resource 
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1746046193622</Id>
-					<Name><![CDATA[доходОтАренды]]></Name>
+					<Name><![CDATA[flow]]></Name>
 					<X>1910</X><Y>660</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -55576,7 +55576,7 @@ Actual only when this block is configured to seize using (alternative) resource 
 									<ClassName><![CDATA[Деньги]]></ClassName>
 									<ItemName><![CDATA[заемные]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[((ПродажаОтСервисаКлиентам.get(1)+старыеНасосыСноваПродаются.get(1))*(стоимостьЕденицыТовара+0.15))]]></Expression>
+								<Expression><![CDATA[(ПродажаОтСервисаКлиентам.get(1)*(стоимостьЕденицыТовара+0.15))]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -55603,73 +55603,6 @@ Actual only when this block is configured to seize using (alternative) resource 
 							<Point><X>0</X><Y>0</Y></Point>
 							<Point><X>250</X><Y>0</Y></Point>
 							<Point><X>430</X><Y>0</Y></Point>
-						</Points>
-					</Properties>
-				</Variable>
-				<Variable Class="Flow">
-					<Id>1747228858337</Id>
-					<Name><![CDATA[повтороноеИспользованиеНасосов]]></Name>
-					<X>1904</X><Y>236</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1743794501395" TargetId="1745670381966" External="false" Constant="false" Array="true">
-						<Formula><![CDATA[1]]></Formula>
-						<Color>-65281</Color>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[product_delivery3]]></PackageName>
-								<ClassName><![CDATA[Металлургия]]></ClassName>
-							</Dimension>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[product_delivery3]]></PackageName>
-									<ClassName><![CDATA[Металлургия]]></ClassName>
-									<ItemName><![CDATA[порошковая]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[пульсирующийПотокНасосов.get(1)*(1+увеличениеПослеСобытия)/поправка4]]></Expression>
-							</CustomExpression>
-						</Array>
-						<ValveIndex>1</ValveIndex>
-						<Points>
-							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>-62</X><Y>57</Y></Point>
-							<Point><X>-124</X><Y>114</Y></Point>
-							<Point><X>-424</X><Y>74</Y></Point>
-						</Points>
-					</Properties>
-				</Variable>
-				<Variable Class="Flow">
-					<Id>1747229020600</Id>
-					<Name><![CDATA[старыеНасосыСноваПродаются]]></Name>
-					<X>1480</X><Y>310</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1745670381966" TargetId="1743794501395" External="false" Constant="false" Array="true">
-						<Formula><![CDATA[0.9]]></Formula>
-						<Color>-65536</Color>
-						<Array>
-							<Dimension>
-								<PackageName><![CDATA[product_delivery3]]></PackageName>
-								<ClassName><![CDATA[Металлургия]]></ClassName>
-							</Dimension>
-							<CustomExpression>
-								<Coordinate>
-									<PackageName><![CDATA[product_delivery3]]></PackageName>
-									<ClassName><![CDATA[Металлургия]]></ClassName>
-									<ItemName><![CDATA[порошковая]]></ItemName>
-								</Coordinate>
-								<Expression><![CDATA[пульсирующийПотокНасосов.get(1)*(1+увеличениеПослеСобытия)/поправка4]]></Expression>
-							</CustomExpression>
-						</Array>
-						<ValveIndex>1</ValveIndex>
-						<Points>
-							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>230</X><Y>-10</Y></Point>
-							<Point><X>424</X><Y>-74</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -56109,7 +56042,7 @@ Actual only when this block is configured to seize using (alternative) resource 
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<Color>-65536</Color>
+					<Color/>
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
@@ -56882,7 +56815,7 @@ Actual only when this block is configured to seize using (alternative) resource 
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>171</X><Y>449</Y></Direction>
 					<Id>1746046166576</Id>
-					<Name><![CDATA[ПродажаОтСервисаКлиентам - доходОтАренды]]></Name>
+					<Name><![CDATA[ПродажаОтСервисаКлиентам - flow]]></Name>
 					<X>1624</X><Y>136</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -56897,7 +56830,7 @@ Actual only when this block is configured to seize using (alternative) resource 
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>286</X><Y>-40</Y></Direction>
 					<Id>1746046292303</Id>
-					<Name><![CDATA[стоимостьЕденицыТовара - доходОтАренды]]></Name>
+					<Name><![CDATA[стоимостьЕденицыТовара - flow]]></Name>
 					<X>1509</X><Y>625</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -56912,128 +56845,8 @@ Actual only when this block is configured to seize using (alternative) resource 
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-115</X><Y>-75</Y></Direction>
 					<Id>1746046446704</Id>
-					<Name><![CDATA[доходОтАренды - <ЗапасыДенег1>]]></Name>
+					<Name><![CDATA[flow - <ЗапасыДенег1>]]></Name>
 					<X>1795</X><Y>585</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1743794501573" TargetId="1747228858337" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>178</X><Y>27</Y></Direction>
-					<Id>1747230115801</Id>
-					<Name><![CDATA[пульсирующийПотокНасосов - повтороноеИспользованиеНасосов]]></Name>
-					<X>1664</X><Y>266</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1743794501573" TargetId="1747229020600" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>46</X><Y>34</Y></Direction>
-					<Id>1747230699439</Id>
-					<Name><![CDATA[пульсирующийПотокНасосов - старыеНасосыСноваПродаются]]></Name>
-					<X>1664</X><Y>266</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1743794501023" TargetId="1747228858337" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>148</X><Y>177</Y></Direction>
-					<Id>1747230987954</Id>
-					<Name><![CDATA[увеличениеПослеСобытия - повтороноеИспользованиеНасосов]]></Name>
-					<X>1694</X><Y>116</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1743794501023" TargetId="1747229020600" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>16</X><Y>184</Y></Direction>
-					<Id>1747230995689</Id>
-					<Name><![CDATA[увеличениеПослеСобытия - старыеНасосыСноваПродаются]]></Name>
-					<X>1694</X><Y>116</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1743794501449" TargetId="1747228858337" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>158</X><Y>-63</Y></Direction>
-					<Id>1747234990000</Id>
-					<Name><![CDATA[поправка4 - повтороноеИспользованиеНасосов]]></Name>
-					<X>1684</X><Y>356</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1743794501449" TargetId="1747229020600" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>26</X><Y>-56</Y></Direction>
-					<Id>1747235274739</Id>
-					<Name><![CDATA[поправка4 - старыеНасосыСноваПродаются]]></Name>
-					<X>1684</X><Y>356</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1747229020600" TargetId="1746046193622" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>85</X><Y>285</Y></Direction>
-					<Id>1747301374833</Id>
-					<Name><![CDATA[старыеНасосыСноваПродаются - доходОтАренды]]></Name>
-					<X>1710</X><Y>300</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1747229020600" TargetId="1743794501590" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>220</X><Y>-364</Y></Direction>
-					<Id>1747306243462</Id>
-					<Name><![CDATA[старыеНасосыСноваПродаются - СервисПотокДенегТрата]]></Name>
-					<X>1710</X><Y>300</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
