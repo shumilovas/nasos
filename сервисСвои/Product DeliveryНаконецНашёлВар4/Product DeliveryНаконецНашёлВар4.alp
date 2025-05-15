@@ -562,220 +562,6 @@ groupMainMenu.setPos( viewArea.getX(), viewArea.getY() );]]></Body>
 
 			<EmbeddedObjects>
 				<EmbeddedObject>
-					<Id>1406112940801</Id>
-					<Name><![CDATA[manufacturingCenters]]></Name>
-					<X>-200</X><Y>50</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<PresentationId>1406112943275</PresentationId>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[ManufacturingCenter]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[product_delivery3]]></PackageName>
-							<ClassName><![CDATA[ManufacturingCenter]]></ClassName>
-							<ItemName><![CDATA[1412681287472]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[nVehicles]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[uniform_discr( 1, 3 )]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[capacity]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[uniform_discr( 50, 80 )]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[productsInStorage]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[uniform( 1000, 2000 )]]></Code>
-							</Value>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>true</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InEnvironment>true</InEnvironment>	
-					<InitialLocationType>NODE</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>LOAD_FROM_DATABASE</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-							<PackageName><![CDATA[product_delivery3]]></PackageName>
-							<ClassName><![CDATA[manufacturing_centers]]></ClassName>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-					<ParameterToDatabaseColumnMapping>
-						<Item>
-							<Key>
-								FAKE_PARAMETER_GIS_LOCATION_NAME_xjal
-							</Key>
-							<Value>
-								<PackageName><![CDATA[product_delivery3]]></PackageName>
-								<ClassName><![CDATA[manufacturing_centers]]></ClassName>
-								<ItemName><![CDATA[city]]></ItemName>
-							</Value>
-						</Item>	
-					</ParameterToDatabaseColumnMapping>
-				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1406123809004</Id>
-					<Name><![CDATA[distributors]]></Name>
-					<X>-200</X><Y>75</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<PresentationId>1406123810536</PresentationId>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[Distributor]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[product_delivery3]]></PackageName>
-							<ClassName><![CDATA[Distributor]]></ClassName>
-							<ItemName><![CDATA[1412681287474]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[center]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[dolg]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[name]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[shir]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>true</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InEnvironment>true</InEnvironment>	
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>LOAD_FROM_DATABASE</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-							<PackageName><![CDATA[product_delivery3]]></PackageName>
-							<ClassName><![CDATA[distributors]]></ClassName>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-					<ParameterToDatabaseColumnMapping>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[product_delivery3]]></PackageName>
-								<ClassName><![CDATA[Distributor]]></ClassName>
-								<ItemName><![CDATA[name]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[product_delivery3]]></PackageName>
-								<ClassName><![CDATA[distributors]]></ClassName>
-								<ItemName><![CDATA[city]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								FAKE_PARAMETER_GIS_LOCATION_NAME_xjal
-							</Key>
-							<Value>
-								<PackageName><![CDATA[product_delivery3]]></PackageName>
-								<ClassName><![CDATA[distributors]]></ClassName>
-								<ItemName><![CDATA[city]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								FAKE_PARAMETER_GIS_LOCATION_LATITUDE_xjal
-							</Key>
-							<Value>
-								<PackageName><![CDATA[product_delivery3]]></PackageName>
-								<ClassName><![CDATA[distributors]]></ClassName>
-								<ItemName><![CDATA[shir]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								FAKE_PARAMETER_GIS_LOCATION_LONGITUDE_xjal
-							</Key>
-							<Value>
-								<PackageName><![CDATA[product_delivery3]]></PackageName>
-								<ClassName><![CDATA[distributors]]></ClassName>
-								<ItemName><![CDATA[dolg]]></ItemName>
-							</Value>
-						</Item>	
-					</ParameterToDatabaseColumnMapping>
-				</EmbeddedObject>
-				<EmbeddedObject>
 					<Id>1745500203538</Id>
 					<Name><![CDATA[mainПОдГис]]></Name>
 					<X>-250</X><Y>190</Y>
@@ -916,6 +702,160 @@ groupMainMenu.setPos( viewArea.getX(), viewArea.getY() );]]></Body>
 					</LatitudeCode>
 					<LongitudeCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1747072004637</Id>
+					<Name><![CDATA[manufacturingCenters]]></Name>
+					<X>-160</X><Y>-130</Y>
+					<Label><X>-70</X><Y>-30</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1747072007714</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[product_delivery3]]></PackageName>
+						<ClassName><![CDATA[ManufacturingCenter]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[product_delivery3]]></PackageName>
+							<ClassName><![CDATA[ManufacturingCenter]]></ClassName>
+							<ItemName><![CDATA[1412681287472]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[nVehicles]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[3]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[capacity]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[2]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[productsInStorage]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[10]]></Code>
+							</Value>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>true</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[1]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>	
+					<InitialLocationType>XYZ</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[63]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[70]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1747072058756</Id>
+					<Name><![CDATA[distributors]]></Name>
+					<X>-240</X><Y>-70</Y>
+					<Label><X>-35</X><Y>-30</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1747072060370</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[product_delivery3]]></PackageName>
+						<ClassName><![CDATA[Distributor]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[product_delivery3]]></PackageName>
+							<ClassName><![CDATA[Distributor]]></ClassName>
+							<ItemName><![CDATA[1412681287474]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[center]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[dolg]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[name]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[shir]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>true</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[1]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>	
+					<InitialLocationType>XYZ</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[72]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[61]]></Code>
 					</LongitudeCode>
 					<LocationNameCode Class="CodeValue">
 						<Code><![CDATA[""]]></Code>
@@ -1187,44 +1127,6 @@ groupMainMenu.setPos( viewArea.getX(), viewArea.getY() );]]></Body>
 
 
 				</GISMap>
-				<EmbeddedObjectPresentation>
-					<Id>1406112943275</Id>
-					<Name><![CDATA[manufacturingCenters_presentation]]></Name>
-					<X>-90</X><Y>120</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
-					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
-					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
-					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
-					<Latitude>0.0</Latitude>
-					<Longitude>0.0</Longitude>
-				</EmbeddedObjectPresentation>
-				<EmbeddedObjectPresentation>
-					<Id>1406123810536</Id>
-					<Name><![CDATA[distributors_presentation]]></Name>
-					<X>-90</X><Y>200</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
-					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
-					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
-					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
-					<Latitude>0.0</Latitude>
-					<Longitude>0.0</Longitude>
-				</EmbeddedObjectPresentation>
 				<Rectangle>
 					<Id>1413363621284</Id>
 					<Name><![CDATA[rectangle6]]></Name>
@@ -1516,6 +1418,44 @@ groupMainMenu.setPos( viewArea.getX(), viewArea.getY() );]]></Body>
 				<EmbeddedObjectPresentation>
 					<Id>1745509271181</Id>
 					<Name><![CDATA[vehicle_presentation]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>61.23975214381038</Latitude>
+					<Longitude>75.3730569711052</Longitude>
+				</EmbeddedObjectPresentation>
+				<EmbeddedObjectPresentation>
+					<Id>1747072007714</Id>
+					<Name><![CDATA[manufacturingCenters_presentation]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>61.23975214381038</Latitude>
+					<Longitude>75.3730569711052</Longitude>
+				</EmbeddedObjectPresentation>
+				<EmbeddedObjectPresentation>
+					<Id>1747072060370</Id>
+					<Name><![CDATA[distributors_presentation]]></Name>
 					<X>0</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -2053,7 +1993,7 @@ else
 
 			<ContainerLinks>
 				<ContainerLink>
-					<Id>1406112943278</Id>
+					<Id>1747072007741</Id>
 					<Name><![CDATA[main]]></Name>
 					<X>50</X><Y>-100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -4104,7 +4044,7 @@ send( order, center );]]></Action>
 
 			<ContainerLinks>
 				<ContainerLink>
-					<Id>1406123810540</Id>
+					<Id>1747072060386</Id>
 					<Name><![CDATA[main]]></Name>
 					<X>50</X><Y>-100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -55666,6 +55606,73 @@ Actual only when this block is configured to seize using (alternative) resource 
 						</Points>
 					</Properties>
 				</Variable>
+				<Variable Class="Flow">
+					<Id>1747228858337</Id>
+					<Name><![CDATA[повтороноеИспользованиеНасосов]]></Name>
+					<X>1904</X><Y>236</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1743794501395" TargetId="1745670381966" External="false" Constant="false" Array="true">
+						<Formula><![CDATA[1]]></Formula>
+						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[product_delivery3]]></PackageName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[product_delivery3]]></PackageName>
+									<ClassName><![CDATA[Металлургия]]></ClassName>
+									<ItemName><![CDATA[порошковая]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[пульсирующийПотокНасосов.get(1)*(1+увеличениеПослеСобытия)/поправка4]]></Expression>
+							</CustomExpression>
+						</Array>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>-62</X><Y>57</Y></Point>
+							<Point><X>-124</X><Y>114</Y></Point>
+							<Point><X>-424</X><Y>74</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1747229020600</Id>
+					<Name><![CDATA[старыеНасосыСноваПродаются]]></Name>
+					<X>1480</X><Y>310</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1745670381966" TargetId="1743794501395" External="false" Constant="false" Array="true">
+						<Formula><![CDATA[0.9]]></Formula>
+						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[product_delivery3]]></PackageName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[product_delivery3]]></PackageName>
+									<ClassName><![CDATA[Металлургия]]></ClassName>
+									<ItemName><![CDATA[порошковая]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[пульсирующийПотокНасосов.get(1)*(1+увеличениеПослеСобытия)/поправка4]]></Expression>
+							</CustomExpression>
+						</Array>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>230</X><Y>-10</Y></Point>
+							<Point><X>424</X><Y>-74</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
 				<Variable Class="Parameter">
 					<Id>1743794501428</Id>
 					<Name><![CDATA[ИзначальноеЧислоНасосов]]></Name>
@@ -56907,6 +56914,96 @@ Actual only when this block is configured to seize using (alternative) resource 
 					<Id>1746046446704</Id>
 					<Name><![CDATA[flow - <ЗапасыДенег1>]]></Name>
 					<X>1795</X><Y>585</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1743794501573" TargetId="1747228858337" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>178</X><Y>27</Y></Direction>
+					<Id>1747230115801</Id>
+					<Name><![CDATA[пульсирующийПотокНасосов - повтороноеИспользованиеНасосов]]></Name>
+					<X>1664</X><Y>266</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1743794501573" TargetId="1747229020600" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>46</X><Y>34</Y></Direction>
+					<Id>1747230699439</Id>
+					<Name><![CDATA[пульсирующийПотокНасосов - старыеНасосыСноваПродаются]]></Name>
+					<X>1664</X><Y>266</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1743794501023" TargetId="1747228858337" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>148</X><Y>177</Y></Direction>
+					<Id>1747230987954</Id>
+					<Name><![CDATA[увеличениеПослеСобытия - повтороноеИспользованиеНасосов]]></Name>
+					<X>1694</X><Y>116</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1743794501023" TargetId="1747229020600" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>16</X><Y>184</Y></Direction>
+					<Id>1747230995689</Id>
+					<Name><![CDATA[увеличениеПослеСобытия - старыеНасосыСноваПродаются]]></Name>
+					<X>1694</X><Y>116</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1743794501449" TargetId="1747228858337" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>158</X><Y>-63</Y></Direction>
+					<Id>1747234990000</Id>
+					<Name><![CDATA[поправка4 - повтороноеИспользованиеНасосов]]></Name>
+					<X>1684</X><Y>356</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1743794501449" TargetId="1747229020600" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>26</X><Y>-56</Y></Direction>
+					<Id>1747235274739</Id>
+					<Name><![CDATA[поправка4 - старыеНасосыСноваПродаются]]></Name>
+					<X>1684</X><Y>356</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
