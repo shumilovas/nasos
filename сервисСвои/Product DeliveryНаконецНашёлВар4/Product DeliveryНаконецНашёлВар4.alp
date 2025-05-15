@@ -55098,7 +55098,7 @@ Actual only when this block is configured to seize using (alternative) resource 
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[{0.0,0.0}]]></InitialValue>
+						<InitialValue><![CDATA[{2.0+триГодаНасосам,0.0}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
@@ -55628,7 +55628,7 @@ Actual only when this block is configured to seize using (alternative) resource 
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 									<ItemName><![CDATA[порошковая]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[пульсирующийПотокНасосов.get(1)*(1+увеличениеПослеСобытия)/поправка4]]></Expression>
+								<Expression><![CDATA[триГодаНасосам*пульсирующийПотокНасосов.get(1)*(1+увеличениеПослеСобытия)/поправка4]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -55662,7 +55662,7 @@ Actual only when this block is configured to seize using (alternative) resource 
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 									<ItemName><![CDATA[порошковая]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[пульсирующийПотокНасосов.get(1)*(1+увеличениеПослеСобытия)/поправка4]]></Expression>
+								<Expression><![CDATA[триГодаНасосам*пульсирующийПотокНасосов.get(1)*(1+увеличениеПослеСобытия)/поправка4]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -57034,6 +57034,51 @@ Actual only when this block is configured to seize using (alternative) resource 
 					<Id>1747306243462</Id>
 					<Name><![CDATA[старыеНасосыСноваПродаются - СервисПотокДенегТрата]]></Name>
 					<X>1710</X><Y>300</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1746024555798" TargetId="1747228858337" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>402</X><Y>-167</Y></Direction>
+					<Id>1747313284269</Id>
+					<Name><![CDATA[триГодаНасосам - повтороноеИспользованиеНасосов]]></Name>
+					<X>1440</X><Y>460</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1746024555798" TargetId="1745670381966" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>40</X><Y>-150</Y></Direction>
+					<Id>1747313290028</Id>
+					<Name><![CDATA[триГодаНасосам - ЗановоИспользуютсяСтарыеНасосы]]></Name>
+					<X>1440</X><Y>460</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1746024555798" TargetId="1747229020600" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>270</X><Y>-160</Y></Direction>
+					<Id>1747313297166</Id>
+					<Name><![CDATA[триГодаНасосам - старыеНасосыСноваПродаются]]></Name>
+					<X>1440</X><Y>460</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60164,8 +60209,8 @@ on real roads, and routes are created when vehicles start moving to destinations
 				<StopOption><![CDATA[Stop at specified time]]></StopOption>
 				<InitialDate><![CDATA[1414825200000]]></InitialDate>	
 				<InitialTime><![CDATA[0.0]]></InitialTime>	
-				<FinalDate><![CDATA[1415815200000]]></FinalDate>	
-				<FinalTime><![CDATA[275.0]]></FinalTime>	
+				<FinalDate><![CDATA[1416625200000]]></FinalDate>	
+				<FinalTime><![CDATA[500.0]]></FinalTime>	
 			</ModelTimeProperties>
 			<BypassInitialScreen>true</BypassInitialScreen>
 		</SimulationExperiment>	
