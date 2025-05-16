@@ -5017,7 +5017,7 @@ traceln("time " +time());
 					<Name><![CDATA[ЭтоДетальАНеНасос]]></Name>
 					<Description><![CDATA[false-о значает, что это насос, а не деталь.
 тру- что это деталь, а не насос]]></Description>
-					<X>40</X><Y>150</Y>
+					<X>30</X><Y>140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -55422,7 +55422,7 @@ Actual only when this block is configured to seize using (alternative) resource 
 								<Coordinate>
 									<PackageName><![CDATA[product_delivery3]]></PackageName>
 									<ClassName><![CDATA[Деньги]]></ClassName>
-									<ItemName><![CDATA[свои]]></ItemName>
+									<ItemName><![CDATA[заемные]]></ItemName>
 								</Coordinate>
 								<Expression><![CDATA[(пульсирующийПотокНасосов.get(1)+старыеНасосыСноваПродаются.get(1))*затратыНаАрендуЕденицыОборудования]]></Expression>
 							</CustomExpression>
@@ -55455,7 +55455,7 @@ Actual only when this block is configured to seize using (alternative) resource 
 								<Coordinate>
 									<PackageName><![CDATA[product_delivery3]]></PackageName>
 									<ClassName><![CDATA[Деньги]]></ClassName>
-									<ItemName><![CDATA[свои]]></ItemName>
+									<ItemName><![CDATA[заемные]]></ItemName>
 								</Coordinate>
 								<Expression><![CDATA[затратыНаЕденицуАренды*аренда]]></Expression>
 							</CustomExpression>
@@ -60209,8 +60209,8 @@ on real roads, and routes are created when vehicles start moving to destinations
 				<StopOption><![CDATA[Stop at specified time]]></StopOption>
 				<InitialDate><![CDATA[1414825200000]]></InitialDate>	
 				<InitialTime><![CDATA[0.0]]></InitialTime>	
-				<FinalDate><![CDATA[1416625200000]]></FinalDate>	
-				<FinalTime><![CDATA[500.0]]></FinalTime>	
+				<FinalDate><![CDATA[1418425200000]]></FinalDate>	
+				<FinalTime><![CDATA[1000.0]]></FinalTime>	
 			</ModelTimeProperties>
 			<BypassInitialScreen>true</BypassInitialScreen>
 		</SimulationExperiment>	
