@@ -4524,7 +4524,7 @@ send( order, center );]]></Action>
 						<EntryAction><![CDATA[dest.setText("");]]></EntryAction>
 						<ExitAction><![CDATA[if (order.ЭтоДетальАНеНасос== false);
 	get_Main().mainПОдГис.сервис.новыеНасосыИзЗавод.inject(20) ;
-	traceln("order.ЭтоДетальАНеНасос== false get_Main().MainПОдГис.сервис.новыеНасосыИзЗавод.inject(20), time =  " +time() );
+	//traceln("order.ЭтоДетальАНеНасос== false get_Main().MainПОдГис.сервис.новыеНасосыИзЗавод.inject(20), time =  " +time() );
 //else 
 	//get_Main().manufacturingCenters.get(1).заво]]></ExitAction>
 						<FillColor/>
@@ -4549,7 +4549,7 @@ else
 		get_Main().manufacturingCenters.get(0).завод.delay10.resume();
 else 
 	{
-	traceln("ща будет if (get_Main().manufacturingCenters.get(0).завод.delay2.isSuspended())  "  + time());
+	//traceln("ща будет if (get_Main().manufacturingCenters.get(0).завод.delay2.isSuspended())  "  + time());
 	if (get_Main().manufacturingCenters.get(0).завод.delay2.isSuspended()) 
 		get_Main().manufacturingCenters.get(0).завод.delay2.resume();
 	 }]]></ExitAction>
@@ -4577,8 +4577,8 @@ else
 order = msg;
 detail = randomFalse(2/3);
 order.ЭтоДетальАНеНасос=detail;
-if (order.ЭтоДетальАНеНасос== true)
-	traceln ("(order.ЭтоДетальАНеНасос== true) time = " + time())]]></Action>
+//if (order.ЭтоДетальАНеНасос== true)
+	//traceln ("(order.ЭтоДетальАНеНасос== true) time = " + time())]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -4718,8 +4718,8 @@ if (order.ЭтоДетальАНеНасос== true)
 					<Properties Source="1413291126356" Target="1407932605116" Trigger="timeout">
 						<Action><![CDATA[moveTo( order.distributor.shir, order.distributor.dolg );
 dest.setText( order.distributor.name );
-traceln("имя дистрибьютера " + order.distributor.name);
-traceln("time " +time());
+//traceln("имя дистрибьютера " + order.distributor.name);
+//traceln("time " +time());
 ]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[uniform( 1, 2 ) ]]></Code>
@@ -7812,11 +7812,11 @@ C:\работа дмитрий\данные окрон и алмаз\данны�
 					<Action><![CDATA[double a= random();
 ставкаЦентробанкаДляТовара += ставкаЦентробанкаДляТовара*a;
 ставкаЦентробанкаДляЗаёма += ставкаЦентробанкаДляЗаёма*a;
-traceln("ставка повышена");
+//traceln("ставка повышена");
 if (a>0.4) {
 	ставкаЦентробанкаДляТовара -= 0.1*ставкаЦентробанкаДляТовара;
 	ставкаЦентробанкаДляЗаёма -= 0.1* ставкаЦентробанкаДляЗаёма;
-	traceln("ставка понижена");
+//	traceln("ставка понижена");
 }
 ]]></Action>
 				</Event>
@@ -8016,7 +8016,7 @@ if (стоимостьЕденицыТовара <10.0) {
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[traceln("разница " + (потокСтоимостиЭЦНсЗавода - ПотокСтоимостиДеталей) + "при потоке " + ПотокСтоимостиДеталей)]]></Action>
+					<Action><![CDATA[//traceln("разница " + (потокСтоимостиЭЦНсЗавода - ПотокСтоимостиДеталей) + "при потоке " + ПотокСтоимостиДеталей)]]></Action>
 				</Event>
 				<Event>
 					<Id>1743794837422</Id>
@@ -9967,15 +9967,15 @@ else числоИныхДеталейСЗавода=average(get_Main().manufactu
 		<ActiveObjectClass>
 			<Id>1743794494314</Id>
 			<Name><![CDATA[Завод]]></Name>
-			<StartupCode><![CDATA[traceln("всяСталь = " +всяСталь); 
-traceln("доляМассыДлинныхСекций = " +доляМассыДлинныхСекций);
+			<StartupCode><![CDATA[//traceln("всяСталь = " +всяСталь); 
+//traceln("доляМассыДлинныхСекций = " +доляМассыДлинныхСекций);//
 traceln("ЗаготовокВ_10_ДеньНеПовторящихсяСекций = " +ЗаготовокВ_10_ДеньНеПовторящихсяСекций);
 
 if (((int)(25*всяСталь*(1-доляМассыДлинныхСекций) /(365)))==0)
 ЗаготовокВ_10_ДеньНеПовторящихсяСекций=1;
-traceln("всяСталь = " +всяСталь); 
-traceln("доляМассыДлинныхСекций = " +доляМассыДлинныхСекций);
-traceln("ЗаготовокВ_10_ДеньНеПовторящихсяСекций = " +ЗаготовокВ_10_ДеньНеПовторящихсяСекций);]]></StartupCode>
+//traceln("всяСталь = " +всяСталь); 
+//traceln("доляМассыДлинныхСекций = " +доляМассыДлинныхСекций);
+//traceln("ЗаготовокВ_10_ДеньНеПовторящихсяСекций = " +ЗаготовокВ_10_ДеньНеПовторящихсяСекций);]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1743794494309</Id>
@@ -16273,7 +16273,7 @@ traceln("ЗаготовокВ_10_ДеньНеПовторящихсяСекци�
 				<Connector>
 					<Id>1743794499957</Id>
 					<Name><![CDATA[connector32]]></Name>
-					<X>0</X><Y>0</Y>
+					<X>3370</X><Y>280</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -16291,75 +16291,6 @@ traceln("ЗаготовокВ_10_ДеньНеПовторящихсяСекци�
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[product_delivery3]]></PackageName>
 						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[release]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Release]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>3370</X><Y>280</Y></Point>
-						<Point><X>3420</X><Y>90</Y></Point>
-						<Point><X>3440</X><Y>90</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1743794499959</Id>
-					<Name><![CDATA[connector41]]></Name>
-					<X>0</X><Y>0</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[release]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Release]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[seize]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Seize]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>3480</X><Y>90</Y></Point>
-						<Point><X>3550</X><Y>90</Y></Point>
-						<Point><X>3550</X><Y>-100</Y></Point>
-						<Point><X>3640</X><Y>-100</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1743794499961</Id>
-					<Name><![CDATA[connector42]]></Name>
-					<X>0</X><Y>0</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[seize]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Seize]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
 						<ItemName><![CDATA[selectOutput25]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -16368,8 +16299,11 @@ traceln("ЗаготовокВ_10_ДеньНеПовторящихсяСекци�
 						<ItemName><![CDATA[in]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>3680</X><Y>-100</Y></Point>
-						<Point><X>3820</X><Y>-100</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>50</X><Y>-190</Y></Point>
+						<Point><X>180</X><Y>-190</Y></Point>
+						<Point><X>180</X><Y>-380</Y></Point>
+						<Point><X>450</X><Y>-380</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -16444,7 +16378,7 @@ traceln("ЗаготовокВ_10_ДеньНеПовторящихсяСекци�
 				<Connector>
 					<Id>1743794499967</Id>
 					<Name><![CDATA[connector119]]></Name>
-					<X>0</X><Y>0</Y>
+					<X>3942</X><Y>-98</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -16462,39 +16396,6 @@ traceln("ЗаготовокВ_10_ДеньНеПовторящихсяСекци�
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[product_delivery3]]></PackageName>
 						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[release1]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Release]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>3942</X><Y>-98</Y></Point>
-						<Point><X>3970</X><Y>-100</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1743794499969</Id>
-					<Name><![CDATA[connector122]]></Name>
-					<X>0</X><Y>0</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[release1]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Release]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
 						<ItemName><![CDATA[выгрузкаНаПлощадкуПередГрузовиком2]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -16503,14 +16404,16 @@ traceln("ЗаготовокВ_10_ДеньНеПовторящихсяСекци�
 						<ItemName><![CDATA[in]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>4010</X><Y>-100</Y></Point>
-						<Point><X>4052</X><Y>-98</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>28</X><Y>-2</Y></Point>
+						<Point><X>68</X><Y>-2</Y></Point>
+						<Point><X>110</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1743794499971</Id>
 					<Name><![CDATA[connector162]]></Name>
-					<X>0</X><Y>0</Y>
+					<X>3930</X><Y>30</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -16528,39 +16431,6 @@ traceln("ЗаготовокВ_10_ДеньНеПовторящихсяСекци�
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[product_delivery3]]></PackageName>
 						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[release2]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Release]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>3930</X><Y>30</Y></Point>
-						<Point><X>3970</X><Y>30</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1743794499973</Id>
-					<Name><![CDATA[connector163]]></Name>
-					<X>0</X><Y>0</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[release2]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Release]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
 						<ItemName><![CDATA[выгрузкаНаПлощадкуПередГрузовиком3]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -16569,9 +16439,9 @@ traceln("ЗаготовокВ_10_ДеньНеПовторящихсяСекци�
 						<ItemName><![CDATA[in]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>4010</X><Y>30</Y></Point>
-						<Point><X>4040</X><Y>30</Y></Point>
-						<Point><X>4050</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>110</X><Y>0</Y></Point>
+						<Point><X>120</X><Y>-30</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -16595,17 +16465,19 @@ traceln("ЗаготовокВ_10_ДеньНеПовторящихсяСекци�
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[product_delivery3]]></PackageName>
 						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[seize1]]></ItemName>
+						<ItemName><![CDATA[delay4]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Seize]]></ClassName>
+						<ClassName><![CDATA[Delay]]></ClassName>
 						<ItemName><![CDATA[in]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>-10</X><Y>-100</Y></Point>
 						<Point><X>20</X><Y>-120</Y></Point>
+						<Point><X>60</X><Y>-120</Y></Point>
+						<Point><X>100</X><Y>-130</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -16643,42 +16515,9 @@ traceln("ЗаготовокВ_10_ДеньНеПовторящихсяСекци�
 					</Points>
 				</Connector>
 				<Connector>
-					<Id>1743794499979</Id>
-					<Name><![CDATA[connector167]]></Name>
-					<X>0</X><Y>0</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[delay4]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Delay]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[seize1]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Seize]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>1360</X><Y>-340</Y></Point>
-						<Point><X>1320</X><Y>-330</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1743794499981</Id>
-					<Name><![CDATA[connector93]]></Name>
-					<X>0</X><Y>0</Y>
+					<Id>1743794499983</Id>
+					<Name><![CDATA[connector168]]></Name>
+					<X>1610</X><Y>-150</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -16696,40 +16535,6 @@ traceln("ЗаготовокВ_10_ДеньНеПовторящихсяСекци�
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[product_delivery3]]></PackageName>
 						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[release3]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Release]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>1610</X><Y>-150</Y></Point>
-						<Point><X>1570</X><Y>-270</Y></Point>
-						<Point><X>1500</X><Y>-270</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1743794499983</Id>
-					<Name><![CDATA[connector168]]></Name>
-					<X>1460</X><Y>-270</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[release3]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Release]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
 						<ItemName><![CDATA[крупноеИлиНет]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -16739,8 +16544,9 @@ traceln("ЗаготовокВ_10_ДеньНеПовторящихсяСекци�
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-40</X><Y>0</Y></Point>
-						<Point><X>-70</X><Y>-180</Y></Point>
+						<Point><X>-40</X><Y>-120</Y></Point>
+						<Point><X>-190</X><Y>-120</Y></Point>
+						<Point><X>-220</X><Y>-300</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -16781,9 +16587,9 @@ traceln("ЗаготовокВ_10_ДеньНеПовторящихсяСекци�
 					</Points>
 				</Connector>
 				<Connector>
-					<Id>1743794499987</Id>
-					<Name><![CDATA[connector59]]></Name>
-					<X>0</X><Y>0</Y>
+					<Id>1743794499989</Id>
+					<Name><![CDATA[connector172]]></Name>
+					<X>1540</X><Y>-460</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -16801,39 +16607,6 @@ traceln("ЗаготовокВ_10_ДеньНеПовторящихсяСекци�
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[product_delivery3]]></PackageName>
 						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[release5]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Release]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>1540</X><Y>-460</Y></Point>
-						<Point><X>1500</X><Y>-460</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1743794499989</Id>
-					<Name><![CDATA[connector172]]></Name>
-					<X>0</X><Y>0</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[release5]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Release]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
 						<ItemName><![CDATA[крупноеИлиНет]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -16842,8 +16615,8 @@ traceln("ЗаготовокВ_10_ДеньНеПовторящихсяСекци�
 						<ItemName><![CDATA[outT]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>1460</X><Y>-460</Y></Point>
-						<Point><X>1400</X><Y>-460</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-140</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -16882,7 +16655,7 @@ traceln("ЗаготовокВ_10_ДеньНеПовторящихсяСекци�
 				<Connector>
 					<Id>1743794499993</Id>
 					<Name><![CDATA[connector154]]></Name>
-					<X>0</X><Y>0</Y>
+					<X>1170</X><Y>-430</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -16900,40 +16673,6 @@ traceln("ЗаготовокВ_10_ДеньНеПовторящихсяСекци�
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[product_delivery3]]></PackageName>
 						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[release4]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Release]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>1170</X><Y>-430</Y></Point>
-						<Point><X>1350</X><Y>-220</Y></Point>
-						<Point><X>1380</X><Y>-220</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1743794499995</Id>
-					<Name><![CDATA[connector175]]></Name>
-					<X>0</X><Y>0</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
-						<ItemName><![CDATA[release4]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Release]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[Завод]]></ClassName>
 						<ItemName><![CDATA[ЗемляИлиЭцн]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
@@ -16942,9 +16681,10 @@ traceln("ЗаготовокВ_10_ДеньНеПовторящихсяСекци�
 						<ItemName><![CDATA[in]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
-						<Point><X>1420</X><Y>-220</Y></Point>
-						<Point><X>1480</X><Y>-220</Y></Point>
-						<Point><X>1610</X><Y>-150</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>180</X><Y>210</Y></Point>
+						<Point><X>310</X><Y>210</Y></Point>
+						<Point><X>440</X><Y>280</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
@@ -17344,7 +17084,7 @@ if (ЗаготовокВ_10_ДеньНеПовторящихсяСекций == 
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[ЗаготовокВ_10_ДеньНеПовторящихсяСекций]]></Code>
+								<Code><![CDATA[2*3*ЗаготовокВ_10_ДеньНеПовторящихсяСекций]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -18136,7 +17876,7 @@ if (ЗаготовокВ_10_ДеньНеПовторящихсяСекций == 
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[12]]></Code>
+								<Code><![CDATA[6]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -18491,8 +18231,8 @@ if (ЗаготовокВ_10_ДеньНеПовторящихсяСекций == 
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[traceln("сервисЛогистика.source.inject(1); " +time());
-traceln("грузовик дул 10 нижний время " +time())
+								<Code><![CDATA[//traceln("сервисЛогистика.source.inject(1); " +time());
+//traceln("грузовик дул 10 нижний время " +time())
 //getRootAgent().mai mai mainПОдГис.выехалГрузовикОтдаватьНаСервис=true;
 //get_Main().dostavka.manufacturing.source.inject(1);]]></Code>
 							</Value>
@@ -20082,7 +19822,7 @@ traceln("грузовик дул 10 нижний время " +time())
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[частотаПРиходаГрузовика1]]></Code>
+								<Code><![CDATA[частотаПРиходаГрузовика1/6]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 							</Value>
 						</Parameter>
@@ -20175,6 +19915,62 @@ traceln("грузовик дул 10 нижний время " +time())
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[newEntity]]></Name>
+							<Value Class="EntityCodeValue">
+								<IsAgentEntity>true</IsAgentEntity>
+								<EntityEmbeddedObject>
+									<ActiveObjectClass>
+										<PackageName><![CDATA[product_delivery3]]></PackageName>
+										<ClassName><![CDATA[ГрузовикПривозящий]]></ClassName>
+									</ActiveObjectClass>
+									<GenericParameterSubstitute>
+										<GenericParameterSubstituteReference>
+											<PackageName><![CDATA[product_delivery3]]></PackageName>
+											<ClassName><![CDATA[ГрузовикПривозящий]]></ClassName>
+											<ItemName><![CDATA[1743794494296]]></ItemName>
+										</GenericParameterSubstituteReference>
+									</GenericParameterSubstitute>
+									<Parameters>
+									</Parameters>
+									<ReplicationFlag>true</ReplicationFlag>
+									<Replication Class="CodeValue">
+										<Code><![CDATA[100]]></Code>
+									</Replication>
+									<CollectionType>ARRAY_LIST_BASED</CollectionType>
+									<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+									<XCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</XCode>
+									<YCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</YCode>
+									<ZCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</ZCode>
+									<ColumnCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</ColumnCode>
+									<RowCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</RowCode>
+									<LatitudeCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</LatitudeCode>
+									<LongitudeCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</LongitudeCode>
+									<LocationNameCode Class="CodeValue">
+										<Code><![CDATA[""]]></Code>
+									</LocationNameCode>
+									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
+									<InitializationDatabaseTableQuery>
+										<TableReference>
+										</TableReference>
+									</InitializationDatabaseTableQuery>
+									<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+									<QuantityColumn>
+									</QuantityColumn>
+								</EntityEmbeddedObject>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[changeDimensions]]></Name>
@@ -22194,7 +21990,7 @@ traceln("грузовик дул 10 нижний время " +time())
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[ЗаготовокВчасПовторящихсяСекций1ДляДвух]]></Code>
+								<Code><![CDATA[4*ЗаготовокВчасПовторящихсяСекций1ДляДвух]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -22660,8 +22456,8 @@ traceln("грузовик дул 10 нижний время " +time())
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[частотаПодготовкаГрузовика2]]></Code>
-								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+								<Code><![CDATA[частотаПодготовкаГрузовика2/4]]></Code>
+								<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -22753,6 +22549,62 @@ traceln("грузовик дул 10 нижний время " +time())
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[newEntity]]></Name>
+							<Value Class="EntityCodeValue">
+								<IsAgentEntity>true</IsAgentEntity>
+								<EntityEmbeddedObject>
+									<ActiveObjectClass>
+										<PackageName><![CDATA[product_delivery3]]></PackageName>
+										<ClassName><![CDATA[ГрузовикПривозящий]]></ClassName>
+									</ActiveObjectClass>
+									<GenericParameterSubstitute>
+										<GenericParameterSubstituteReference>
+											<PackageName><![CDATA[product_delivery3]]></PackageName>
+											<ClassName><![CDATA[ГрузовикПривозящий]]></ClassName>
+											<ItemName><![CDATA[1743794494296]]></ItemName>
+										</GenericParameterSubstituteReference>
+									</GenericParameterSubstitute>
+									<Parameters>
+									</Parameters>
+									<ReplicationFlag>true</ReplicationFlag>
+									<Replication Class="CodeValue">
+										<Code><![CDATA[100]]></Code>
+									</Replication>
+									<CollectionType>ARRAY_LIST_BASED</CollectionType>
+									<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+									<XCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</XCode>
+									<YCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</YCode>
+									<ZCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</ZCode>
+									<ColumnCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</ColumnCode>
+									<RowCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</RowCode>
+									<LatitudeCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</LatitudeCode>
+									<LongitudeCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</LongitudeCode>
+									<LocationNameCode Class="CodeValue">
+										<Code><![CDATA[""]]></Code>
+									</LocationNameCode>
+									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
+									<InitializationDatabaseTableQuery>
+										<TableReference>
+										</TableReference>
+									</InitializationDatabaseTableQuery>
+									<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+									<QuantityColumn>
+									</QuantityColumn>
+								</EntityEmbeddedObject>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[changeDimensions]]></Name>
@@ -25176,13 +25028,13 @@ agent.стоимость = 1500000   ;]]></Code>
 						<Parameter>
 							<Name><![CDATA[probability1]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[0.33]]></Code>
+								<Code><![CDATA[0.35]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[probability2]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[0.33]]></Code>
+								<Code><![CDATA[0.32]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -27532,7 +27384,7 @@ agent.стоимость = 10000 ;]]></Code>
 						<Parameter>
 							<Name><![CDATA[probability]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[0.53]]></Code>
+								<Code><![CDATA[0.4]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -28267,7 +28119,7 @@ agent.стоимость = 22000;]]></Code>
 						<Parameter>
 							<Name><![CDATA[entitiesPerArrival]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[6*ЗаготовокВчасПовторящихсяСекций1ДляДвух]]></Code>
+								<Code><![CDATA[4*6*ЗаготовокВчасПовторящихсяСекций1ДляДвух]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -31401,7 +31253,7 @@ agent.стоимость = 100 ;]]></Code>
 						<Parameter>
 							<Name><![CDATA[probability]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[0.3]]></Code>
+								<Code><![CDATA[0.2]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -32271,7 +32123,7 @@ agent.стоимость = 100 ;]]></Code>
 						<Parameter>
 							<Name><![CDATA[probability]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[0.75]]></Code>
+								<Code><![CDATA[0.7]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -34117,7 +33969,7 @@ agent.стоимость = 100 ;]]></Code>
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[12]]></Code>
+								<Code><![CDATA[6]]></Code>
 								<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -34623,7 +34475,7 @@ agent.стоимость = 100 ;]]></Code>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[traceln("грузовик с насосами поехзал " +time());]]></Code>
+								<Code><![CDATA[//traceln("грузовик с насосами поехзал " +time());]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -38206,321 +38058,6 @@ agent.стоимость = 100 ;]]></Code>
 					</QuantityColumn>
 				</EmbeddedObject>
 				<EmbeddedObject>
-					<Id>1743794499340</Id>
-					<Name><![CDATA[release]]></Name>
-					<X>3440</X><Y>70</Y>
-					<Label><X>-5</X><Y>-10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Release]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-							<ClassName><![CDATA[Release]]></ClassName>
-							<ItemName><![CDATA[1412336243154]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[releaseMode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourcePool]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[quantity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resources]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeBlocks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[movingGoHome]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskPolicyType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskPriority]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskMayPreemptOtherTasks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskPreemptionPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpUsageState]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onReleaseUnit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onWrapUpTerminated]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1743794499359</Id>
-					<Name><![CDATA[seize]]></Name>
-					<X>3640</X><Y>-120</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Seize]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-							<ClassName><![CDATA[Seize]]></ClassName>
-							<ItemName><![CDATA[1412336243147]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[seizeFromOnePool]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceSets]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourcePool]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceQuantity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizePolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[capacity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[maximumCapacity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[sendResources]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationNode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationAttractor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationResource]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationX]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationZ]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[attachResources]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[entityLocationQueue]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[priority]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskMayPreemptOtherTasks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskPreemptionPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[terminatedTaskProcessing]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[terminatedTasksEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[suspendResumeEntities]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[customizeResourceChoice]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceChoiceCondition]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceSelectionMode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceRating]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceComparison]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskStartBlocksAreConnected]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskStartBlocks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[enableTimeout]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[timeout]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[enablePreemption]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledUnitsBehavior]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledUnitsRelease]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[pushProtocol]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[restoreEntityLocationOnExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[forceStatisticsCollection]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExitTimeout]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExitPreempted]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onSeizeUnit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onPrepareUnit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onRemove]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onTaskTerminated]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[comparison]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onTaskSuspended]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onTaskResumed]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onUnitFinishedWrapUp]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
 					<Id>1743794499413</Id>
 					<Name><![CDATA[работникПроверяет]]></Name>
 					<X>2780</X><Y>-100</Y>
@@ -38757,434 +38294,6 @@ agent.стоимость = 100 ;]]></Code>
 					</QuantityColumn>
 				</EmbeddedObject>
 				<EmbeddedObject>
-					<Id>1743794499438</Id>
-					<Name><![CDATA[release1]]></Name>
-					<X>3970</X><Y>-120</Y>
-					<Label><X>-5</X><Y>-10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Release]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-							<ClassName><![CDATA[Release]]></ClassName>
-							<ItemName><![CDATA[1412336243154]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[releaseMode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourcePool]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[quantity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resources]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeBlocks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[movingGoHome]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskPolicyType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskPriority]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskMayPreemptOtherTasks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskPreemptionPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpUsageState]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onReleaseUnit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onWrapUpTerminated]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1743794499457</Id>
-					<Name><![CDATA[release2]]></Name>
-					<X>3970</X><Y>10</Y>
-					<Label><X>-5</X><Y>-10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Release]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-							<ClassName><![CDATA[Release]]></ClassName>
-							<ItemName><![CDATA[1412336243154]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[releaseMode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourcePool]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[quantity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resources]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeBlocks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[movingGoHome]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskPolicyType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskPriority]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskMayPreemptOtherTasks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskPreemptionPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpUsageState]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onReleaseUnit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onWrapUpTerminated]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1743794499476</Id>
-					<Name><![CDATA[seize1]]></Name>
-					<X>1280</X><Y>-350</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Seize]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-							<ClassName><![CDATA[Seize]]></ClassName>
-							<ItemName><![CDATA[1412336243147]]></ItemName>
-						</GenericParameterSubstituteReference>
-						<GenericParameterSubstituteValue Class="CodeValue">
-							<Code><![CDATA[Заготовка]]></Code>
-						</GenericParameterSubstituteValue>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[seizeFromOnePool]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceSets]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[{ 
-  { Рабочие }
-}]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourcePool]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceQuantity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizePolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[capacity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[maximumCapacity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[sendResources]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationNode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationAttractor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationResource]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationX]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationZ]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[attachResources]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[entityLocationQueue]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[priority]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskMayPreemptOtherTasks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskPreemptionPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[terminatedTaskProcessing]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[terminatedTasksEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[suspendResumeEntities]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[customizeResourceChoice]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceChoiceCondition]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceSelectionMode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceRating]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceComparison]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskStartBlocksAreConnected]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskStartBlocks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[enableTimeout]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[timeout]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[enablePreemption]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledUnitsBehavior]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledUnitsRelease]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[pushProtocol]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[restoreEntityLocationOnExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[forceStatisticsCollection]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExitTimeout]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExitPreempted]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onSeizeUnit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onPrepareUnit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onRemove]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onTaskTerminated]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[comparison]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onTaskSuspended]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onTaskResumed]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onUnitFinishedWrapUp]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
 					<Id>1743794499530</Id>
 					<Name><![CDATA[delay4]]></Name>
 					<X>1360</X><Y>-360</Y>
@@ -39285,216 +38394,6 @@ agent.стоимость = 100 ;]]></Code>
 					</QuantityColumn>
 				</EmbeddedObject>
 				<EmbeddedObject>
-					<Id>1743794499546</Id>
-					<Name><![CDATA[release3]]></Name>
-					<X>1460</X><Y>-290</Y>
-					<Label><X>-5</X><Y>-10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Release]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-							<ClassName><![CDATA[Release]]></ClassName>
-							<ItemName><![CDATA[1412336243154]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[releaseMode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourcePool]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[quantity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resources]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeBlocks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[movingGoHome]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskPolicyType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskPriority]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskMayPreemptOtherTasks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskPreemptionPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpUsageState]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onReleaseUnit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onWrapUpTerminated]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1743794499565</Id>
-					<Name><![CDATA[release5]]></Name>
-					<X>1460</X><Y>-480</Y>
-					<Label><X>-5</X><Y>-10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Release]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-							<ClassName><![CDATA[Release]]></ClassName>
-							<ItemName><![CDATA[1412336243154]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[releaseMode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourcePool]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[quantity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resources]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeBlocks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[movingGoHome]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskPolicyType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskPriority]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskMayPreemptOtherTasks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskPreemptionPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpUsageState]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onReleaseUnit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onWrapUpTerminated]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
 					<Id>1743794499584</Id>
 					<Name><![CDATA[мелкиеДеталиДополнительно]]></Name>
 					<X>1150</X><Y>-450</Y>
@@ -39537,114 +38436,6 @@ agent.стоимость = 100 ;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExitFalse]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1743794499595</Id>
-					<Name><![CDATA[release4]]></Name>
-					<X>1380</X><Y>-240</Y>
-					<Label><X>-5</X><Y>-10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Release]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-							<ClassName><![CDATA[Release]]></ClassName>
-							<ItemName><![CDATA[1412336243154]]></ItemName>
-						</GenericParameterSubstituteReference>
-						<GenericParameterSubstituteValue Class="CodeValue">
-							<Code><![CDATA[Заготовка]]></Code>
-						</GenericParameterSubstituteValue>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[releaseMode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourcePool]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[quantity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resources]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizeBlocks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[movingGoHome]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskPolicyType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskPriority]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskMayPreemptOtherTasks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpTaskPreemptionPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[wrapUpUsageState]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onReleaseUnit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onWrapUpTerminated]]></Name>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -53444,39 +52235,6 @@ Actual only when this block is configured to seize using (alternative) resource 
 			</Ports>
 			<Connectors>
 				<Connector>
-					<Id>1743794500971</Id>
-					<Name><![CDATA[connector2]]></Name>
-					<X>-2520</X><Y>-180</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[РаботникПроверяет]]></ClassName>
-						<ItemName><![CDATA[Обработка]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Delay]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[РаботникПроверяет]]></ClassName>
-						<ItemName><![CDATA[seize2]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Seize]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>2992</X><Y>502</Y></Point>
-						<Point><X>2960</X><Y>500</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
 					<Id>1743794500973</Id>
 					<Name><![CDATA[connector73]]></Name>
 					<X>430</X><Y>310</Y>
@@ -53484,16 +52242,6 @@ Actual only when this block is configured to seize using (alternative) resource 
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[РаботникПроверяет]]></ClassName>
-						<ItemName><![CDATA[seize2]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Seize]]></ClassName>
-						<ItemName><![CDATA[outTimeout]]></ItemName>
-					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[product_delivery3]]></PackageName>
 						<ClassName><![CDATA[РаботникПроверяет]]></ClassName>
@@ -53560,25 +52308,20 @@ Actual only when this block is configured to seize using (alternative) resource 
 						<ClassName><![CDATA[Queue]]></ClassName>
 						<ItemName><![CDATA[out]]></ItemName>
 					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[РаботникПроверяет]]></ClassName>
-						<ItemName><![CDATA[seize3]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Seize]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
+					<TargetId>1743794500969</TargetId>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>130</X><Y>250</Y></Point>
+						<Point><X>170</X><Y>250</Y></Point>
+						<Point><X>189</X><Y>250</Y></Point>
+						<Point><X>189</X><Y>-220</Y></Point>
+						<Point><X>170</X><Y>250</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1743794500979</Id>
 					<Name><![CDATA[connector]]></Name>
-					<X>400</X><Y>320</Y>
+					<X>472</X><Y>322</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53586,45 +52329,21 @@ Actual only when this block is configured to seize using (alternative) resource 
 					<SourceEmbeddedObjectReference>
 						<PackageName><![CDATA[product_delivery3]]></PackageName>
 						<ClassName><![CDATA[РаботникПроверяет]]></ClassName>
-						<ItemName><![CDATA[seize2]]></ItemName>
+						<ItemName><![CDATA[Обработка]]></ItemName>
 					</SourceEmbeddedObjectReference>
 					<SourceConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Seize]]></ClassName>
+						<ClassName><![CDATA[Delay]]></ClassName>
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetId>1743794500967</TargetId>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-20</X><Y>0</Y></Point>
-						<Point><X>-20</X><Y>-220</Y></Point>
-						<Point><X>0</X><Y>0</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1743794500981</Id>
-					<Name><![CDATA[connector1]]></Name>
-					<X>750</X><Y>570</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[product_delivery3]]></PackageName>
-						<ClassName><![CDATA[РаботникПроверяет]]></ClassName>
-						<ItemName><![CDATA[seize3]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Seize]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetId>1743794500969</TargetId>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>19</X><Y>0</Y></Point>
-						<Point><X>19</X><Y>-470</Y></Point>
-						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-32</X><Y>-2</Y></Point>
+						<Point><X>-72</X><Y>-2</Y></Point>
+						<Point><X>-92</X><Y>-2</Y></Point>
+						<Point><X>-92</X><Y>-222</Y></Point>
+						<Point><X>-72</X><Y>-2</Y></Point>
 					</Points>
 				</Connector>
 			</Connectors>
@@ -53784,448 +52503,6 @@ Actual only when this block is configured to seize using (alternative) resource 
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
 					<InitialLocationType>XYZ</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1743794500840</Id>
-					<Name><![CDATA[seize2]]></Name>
-					<X>400</X><Y>300</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Seize]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-							<ClassName><![CDATA[Seize]]></ClassName>
-							<ItemName><![CDATA[1412336243147]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[seizeFromOnePool]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceSets]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[seize2_resourceSets(agent)]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourcePool]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceQuantity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizePolicy]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[self.SEIZE_UNITS_ONE_BY_ONE]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[capacity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[maximumCapacity]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[true]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[sendResources]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationNode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationAttractor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationResource]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationX]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationZ]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[attachResources]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[entityLocationQueue]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[priority]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskMayPreemptOtherTasks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskPreemptionPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[terminatedTaskProcessing]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[terminatedTasksEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[suspendResumeEntities]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[customizeResourceChoice]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceChoiceCondition]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceSelectionMode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceRating]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceComparison]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskStartBlocksAreConnected]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskStartBlocks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[enableTimeout]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[true]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[timeout]]></Name>
-							<Value Class="CodeUnitValue">
-								<Code><![CDATA[seize2_timeout(agent)]]></Code>
-								<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[enablePreemption]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledUnitsBehavior]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledUnitsRelease]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[pushProtocol]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[restoreEntityLocationOnExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[forceStatisticsCollection]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExitTimeout]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExitPreempted]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onSeizeUnit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onPrepareUnit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onRemove]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onTaskTerminated]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[comparison]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onTaskSuspended]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onTaskResumed]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onUnitFinishedWrapUp]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-				</EmbeddedObject>
-				<EmbeddedObject>
-					<Id>1743794500894</Id>
-					<Name><![CDATA[seize3]]></Name>
-					<X>710</X><Y>550</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Seize]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-							<ClassName><![CDATA[Seize]]></ClassName>
-							<ItemName><![CDATA[1412336243147]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[seizeFromOnePool]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceSets]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[seize3_resourceSets(agent)]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourcePool]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceQuantity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[seizePolicy]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[self.SEIZE_UNITS_ONE_BY_ONE]]></Code>
-							</Value>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[capacity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[maximumCapacity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[sendResources]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationType]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationNode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationAttractor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationResource]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationX]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[destinationZ]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[attachResources]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[entityLocationQueue]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[priority]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskMayPreemptOtherTasks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskPreemptionPolicy]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[terminatedTaskProcessing]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[terminatedTasksEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[suspendResumeEntities]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[customizeResourceChoice]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceChoiceCondition]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceSelectionMode]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceRating]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[resourceComparison]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskStartBlocksAreConnected]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[taskStartBlocks]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[enableTimeout]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[timeout]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[enablePreemption]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledUnitsBehavior]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[canceledUnitsRelease]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[pushProtocol]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[restoreEntityLocationOnExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[forceStatisticsCollection]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onEnter]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExitTimeout]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExitPreempted]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onSeizeUnit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onPrepareUnit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onExit]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onRemove]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onTaskTerminated]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[comparison]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onTaskSuspended]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onTaskResumed]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[onUnitFinishedWrapUp]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>false</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
 					<XCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</XCode>
@@ -57716,7 +55993,7 @@ traceln("произовдство увеличилось");}]]></Action>
 						</RecurrenceCode>
 						<Condition><![CDATA[(товарПродан.get(1) + ТоварВзятВсервис.get(1) > МаксимальноеКоличествоСкважинРоссии/2) || (насосЧинят.size()>МаксимальноеКоличествоСкважинРоссии/3)]]></Condition>
 					</Properties>
-					<Action><![CDATA[traceln("уменьшение рынка " +time(), red);
+					<Action><![CDATA[//traceln("уменьшение рынка " +time(), red);
 ПрибавкаНасосовВМнсяц=(int)(ПрибавкаНасосовВМнсяц*0.8);
 увеличениеПаркаНасосов=увеличениеПаркаНасосов*0.8;
 поправка2=поправка2*1.5;
@@ -60209,8 +58486,8 @@ on real roads, and routes are created when vehicles start moving to destinations
 				<StopOption><![CDATA[Stop at specified time]]></StopOption>
 				<InitialDate><![CDATA[1414825200000]]></InitialDate>	
 				<InitialTime><![CDATA[0.0]]></InitialTime>	
-				<FinalDate><![CDATA[1418425200000]]></FinalDate>	
-				<FinalTime><![CDATA[1000.0]]></FinalTime>	
+				<FinalDate><![CDATA[1417525200000]]></FinalDate>	
+				<FinalTime><![CDATA[750.0]]></FinalTime>	
 			</ModelTimeProperties>
 			<BypassInitialScreen>true</BypassInitialScreen>
 		</SimulationExperiment>	
