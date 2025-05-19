@@ -5416,7 +5416,7 @@ if (завод.доляМассыДлинныхСекций >=0.99999999)
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[СтоимостьСозданияЕденицыОборудования*1.1/ставкаЦентробанкаДляТовара]]></Formula>
+						<Formula><![CDATA[СтоимостьСозданияЕденицыОборудования*1.4/ставкаЦентробанкаДляТовара]]></Formula>
 						<Value><![CDATA[0]]></Value>
 						<Color>-65536</Color>
 					</Properties>
@@ -6387,7 +6387,7 @@ C:\работа дмитрий\данные окрон и алмаз\данны�
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties TargetId="1743794837300" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[добВремяРасход*(товарПроданДочернейФирме)*стоимостьЕденицыТовара/3]]></Formula>
+						<Formula><![CDATA[добВремяРасход*(товарПроданДочернейФирме)*стоимостьЕденицыТовара]]></Formula>
 						<Color>-65536</Color>
 						<ValveIndex>1</ValveIndex>
 						<Points>
