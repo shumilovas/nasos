@@ -756,7 +756,7 @@
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[{200.0+триГодаНасосам,200.0,200}]]></InitialValue>
+						<InitialValue><![CDATA[{2000.0+триГодаНасосам,2000.0,2000}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
@@ -810,7 +810,7 @@
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[{300,300,300}]]></InitialValue>
+						<InitialValue><![CDATA[{3000,3000,3000}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
@@ -3755,11 +3755,11 @@ if  (времяОтрицательных2_1 - времяОтрицательн�
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1742112000000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[7500]]></Code>
+							<Code><![CDATA[6343]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[3000]]></Code>
+							<Code><![CDATA[0.00001]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
@@ -3867,7 +3867,7 @@ getExperimentHost().saveSnapshot(
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[if (пульсирующийПотокНасосов.get(1)>9.3) поправка2 = поправка2*(пульсирующийПотокНасосов.get(1)/4);
+					<Action><![CDATA[if (пульсирующийПотокНасосов.get(1)>9.3) поправка2 = поправка2*(пульсирующийПотокНасосов.get(1)/3);
 if (старыеНасосыСноваПродаются.get(1)>4.7) поправка4 = поправка4*(старыеНасосыСноваПродаются.get(1)/5.3);
 if (повтороноеИспользованиеНасосов.get(1)>5) поправка4 = поправка4*(повтороноеИспользованиеНасосов.get(1)/5);
 if (пульсирующийПотокНасосов.get(1)<2.5) поправка2 = поправка2/1.4;
@@ -3914,6 +3914,115 @@ if (time()>365*10*24) семьЛет=2.0;]]></Description>
 						</RecurrenceCode>
 						<Condition><![CDATA[if (time()>365*3*24)]]></Condition>
 					</Properties>
+				</Event>
+				<Event>
+					<Id>1748352735770</Id>
+					<Name><![CDATA[насосыВпотоке1]]></Name>
+					<X>100</X><Y>500</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1747900800000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[6330]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[if (пульсирующийПотокНасосов.get(1)>9.3) поправка2 = поправка2*(пульсирующийПотокНасосов.get(1)/4);
+if (старыеНасосыСноваПродаются.get(1)>4.7) поправка4 = поправка4*(старыеНасосыСноваПродаются.get(1)/5.3);
+if (повтороноеИспользованиеНасосов.get(1)>5) поправка4 = поправка4*(повтороноеИспользованиеНасосов.get(1)/5);
+if (пульсирующийПотокНасосов.get(1)<2.5) поправка2 = поправка2/1.4;
+if (старыеНасосыСноваПродаются.get(1)<0.2) поправка4 = поправка4/1.3;
+if (повтороноеИспользованиеНасосов.get(1)<0.4) поправка4 = поправка4/1.3;
+
+]]></Action>
+				</Event>
+				<Event>
+					<Id>1748352833309</Id>
+					<Name><![CDATA[насосыВпотоке2]]></Name>
+					<X>100</X><Y>500</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1747900800000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[6343]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[300]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MILLISECOND]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[if (пульсирующийПотокНасосов.get(1)>9.3) поправка2 = поправка2*(пульсирующийПотокНасосов.get(1)/4);
+if (старыеНасосыСноваПродаются.get(1)>4.7) поправка4 = поправка4*(старыеНасосыСноваПродаются.get(1)/5.3);
+if (повтороноеИспользованиеНасосов.get(1)>5) поправка4 = поправка4*(повтороноеИспользованиеНасосов.get(1)/5);
+if (пульсирующийПотокНасосов.get(1)<2.5) поправка2 = поправка2/1.4;
+if (старыеНасосыСноваПродаются.get(1)<0.2) поправка4 = поправка4/1.3;
+if (повтороноеИспользованиеНасосов.get(1)<0.4) поправка4 = поправка4/1.3;
+
+]]></Action>
+				</Event>
+				<Event>
+					<Id>1748354090910</Id>
+					<Name><![CDATA[отслеживаниеНакопителей]]></Name>
+					<X>-60</X><Y>400</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1748419200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[if stock.get(1)<10 поправка=поправка/2;
+if ЗановоИспользуютсяСтарыеНасосы.get(1)<10 
+]]></Action>
 				</Event>
 			</Events>
 			<AgentLinks>
