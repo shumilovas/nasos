@@ -3585,7 +3585,7 @@ self.restart();}
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[if ((товарПродан.get(1) + ТоварВзятВсервис.get(1) < МаксимальноеКоличествоСкважинРоссии/2) || (насосЧинят.size() < МаксимальноеКоличествоСкважинРоссии/3) )
+					<Action><![CDATA[if ((товарПродан.get(1) + ТоварВзятВсервис.get(1) < МаксимальноеКоличествоСкважинРоссии/2) )
 {количествоНасосов =1.05*количествоНасосов;
 traceln("произовдство увеличилось");}]]></Action>
 				</Event>
@@ -3788,48 +3788,6 @@ if (времяОтрицательных1_1 - времяОтрицательны
 					<Action><![CDATA[времяОтрицательных2_1=time();
 if  (времяОтрицательных2_1 - времяОтрицательных2 >100) stopSimulation();
 ]]></Action>
-				</Event>
-				<Event>
-					<Id>1747812387860</Id>
-					<Name><![CDATA[снепшоты]]></Name>
-					<X>151</X><Y>34</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="timeout" Mode="cyclic">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</Timeout>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
-						</Rate>
-						<OccurrenceAtTime>true</OccurrenceAtTime>
-						<OccurrenceDate>1742112000000</OccurrenceDate>
-						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[6343]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</OccurrenceTime>
-						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[0.00001]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</RecurrenceCode>
-						<Condition><![CDATA[false]]></Condition>
-					</Properties>
-					<Action><![CDATA[// snep
-int n=1;
-String  s = "F " + n;
-getExperimentHost().saveSnapshot(
-  s + ".als",
-  () -> traceln("Saved! " + s),
-  e -> {
-    traceln("Error!");
-    e.printStackTrace();
-  }
-);
-++n;]]></Action>
 				</Event>
 				<Event>
 					<Id>1747812387881</Id>
@@ -4112,7 +4070,8 @@ if (time()%2!=0) stockNew = stock.get(1);
 if (stockNew - stockOld < -0.5) 
 	{
 	поправка=поправка/1.1;
-	traceln("stockNewOld time " +time());]]></Action>
+	traceln("stockNewOld time " +time());
+	}]]></Action>
 				</Event>
 			</Events>
 			<AgentLinks>
