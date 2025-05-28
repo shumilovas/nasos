@@ -321,6 +321,30 @@
 						</InitialValue>
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1748440232618</Id>
+					<Name><![CDATA[stockNew]]></Name>
+					<X>-230</X><Y>200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1748440257128</Id>
+					<Name><![CDATA[stockOld]]></Name>
+					<X>-250</X><Y>250</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
 				<Variable Class="AuxVariable">
 					<Id>1747812388815</Id>
 					<Name><![CDATA[затратыПродажиЕденицыОборудования]]></Name>
@@ -942,7 +966,7 @@
 									<PackageName><![CDATA[отдельносервисагент]]></PackageName>
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[(СГлавногоАгентаПотокПродаж.get(1)*(1+увеличениеПослеСобытия)*поправка+увеличениеПаркаНасосов)/(3.79*поправка2)]]></Expression>
+								<Expression><![CDATA[(СГлавногоАгентаПотокПродаж.get(1)*(1+увеличениеПослеСобытия)*поправка+увеличениеПаркаНасосов)/(3.85*поправка2)]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -1441,7 +1465,7 @@
 									<PackageName><![CDATA[отдельносервисагент]]></PackageName>
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[повтороноеИспользованиеНасосов.get(1)/1.395]]></Expression>
+								<Expression><![CDATA[повтороноеИспользованиеНасосов.get(1)/1.295]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -3561,7 +3585,7 @@ self.restart();}
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[if ((товарПродан.get(1) + ТоварВзятВсервис.get(1) < МаксимальноеКоличествоСкважинРоссии/2) || (насосЧинят.size() < МаксимальноеКоличествоСкважинРоссии/3) )
+					<Action><![CDATA[if ((товарПродан.get(1) + ТоварВзятВсервис.get(1) < МаксимальноеКоличествоСкважинРоссии/2) )
 {количествоНасосов =1.05*количествоНасосов;
 traceln("произовдство увеличилось");}]]></Action>
 				</Event>
@@ -3764,48 +3788,6 @@ if (времяОтрицательных1_1 - времяОтрицательны
 					<Action><![CDATA[времяОтрицательных2_1=time();
 if  (времяОтрицательных2_1 - времяОтрицательных2 >100) stopSimulation();
 ]]></Action>
-				</Event>
-				<Event>
-					<Id>1747812387860</Id>
-					<Name><![CDATA[снепшоты]]></Name>
-					<X>151</X><Y>34</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="timeout" Mode="cyclic">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</Timeout>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
-						</Rate>
-						<OccurrenceAtTime>true</OccurrenceAtTime>
-						<OccurrenceDate>1742112000000</OccurrenceDate>
-						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[6343]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</OccurrenceTime>
-						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[0.00001]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</RecurrenceCode>
-						<Condition><![CDATA[false]]></Condition>
-					</Properties>
-					<Action><![CDATA[// snep
-int n=1;
-String  s = "F " + n;
-getExperimentHost().saveSnapshot(
-  s + ".als",
-  () -> traceln("Saved! " + s),
-  e -> {
-    traceln("Error!");
-    e.printStackTrace();
-  }
-);
-++n;]]></Action>
 				</Event>
 				<Event>
 					<Id>1747812387881</Id>
@@ -4041,7 +4023,40 @@ if (повтороноеИспользованиеНасосов.get(1)<0.4) п�
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1748419200000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[2700]]></Code>
+							<Code><![CDATA[2450]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[10]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[if (stock.get(1)<2) поправка=поправка/1.1;
+if (ЗановоИспользуютсяСтарыеНасосы.get(1)<2) variable=variable/1.1;
+]]></Action>
+				</Event>
+				<Event>
+					<Id>1748440274360</Id>
+					<Name><![CDATA[stockNewOld]]></Name>
+					<X>-250</X><Y>220</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1748505600000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[99]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -4050,9 +4065,13 @@ if (повтороноеИспользованиеНасосов.get(1)<0.4) п�
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[if (stock.get(1)<10) поправка=поправка/2;
-if (ЗановоИспользуютсяСтарыеНасосы.get(1)<10) variable=variable/2;
-]]></Action>
+					<Action><![CDATA[if (time()%2==0) stockOld = stock.get(1);
+if (time()%2!=0) stockNew = stock.get(1);
+if (stockNew - stockOld < -0.5) 
+	{
+	поправка=поправка/1.1;
+	traceln("stockNewOld time " +time());
+	}]]></Action>
 				</Event>
 			</Events>
 			<AgentLinks>

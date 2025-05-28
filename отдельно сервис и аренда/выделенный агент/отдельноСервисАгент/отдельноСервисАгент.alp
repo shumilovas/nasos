@@ -1368,7 +1368,7 @@
 									<PackageName><![CDATA[отдельносервисагент]]></PackageName>
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[триГодаНасосам*пульсирующийПотокНасосов.get(1)*(1+увеличениеПослеСобытия)/(поправка4*0.6)]]></Expression>
+								<Expression><![CDATA[триГодаНасосам*пульсирующийПотокНасосов.get(1)*(1+увеличениеПослеСобытия)/(поправка4*0.55)]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -1465,7 +1465,7 @@
 									<PackageName><![CDATA[отдельносервисагент]]></PackageName>
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[повтороноеИспользованиеНасосов.get(1)/1.295]]></Expression>
+								<Expression><![CDATA[повтороноеИспользованиеНасосов.get(1)/1.195]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -4056,7 +4056,7 @@ if (ЗановоИспользуютсяСтарыеНасосы.get(1)<2) varia
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1748505600000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[99]]></Code>
+							<Code><![CDATA[999]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -4065,13 +4065,17 @@ if (ЗановоИспользуютсяСтарыеНасосы.get(1)<2) varia
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[if (time()%2==0) stockOld = stock.get(1);
-if (time()%2!=0) stockNew = stock.get(1);
-if (stockNew - stockOld < -0.5) 
+					<Action><![CDATA[if (stock.get(1)>0 )
 	{
-	поправка=поправка/1.1;
-	traceln("stockNewOld time " +time());
-	}]]></Action>
+	if (time()%2==0) stockOld = stock.get(1);
+	if (time()%2!=0) stockNew = stock.get(1);
+	if (stockNew - stockOld < -0.8) 
+		{
+		поправка=поправка/1.1;
+		traceln("stockNewOld time " +time());
+		}
+	}
+else traceln(" minus stock time " + time());]]></Action>
 				</Event>
 			</Events>
 			<AgentLinks>
