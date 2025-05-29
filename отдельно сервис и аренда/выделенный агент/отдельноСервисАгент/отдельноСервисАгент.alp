@@ -345,6 +345,36 @@
 						<Type><![CDATA[double]]></Type>        
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1748519457729</Id>
+					<Name><![CDATA[ТоварВзятВсервисOld]]></Name>
+					<X>-100</X><Y>200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1748519483961</Id>
+					<Name><![CDATA[ТоварВзятВсервисNew]]></Name>
+					<X>-90</X><Y>230</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[1]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
 				<Variable Class="AuxVariable">
 					<Id>1747812388815</Id>
 					<Name><![CDATA[затратыПродажиЕденицыОборудования]]></Name>
@@ -4056,7 +4086,7 @@ if (ЗановоИспользуютсяСтарыеНасосы.get(1)<2) varia
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1748505600000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[111]]></Code>
+							<Code><![CDATA[2999]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -4067,9 +4097,17 @@ if (ЗановоИспользуютсяСтарыеНасосы.get(1)<2) varia
 					</Properties>
 					<Action><![CDATA[if (stock.get(1)>0 )
 	{
-	if (time()%2==0) stockOld = stock.get(1);
-	if (time()%2!=0) stockNew = stock.get(1);
-	if (stockNew - stockOld < -0.4) 
+	if (time()%2==0) 
+		{
+		stockOld = stock.get(1);
+		ТоварВзятВсервисOld = ТоварВзятВсервис.get(1);
+		}
+	if (time()%2!=0) 
+		{
+		stockNew = stock.get(1);
+		ТоварВзятВсервисNew = ТоварВзятВсервис.get(1);
+		}
+	if (stockNew - stockOld < -0.4 & ТоварВзятВсервисNew - ТоварВзятВсервисOld > 0) 
 		{
 		поправка=поправка/1.023;
 		traceln("stockNewOld time " +time());
