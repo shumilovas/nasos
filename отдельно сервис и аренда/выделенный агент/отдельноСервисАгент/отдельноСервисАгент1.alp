@@ -7,9 +7,9 @@
 <AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.1.202408021040" AlpVersion="8.9.1">
 <Model>
 	<Id>1747812281948</Id>
-	<Name><![CDATA[отдельноСервисАгент]]></Name>
+	<Name><![CDATA[отдельноСервисАгент1]]></Name>
 	<EngineVersion>6</EngineVersion>
-	<JavaPackageName><![CDATA[отдельносервисагент]]></JavaPackageName>
+	<JavaPackageName><![CDATA[отдельносервисагент2]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Hour]]></ModelTimeUnit>
 	<Dimensions>
 		<!--   =========   Dimension   ========  -->
@@ -306,6 +306,90 @@
 						</InitialValue>
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1748354229782</Id>
+					<Name><![CDATA[variable]]></Name>
+					<X>-90</X><Y>480</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[1]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1748440232618</Id>
+					<Name><![CDATA[stockNew]]></Name>
+					<X>-230</X><Y>200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1748440257128</Id>
+					<Name><![CDATA[stockOld]]></Name>
+					<X>-250</X><Y>250</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1748519457729</Id>
+					<Name><![CDATA[ТоварВзятВсервисOld]]></Name>
+					<X>-100</X><Y>200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1748519483961</Id>
+					<Name><![CDATA[ТоварВзятВсервисNew]]></Name>
+					<X>-90</X><Y>230</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[1]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1748557371254</Id>
+					<Name><![CDATA[variable1]]></Name>
+					<X>180</X><Y>70</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[1]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
 				<Variable Class="AuxVariable">
 					<Id>1747812388815</Id>
 					<Name><![CDATA[затратыПродажиЕденицыОборудования]]></Name>
@@ -441,7 +525,7 @@
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 						</Array>
@@ -464,7 +548,7 @@
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 						</Array>
@@ -482,11 +566,11 @@
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[{1000,1000,1000}]]></InitialValue>
+						<InitialValue><![CDATA[{3000,3000,3000}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 						</Array>
@@ -507,7 +591,7 @@
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 						</Array>
@@ -528,7 +612,7 @@
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 						</Array>
@@ -550,7 +634,7 @@
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Деньги]]></ClassName>
 							</Dimension>
 						</Array>
@@ -572,7 +656,7 @@
 						<Color>-16711681</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Деньги]]></ClassName>
 							</Dimension>
 						</Array>
@@ -662,7 +746,7 @@
 						<Color>-16711681</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Деньги]]></ClassName>
 							</Dimension>
 						</Array>
@@ -684,7 +768,7 @@
 						<Color>-65281</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Деньги]]></ClassName>
 							</Dimension>
 						</Array>
@@ -706,7 +790,7 @@
 						<Color>-6632142</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Деньги]]></ClassName>
 							</Dimension>
 						</Array>
@@ -756,11 +840,11 @@
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[{200.0+триГодаНасосам,200.0,200}]]></InitialValue>
+						<InitialValue><![CDATA[{2000.0+триГодаНасосам,2000.0,2000}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 						</Array>
@@ -810,11 +894,11 @@
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<InitialValue><![CDATA[{300,300,300}]]></InitialValue>
+						<InitialValue><![CDATA[{3000,3000,3000}]]></InitialValue>
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 						</Array>
@@ -836,7 +920,7 @@
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 						</Array>
@@ -855,12 +939,12 @@
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[0.45*СГлавногоАгентаПотокПродаж.get(1)]]></Expression>
@@ -887,12 +971,12 @@
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[количествоНасосов]]></Expression>
@@ -919,15 +1003,16 @@
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[(СГлавногоАгентаПотокПродаж.get(1)*(1+увеличениеПослеСобытия)*поправка+увеличениеПаркаНасосов)/(3.79*поправка2)]]></Expression>
+								<Expression><![CDATA[(СГлавногоАгентаПотокПродаж.get(1)*(1+увеличениеПослеСобытия)*поправка+увеличениеПаркаНасосов)/(2.82
+*поправка2)]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -950,12 +1035,12 @@
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[СГлавногоАгентаПотокПродаж.get(1)*0.33*0.4/(24*365)]]></Expression>
@@ -981,12 +1066,12 @@
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[СГлавногоАгентаПотокПродаж.get(1)*0.33*0.6/(24*365)]]></Expression>
@@ -1012,12 +1097,12 @@
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Деньги]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Деньги]]></ClassName>
 									<ItemName><![CDATA[заемные]]></ItemName>
 								</Coordinate>
@@ -1045,12 +1130,12 @@
 						<Color>-16711681</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Деньги]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Деньги]]></ClassName>
 									<ItemName><![CDATA[заемные]]></ItemName>
 								</Coordinate>
@@ -1058,7 +1143,7 @@
 							</CustomExpression>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Деньги]]></ClassName>
 								</Coordinate>
 								<Expression><![CDATA[0]]></Expression>
@@ -1085,12 +1170,12 @@
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Деньги]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Деньги]]></ClassName>
 									<ItemName><![CDATA[заемные]]></ItemName>
 								</Coordinate>
@@ -1117,12 +1202,12 @@
 						<Color>-65281</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Деньги]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Деньги]]></ClassName>
 									<ItemName><![CDATA[заемные]]></ItemName>
 								</Coordinate>
@@ -1150,12 +1235,12 @@
 						<Color>-6632142</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Деньги]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Деньги]]></ClassName>
 									<ItemName><![CDATA[заемные]]></ItemName>
 								</Coordinate>
@@ -1203,12 +1288,12 @@
 						<Color>-65281</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Деньги]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Деньги]]></ClassName>
 									<ItemName><![CDATA[заемные]]></ItemName>
 								</Coordinate>
@@ -1236,12 +1321,12 @@
 						<Color>-6632142</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Деньги]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Деньги]]></ClassName>
 									<ItemName><![CDATA[свои]]></ItemName>
 								</Coordinate>
@@ -1269,12 +1354,12 @@
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Деньги]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Деньги]]></ClassName>
 									<ItemName><![CDATA[заемные]]></ItemName>
 								</Coordinate>
@@ -1321,15 +1406,15 @@
 						<Color>-65281</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[триГодаНасосам*пульсирующийПотокНасосов.get(1)*(1+увеличениеПослеСобытия)/(поправка4*0.3)]]></Expression>
+								<Expression><![CDATA[variable1*триГодаНасосам*пульсирующийПотокНасосов.get(1)*(1+увеличениеПослеСобытия)/(поправка4*0.125)]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -1354,15 +1439,15 @@
 						<Color>-65536</Color>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[триГодаНасосам*пульсирующийПотокНасосов.get(1)*(1+увеличениеПослеСобытия)/(поправка4*4)]]></Expression>
+								<Expression><![CDATA[variable*триГодаНасосам*пульсирующийПотокНасосов.get(1)*(1+увеличениеПослеСобытия)/(поправка4*2.1*variable1)]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -1386,15 +1471,15 @@
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[0.45*СГлавногоАгентаПотокПродаж.get(1)]]></Expression>
+								<Expression><![CDATA[0.47*СГлавногоАгентаПотокПродаж.get(1)]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -1418,15 +1503,15 @@
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 							<CustomExpression>
 								<Coordinate>
-									<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[повтороноеИспользованиеНасосов.get(1)/1.095]]></Expression>
+								<Expression><![CDATA[variable1*повтороноеИспользованиеНасосов.get(1)/1.099]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -1450,7 +1535,7 @@
 						<Color/>
 						<Array>
 							<Dimension>
-								<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 								<ClassName><![CDATA[Металлургия]]></ClassName>
 							</Dimension>
 						</Array>
@@ -2966,6 +3051,66 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
+				<Link SourceId="1748354229782" TargetId="1747812388323" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>419</X><Y>-85</Y></Direction>
+					<Id>1748354251753</Id>
+					<Name><![CDATA[variable - старыеНасосыСноваПродаются]]></Name>
+					<X>-90</X><Y>480</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1748557371254" TargetId="1747819751879" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-130</X><Y>305</Y></Direction>
+					<Id>1748557480152</Id>
+					<Name><![CDATA[variable1 - flow1]]></Name>
+					<X>180</X><Y>70</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1748557371254" TargetId="1747812388323" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>149</X><Y>325</Y></Direction>
+					<Id>1748558777295</Id>
+					<Name><![CDATA[variable1 - старыеНасосыСноваПродаются]]></Name>
+					<X>180</X><Y>70</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1748557371254" TargetId="1747812388303" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>281</X><Y>318</Y></Direction>
+					<Id>1748559313869</Id>
+					<Name><![CDATA[variable1 - повтороноеИспользованиеНасосов]]></Name>
+					<X>180</X><Y>70</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
 			</Dependences>
 			<Connectors>
 				<Connector>
@@ -2977,7 +3122,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[насосСтариться]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -2987,7 +3132,7 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[новыеНасосы]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -3010,7 +3155,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[изначальныеНасосы]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -3020,7 +3165,7 @@
 						<ItemName><![CDATA[out]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[ож]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -3043,7 +3188,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[ож]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -3053,7 +3198,7 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[насосСтариться]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -3076,7 +3221,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[delay]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -3086,7 +3231,7 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[ож]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -3109,7 +3254,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[насосЧинят]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -3119,7 +3264,7 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[queue]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -3142,7 +3287,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[queue]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -3152,7 +3297,7 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[delay]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -3175,7 +3320,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[delay1]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -3185,7 +3330,7 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[queue1]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -3208,7 +3353,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[queue1]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -3218,7 +3363,7 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[насосЧинят]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -3241,7 +3386,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[delay2]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -3251,7 +3396,7 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[queue2]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -3274,7 +3419,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[queue2]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -3284,7 +3429,7 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[delay1]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -3307,7 +3452,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[насосСломан]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -3317,7 +3462,7 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[queue3]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -3340,7 +3485,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[queue3]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -3350,7 +3495,7 @@
 						<ItemName><![CDATA[in]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[delay2]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -3373,7 +3518,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[новыеНасосыИзЗавод]]></ItemName>
 					</SourceEmbeddedObjectReference>
@@ -3383,7 +3528,7 @@
 						<ItemName><![CDATA[out]]></ItemName>
 					</SourceConnectableItemReference>
 					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[отдельносервисагент]]></PackageName>
+						<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
 						<ItemName><![CDATA[насосСтариться]]></ItemName>
 					</TargetEmbeddedObjectReference>
@@ -3428,7 +3573,7 @@
 						</RecurrenceCode>
 						<Condition><![CDATA[((увеличениеПаркаНасосов<1) &&( time()>100))]]></Condition>
 					</Properties>
-					<Action><![CDATA[if (увеличениеПаркаНасосов<0.1)увеличениеПаркаНасосов=ПоправкаДляСобытия1;
+					<Action><![CDATA[if (увеличениеПаркаНасосов<0.1 ||  (насосЧинят.size() < МаксимальноеКоличествоСкважинРоссии/3) )увеличениеПаркаНасосов=ПоправкаДляСобытия1;
 {if (увеличениеПослеСобытия>12) увеличениеПослеСобытия=ПоправкаДляСобытия2;
 if (увеличениеПослеСобытия<0.05) увеличениеПослеСобытия=ПоправкаДляСобытия2;
 self.restart();}
@@ -3531,7 +3676,7 @@ self.restart();}
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[if ((товарПродан.get(1) + ТоварВзятВсервис.get(1) < МаксимальноеКоличествоСкважинРоссии/2) || (насосЧинят.size() < МаксимальноеКоличествоСкважинРоссии/3) )
+					<Action><![CDATA[if ((товарПродан.get(1) + ТоварВзятВсервис.get(1) < МаксимальноеКоличествоСкважинРоссии/2) )
 {количествоНасосов =1.05*количествоНасосов;
 traceln("произовдство увеличилось");}]]></Action>
 				</Event>
@@ -3736,48 +3881,6 @@ if  (времяОтрицательных2_1 - времяОтрицательн�
 ]]></Action>
 				</Event>
 				<Event>
-					<Id>1747812387860</Id>
-					<Name><![CDATA[снепшоты]]></Name>
-					<X>151</X><Y>34</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties TriggerType="timeout" Mode="cyclic">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</Timeout>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
-						</Rate>
-						<OccurrenceAtTime>true</OccurrenceAtTime>
-						<OccurrenceDate>1742112000000</OccurrenceDate>
-						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[7500]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</OccurrenceTime>
-						<RecurrenceCode Class="CodeUnitValue">
-							<Code><![CDATA[3000]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</RecurrenceCode>
-						<Condition><![CDATA[false]]></Condition>
-					</Properties>
-					<Action><![CDATA[// snep
-int n=1;
-String  s = "F " + n;
-getExperimentHost().saveSnapshot(
-  s + ".als",
-  () -> traceln("Saved! " + s),
-  e -> {
-    traceln("Error!");
-    e.printStackTrace();
-  }
-);
-++n;]]></Action>
-				</Event>
-				<Event>
 					<Id>1747812387881</Id>
 					<Name><![CDATA[eстарыеНасосыВновьИспользуютсяЧерез1000дней]]></Name>
 					<X>39</X><Y>455</Y>
@@ -3867,10 +3970,10 @@ getExperimentHost().saveSnapshot(
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[if (пульсирующийПотокНасосов.get(1)>8) поправка2 = поправка2*(пульсирующийПотокНасосов.get(1)/3);
-if (старыеНасосыСноваПродаются.get(1)>5) поправка4 = поправка4*(старыеНасосыСноваПродаются.get(1)/5);
+					<Action><![CDATA[if (пульсирующийПотокНасосов.get(1)>9.3) поправка2 = поправка2*(пульсирующийПотокНасосов.get(1)/3);
+if (старыеНасосыСноваПродаются.get(1)>4.7) поправка4 = поправка4*(старыеНасосыСноваПродаются.get(1)/5.3);
 if (повтороноеИспользованиеНасосов.get(1)>5) поправка4 = поправка4*(повтороноеИспользованиеНасосов.get(1)/5);
-if (пульсирующийПотокНасосов.get(1)<2) поправка2 = поправка2/1.5;
+if (пульсирующийПотокНасосов.get(1)<1.5) поправка2 = поправка2/1.4;
 if (старыеНасосыСноваПродаются.get(1)<0.2) поправка4 = поправка4/1.3;
 if (повтороноеИспользованиеНасосов.get(1)<0.4) поправка4 = поправка4/1.3;
 
@@ -3914,6 +4017,297 @@ if (time()>365*10*24) семьЛет=2.0;]]></Description>
 						</RecurrenceCode>
 						<Condition><![CDATA[if (time()>365*3*24)]]></Condition>
 					</Properties>
+				</Event>
+				<Event>
+					<Id>1748352735770</Id>
+					<Name><![CDATA[насосыВпотоке1]]></Name>
+					<X>100</X><Y>500</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1747900800000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[6330]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[if (пульсирующийПотокНасосов.get(1)>9.3) поправка2 = поправка2*(пульсирующийПотокНасосов.get(1)/4);
+if (старыеНасосыСноваПродаются.get(1)>4.7) поправка4 = поправка4*(старыеНасосыСноваПродаются.get(1)/5.3);
+if (повтороноеИспользованиеНасосов.get(1)>5) поправка4 = поправка4*(повтороноеИспользованиеНасосов.get(1)/5);
+if (пульсирующийПотокНасосов.get(1)<2.5) поправка2 = поправка2/1.4;
+if (старыеНасосыСноваПродаются.get(1)<0.2) поправка4 = поправка4/1.3;
+if (повтороноеИспользованиеНасосов.get(1)<0.4) поправка4 = поправка4/1.3;
+
+]]></Action>
+				</Event>
+				<Event>
+					<Id>1748352833309</Id>
+					<Name><![CDATA[насосыВпотоке2]]></Name>
+					<X>100</X><Y>500</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1747900800000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[6343]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[300]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MILLISECOND]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[if (пульсирующийПотокНасосов.get(1)>9.3) поправка2 = поправка2*(пульсирующийПотокНасосов.get(1)/4);
+if (старыеНасосыСноваПродаются.get(1)>4.7) поправка4 = поправка4*(старыеНасосыСноваПродаются.get(1)/5.3);
+if (повтороноеИспользованиеНасосов.get(1)>5) поправка4 = поправка4*(повтороноеИспользованиеНасосов.get(1)/5);
+if (пульсирующийПотокНасосов.get(1)<2.5) поправка2 = поправка2/1.4;
+if (старыеНасосыСноваПродаются.get(1)<0.2) поправка4 = поправка4/1.3;
+if (повтороноеИспользованиеНасосов.get(1)<0.4) поправка4 = поправка4/1.3;
+
+]]></Action>
+				</Event>
+				<Event>
+					<Id>1748354090910</Id>
+					<Name><![CDATA[отслеживаниеНакопителей]]></Name>
+					<X>-60</X><Y>400</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1748419200000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[2450]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[10]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[if (stock.get(1)<2) поправка=поправка/1.1;
+if (ЗановоИспользуютсяСтарыеНасосы.get(1)<2) variable=variable/1.1;
+]]></Action>
+				</Event>
+				<Event>
+					<Id>1748440274360</Id>
+					<Name><![CDATA[stockNewOld]]></Name>
+					<X>-250</X><Y>220</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1748505600000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[2099]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[if (time()<10500)
+	{
+	if (time()%2==0) 
+		{
+		stockOld = stock.get(1);
+		ТоварВзятВсервисOld = ТоварВзятВсервис.get(1);
+		}
+	if (time()%2!=0) 
+		{
+		stockNew = stock.get(1);
+		ТоварВзятВсервисNew = ТоварВзятВсервис.get(1);
+		if (stock.get(1)>0 )
+		{	
+		if (stockNew - stockOld < -0.2 & ТоварВзятВсервисNew - ТоварВзятВсервисOld > 0) 
+			{
+			поправка=поправка/1.00035;
+			traceln("stockNewOld time " +time());
+			}
+		}
+	else traceln(" minus stock time " + time());
+		}
+		
+	}]]></Action>
+				</Event>
+				<Event>
+					<Id>1748521960115</Id>
+					<Name><![CDATA[снепшоты]]></Name>
+					<X>151</X><Y>34</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1742112000000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[9300]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[20]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[// snep
+int n=1;
+String  s = "F " + n;
+getExperimentHost().saveSnapshot(
+  s + ".als",
+  () -> traceln("Saved! " + s),
+  e -> {
+    traceln("Error!");
+    e.printStackTrace();
+  }
+);
+++n;]]></Action>
+				</Event>
+				<Event>
+					<Id>1748557393081</Id>
+					<Name><![CDATA[event]]></Name>
+					<X>110</X><Y>100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1748592000000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[3100]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[variable1=1.25]]></Action>
+				</Event>
+				<Event>
+					<Id>1748765263259</Id>
+					<Name><![CDATA[stockNewOld1]]></Name>
+					<X>-250</X><Y>220</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1748505600000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[8099]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[if (time()%2==0) 
+	{
+	stockOld = stock.get(1);
+	ТоварВзятВсервисOld = ТоварВзятВсервис.get(1);
+	}
+if (time()%2!=0) 
+	{
+	stockNew = stock.get(1);
+	ТоварВзятВсервисNew = ТоварВзятВсервис.get(1);
+	}
+if (stock.get(1)>0 )
+	{	
+	if (stockNew - stockOld < -0.2 & ТоварВзятВсервисNew - ТоварВзятВсервисOld > 0) 
+		{
+		поправка=поправка/1.002;
+		traceln("stockNewOld time " +time());
+		}
+		else 
+		{
+		if (time()>10000) поправка=поправка*1.0001;
+		}
+	}
+else traceln(" minus stock time " + time());
+	
+	
+]]></Action>
 				</Event>
 			</Events>
 			<AgentLinks>
