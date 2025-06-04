@@ -1011,13 +1011,14 @@
 									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[(СГлавногоАгентаПотокПродаж.get(1)*(1+увеличениеПослеСобытия)*поправка+увеличениеПаркаНасосов)/(2.82
+								<Expression><![CDATA[(СГлавногоАгентаПотокПродаж.get(1)*(1+увеличениеПослеСобытия)*поправка+увеличениеПаркаНасосов)/(2.7
 *поправка2)]]></Expression>
 							</CustomExpression>
 						</Array>
-						<ValveIndex>1</ValveIndex>
+						<ValveIndex>2</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>172</X><Y>16</Y></Point>
 							<Point><X>223</X><Y>21</Y></Point>
 							<Point><X>463</X><Y>-9</Y></Point>
 						</Points>
@@ -1414,7 +1415,7 @@
 									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[variable1*триГодаНасосам*пульсирующийПотокНасосов.get(1)*(1+увеличениеПослеСобытия)/(поправка4*0.125)]]></Expression>
+								<Expression><![CDATA[variable1*триГодаНасосам*пульсирующийПотокНасосов.get(1)*(1+увеличениеПослеСобытия)/(поправка4*0.11)]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -1447,12 +1448,13 @@
 									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[variable*триГодаНасосам*пульсирующийПотокНасосов.get(1)*(1+увеличениеПослеСобытия)/(поправка4*2.1*variable1)]]></Expression>
+								<Expression><![CDATA[variable*триГодаНасосам*пульсирующийПотокНасосов.get(1)*(1+увеличениеПослеСобытия)/(поправка4*2.0*variable1)]]></Expression>
 							</CustomExpression>
 						</Array>
-						<ValveIndex>1</ValveIndex>
+						<ValveIndex>2</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>98</X><Y>-4</Y></Point>
 							<Point><X>230</X><Y>-10</Y></Point>
 							<Point><X>424</X><Y>-74</Y></Point>
 						</Points>
@@ -1511,7 +1513,7 @@
 									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[variable1*повтороноеИспользованиеНасосов.get(1)/1.099]]></Expression>
+								<Expression><![CDATA[variable1*повтороноеИспользованиеНасосов.get(1)/1.194]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
