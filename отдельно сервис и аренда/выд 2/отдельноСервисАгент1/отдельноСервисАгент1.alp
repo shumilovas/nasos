@@ -1011,7 +1011,7 @@
 									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[(СГлавногоАгентаПотокПродаж.get(1)*(1+увеличениеПослеСобытия)*поправка+увеличениеПаркаНасосов)/(2.25
+								<Expression><![CDATA[(СГлавногоАгентаПотокПродаж.get(1)*(1+увеличениеПослеСобытия)*поправка+увеличениеПаркаНасосов)/(2.2
 *поправка2)]]></Expression>
 							</CustomExpression>
 						</Array>
@@ -1415,7 +1415,7 @@
 									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[variable1*триГодаНасосам*пульсирующийПотокНасосов.get(1)*(1+увеличениеПослеСобытия)/(поправка4*0.105)]]></Expression>
+								<Expression><![CDATA[variable1*триГодаНасосам*пульсирующийПотокНасосов.get(1)*(1+увеличениеПослеСобытия)/(поправка4*0.1025)]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -1513,7 +1513,7 @@
 									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
 									<ClassName><![CDATA[Металлургия]]></ClassName>
 								</Coordinate>
-								<Expression><![CDATA[variable1*повтороноеИспользованиеНасосов.get(1)/1.28]]></Expression>
+								<Expression><![CDATA[variable1*повтороноеИспользованиеНасосов.get(1)/1.295]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
