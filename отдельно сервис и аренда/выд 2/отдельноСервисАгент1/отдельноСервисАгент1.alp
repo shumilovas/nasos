@@ -438,7 +438,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1747812388879</Id>
 					<Name><![CDATA[Доход]]></Name>
-					<X>-415</X><Y>3</Y>
+					<X>-370</X><Y>40</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -543,7 +543,7 @@
 					<EquationStyle>classic</EquationStyle>
 					<Width>20</Width>
 					<Height>20</Height>
-						<Expression><![CDATA[flow3]]></Expression>
+						<Expression><![CDATA[ПроданныеНасосыНуждаютсяВСервисе]]></Expression>
 						<InitialValue><![CDATA[{800.0}]]></InitialValue>
 						<Color/>
 						<Array>
@@ -798,8 +798,8 @@
 				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1747812389215</Id>
-					<Name><![CDATA[ТоварДляСервиса]]></Name>
-					<X>1413</X><Y>341</Y>
+					<Name><![CDATA[ТоварДляАренды]]></Name>
+					<X>1293</X><Y>341</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -1120,7 +1120,7 @@
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1747812388083</Id>
-					<Name><![CDATA[flow17]]></Name>
+					<Name><![CDATA[ежечасный_процесс_оплаты_процентов]]></Name>
 					<X>-405</X><Y>283</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1160,7 +1160,7 @@
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1747812388113</Id>
-					<Name><![CDATA[flow13]]></Name>
+					<Name><![CDATA[запаснойДляЗатратСклада]]></Name>
 					<X>299</X><Y>605</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1180,7 +1180,7 @@
 									<ClassName><![CDATA[Деньги]]></ClassName>
 									<ItemName><![CDATA[заемные]]></ItemName>
 								</Coordinate>
-								<Expression><![CDATA[(СГлавногоАгентаПотокПродаж.get(1))*стоимостьЕденицыТовара]]></Expression>
+								<Expression><![CDATA[0.000001*(СГлавногоАгентаПотокПродаж.get(1))*стоимостьЕденицыТовара]]></Expression>
 							</CustomExpression>
 						</Array>
 						<ValveIndex>1</ValveIndex>
@@ -1260,7 +1260,7 @@
 				<Variable Class="Flow">
 					<Id>1747812388186</Id>
 					<Name><![CDATA[аренда]]></Name>
-					<X>1413</X><Y>341</Y>
+					<X>1293</X><Y>341</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1271,8 +1271,8 @@
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>100</X><Y>0</Y></Point>
-							<Point><X>200</X><Y>0</Y></Point>
+							<Point><X>220</X><Y>0</Y></Point>
+							<Point><X>320</X><Y>0</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -1344,7 +1344,7 @@
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1747812388262</Id>
-					<Name><![CDATA[доходОтАренды]]></Name>
+					<Name><![CDATA[доходОтАрендыИпродажи]]></Name>
 					<X>529</X><Y>755</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1545,6 +1545,70 @@
 							<Point><X>0</X><Y>0</Y></Point>
 							<Point><X>38</X><Y>-71</Y></Point>
 							<Point><X>77</X><Y>-141</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1750623470095</Id>
+					<Name><![CDATA[ПроданныеНасосыНуждаютсяВСервисе]]></Name>
+					<X>293</X><Y>301</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1747812388984" TargetId="1747812389026" External="false" Constant="false" Array="true">
+						<Formula><![CDATA[0]]></Formula>
+						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
+								<ClassName><![CDATA[Металлургия]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
+									<ClassName><![CDATA[Металлургия]]></ClassName>
+								</Coordinate>
+								<Expression><![CDATA[0.95*ПродажаОтСервисаКлиентам[Металлургия]]]></Expression>
+							</CustomExpression>
+						</Array>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>115</X><Y>15</Y></Point>
+							<Point><X>230</X><Y>30</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1750623788878</Id>
+					<Name><![CDATA[СервисПроданныхНасосов]]></Name>
+					<X>290</X><Y>850</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1747815624960" External="false" Constant="false" Array="true">
+						<Color/>
+						<Array>
+							<Dimension>
+								<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
+								<ClassName><![CDATA[Деньги]]></ClassName>
+							</Dimension>
+							<CustomExpression>
+								<Coordinate>
+									<PackageName><![CDATA[отдельносервисагент2]]></PackageName>
+									<ClassName><![CDATA[Деньги]]></ClassName>
+									<ItemName><![CDATA[заемные]]></ItemName>
+								</Coordinate>
+								<Expression><![CDATA[ПроданныеНасосыНуждаютсяВСервисе.get(1)*(500000/365*24)]]></Expression>
+							</CustomExpression>
+						</Array>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>5</X><Y>-120</Y></Point>
+							<Point><X>10</X><Y>-240</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
@@ -2218,7 +2282,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>165</X><Y>-65</Y></Direction>
 					<Id>1747812388377</Id>
-					<Name><![CDATA[ЗаёмныеДеньги - flow17]]></Name>
+					<Name><![CDATA[ЗаёмныеДеньги - ежечасный_процесс_оплаты_процентов]]></Name>
 					<X>-655</X><Y>253</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2233,7 +2297,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>65</X><Y>165</Y></Direction>
 					<Id>1747812388379</Id>
-					<Name><![CDATA[ставкаЦентробанкаДляЗаёма - flow17]]></Name>
+					<Name><![CDATA[ставкаЦентробанкаДляЗаёма - ежечасный_процесс_оплаты_процентов]]></Name>
 					<X>-555</X><Y>23</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2276,7 +2340,7 @@
 				<Link SourceId="1747812389107" TargetId="1747812388879" Polarity="null">
 					<Height>-48.479</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-10</X><Y>-280</Y></Direction>
+					<Direction><X>35</X><Y>-243</Y></Direction>
 					<Id>1747812388385</Id>
 					<Name><![CDATA[ЗапасыДенег1 - Доход]]></Name>
 					<X>-405</X><Y>283</Y>
@@ -2338,7 +2402,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>240</X><Y>0</Y></Direction>
 					<Id>1747812388393</Id>
-					<Name><![CDATA[стоимостьЕденицыТовара - flow13]]></Name>
+					<Name><![CDATA[стоимостьЕденицыТовара - запаснойДляЗатратСклада]]></Name>
 					<X>128</X><Y>720</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2353,7 +2417,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>409</X><Y>414</Y></Direction>
 					<Id>1747812388395</Id>
-					<Name><![CDATA[СГлавногоАгентаПотокПродаж - flow13]]></Name>
+					<Name><![CDATA[СГлавногоАгентаПотокПродаж - запаснойДляЗатратСклада]]></Name>
 					<X>-41</X><Y>306</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2368,7 +2432,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-65</X><Y>-109</Y></Direction>
 					<Id>1747812388397</Id>
-					<Name><![CDATA[flow13 - <ЗапасыДенег1>]]></Name>
+					<Name><![CDATA[запаснойДляЗатратСклада - <ЗапасыДенег1>]]></Name>
 					<X>368</X><Y>720</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2441,9 +2505,9 @@
 				<Link SourceId="1747812389026" TargetId="1747812389215" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>890</X><Y>10</Y></Direction>
+					<Direction><X>770</X><Y>10</Y></Direction>
 					<Id>1747812388407</Id>
-					<Name><![CDATA[ТоварВзятВсервис - ТоварДляСервиса]]></Name>
+					<Name><![CDATA[ТоварВзятВсервис - ТоварДляАренды]]></Name>
 					<X>523</X><Y>331</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2757,7 +2821,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>171</X><Y>449</Y></Direction>
 					<Id>1747812388449</Id>
-					<Name><![CDATA[ПродажаОтСервисаКлиентам - доходОтАренды]]></Name>
+					<Name><![CDATA[ПродажаОтСервисаКлиентам - доходОтАрендыИпродажи]]></Name>
 					<X>243</X><Y>231</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2772,7 +2836,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>286</X><Y>-40</Y></Direction>
 					<Id>1747812388451</Id>
-					<Name><![CDATA[стоимостьЕденицыТовара - доходОтАренды]]></Name>
+					<Name><![CDATA[стоимостьЕденицыТовара - доходОтАрендыИпродажи]]></Name>
 					<X>128</X><Y>720</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2787,7 +2851,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-115</X><Y>-75</Y></Direction>
 					<Id>1747812388453</Id>
-					<Name><![CDATA[доходОтАренды - <ЗапасыДенег1>]]></Name>
+					<Name><![CDATA[доходОтАрендыИпродажи - <ЗапасыДенег1>]]></Name>
 					<X>414</X><Y>680</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -2892,7 +2956,7 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>85</X><Y>285</Y></Direction>
 					<Id>1747812388467</Id>
-					<Name><![CDATA[старыеНасосыСноваПродаются - доходОтАренды]]></Name>
+					<Name><![CDATA[старыеНасосыСноваПродаются - доходОтАрендыИпродажи]]></Name>
 					<X>329</X><Y>395</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -3104,6 +3168,51 @@
 					<Id>1748559313869</Id>
 					<Name><![CDATA[variable1 - повтороноеИспользованиеНасосов]]></Name>
 					<X>180</X><Y>70</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1747812387922" TargetId="1750623470095" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>165</X><Y>85</Y></Direction>
+					<Id>1750623543333</Id>
+					<Name><![CDATA[ПродажаОтСервисаКлиентам - ПроданныеНасосыНуждаютсяВСервисе]]></Name>
+					<X>243</X><Y>231</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1750623470095" TargetId="1750623788878" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-113</X><Y>414</Y></Direction>
+					<Id>1750623719662</Id>
+					<Name><![CDATA[ПроданныеНасосыНуждаютсяВСервисе - СервисПроданныхНасосов]]></Name>
+					<X>408</X><Y>316</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1750623788878" TargetId="1747815624960" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>5</X><Y>-120</Y></Direction>
+					<Id>1750624157229</Id>
+					<Name><![CDATA[СервисПроданныхНасосов - <ЗапасыДенег1>]]></Name>
+					<X>295</X><Y>730</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
